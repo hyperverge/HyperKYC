@@ -12,7 +12,6 @@ Pod::Spec.new do |s|
                         :type => 'Custom',
                         :file => 'LICENSE'
                      }
-                     
     s.platform     = :ios
     s.swift_version = '5.4'
     s.ios.deployment_target  = '9.0'
