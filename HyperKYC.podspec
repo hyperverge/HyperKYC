@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
     s.ios.deployment_target  = '9.0'
     
     s.source       = {
-                        :git => 'https://github.com/hyperverge/HyperKYC.git',
-                        :tag => '#{s.version}'
+                        :git => "https://github.com/hyperverge/HyperKYC.git",
+                        :tag => "#{s.version}"
                      }
     s.vendored_frameworks = 'HyperKYC.xcframework'
     s.ios.resource = 'HyperKYCResources.bundle'
