@@ -1,2 +1,4 @@
 # HyperKYC
-iOS Framework for capturing documents and faces at a resolution appropriate for our proprietary Deep Learning OCR and Face Recognition Engines.
+---
+This documentation has been moved to a new location. Please contact HyperVerge for more information.
+
