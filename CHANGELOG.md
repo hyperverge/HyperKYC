@@ -5,3 +5,6 @@
 
 ### 0.0.2 *[ 22 Jan 2022 ]*
 - Add more logic to handle failure states
+
+### 0.0.3 *[ 31 Jan 2022 ]*
+- Add support for global countries
