@@ -214,7 +214,7 @@ public struct DocQualityChecks : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct RuleChecks : Swift.Codable {
-  public var idNumberInvarid: HyperKYC.Fieldvalue? {
+  public var idNumberInvalid: HyperKYC.Fieldvalue? {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -398,6 +398,9 @@ public struct KycCountry : Swift.Codable {
     get
   }
   public var documents: [HyperKYC.KycDocument] {
+    get
+  }
+  public var base_url: Swift.String {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
@@ -663,6 +666,9 @@ public struct KycDocument : Swift.Codable {
     get
   }
   public var sides: [Swift.String] {
+    get
+  }
+  public var type: Swift.String {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
