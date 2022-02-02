@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
     s.name         = 'HyperKYC'
-    s.version      = '0.0.3'
+    s.version      = '0.0.4'
     s.summary      = "HyperVerge's iOS Framework for capturing documents and faces to be used with our AI Engines"
     s.description  = <<-DESC
-                    HyperSnapSDK is HyperVerge’s documents + face capture framework that captures images at a resolution appropriate for our proprietary Deep Learning OCR and Face Recognition Engines.The framework provides a liveness feature that uses our advanced AI Engines to tell if a captured image is that of a real person or a photograph.
+                    HyperKyc SDK can be used to create Global DKYC workflows to capture images of ID cards, photos of the face of the user, and perform other operations like face matches, etc all within itself to ease up integration friction on the client end.
                     DESC
                     
     s.homepage     = 'https://github.com/hyperverge/HyperKYC'
