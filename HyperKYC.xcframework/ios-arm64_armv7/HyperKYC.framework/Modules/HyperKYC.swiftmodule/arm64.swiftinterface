@@ -114,7 +114,7 @@ public struct FieldsExtracted : Swift.Codable {
   public var placeOfIssue: HyperKYC.Fieldvalue? {
     get
   }
-  public var yearOfBirth: HyperKYC.YearOfBirthFieldValue? {
+  public var yearOfBirth: HyperKYC.Fieldvalue? {
     get
   }
   public var age: HyperKYC.Fieldvalue? {
@@ -142,25 +142,6 @@ public struct FieldsExtracted : Swift.Codable {
     get
   }
   public var address: HyperKYC.Address? {
-    get
-  }
-  public var asDictionary: [Swift.String : Any] {
-    get
-  }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct YearOfBirthFieldValue : Swift.Codable {
-  public var value: Swift.Int? {
-    get
-  }
-  public var confidence: Swift.String? {
-    get
-  }
-  public var score: Swift.Double? {
-    get
-  }
-  public var reviewNeeded: Swift.String? {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -284,11 +265,12 @@ public struct Fieldvalue : Swift.Codable {
   public var reviewNeeded: Swift.String? {
     get
   }
+  public init(value: Swift.String? = nil, confidence: Swift.String? = nil, score: Swift.Double? = nil, reviewNeeded: Swift.String? = nil)
+  public init(from decoder: Swift.Decoder) throws
   public var asDictionary: [Swift.String : Any] {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
 }
 public struct DocData {
   public var side: Swift.String? {
