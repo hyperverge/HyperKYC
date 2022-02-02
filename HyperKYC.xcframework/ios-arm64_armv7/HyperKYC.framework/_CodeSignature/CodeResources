@@ -742,11 +742,11 @@
 		</data>
 		<key>HyperKYCResources.bundle/Info.plist</key>
 		<data>
-		Vl0hPZL7iLy/UgJaQo0k8VBgtNE=
+		9LbzbWtFJsbvlrrIXSJ0guMVBaI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KR3sof3xxou5/KBy5s0fV4gNUTc=
+		Br5fyNg5UXSDrjaz6/LRfafJHB0=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -754,11 +754,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftinterface</key>
 		<data>
-		E5pbGMTW8mPh+BzSffR+VZaL1y8=
+		ORvFV+hEfdK7YGgU5G1xoxqEhnA=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftmodule</key>
 		<data>
-		P2QIFC62hn+n+qQ0HE5lgr+xbXg=
+		7B0+sDom46VBnnTWf4xV9sICjzc=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -766,11 +766,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		tf4rFwbt9KvUol1gy8rwwQ68jDc=
+		/Ur+jyHsUgn/0vCZCuoJZOCs5vM=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		QN6kTqyu2lUgB9nWtYjbApq8eYw=
+		LSd+zDzC/HycI8Iqn1EmPLXkvv0=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -778,11 +778,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		tf4rFwbt9KvUol1gy8rwwQ68jDc=
+		/Ur+jyHsUgn/0vCZCuoJZOCs5vM=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		QN6kTqyu2lUgB9nWtYjbApq8eYw=
+		LSd+zDzC/HycI8Iqn1EmPLXkvv0=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -790,11 +790,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		E5pbGMTW8mPh+BzSffR+VZaL1y8=
+		ORvFV+hEfdK7YGgU5G1xoxqEhnA=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		P2QIFC62hn+n+qQ0HE5lgr+xbXg=
+		7B0+sDom46VBnnTWf4xV9sICjzc=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -802,11 +802,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftinterface</key>
 		<data>
-		E5pbGMTW8mPh+BzSffR+VZaL1y8=
+		ORvFV+hEfdK7YGgU5G1xoxqEhnA=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		P2QIFC62hn+n+qQ0HE5lgr+xbXg=
+		7B0+sDom46VBnnTWf4xV9sICjzc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -2843,11 +2843,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Vl0hPZL7iLy/UgJaQo0k8VBgtNE=
+			9LbzbWtFJsbvlrrIXSJ0guMVBaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			UQWRmzIBrhlIN5rrtTNm8bfmkoYRs3R0nzK2cQTOAkM=
+			g2P4XhdBJnIjFC8EO11I6ACNcRlKZcwDUQCQS7Aw6Nw=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftdoc</key>
@@ -2865,22 +2865,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E5pbGMTW8mPh+BzSffR+VZaL1y8=
+			ORvFV+hEfdK7YGgU5G1xoxqEhnA=
 			</data>
 			<key>hash2</key>
 			<data>
-			YJyZagqonoE4N1UzrELgUTStkevlPBZqSMldb3/HcVI=
+			CECfXO5GrQFMS1YtplewytH95r/IRjECSL4jt+KEDk0=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			P2QIFC62hn+n+qQ0HE5lgr+xbXg=
+			7B0+sDom46VBnnTWf4xV9sICjzc=
 			</data>
 			<key>hash2</key>
 			<data>
-			43NvJNEfYqRnk4wCuWR2v36MlfOnbgmR9O6xS9FuHHM=
+			wC+ukteggYs0JZbXC4Gzn/BERJbEJ57chzSKY7lv5Wo=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -2898,22 +2898,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tf4rFwbt9KvUol1gy8rwwQ68jDc=
+			/Ur+jyHsUgn/0vCZCuoJZOCs5vM=
 			</data>
 			<key>hash2</key>
 			<data>
-			dgdDFvu8aJn4TqWSTEWHW7EteB95ymH1SgO0Brwkhp0=
+			ecuY5KCfZQqIxXIRA4YPnvXhRQDL0M5AkeXGrFdfR9o=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QN6kTqyu2lUgB9nWtYjbApq8eYw=
+			LSd+zDzC/HycI8Iqn1EmPLXkvv0=
 			</data>
 			<key>hash2</key>
 			<data>
-			t5k18ZknasaY72Zr941Xc8SHE1n/462x+kwDGihqgR4=
+			HKgfFGoy+YyjZlidq1HH/Kg6+xrsp9Bewt8u8NVybIQ=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftdoc</key>
@@ -2931,22 +2931,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tf4rFwbt9KvUol1gy8rwwQ68jDc=
+			/Ur+jyHsUgn/0vCZCuoJZOCs5vM=
 			</data>
 			<key>hash2</key>
 			<data>
-			dgdDFvu8aJn4TqWSTEWHW7EteB95ymH1SgO0Brwkhp0=
+			ecuY5KCfZQqIxXIRA4YPnvXhRQDL0M5AkeXGrFdfR9o=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QN6kTqyu2lUgB9nWtYjbApq8eYw=
+			LSd+zDzC/HycI8Iqn1EmPLXkvv0=
 			</data>
 			<key>hash2</key>
 			<data>
-			t5k18ZknasaY72Zr941Xc8SHE1n/462x+kwDGihqgR4=
+			HKgfFGoy+YyjZlidq1HH/Kg6+xrsp9Bewt8u8NVybIQ=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -2964,22 +2964,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E5pbGMTW8mPh+BzSffR+VZaL1y8=
+			ORvFV+hEfdK7YGgU5G1xoxqEhnA=
 			</data>
 			<key>hash2</key>
 			<data>
-			YJyZagqonoE4N1UzrELgUTStkevlPBZqSMldb3/HcVI=
+			CECfXO5GrQFMS1YtplewytH95r/IRjECSL4jt+KEDk0=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			P2QIFC62hn+n+qQ0HE5lgr+xbXg=
+			7B0+sDom46VBnnTWf4xV9sICjzc=
 			</data>
 			<key>hash2</key>
 			<data>
-			43NvJNEfYqRnk4wCuWR2v36MlfOnbgmR9O6xS9FuHHM=
+			wC+ukteggYs0JZbXC4Gzn/BERJbEJ57chzSKY7lv5Wo=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftdoc</key>
@@ -2997,22 +2997,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E5pbGMTW8mPh+BzSffR+VZaL1y8=
+			ORvFV+hEfdK7YGgU5G1xoxqEhnA=
 			</data>
 			<key>hash2</key>
 			<data>
-			YJyZagqonoE4N1UzrELgUTStkevlPBZqSMldb3/HcVI=
+			CECfXO5GrQFMS1YtplewytH95r/IRjECSL4jt+KEDk0=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			P2QIFC62hn+n+qQ0HE5lgr+xbXg=
+			7B0+sDom46VBnnTWf4xV9sICjzc=
 			</data>
 			<key>hash2</key>
 			<data>
-			43NvJNEfYqRnk4wCuWR2v36MlfOnbgmR9O6xS9FuHHM=
+			wC+ukteggYs0JZbXC4Gzn/BERJbEJ57chzSKY7lv5Wo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

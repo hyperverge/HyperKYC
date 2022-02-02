@@ -8,3 +8,7 @@
 
 ### 0.0.3 *[ 31 Jan 2022 ]*
 - Add support for global countries
+
+### 0.0.4 *[ 02 Feb 2022 ]*
+- Remove flag icon
+- Fix Fieldvalue decodable bug
