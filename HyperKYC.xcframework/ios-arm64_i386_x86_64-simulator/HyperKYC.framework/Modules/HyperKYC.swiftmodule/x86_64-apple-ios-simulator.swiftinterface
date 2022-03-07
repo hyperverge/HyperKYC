@@ -11,7 +11,9 @@ import SystemConfiguration
 import UIKit
 import _Concurrency
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject {
-  public init(appId: Swift.String, accessToken: Swift.String, workFlow: [HyperKYC.HyperKycFlow], transactionId: Swift.String, shouldShowFullScreen: Swift.Bool = true)
+  public init(appId: Swift.String, appKey: Swift.String, workFlow: [HyperKYC.HyperKycFlow], transactionId: Swift.String, shouldShowFullScreen: Swift.Bool = true, defaultCountryId: Swift.String? = nil)
+  public init(accessToken: Swift.String, workFlow: [HyperKYC.HyperKycFlow], transactionId: Swift.String, shouldShowFullScreen: Swift.Bool = true, defaultCountryId: Swift.String? = nil)
+  public func validate() -> Swift.Bool
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class HKYCBundleLocator : ObjectiveC.NSObject {
@@ -265,12 +267,38 @@ public struct Fieldvalue : Swift.Codable {
   public var reviewNeeded: Swift.String? {
     get
   }
-  public init(value: Swift.String? = nil, confidence: Swift.String? = nil, score: Swift.Double? = nil, reviewNeeded: Swift.String? = nil)
+  public var line1: Swift.String? {
+    get
+  }
+  public var line2: Swift.String? {
+    get
+  }
+  public init(value: Swift.String? = nil, confidence: Swift.String? = nil, score: Swift.Double? = nil, reviewNeeded: Swift.String? = nil, line1: Swift.String? = nil, line2: Swift.String? = nil)
   public init(from decoder: Swift.Decoder) throws
   public var asDictionary: [Swift.String : Any] {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
+}
+public struct DocResult {
+  public var tag: Swift.String {
+    get
+  }
+  public var documentId: Swift.String {
+    get
+  }
+  public var docDataList: [HyperKYC.DocData] {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public var getActions: [Swift.String?] {
+    get
+  }
+  public var getRequestIds: [Swift.String] {
+    get
+  }
 }
 public struct DocData {
   public var side: Swift.String? {
@@ -333,6 +361,20 @@ public struct FaceData {
     get
   }
 }
+public struct FaceMatchDataResult {
+  public var tag: Swift.String {
+    get
+  }
+  public var documentId: Swift.String {
+    get
+  }
+  public var facematchData: HyperKYC.FaceMatchData {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+}
 public struct FaceMatchData {
   public var action: Swift.String? {
     get
@@ -349,18 +391,27 @@ public struct FaceMatchData {
   public var isStatusSuccess: Swift.Bool {
     get
   }
+  public var isActionSuccess: Swift.Bool {
+    get
+  }
   public var isFaceMatched: Swift.Bool {
     get
   }
 }
-@objc public enum HyperKycFlow : Swift.Int {
-  case document
-  case face
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
+public enum HyperKycFlow {
+  case document(config: HyperKYC.DocFlowConfig? = nil)
+  case face(config: HyperKYC.FaceFlowConfig? = nil)
+  case api(config: HyperKYC.ApiFlowConfig? = nil)
+}
+public class DocFlowConfig {
+  public init(useForFaceMatch: Swift.Bool, countryId: Swift.String? = nil, documentId: Swift.String? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FaceFlowConfig {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ApiFlowConfig {
+  @objc deinit
 }
 public struct KycCountries : Swift.Codable {
   public var countries: [HyperKYC.KycCountry] {
@@ -556,13 +607,13 @@ public enum KYCResult {
   public var selectedDocument: Swift.String? {
     get
   }
-  public var docDataList: [HyperKYC.DocData] {
+  public var docResultList: [HyperKYC.DocResult] {
     get
   }
   public var faceData: HyperKYC.FaceData? {
     get
   }
-  public var faceMatchData: HyperKYC.FaceMatchData? {
+  public var faceMatchDataResultList: [HyperKYC.FaceMatchDataResult] {
     get
   }
   @objc deinit
@@ -668,8 +719,5 @@ extension HyperKYC.HKYCDocumentPickerProccedToCaptureButton {
     @_Concurrency.MainActor(unsafe) @objc set
   }
 }
-extension HyperKYC.HyperKycFlow : Swift.Equatable {}
-extension HyperKYC.HyperKycFlow : Swift.Hashable {}
-extension HyperKYC.HyperKycFlow : Swift.RawRepresentable {}
 extension HyperKYC.KYCResult : Swift.Equatable {}
 extension HyperKYC.KYCResult : Swift.Hashable {}
