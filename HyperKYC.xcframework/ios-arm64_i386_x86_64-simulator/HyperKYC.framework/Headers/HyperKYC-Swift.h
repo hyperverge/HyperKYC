@@ -352,11 +352,6 @@ SWIFT_CLASS("_TtC8HyperKYC12HyperKycData")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, HyperKycFlow, open) {
-  HyperKycFlowDocument = 0,
-  HyperKycFlowFace = 1,
-};
-
 
 SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @interface HyperKycResult : NSObject
@@ -724,11 +719,6 @@ SWIFT_CLASS("_TtC8HyperKYC12HyperKycData")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, HyperKycFlow, open) {
-  HyperKycFlowDocument = 0,
-  HyperKycFlowFace = 1,
-};
-
 
 SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @interface HyperKycResult : NSObject
@@ -1095,11 +1085,6 @@ SWIFT_CLASS("_TtC8HyperKYC12HyperKycData")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
-typedef SWIFT_ENUM(NSInteger, HyperKycFlow, open) {
-  HyperKycFlowDocument = 0,
-  HyperKycFlowFace = 1,
-};
 
 
 SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
