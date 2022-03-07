@@ -12,3 +12,8 @@
 ### 0.0.4 *[ 02 Feb 2022 ]*
 - Remove flag icon
 - Fix Fieldvalue decodable bug
+
+### 0.0.5 *[ 07 Mar 2022]*
+- Add support for configurable workflow - multi doc and facematch
+- Add status field in FinishReview Api call
+- Add support for appId, appKey initialisation
