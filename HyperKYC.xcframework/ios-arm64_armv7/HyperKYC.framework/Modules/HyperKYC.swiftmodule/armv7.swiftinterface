@@ -190,6 +190,21 @@ public struct DocQualityChecks : Swift.Codable {
   public var blur: HyperKYC.Fieldvalue? {
     get
   }
+  public var glare: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var blackAndWhite: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var capturedFromScreen: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var whiteBackground: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var cutId: HyperKYC.Fieldvalue? {
+    get
+  }
   public var asDictionary: [Swift.String : Any] {
     get
   }
@@ -328,6 +343,9 @@ public struct DocData {
   public var isMultipleOCR: Swift.Bool {
     get
   }
+  public var errorMessage: Swift.String? {
+    get
+  }
 }
 public struct FaceData {
   public var croppedFaceImagePath: Swift.String? {
@@ -358,6 +376,9 @@ public struct FaceData {
     get
   }
   public var isFaceLive: Swift.Bool {
+    get
+  }
+  public var errorMessage: Swift.String? {
     get
   }
 }
@@ -395,6 +416,9 @@ public struct FaceMatchData {
     get
   }
   public var isFaceMatched: Swift.Bool {
+    get
+  }
+  public var errorMessage: Swift.String? {
     get
   }
 }
@@ -577,24 +601,24 @@ public struct FaceQualityChecks : Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
-public enum KYCResult {
+public enum Status {
   case success
   case failure
   case cancelled
-  public static func == (a: HyperKYC.KYCResult, b: HyperKYC.KYCResult) -> Swift.Bool
+  public static func == (a: HyperKYC.Status, b: HyperKYC.Status) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
 @objc @_inheritsConvenienceInitializers public class HyperKycResult : ObjectiveC.NSObject {
-  public var result: HyperKYC.KYCResult? {
+  public var status: HyperKYC.Status? {
     get
   }
   public var hyperKYCData: HyperKYC.HyperKycData? {
     get
   }
-  public var errorMessage: Swift.String? {
+  public var reason: Swift.String? {
     get
   }
   @objc override dynamic public init()
@@ -691,7 +715,7 @@ public enum KYCResult {
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
-public struct KycDocument : Swift.Codable {
+public struct KycDocument : Swift.Codable, Swift.Hashable {
   public var id: Swift.String {
     get
   }
@@ -704,7 +728,12 @@ public struct KycDocument : Swift.Codable {
   public var type: Swift.String {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: HyperKYC.KycDocument, b: HyperKYC.KycDocument) -> Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
   public init(from decoder: Swift.Decoder) throws
 }
 extension HyperKYC.HKYCCountryPickerContinueButton {
@@ -719,5 +748,5 @@ extension HyperKYC.HKYCDocumentPickerProccedToCaptureButton {
     @_Concurrency.MainActor(unsafe) @objc set
   }
 }
-extension HyperKYC.KYCResult : Swift.Equatable {}
-extension HyperKYC.KYCResult : Swift.Hashable {}
+extension HyperKYC.Status : Swift.Equatable {}
+extension HyperKYC.Status : Swift.Hashable {}

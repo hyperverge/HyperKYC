@@ -742,11 +742,15 @@
 		</data>
 		<key>HyperKYCResources.bundle/Info.plist</key>
 		<data>
-		ubT6cBB7naYeKjdVbvtjeO+NQoQ=
+		nXIk6Nj+XpaRJI7SmNW458l9b8I=
+		</data>
+		<key>HyperKYCResources.bundle/country_codes.csv</key>
+		<data>
+		QolVzlv8vvK6jXIvsSLRptbBgn4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/iurr8Abd3Ym90u187LHfMwTSVY=
+		Kr3f3Mf2wiRvD+X+FpPLaafuWC4=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -754,11 +758,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftinterface</key>
 		<data>
-		El18Z4wZZru1QZBpyOks5nUBcXQ=
+		ruCsLdDEqJyzfyKcW1Q7pg3Z5O4=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftmodule</key>
 		<data>
-		kCJuwAH7yGxBWnJQ0ER/KGfzpWs=
+		dcLZno8TclAhBypETTfjokaN4gA=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -766,11 +770,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		j1fqfwRoLxHUzN+70N8vVbtPSR0=
+		i8WbBt8DGKrWtod7hCqSiD0KhdI=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		bq3Oj7hQD5T0G+J5NSlHrbIKbQU=
+		xct48odtCrAC4+qKBbPn31C1wnE=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -778,11 +782,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		j1fqfwRoLxHUzN+70N8vVbtPSR0=
+		i8WbBt8DGKrWtod7hCqSiD0KhdI=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		bq3Oj7hQD5T0G+J5NSlHrbIKbQU=
+		xct48odtCrAC4+qKBbPn31C1wnE=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -790,11 +794,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		El18Z4wZZru1QZBpyOks5nUBcXQ=
+		ruCsLdDEqJyzfyKcW1Q7pg3Z5O4=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		kCJuwAH7yGxBWnJQ0ER/KGfzpWs=
+		dcLZno8TclAhBypETTfjokaN4gA=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -802,11 +806,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftinterface</key>
 		<data>
-		El18Z4wZZru1QZBpyOks5nUBcXQ=
+		ruCsLdDEqJyzfyKcW1Q7pg3Z5O4=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		kCJuwAH7yGxBWnJQ0ER/KGfzpWs=
+		dcLZno8TclAhBypETTfjokaN4gA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -2847,11 +2851,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ubT6cBB7naYeKjdVbvtjeO+NQoQ=
+			nXIk6Nj+XpaRJI7SmNW458l9b8I=
 			</data>
 			<key>hash2</key>
 			<data>
-			c8AyCVTpwtdBx53Rzaq4/4RC9IIAABUtRkk0m/mePiE=
+			iO8HOdVTCfhQXoAEsrgzHFGsdyaJh91f5/C1Xa9f0h4=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/country_codes.csv</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QolVzlv8vvK6jXIvsSLRptbBgn4=
+			</data>
+			<key>hash2</key>
+			<data>
+			UhUr1uutVRBTQ1tQ0wkD/C8gL6JyfpKnOWkMk0i+VHQ=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftdoc</key>
@@ -2869,22 +2884,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			El18Z4wZZru1QZBpyOks5nUBcXQ=
+			ruCsLdDEqJyzfyKcW1Q7pg3Z5O4=
 			</data>
 			<key>hash2</key>
 			<data>
-			VkBuqQxO1MZPGlXFKU0k18aGH2PCuW5ggcokNV3Pf+0=
+			o/fI9CAI/D+wYVig7qZEqfS9w5Dy0J0llEXOU3aoqr0=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kCJuwAH7yGxBWnJQ0ER/KGfzpWs=
+			dcLZno8TclAhBypETTfjokaN4gA=
 			</data>
 			<key>hash2</key>
 			<data>
-			WJmnfmRSwuwO3CpOqmXAdJVj77iK7MhdFa1Awvs4RPg=
+			jTnRb78Mv8Ytyga0P6LrGh7lEBa+WMuYWu7km7dfHho=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -2902,22 +2917,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j1fqfwRoLxHUzN+70N8vVbtPSR0=
+			i8WbBt8DGKrWtod7hCqSiD0KhdI=
 			</data>
 			<key>hash2</key>
 			<data>
-			TUVzXlqUZfoAEdBfv/najv1UWPn4BYvByh093SN/1Qw=
+			3+iqtpjQyR+eqNtstHHcTMHWD30omORvjkK4Zm3EhLE=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bq3Oj7hQD5T0G+J5NSlHrbIKbQU=
+			xct48odtCrAC4+qKBbPn31C1wnE=
 			</data>
 			<key>hash2</key>
 			<data>
-			NNEZ0ZlkeT5rlxLL//5SKlWVugfC1fW1cimUs6pi4zs=
+			iEv8gxSEr/OwsdBYgO+QP0/Y1vtAfLhlxY+3jENIiXc=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftdoc</key>
@@ -2935,22 +2950,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			j1fqfwRoLxHUzN+70N8vVbtPSR0=
+			i8WbBt8DGKrWtod7hCqSiD0KhdI=
 			</data>
 			<key>hash2</key>
 			<data>
-			TUVzXlqUZfoAEdBfv/najv1UWPn4BYvByh093SN/1Qw=
+			3+iqtpjQyR+eqNtstHHcTMHWD30omORvjkK4Zm3EhLE=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bq3Oj7hQD5T0G+J5NSlHrbIKbQU=
+			xct48odtCrAC4+qKBbPn31C1wnE=
 			</data>
 			<key>hash2</key>
 			<data>
-			NNEZ0ZlkeT5rlxLL//5SKlWVugfC1fW1cimUs6pi4zs=
+			iEv8gxSEr/OwsdBYgO+QP0/Y1vtAfLhlxY+3jENIiXc=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -2968,22 +2983,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			El18Z4wZZru1QZBpyOks5nUBcXQ=
+			ruCsLdDEqJyzfyKcW1Q7pg3Z5O4=
 			</data>
 			<key>hash2</key>
 			<data>
-			VkBuqQxO1MZPGlXFKU0k18aGH2PCuW5ggcokNV3Pf+0=
+			o/fI9CAI/D+wYVig7qZEqfS9w5Dy0J0llEXOU3aoqr0=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kCJuwAH7yGxBWnJQ0ER/KGfzpWs=
+			dcLZno8TclAhBypETTfjokaN4gA=
 			</data>
 			<key>hash2</key>
 			<data>
-			WJmnfmRSwuwO3CpOqmXAdJVj77iK7MhdFa1Awvs4RPg=
+			jTnRb78Mv8Ytyga0P6LrGh7lEBa+WMuYWu7km7dfHho=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftdoc</key>
@@ -3001,22 +3016,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			El18Z4wZZru1QZBpyOks5nUBcXQ=
+			ruCsLdDEqJyzfyKcW1Q7pg3Z5O4=
 			</data>
 			<key>hash2</key>
 			<data>
-			VkBuqQxO1MZPGlXFKU0k18aGH2PCuW5ggcokNV3Pf+0=
+			o/fI9CAI/D+wYVig7qZEqfS9w5Dy0J0llEXOU3aoqr0=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/armv7.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kCJuwAH7yGxBWnJQ0ER/KGfzpWs=
+			dcLZno8TclAhBypETTfjokaN4gA=
 			</data>
 			<key>hash2</key>
 			<data>
-			WJmnfmRSwuwO3CpOqmXAdJVj77iK7MhdFa1Awvs4RPg=
+			jTnRb78Mv8Ytyga0P6LrGh7lEBa+WMuYWu7km7dfHho=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
