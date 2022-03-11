@@ -17,3 +17,8 @@
 - Add support for configurable workflow - multi doc and facematch
 - Add status field in FinishReview Api call
 - Add support for appId, appKey initialisation
+
+### 0.0.6 *[ 11 Mar 2022]*
+- Fix several bugs
+- Rename fields : `result` -> `status`, `errorMessage` -> `reason`
+- Do not display already `usedDocument` in `docPicker` screen

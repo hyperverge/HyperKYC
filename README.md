@@ -28,19 +28,23 @@ To request the user for camera permissions, add this key-value pair in your appl
 - **Value :** "Access to camera is needed for document and face capture"
 
   
+1. Import `HyperKYC` module
+```swift
+import HyperKYC
+```
 
-1. Create `HyperKycConfig` instance
+2. Create `HyperKycConfig` instance
 
 ```swift
-let workFlow = [ .document, .face]
+let workFlow = [ .document(), .face()]
 let hyperKycConfig = HyperKycConfig(
                         appId: "<app-id>", // get this from Hyperverge team
-                        accessToken: "<access-token>", // get more info from Hyperverge team
+                        appKey: "<app-key>", // get more info from Hyperverge team
                         workFlow: workFlow,
                         transactionId: "<transaction-id>"
                     )
 ```
-2. Call `HyperKYC.launch()`
+3. Call `HyperKYC.launch()`
 
 ```swift
 HyperKyc.launch(self, hyperKycConfig: hyperKycConfig) { hyperKycResult in
