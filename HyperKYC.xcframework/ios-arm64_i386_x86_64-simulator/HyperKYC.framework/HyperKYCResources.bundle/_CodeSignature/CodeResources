@@ -60,6 +60,10 @@
 		<data>
 		9iqCFjyHgmhl2QXjvvvAr8OAVcE=
 		</data>
+		<key>country_codes.csv</key>
+		<data>
+		QolVzlv8vvK6jXIvsSLRptbBgn4=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -215,6 +219,17 @@
 			<key>hash2</key>
 			<data>
 			SwRs7VRjvhD/Y6M3uEaJEnfuG5Mb5kgXgbBIC+pZkEI=
+			</data>
+		</dict>
+		<key>country_codes.csv</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QolVzlv8vvK6jXIvsSLRptbBgn4=
+			</data>
+			<key>hash2</key>
+			<data>
+			UhUr1uutVRBTQ1tQ0wkD/C8gL6JyfpKnOWkMk0i+VHQ=
 			</data>
 		</dict>
 	</dict>
