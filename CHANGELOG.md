@@ -22,3 +22,7 @@
 - Fix several bugs
 - Rename fields : `result` -> `status`, `errorMessage` -> `reason`
 - Do not display already `usedDocument` in `docPicker` screen
+
+### 0.0.7 *[ 23 Mar 2022]*
+- Fix table UI issues
+- Fix minor bugs

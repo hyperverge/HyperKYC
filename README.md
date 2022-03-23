@@ -36,19 +36,49 @@ import HyperKYC
 2. Create `HyperKycConfig` instance
 
 ```swift
-let workFlow = [ .document(), .face()]
+let workFlow = [ 
+            HyperKycFlow.document(
+                    config:DocFlowConfig(
+                            useForFaceMatch: true, // Optional, by default -> false
+                            countryId: "<country-id>", // Optional
+                            documentId: "<document-id>", // Optional
+                    ),
+            ),
+            HyperKycFlow.face(),
+]
+
+//  Create HyperKycConfig instance using appId-appKey (less secure)
 let hyperKycConfig = HyperKycConfig(
-                        appId: "<app-id>", // get this from Hyperverge team
-                        appKey: "<app-key>", // get more info from Hyperverge team
-                        workFlow: workFlow,
-                        transactionId: "<transaction-id>"
-                    )
+                appId: "<app-id>", // get this from Hyperverge team
+                appKey: "<app-key>", // get this from Hyperverge team
+                workFlow: workFlow, 
+                transactionId: "<transaction-id>",
+                defaultCountryId: "<default-country-id>" // Optional
+)
+
+OR
+
+//  Create HyperKycConfig instance using accessToken (more secure)
+let hyperKycConfig = HyperKycConfig(
+                accessToken: "<access-token>", // get accessToken as shown here
+                workFlow: workFlow, 
+                transactionId: "<transaction-id>",
+                defaultCountryId: "<default-country-id>" // Optional
+)
 ```
-3. Call `HyperKYC.launch()`
+
+3. Create `completionHandler` instance
 
 ```swift
-HyperKyc.launch(self, hyperKycConfig: hyperKycConfig) { hyperKycResult in
-    // Handle final result here
+let completionHandler :(_ hyperKycResult: HyperKycResult)->Void = {
+    hyperKycResult in
+        //  Handle hyperKycResult (contact Hyperverge team for more info)
 }
+```
+
+4. Call `HyperKYC.launch()` 
+
+```swift
+HyperKyc.launch(self, hyperKycConfig: hyperKycConfig, completionHandler)
 ```
 **Please contact Hyperverge for complete documentation and a properly designed solution specific to your usecase to use HyperKyc SDK to its optimum capacity**
