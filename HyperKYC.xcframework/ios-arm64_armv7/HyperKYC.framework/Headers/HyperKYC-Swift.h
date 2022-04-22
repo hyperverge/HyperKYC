@@ -243,6 +243,14 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCActivityLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC18HKYCBrandingLayout")
+@interface HKYCBrandingLayout : UIStackView
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (void)showBrandingWithShow:(BOOL)show;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @interface HKYCBundleLocator : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -294,22 +302,15 @@ SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC40HKYCDocumentPickerProccedToCaptureButton")
-@interface HKYCDocumentPickerProccedToCaptureButton : UIButton
+SWIFT_CLASS("_TtC8HyperKYC16HKYCDocumentCell")
+@interface HKYCDocumentCell : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setBorderColor:(CGColorRef _Nonnull)color;
 + (void)setBackgroundColor:(CGColorRef _Nonnull)color;
 + (void)setBorderWidth:(CGFloat)width;
-+ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
 + (void)setTitleShadowOffset:(CGSize)offset;
 + (void)setTitleFont:(UIFont * _Nonnull)font;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-@interface HKYCDocumentPickerProccedToCaptureButton (SWIFT_EXTENSION(HyperKYC))
-@property (nonatomic, getter=isEnabled) BOOL enabled;
 @end
 
 
@@ -317,6 +318,30 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @interface HKYCErrorMessageLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC23HKYCSelectedCountryView")
+@interface HKYCSelectedCountryView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC23HKYCSubDescriptionLabel")
+@interface HKYCSubDescriptionLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
@@ -362,6 +387,16 @@ SWIFT_CLASS("_TtC8HyperKYC12HyperKycData")
 SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @interface HyperKycResult : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+@interface UINavigationController (SWIFT_EXTENSION(HyperKYC))
+@property (nonatomic, readonly) BOOL shouldAutorotate;
+@property (nonatomic, readonly) UIInterfaceOrientation preferredInterfaceOrientationForPresentation;
+@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @end
 
 
@@ -616,6 +651,14 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCActivityLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC18HKYCBrandingLayout")
+@interface HKYCBrandingLayout : UIStackView
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (void)showBrandingWithShow:(BOOL)show;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @interface HKYCBundleLocator : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -667,22 +710,15 @@ SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC40HKYCDocumentPickerProccedToCaptureButton")
-@interface HKYCDocumentPickerProccedToCaptureButton : UIButton
+SWIFT_CLASS("_TtC8HyperKYC16HKYCDocumentCell")
+@interface HKYCDocumentCell : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setBorderColor:(CGColorRef _Nonnull)color;
 + (void)setBackgroundColor:(CGColorRef _Nonnull)color;
 + (void)setBorderWidth:(CGFloat)width;
-+ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
 + (void)setTitleShadowOffset:(CGSize)offset;
 + (void)setTitleFont:(UIFont * _Nonnull)font;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-@interface HKYCDocumentPickerProccedToCaptureButton (SWIFT_EXTENSION(HyperKYC))
-@property (nonatomic, getter=isEnabled) BOOL enabled;
 @end
 
 
@@ -690,6 +726,30 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @interface HKYCErrorMessageLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC23HKYCSelectedCountryView")
+@interface HKYCSelectedCountryView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC23HKYCSubDescriptionLabel")
+@interface HKYCSubDescriptionLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
@@ -735,6 +795,16 @@ SWIFT_CLASS("_TtC8HyperKYC12HyperKycData")
 SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @interface HyperKycResult : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+
+
+@interface UINavigationController (SWIFT_EXTENSION(HyperKYC))
+@property (nonatomic, readonly) BOOL shouldAutorotate;
+@property (nonatomic, readonly) UIInterfaceOrientation preferredInterfaceOrientationForPresentation;
+@property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @end
 
 

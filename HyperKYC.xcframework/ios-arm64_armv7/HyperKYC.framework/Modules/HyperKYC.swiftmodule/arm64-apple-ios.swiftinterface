@@ -64,7 +64,7 @@ public struct OCRApiStructure : Swift.Codable {
   public var fieldsExtracted: HyperKYC.FieldsExtracted? {
     get
   }
-  public var qualityCheck: HyperKYC.DocQualityChecks? {
+  public var qualityChecks: HyperKYC.DocQualityChecks? {
     get
   }
   public var ruleChecks: HyperKYC.RuleChecks? {
@@ -437,6 +437,10 @@ public class DocFlowConfig {
 @_hasMissingDesignatedInitializers public class ApiFlowConfig {
   @objc deinit
 }
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCBrandingLayout : UIKit.UIStackView {
+  @objc @_Concurrency.MainActor(unsafe) public func showBranding(show: Swift.Bool)
+  @objc deinit
+}
 public struct KycCountries : Swift.Codable {
   public var countries: [HyperKYC.KycCountry] {
     get
@@ -674,12 +678,39 @@ public enum Status {
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
   @objc deinit
 }
+@objc @_Concurrency.MainActor(unsafe) public class HKYCSubDescriptionLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc deinit
+}
 @objc @_Concurrency.MainActor(unsafe) public class HKYCErrorMessageLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCSelectedCountryView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCDocumentCell : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class HKYCCountryPickerContinueButton : UIKit.UIButton {
@@ -694,17 +725,6 @@ public enum Status {
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class HKYCCountryPickerErrorRetryButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
-  @objc deinit
-}
-@objc @_Concurrency.MainActor(unsafe) public class HKYCDocumentPickerProccedToCaptureButton : UIKit.UIButton {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
@@ -736,13 +756,21 @@ public struct KycDocument : Swift.Codable, Swift.Hashable {
   }
   public init(from decoder: Swift.Decoder) throws
 }
-extension HyperKYC.HKYCCountryPickerContinueButton {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isEnabled: Swift.Bool {
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
     @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredInterfaceOrientationForPresentation: UIKit.UIInterfaceOrientation {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
 }
-extension HyperKYC.HKYCDocumentPickerProccedToCaptureButton {
+extension UIKit.UIImage {
+  public func withRoundedCorners(radius: CoreGraphics.CGFloat? = nil) -> UIKit.UIImage?
+}
+extension HyperKYC.HKYCCountryPickerContinueButton {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var isEnabled: Swift.Bool {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
