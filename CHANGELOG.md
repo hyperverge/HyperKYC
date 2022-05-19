@@ -30,3 +30,6 @@
 ### 0.1.0 *[ 22 Apr 2022 ]*
 - UI/UX revamp
 - Fix minor bugs
+
+### 0.1.1-alpha *[ 19 May 2022 ]*
+- Support Workflow Config
