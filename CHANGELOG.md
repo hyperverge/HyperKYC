@@ -33,3 +33,8 @@
 
 ### 0.1.1-alpha *[ 19 May 2022 ]*
 - Support Workflow Config
+
+### 0.2.0 *[ 26 May 2022 ]*
+- Add workflow config support
+- Add API module support
+- Fix minor bugs
