@@ -9,11 +9,12 @@ import MobileCoreServices
 import Swift
 import SystemConfiguration
 import UIKit
+import WebKit
 import _Concurrency
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject {
-  public init(appId: Swift.String, appKey: Swift.String, workFlowId: Swift.String, transactionId: Swift.String, shouldShowFullScreen: Swift.Bool = true, defaultCountryId: Swift.String? = nil)
-  public init(accessToken: Swift.String, workFlowId: Swift.String, transactionId: Swift.String, shouldShowFullScreen: Swift.Bool = true, defaultCountryId: Swift.String? = nil)
-  public func validate() -> Swift.Bool
+  public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String, shouldShowFullScreen: Swift.Bool = true)
+  public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String, shouldShowFullScreen: Swift.Bool = true)
+  public func setInputs(inputs: [Swift.String : Swift.String])
   public func isAccessTokenEmpty() -> Swift.Bool
   @objc deinit
 }
@@ -312,10 +313,6 @@ public struct CountryResult {
   public var baseUrl: Swift.String? {
     get
   }
-  public var variables: [Swift.String : Swift.String] {
-    get
-  }
-  public func loadVariables() -> [Swift.String : Swift.String]
 }
 public struct DocResult {
   public var moduleId: Swift.String {
@@ -327,19 +324,9 @@ public struct DocResult {
   public var docDataList: [HyperKYC.DocData] {
     get
   }
-  public var variables: [Swift.String : Swift.String] {
-    get
-  }
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public var getActions: [Swift.String?] {
-    get
-  }
-  public var getRequestIds: [Swift.String] {
-    get
-  }
-  public func loadVariables(dynamicVariable: [HyperKYC.WorkflowVariable]?, docData: HyperKYC.DocData) -> [Swift.String : Swift.String]
 }
 public struct DocData {
   public var side: Swift.String? {
@@ -360,31 +347,12 @@ public struct DocData {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public var isStatusSuccess: Swift.Bool {
-    get
-  }
-  public var isActionSuccess: Swift.Bool {
-    get
-  }
-  public var isMultipleOCR: Swift.Bool {
-    get
-  }
-  public var errorMessage: Swift.String? {
-    get
-  }
 }
 public struct FaceResult {
   public var moduleId: Swift.String {
     get
   }
   public var faceData: HyperKYC.FaceData {
-    get
-  }
-  public var variables: [Swift.String : Swift.String] {
-    get
-  }
-  public func loadVariables(dynamicVariable: [HyperKYC.WorkflowVariable]?) -> [Swift.String : Swift.String]
-  public var getRequestId: Swift.String {
     get
   }
 }
@@ -410,18 +378,6 @@ public struct FaceData {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public var isStatusSuccess: Swift.Bool {
-    get
-  }
-  public var isActionSuccess: Swift.Bool {
-    get
-  }
-  public var isFaceLive: Swift.Bool {
-    get
-  }
-  public var errorMessage: Swift.String? {
-    get
-  }
 }
 public struct APIResult {
   public var moduleId: Swift.String {
@@ -430,14 +386,7 @@ public struct APIResult {
   public var apiData: HyperKYC.APIData {
     get
   }
-  public var variables: [Swift.String : Swift.String] {
-    get
-  }
   public var asDictionary: [Swift.String : Any] {
-    get
-  }
-  public func loadVariables(dynamicVariable: [HyperKYC.WorkflowVariable]?) -> [Swift.String : Swift.String]
-  public var getRequestId: Swift.String {
     get
   }
 }
@@ -449,6 +398,33 @@ public struct APIData {
     get
   }
   public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+}
+public struct FormResult {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+}
+public struct WebviewResult {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var webviewData: HyperKYC.WebviewData {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+}
+public struct WebviewData {
+  public var rawData: Swift.String? {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -484,22 +460,7 @@ public struct FaceMatchData {
   public var responseResultRaw: [Swift.String : Any]? {
     get
   }
-  public var variables: [Swift.String : Swift.String] {
-    get
-  }
   public var asDictionary: [Swift.String : Any] {
-    get
-  }
-  public var isStatusSuccess: Swift.Bool {
-    get
-  }
-  public var isActionSuccess: Swift.Bool {
-    get
-  }
-  public var isFaceMatched: Swift.Bool {
-    get
-  }
-  public var errorMessage: Swift.String? {
     get
   }
 }
@@ -728,6 +689,12 @@ public enum Status {
   public var apiResultList: [HyperKYC.APIResult] {
     get
   }
+  public var formResultList: [HyperKYC.FormResult] {
+    get
+  }
+  public var webviewResultList: [HyperKYC.WebviewResult] {
+    get
+  }
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class HKYCActivityLabel : UIKit.UILabel {
@@ -819,6 +786,28 @@ public enum Status {
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
+@objc @_Concurrency.MainActor(unsafe) public class HKYCFormVCAffirmativeButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCFormVCNegativeButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
 public struct KycDocument : Swift.Codable, Swift.Hashable {
   public var id: Swift.String {
     get
@@ -847,20 +836,23 @@ public struct WorkFlowConfig : Swift.Codable {
   public var conditions: [Swift.String : HyperKYC.WorkflowCondition]? {
     get
   }
-  public var sdk_versions: HyperKYC.SDKVersions? {
+  public var properties: HyperKYC.WorkflowProperties? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct SDKVersions : Swift.Codable {
-  public var ios: HyperKYC.AcceptableRange? {
+public struct WorkflowProperties : Swift.Codable {
+  public var sdk_versions: [Swift.String : HyperKYC.SDKVersion]? {
+    get
+  }
+  public var inputsRequired: [Swift.String : Swift.String]? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct AcceptableRange : Swift.Codable {
+public struct SDKVersion : Swift.Codable {
   public var minimum: Swift.String? {
     get
   }
@@ -876,6 +868,8 @@ public struct WorkflowModule : Swift.Codable {
     case type_document
     case type_face
     case type_api
+    case type_form
+    case type_webview
     case unknown
     public init(from decoder: Swift.Decoder) throws
     public init?(rawValue: Swift.String)
@@ -896,16 +890,16 @@ public struct WorkflowModule : Swift.Codable {
   public var nextStep: Swift.String {
     get
   }
-  public var properties: HyperKYC.WorkflowProperties? {
+  public var properties: HyperKYC.WorkflowModuleProperties? {
     get
   }
-  public var variables: [HyperKYC.WorkflowVariable]? {
+  public var variables: [HyperKYC.WorkflowModuleVariable]? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct WorkflowVariable : Swift.Codable {
+public struct WorkflowModuleVariable : Swift.Codable {
   public var name: Swift.String {
     get
   }
@@ -915,7 +909,7 @@ public struct WorkflowVariable : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct WorkflowProperties : Swift.Codable {
+public struct WorkflowModuleProperties : Swift.Codable {
   public var countriesSupported: [Swift.String]? {
     get
   }
@@ -937,7 +931,7 @@ public struct WorkflowProperties : Swift.Codable {
   public var headers: [Swift.String : Swift.String]? {
     get
   }
-  public var requestParameters: [HyperKYC.RequestParam]? {
+  public var requestParameters: [HyperKYC.WorkflowModuleRequestParam]? {
     get
   }
   public var showInstruction: Swift.Bool? {
@@ -946,7 +940,7 @@ public struct WorkflowProperties : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct RequestParam : Swift.Codable {
+public struct WorkflowModuleRequestParam : Swift.Codable {
   public var name: Swift.String {
     get
   }
