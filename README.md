@@ -16,7 +16,7 @@ This SDK can be used within iOS native apps and supports all iOS versions from i
 
 1. Add HyperKyc SDK to your project and run `pod install`
 ```ruby
-pod 'HyperKyc'
+pod 'HyperKYC'
 ```
 
 **Camera Permissions**
@@ -36,41 +36,28 @@ import HyperKYC
 2. Create `HyperKycConfig` instance
 
 ```swift
-let workFlow = [ 
-            HyperKycFlow.document(
-                    config:DocFlowConfig(
-                            useForFaceMatch: true, // Optional, by default -> false
-                            countryId: "<country-id>", // Optional
-                            documentId: "<document-id>", // Optional
-                    ),
-            ),
-            HyperKycFlow.face(),
-]
-
 //  Create HyperKycConfig instance using appId-appKey (less secure)
 let hyperKycConfig = HyperKycConfig(
-                appId: "<app-id>", // get this from Hyperverge team
-                appKey: "<app-key>", // get this from Hyperverge team
-                workFlow: workFlow, 
-                transactionId: "<transaction-id>",
-                defaultCountryId: "<default-country-id>" // Optional
-)
+                    appId: "<app-id>", // get this from Hyperverge team
+                    appKey: "<app-key>", // get this from Hyperverge team
+                    workflowId: "<workflow-id>", // get this from Hyperverge dashboard
+                    transactionId: "<transaction-id>"
+                )
 
 OR
 
 //  Create HyperKycConfig instance using accessToken (more secure)
 let hyperKycConfig = HyperKycConfig(
-                accessToken: "<access-token>", // get accessToken as shown here
-                workFlow: workFlow, 
-                transactionId: "<transaction-id>",
-                defaultCountryId: "<default-country-id>" // Optional
-)
+                    accessToken: "<access-token>", // contact Hyperverge team to get more info about accessToken
+                    workflowId: "<workflow-id>", // get this from Hyperverge dashboard
+                    transactionId: "<transaction-id>"
+                )
 ```
 
 3. Create `completionHandler` instance
 
 ```swift
-let completionHandler :(_ hyperKycResult: HyperKycResult)->Void = {
+let completionHandler :(_ hyperKycResult: HyperKycResult) -> Void = {
     hyperKycResult in
         //  Handle hyperKycResult (contact Hyperverge team for more info)
 }

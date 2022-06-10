@@ -38,3 +38,8 @@
 - Add workflow config support
 - Add API module support
 - Fix minor bugs
+
+### 0.2.1 *[ 10 Jun 2022 ]*
+- Add support for form module and webview module
+- Fix minor bugs
+- Add support custom inputs/fields
