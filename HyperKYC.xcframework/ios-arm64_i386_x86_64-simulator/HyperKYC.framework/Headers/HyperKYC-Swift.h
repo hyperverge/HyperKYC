@@ -325,6 +325,34 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC27HKYCFormVCAffirmativeButton")
+@interface HKYCFormVCAffirmativeButton : UIButton
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC24HKYCFormVCNegativeButton")
+@interface HKYCFormVCNegativeButton : UIButton
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC23HKYCSelectedCountryView")
 @interface HKYCSelectedCountryView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -733,6 +761,34 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC27HKYCFormVCAffirmativeButton")
+@interface HKYCFormVCAffirmativeButton : UIButton
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC24HKYCFormVCNegativeButton")
+@interface HKYCFormVCNegativeButton : UIButton
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC23HKYCSelectedCountryView")
 @interface HKYCSelectedCountryView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -1137,6 +1193,34 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC27HKYCFormVCAffirmativeButton")
+@interface HKYCFormVCAffirmativeButton : UIButton
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC24HKYCFormVCNegativeButton")
+@interface HKYCFormVCNegativeButton : UIButton
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
