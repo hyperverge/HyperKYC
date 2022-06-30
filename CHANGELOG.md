@@ -43,3 +43,9 @@
 - Add support for form module and webview module
 - Fix minor bugs
 - Add support custom inputs/fields
+
+### 0.2.2 *[ 30 Jun 2022 ]*
+- Add APIViewModel to handle all API calls
+- Handle network errors
+- Add extra params to API calls made by the HyperKYC SDK 
+- Support alphanumeric module id 
