@@ -276,20 +276,6 @@ SWIFT_CLASS("_TtC8HyperKYC31HKYCCountryPickerContinueButton")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC33HKYCCountryPickerErrorRetryButton")
-@interface HKYCCountryPickerErrorRetryButton : UIButton
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setBorderColor:(CGColorRef _Nonnull)color;
-+ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
-+ (void)setBorderWidth:(CGFloat)width;
-+ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowOffset:(CGSize)offset;
-+ (void)setTitleFont:(UIFont * _Nonnull)font;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @interface HKYCDescriptionLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -321,6 +307,20 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC20HKYCErrorRetryButton")
+@interface HKYCErrorRetryButton : UIButton
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -712,20 +712,6 @@ SWIFT_CLASS("_TtC8HyperKYC31HKYCCountryPickerContinueButton")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC33HKYCCountryPickerErrorRetryButton")
-@interface HKYCCountryPickerErrorRetryButton : UIButton
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setBorderColor:(CGColorRef _Nonnull)color;
-+ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
-+ (void)setBorderWidth:(CGFloat)width;
-+ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowOffset:(CGSize)offset;
-+ (void)setTitleFont:(UIFont * _Nonnull)font;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @interface HKYCDescriptionLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -757,6 +743,20 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC20HKYCErrorRetryButton")
+@interface HKYCErrorRetryButton : UIButton
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
