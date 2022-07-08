@@ -18,6 +18,54 @@ import _Concurrency
   public func isAccessTokenEmpty() -> Swift.Bool
   @objc deinit
 }
+@frozen public struct AnyCodable : Swift.Codable {
+  public let value: Any
+  public init<T>(_ value: T?)
+}
+extension HyperKYC.AnyCodable : HyperKYC._AnyEncodable, HyperKYC._AnyDecodable {
+}
+extension HyperKYC.AnyCodable : Swift.Equatable {
+  public static func == (lhs: HyperKYC.AnyCodable, rhs: HyperKYC.AnyCodable) -> Swift.Bool
+}
+extension HyperKYC.AnyCodable : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyCodable : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByNilLiteral {
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByBooleanLiteral {
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByIntegerLiteral {
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByFloatLiteral {
+  public typealias FloatLiteralType = Swift.Double
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByStringLiteral {
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByArrayLiteral {
+  public typealias ArrayLiteralElement = Any
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByDictionaryLiteral {
+  public typealias Key = Swift.AnyHashable
+  public typealias Value = Any
+}
+extension HyperKYC.AnyCodable : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @objc public class HKYCBundleLocator : ObjectiveC.NSObject {
   public static func getHyperKYCResourcesBundle() -> Foundation.Bundle?
   public static func getHVResourcesBundle() -> Foundation.Bundle?
@@ -512,6 +560,75 @@ public struct KycCountry : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+@frozen public struct AnyEncodable : Swift.Encodable {
+  public let value: Any
+  public init<T>(_ value: T?)
+}
+@usableFromInline
+internal protocol _AnyEncodable {
+  var value: Any { get }
+  init<T>(_ value: T?)
+}
+extension HyperKYC.AnyEncodable : HyperKYC._AnyEncodable {
+}
+extension HyperKYC._AnyEncodable {
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension HyperKYC.AnyEncodable : Swift.Equatable {
+  public static func == (lhs: HyperKYC.AnyEncodable, rhs: HyperKYC.AnyEncodable) -> Swift.Bool
+}
+extension HyperKYC.AnyEncodable : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyEncodable : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByNilLiteral {
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByBooleanLiteral {
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByIntegerLiteral {
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByFloatLiteral {
+  public typealias FloatLiteralType = Swift.Double
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByStringLiteral {
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByStringInterpolation {
+  public typealias StringInterpolation = Swift.DefaultStringInterpolation
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByArrayLiteral {
+  public typealias ArrayLiteralElement = Any
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByDictionaryLiteral {
+  public typealias Key = Swift.AnyHashable
+  public typealias Value = Any
+}
+extension HyperKYC._AnyEncodable {
+  public init(nilLiteral _: ())
+  public init(booleanLiteral value: Swift.Bool)
+  public init(integerLiteral value: Swift.Int)
+  public init(floatLiteral value: Swift.Double)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(arrayLiteral elements: Any...)
+  public init(dictionaryLiteral elements: (Swift.AnyHashable, Any)...)
+}
+extension HyperKYC.AnyEncodable : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct FaceMatchApiDetail : Swift.Codable {
   public var metadata: HyperKYC.Metadata {
     get
@@ -696,6 +813,39 @@ public enum Status {
     get
   }
   @objc deinit
+}
+@frozen public struct AnyDecodable : Swift.Decodable {
+  public let value: Any
+  public init<T>(_ value: T?)
+}
+@usableFromInline
+internal protocol _AnyDecodable {
+  var value: Any { get }
+  init<T>(_ value: T?)
+}
+extension HyperKYC.AnyDecodable : HyperKYC._AnyDecodable {
+}
+extension HyperKYC._AnyDecodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+extension HyperKYC.AnyDecodable : Swift.Equatable {
+  public static func == (lhs: HyperKYC.AnyDecodable, rhs: HyperKYC.AnyDecodable) -> Swift.Bool
+}
+extension HyperKYC.AnyDecodable : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyDecodable : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyDecodable : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 @objc @_Concurrency.MainActor(unsafe) public class HKYCActivityLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -896,6 +1046,9 @@ public struct WorkflowModule : Swift.Codable {
   public var variables: [HyperKYC.WorkflowModuleVariable]? {
     get
   }
+  public var previousStep: Swift.String? {
+    get
+  }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -934,6 +1087,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var requestParameters: [HyperKYC.WorkflowModuleRequestParam]? {
     get
   }
+  public var requestBody: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
   public var showInstruction: Swift.Bool? {
     get
   }
@@ -947,7 +1103,7 @@ public struct WorkflowModuleRequestParam : Swift.Codable {
   public var value: Swift.String {
     get
   }
-  public var type: Swift.String {
+  public var type: Swift.String? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
