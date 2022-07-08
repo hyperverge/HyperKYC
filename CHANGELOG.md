@@ -49,3 +49,9 @@
 - Handle network errors
 - Add extra params to API calls made by the HyperKYC SDK 
 - Support alphanumeric module id 
+
+### 0.2.3 *[ 08 Jul 2022 ]*
+- Add support for request params for doc and face modules
+- Handle intra module back navigation
+- Handle long strings rule parse logic
+- Fix docResultList bug
