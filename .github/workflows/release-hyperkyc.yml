@@ -1,0 +1,52 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Release-HyperKyc
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "main" ]
+  # pull_request:
+    # branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "deploy"
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: macOS-latest
+    
+    # Environment to be used for pushing HyperSnapSDK to cocoapods
+    environment: production
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a set of commands to create tag (x.y.z) and push it to origin
+      - name: Create a tag for version x.y.z
+        env:
+          HYPERKYC_VERSION: ${{ secrets.HYPERKYC_VERSION }}
+        run: |
+          git tag "$HYPERKYC_VERSION"
+          git push origin --tags
+          
+      # Runs a set of commands to push HyperKyc (HYPERKYC_VERSION) to cocoapods
+#       - name: Push HyperSnapSDK (HYPERKYC_VERSION) to cocoapods
+#         env: 
+#           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+#         run: |
+#           pod spec lint HyperKYC.podspec --allow-warnings --verbose
+#           pod trunk push HyperKYC.podspec --allow-warnings
+      
+      # Runs a command to let you know that HyperKyc (HYPERKYC_VERSION) has been released
+      - name: Log HyperKyc (HYPERKYC_VERSION) release
+        env: 
+          HYPERKYC_VERSION: ${{ secrets.HYPERKYC_VERSION }}
+        run: |
+          echo HyperKyc "$HYPERKYC_VERSION" has been pushed to cocoapods
