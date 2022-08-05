@@ -20,7 +20,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: macOS-latest
     
-    # Environment to be used for pushing HyperSnapSDK to cocoapods
+    # Environment to be used for pushing HyperKYC to cocoapods
     environment: production
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -37,12 +37,12 @@ jobs:
           git push origin --tags
           
       # Runs a set of commands to push HyperKyc (HYPERKYC_VERSION) to cocoapods
-#       - name: Push HyperSnapSDK (HYPERKYC_VERSION) to cocoapods
-#         env: 
-#           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
-#         run: |
-#           pod spec lint HyperKYC.podspec --allow-warnings --verbose
-#           pod trunk push HyperKYC.podspec --allow-warnings
+      - name: Push HyperSnapSDK (HYPERKYC_VERSION) to cocoapods
+        env: 
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: |
+          pod spec lint HyperKYC.podspec --allow-warnings --verbose
+          pod trunk push HyperKYC.podspec --allow-warnings
       
       # Runs a command to let you know that HyperKyc (HYPERKYC_VERSION) has been released
       - name: Log HyperKyc (HYPERKYC_VERSION) release
