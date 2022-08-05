@@ -12,9 +12,10 @@ import UIKit
 import WebKit
 import _Concurrency
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject {
-  public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String, shouldShowFullScreen: Swift.Bool = true)
-  public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String, shouldShowFullScreen: Swift.Bool = true)
+  public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
+  public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   public func setInputs(inputs: [Swift.String : Swift.String])
+  public func setDefaultLangCode(language: Swift.String)
   public func isAccessTokenEmpty() -> Swift.Bool
   @objc deinit
 }
@@ -767,30 +768,26 @@ public struct FaceQualityChecks : Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
-public enum Status {
-  case success
-  case failure
-  case cancelled
-  public static func == (a: HyperKYC.Status, b: HyperKYC.Status) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+@objc public class HyperKycResult : ObjectiveC.NSObject {
+  public var status: Swift.String! {
     get
   }
-}
-@objc @_inheritsConvenienceInitializers public class HyperKycResult : ObjectiveC.NSObject {
-  public var status: HyperKYC.Status? {
+  public var transactionId: Swift.String! {
     get
   }
-  public var hyperKYCData: HyperKYC.HyperKycData? {
+  public var details: [Swift.String : Swift.String?] {
     get
   }
-  public var reason: Swift.String? {
+  public var errorCode: Swift.Int? {
     get
   }
-  public var applicationStatus: Swift.String? {
+  public var errorMessage: Swift.String? {
     get
   }
-  @objc override dynamic public init()
+  public var latestModule: Swift.String? {
+    get
+  }
+  public init(status: Swift.String, transactionId: Swift.String, details: [Swift.String : Swift.String?], errorCode: Swift.Int?, errorMessage: Swift.String?, latestModule: Swift.String?)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HyperKycData : ObjectiveC.NSObject {
@@ -980,24 +977,43 @@ public struct KycDocument : Swift.Codable, Swift.Hashable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct WorkFlowConfig : Swift.Codable {
+  public var properties: HyperKYC.WorkflowProperties? {
+    get
+  }
   public var modules: [HyperKYC.WorkflowModule] {
     get
   }
   public var conditions: [Swift.String : HyperKYC.WorkflowCondition]? {
     get
   }
-  public var properties: HyperKYC.WorkflowProperties? {
+  public var sdkResponse: [Swift.String : Swift.String]? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct WorkflowProperties : Swift.Codable {
-  public var sdk_versions: [Swift.String : HyperKYC.SDKVersion]? {
+  public var sdkVersions: [Swift.String : HyperKYC.SDKVersion]? {
     get
   }
   public var inputsRequired: [Swift.String : Swift.String]? {
     get
+  }
+  public var textConfigSource: [Swift.String : Swift.String]? {
+    get
+  }
+  public var uiConfigSource: Swift.String? {
+    get
+  }
+  public enum PlatformKey : Swift.String, Swift.Codable {
+    case sdkVersionMobileKey
+    case unknown
+    public init(from decoder: Swift.Decoder) throws
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
@@ -1013,7 +1029,7 @@ public struct SDKVersion : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct WorkflowModule : Swift.Codable {
-  public enum ConfigType : Swift.String, Swift.Codable {
+  public enum WorkflowModuleType : Swift.String, Swift.Codable {
     case type_country
     case type_document
     case type_face
@@ -1031,7 +1047,7 @@ public struct WorkflowModule : Swift.Codable {
   public var id: Swift.String {
     get
   }
-  public var type: HyperKYC.WorkflowModule.ConfigType {
+  public var type: HyperKYC.WorkflowModule.WorkflowModuleType {
     get
   }
   public var subType: Swift.String {
@@ -1040,23 +1056,13 @@ public struct WorkflowModule : Swift.Codable {
   public var nextStep: Swift.String {
     get
   }
+  public var previousStep: Swift.String? {
+    get
+  }
   public var properties: HyperKYC.WorkflowModuleProperties? {
     get
   }
   public var variables: [HyperKYC.WorkflowModuleVariable]? {
-    get
-  }
-  public var previousStep: Swift.String? {
-    get
-  }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct WorkflowModuleVariable : Swift.Codable {
-  public var name: Swift.String {
-    get
-  }
-  public var path: Swift.String {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
@@ -1075,6 +1081,24 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var documentsSupported: [Swift.String : [Swift.String]]? {
     get
   }
+  public var showReview: Swift.Bool? {
+    get
+  }
+  public var autoCapture: Swift.Bool? {
+    get
+  }
+  public var autoCaptureDuration: Swift.Int? {
+    get
+  }
+  public var videoRecording: Swift.Bool? {
+    get
+  }
+  public var videoRecordingDuration: Swift.Int? {
+    get
+  }
+  public var showInstruction: Swift.Bool? {
+    get
+  }
   public var url: Swift.String? {
     get
   }
@@ -1090,9 +1114,6 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var requestBody: [Swift.String : HyperKYC.AnyCodable]? {
     get
   }
-  public var showInstruction: Swift.Bool? {
-    get
-  }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1104,6 +1125,16 @@ public struct WorkflowModuleRequestParam : Swift.Codable {
     get
   }
   public var type: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct WorkflowModuleVariable : Swift.Codable {
+  public var name: Swift.String {
+    get
+  }
+  public var path: Swift.String {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
@@ -1142,8 +1173,30 @@ extension HyperKYC.HKYCCountryPickerContinueButton {
     @_Concurrency.MainActor(unsafe) @objc set
   }
 }
-extension HyperKYC.Status : Swift.Equatable {}
-extension HyperKYC.Status : Swift.Hashable {}
-extension HyperKYC.WorkflowModule.ConfigType : Swift.Equatable {}
-extension HyperKYC.WorkflowModule.ConfigType : Swift.Hashable {}
-extension HyperKYC.WorkflowModule.ConfigType : Swift.RawRepresentable {}
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.String)
+}
+public enum HyperKycStatus : Swift.String {
+  case autoApproved
+  case autoDeclined
+  case manuallyApproved
+  case manuallyDeclined
+  case ongoing
+  case needsReview
+  case userCancelled
+  case error
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Equatable {}
+extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Hashable {}
+extension HyperKYC.WorkflowProperties.PlatformKey : Swift.RawRepresentable {}
+extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.Equatable {}
+extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.Hashable {}
+extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.RawRepresentable {}
+extension HyperKYC.HyperKycStatus : Swift.Equatable {}
+extension HyperKYC.HyperKycStatus : Swift.Hashable {}
+extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
