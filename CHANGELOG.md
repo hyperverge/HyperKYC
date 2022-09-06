@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+### 0.3.2 *[ 6 Sept 2022 ]*
+- Added support conditionalVariables
+- Added `userDetails` as a part of finishTransactionAPI
+- Added support for `sidesConfig` and `documentsOverride`
+- Upgraded HyperSnapSDK version (4.1.7) to support bardcode processing
+
 ### 0.3.1 *[ 18 Aug 2022 ]*
 - Send extra fields in request headers
 - Fix Form VC subtype-text issue
