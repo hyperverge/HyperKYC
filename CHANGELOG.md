@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 0.3.4 *[30 Sept 2022]*
+- Enable document upload 
+- Enable to process alertTextBox value 
+
 ### 0.3.3 *[20 Sep 2022 ]*
 - Support remote config
 - Enable white-labelling
