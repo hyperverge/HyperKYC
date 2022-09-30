@@ -1117,6 +1117,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var videoRecordingDuration: Swift.Int? {
     get
   }
+  public var alertTextBox: Swift.Bool? {
+    get
+  }
   public var showInstruction: Swift.Bool? {
     get
   }
