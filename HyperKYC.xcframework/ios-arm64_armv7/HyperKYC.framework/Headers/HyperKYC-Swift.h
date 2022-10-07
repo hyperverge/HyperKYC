@@ -406,6 +406,12 @@ SWIFT_CLASS("_TtC8HyperKYC12HyperKycData")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC13HyperKycError")
+@interface HyperKycError : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @interface HyperKycResult : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -835,6 +841,12 @@ SWIFT_CLASS("_TtC8HyperKYC12HyperKycData")
 @interface HyperKycData : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC13HyperKycError")
+@interface HyperKycError : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
