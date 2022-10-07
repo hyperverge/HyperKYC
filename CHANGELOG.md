@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 0.3.5 *[07 Oct 2022]*
+- Add standard error codes and error messages
+- Fix `score` field data type issue
+
 ### 0.3.4 *[30 Sept 2022]*
 - Enable document upload 
 - Enable to process alertTextBox value 

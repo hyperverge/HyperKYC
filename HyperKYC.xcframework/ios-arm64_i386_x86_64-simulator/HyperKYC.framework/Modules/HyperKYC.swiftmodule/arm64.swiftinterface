@@ -16,7 +16,6 @@ import _Concurrency
   public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   public func setInputs(inputs: [Swift.String : Swift.String])
   public func setDefaultLangCode(language: Swift.String)
-  public func isAccessTokenEmpty() -> Swift.Bool
   @objc deinit
 }
 @frozen public struct AnyCodable : Swift.Codable {
@@ -210,7 +209,7 @@ public struct Address : Swift.Codable {
   public var confidence: Swift.String? {
     get
   }
-  public var score: Swift.String? {
+  public var score: HyperKYC.AnyCodable? {
     get
   }
   public var houseNumber: Swift.String? {
@@ -345,6 +344,34 @@ public struct Fieldvalue : Swift.Codable {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class HyperKycError : ObjectiveC.NSObject {
+  public static let HS_INTERNAL_SDK_ERROR: Swift.Int
+  public static let HS_OPERATION_CANCELLED_BY_USER_ERROR: Swift.Int
+  public static let HS_PERMISSIONS_NOT_GRANTED_ERROR: Swift.Int
+  public static let HS_HARDWARE_ERROR: Swift.Int
+  public static let HS_INPUT_ERROR: Swift.Int
+  public static let HS_QR_PARSER_ERROR: Swift.Int
+  public static let HS_LOCATION_PERMISSION_NOT_AVAILABLE_ERROR: Swift.Int
+  public static let HS_INITIALIZATION_ERROR: Swift.Int
+  public static let HS_NETWORK_ERROR: Swift.Int
+  public static let HS_INTERNAL_SERVER_ERROR: Swift.Int
+  public static let HS_SSL_CONNECT_ERROR: Swift.Int
+  public static let HS_ACTIVE_SESSION_ERROR: Swift.Int
+  public static let HS_TRANSACTION_ID_EMPTY: Swift.Int
+  public static let HS_SIGNATURE_FAILED_ERROR: Swift.Int
+  public static let HS_FACE_DETECTION_ERROR: Swift.Int
+  public static let HS_BLURRY_FACE_DETECTION_ERROR: Swift.Int
+  public static let HS_INSTRUCTION_ERROR: Swift.Int
+  public static let HS_QR_SCANNER_ERROR: Swift.Int
+  public static let HS_GPS_ACCESS_DENIED: Swift.Int
+  public static let SDK_CONFIG_ERROR: Swift.Int
+  public static let SDK_INPUT_ERROR: Swift.Int
+  public static let USER_CANCELLED_ERROR: Swift.Int
+  public static let WORKFLOW_CONFIG_ERROR: Swift.Int
+  public static let WORKFLOW_ERROR: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
 }
 public struct CountryResult {
   public var moduleId: Swift.String {
