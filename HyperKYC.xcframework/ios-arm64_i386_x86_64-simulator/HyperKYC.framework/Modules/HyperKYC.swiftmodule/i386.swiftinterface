@@ -16,6 +16,7 @@ import _Concurrency
   public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   public func setInputs(inputs: [Swift.String : Swift.String])
   public func setDefaultLangCode(language: Swift.String)
+  public func addMetadata(metadata: [Swift.String : Swift.String])
   @objc deinit
 }
 @frozen public struct AnyCodable : Swift.Codable {
@@ -507,6 +508,22 @@ public struct WebviewData {
     get
   }
 }
+public struct BarcodeResult : Swift.Codable {
+  public var moduleId: Swift.String? {
+    get
+  }
+  public var barcodeData: Swift.String? {
+    get
+  }
+  public var responseBodyRaw: [Swift.String : Swift.String]? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 @available(*, deprecated, message: "Use generic APIResult")
 public struct FaceMatchDataResult {
   public var moduleId: Swift.String {
@@ -539,21 +556,6 @@ public struct FaceMatchData {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-}
-public enum HyperKycFlow {
-  case document(config: HyperKYC.DocFlowConfig? = nil)
-  case face(config: HyperKYC.FaceFlowConfig? = nil)
-  case api(config: HyperKYC.ApiFlowConfig? = nil)
-}
-public class DocFlowConfig {
-  public init(useForFaceMatch: Swift.Bool, countryId: Swift.String? = nil, documentId: Swift.String? = nil)
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class FaceFlowConfig {
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers public class ApiFlowConfig {
-  @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCBrandingLayout : UIKit.UIStackView {
   @objc @_Concurrency.MainActor(unsafe) public func showBranding(show: Swift.Bool)
@@ -836,6 +838,9 @@ public struct FaceQualityChecks : Swift.Codable {
   public var webviewResultList: [HyperKYC.WebviewResult] {
     get
   }
+  public var barcodeResultList: [HyperKYC.BarcodeResult] {
+    get
+  }
   @objc deinit
 }
 @frozen public struct AnyDecodable : Swift.Decodable {
@@ -1007,7 +1012,10 @@ public struct KycDocument : Swift.Codable, Swift.Hashable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct SidesConfig : Swift.Codable, Swift.Hashable {
-  public var readBarcode: [Swift.String] {
+  public var readBarcode: [Swift.String]? {
+    get
+  }
+  public var disableOCR: [Swift.String]? {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
@@ -1081,6 +1089,7 @@ public struct WorkflowModule : Swift.Codable {
     case type_api
     case type_form
     case type_webview
+    case type_barcode
     case unknown
     public init(from decoder: Swift.Decoder) throws
     public init?(rawValue: Swift.String)
@@ -1132,6 +1141,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var showReview: Swift.Bool? {
     get
   }
+  public var disableOCR: Swift.Bool? {
+    get
+  }
   public var autoCapture: Swift.Bool? {
     get
   }
@@ -1145,6 +1157,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var alertTextBox: Swift.Bool? {
+    get
+  }
+  public var disableLiveness: Swift.Bool? {
     get
   }
   public var showInstruction: Swift.Bool? {
@@ -1215,7 +1230,10 @@ public struct WorkflowCondition : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct DocumentsOverride : Swift.Codable {
-  public var sides: [Swift.String] {
+  public var sidesConfig: HyperKYC.SidesConfig? {
+    get
+  }
+  public var sides: [Swift.String]? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws

@@ -86,11 +86,11 @@
 		</data>
 		<key>HVResources.bundle/HyperSnapPreview.storyboardc/qVG-fv-wg9-view-Fzv-RR-Zik.nib</key>
 		<data>
-		wTFdN+GsphgrSMFFUlJGcVFViT0=
+		k7r4gVCZhJMt1az+MC81WzmfKZ8=
 		</data>
 		<key>HVResources.bundle/HyperSnapPreview.storyboardc/rZu-Sr-XNX-view-V7e-qd-0oS.nib</key>
 		<data>
-		0gkNVJiXXIwYwdXlYGAu2j1EUpk=
+		/CgASiNaGfoyZZQj5oxQiLl104w=
 		</data>
 		<key>HVResources.bundle/HyperSnapPreview.storyboardc/x6s-8e-c2z-view-fsm-ON-Vee.nib</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>HVResources.bundle/Info.plist</key>
 		<data>
-		gcl+NITTx7MOVA1HwiVSYMXmEco=
+		QFKRAFNH2dfzryvV7DgNNnhZ0iw=
 		</data>
 		<key>HVResources.bundle/Mulish-Bold.ttf</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>HVResources.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		m3V5Hx2dUkJL3Wte7HOPWq1E2rs=
+		ZuZJJxIQTeZvpGtvK2Z0E7Ybnq0=
 		</data>
 		<key>HVResources.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -126,11 +126,11 @@
 		</data>
 		<key>HVResources.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		Co8UFCA7KeavCtXaIB7HsaV/Ufg=
+		ePVrhUBgDZscgJk1In93VTKUhEg=
 		</data>
 		<key>HVResources.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		zqOKu3BdinB2AGnjwM0asB4/IGs=
+		8Qm25RpOC2f8QbZXBeX4o+8TM64=
 		</data>
 		<key>HVResources.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bbijYrpx9lrOQWk6OsBv7bhwXaE=
+		QhB3jnhQCy9sNUP5PalYz+4dYSM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -407,22 +407,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wTFdN+GsphgrSMFFUlJGcVFViT0=
+			k7r4gVCZhJMt1az+MC81WzmfKZ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			EKBTPWMwe1ly7oewggJvjQokZfj+Pnm9w+3sQoLlCAw=
+			hUpLSeazYaNCNFmmK7pc5KTpQ46P02g2e9ZKdZTnzWQ=
 			</data>
 		</dict>
 		<key>HVResources.bundle/HyperSnapPreview.storyboardc/rZu-Sr-XNX-view-V7e-qd-0oS.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0gkNVJiXXIwYwdXlYGAu2j1EUpk=
+			/CgASiNaGfoyZZQj5oxQiLl104w=
 			</data>
 			<key>hash2</key>
 			<data>
-			TjSE7tfzi9ihjbCnECdQdAYAfrgek/KudwdVobgJBNs=
+			NnomTYjOGpqKDxYkLQpWWZgETjYyDt3i0VwuFJkgHTQ=
 			</data>
 		</dict>
 		<key>HVResources.bundle/HyperSnapPreview.storyboardc/x6s-8e-c2z-view-fsm-ON-Vee.nib</key>
@@ -451,11 +451,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gcl+NITTx7MOVA1HwiVSYMXmEco=
+			QFKRAFNH2dfzryvV7DgNNnhZ0iw=
 			</data>
 			<key>hash2</key>
 			<data>
-			SuvVq0sEGbvJZPUwHdXkx2IRyRy7F1eSwvEOw6FGEPw=
+			LpB2x2DIs2/TPV4onprMNv0xUhLmW0ogNO7WDrqGtXo=
 			</data>
 		</dict>
 		<key>HVResources.bundle/Mulish-Bold.ttf</key>
@@ -495,11 +495,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			m3V5Hx2dUkJL3Wte7HOPWq1E2rs=
+			ZuZJJxIQTeZvpGtvK2Z0E7Ybnq0=
 			</data>
 			<key>hash2</key>
 			<data>
-			zwFSr4s9ISwde0/xughvJf4eex2Dji9zoF+Bx3sHrxc=
+			90IHeRE7fzpU4t7AKE4+CgwwNXyZnl8jjNaUcEFXPgc=
 			</data>
 		</dict>
 		<key>HVResources.bundle/_CodeSignature/CodeRequirements</key>
@@ -517,22 +517,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Co8UFCA7KeavCtXaIB7HsaV/Ufg=
+			ePVrhUBgDZscgJk1In93VTKUhEg=
 			</data>
 			<key>hash2</key>
 			<data>
-			gPhLNIP9NwolI6lf3O5viuTg5WsR6rYQWMIPByqo3yY=
+			m+3w311KS4/CKCtoF8v+O4TnjU/dn3Y1VLrnU2jvfnU=
 			</data>
 		</dict>
 		<key>HVResources.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zqOKu3BdinB2AGnjwM0asB4/IGs=
+			8Qm25RpOC2f8QbZXBeX4o+8TM64=
 			</data>
 			<key>hash2</key>
 			<data>
-			xkN+SLI4h87ZRZ0nbzDcUrJ0kZm4rQoT+QsCmov7xtM=
+			J8GJ9ktbIBB+qHN0WrZGf6auyKUCU9GSY7BFSDPH6gc=
 			</data>
 		</dict>
 		<key>HVResources.bundle/_CodeSignature/CodeSignature</key>
