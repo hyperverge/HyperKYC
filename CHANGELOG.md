@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 0.3.6 *[21 Oct 2022]*
+- Enable qr as a part of workflow config
+- Enable disabling liveness and OCR API calls
+
 ### 0.3.5 *[07 Oct 2022]*
 - Add standard error codes and error messages
 - Fix `score` field data type issue
