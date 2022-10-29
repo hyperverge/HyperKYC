@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 0.3.7 *[29 Oct 2022]*
+- Added ui config with alignment and font customisations
+
+
 ### 0.3.6 *[21 Oct 2022]*
 - Enable qr as a part of workflow config
 - Enable disabling liveness and OCR API calls
