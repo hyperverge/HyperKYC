@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 0.3.8 *[7th Nov 2022]*
+- Added setter to return HyperKYCData raw response
+- Added error codes standardisation 
+
 ### 0.3.7 *[29 Oct 2022]*
 - Added ui config with alignment and font customisations
 

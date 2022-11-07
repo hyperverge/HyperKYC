@@ -68,6 +68,7 @@ extension HyperKYC.AnyCodable : Swift.Hashable {
   }
 }
 @_inheritsConvenienceInitializers @objc public class HKYCBundleLocator : ObjectiveC.NSObject {
+  public static func getParentApplicationBundleId() -> Swift.String?
   public static func getHyperKYCResourcesBundle() -> Foundation.Bundle?
   public static func getHVResourcesBundle() -> Foundation.Bundle?
   @objc override dynamic public init()
@@ -346,35 +347,25 @@ public struct Fieldvalue : Swift.Codable {
   }
   public func encode(to encoder: Swift.Encoder) throws
 }
-@_inheritsConvenienceInitializers @objc public class HyperKycError : ObjectiveC.NSObject {
-  public static let HS_INTERNAL_SDK_ERROR: Swift.Int
-  public static let HS_OPERATION_CANCELLED_BY_USER_ERROR: Swift.Int
-  public static let HS_PERMISSIONS_NOT_GRANTED_ERROR: Swift.Int
-  public static let HS_HARDWARE_ERROR: Swift.Int
-  public static let HS_INPUT_ERROR: Swift.Int
-  public static let HS_QR_PARSER_ERROR: Swift.Int
-  public static let HS_LOCATION_PERMISSION_NOT_AVAILABLE_ERROR: Swift.Int
-  public static let HS_INITIALIZATION_ERROR: Swift.Int
-  public static let HS_NETWORK_ERROR: Swift.Int
-  public static let HS_INTERNAL_SERVER_ERROR: Swift.Int
-  public static let HS_SSL_CONNECT_ERROR: Swift.Int
-  public static let HS_ACTIVE_SESSION_ERROR: Swift.Int
-  public static let HS_TRANSACTION_ID_EMPTY: Swift.Int
-  public static let HS_SIGNATURE_FAILED_ERROR: Swift.Int
-  public static let HS_FACE_DETECTION_ERROR: Swift.Int
-  public static let HS_BLURRY_FACE_DETECTION_ERROR: Swift.Int
-  public static let HS_INSTRUCTION_ERROR: Swift.Int
-  public static let HS_QR_SCANNER_ERROR: Swift.Int
-  public static let HS_GPS_ACCESS_DENIED: Swift.Int
+@_hasMissingDesignatedInitializers @objc public class HyperKycError : ObjectiveC.NSObject {
   public static let SDK_CONFIG_ERROR: Swift.Int
   public static let SDK_INPUT_ERROR: Swift.Int
   public static let USER_CANCELLED_ERROR: Swift.Int
-  public static let WORKFLOW_CONFIG_ERROR: Swift.Int
   public static let WORKFLOW_ERROR: Swift.Int
-  @objc override dynamic public init()
+  public static let SDK_VERSION_ERROR: Swift.Int
+  public static let PERMISSIONS_ERROR: Swift.Int
+  public static let HARDWARE_ERROR: Swift.Int
+  public static let GPS_ACCESS_DENIED: Swift.Int
+  public static let QR_SCANNER_ERROR: Swift.Int
+  public static let SSL_CONNECT_ERROR: Swift.Int
+  public static let NETWORK_ERROR: Swift.Int
+  public static let SIGNATURE_FAILED_ERROR: Swift.Int
+  public static let FACE_NOT_DETECTED: Swift.Int
+  public var errorMessage: Swift.String?
+  public var errorCode: Swift.Int?
   @objc deinit
 }
-public struct CountryResult {
+public struct CountryResult : Swift.Codable {
   public var moduleId: Swift.String {
     get
   }
@@ -390,8 +381,10 @@ public struct CountryResult {
   public var baseUrl: Swift.String? {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct DocResult {
+public struct DocResult : Swift.Codable {
   public var moduleId: Swift.String {
     get
   }
@@ -404,8 +397,10 @@ public struct DocResult {
   public var asDictionary: [Swift.String : Any] {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct DocData {
+public struct DocData : Swift.Codable {
   public var side: Swift.String? {
     get
   }
@@ -424,16 +419,20 @@ public struct DocData {
   public var asDictionary: [Swift.String : Any] {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct FaceResult {
+public struct FaceResult : Swift.Codable {
   public var moduleId: Swift.String {
     get
   }
   public var faceData: HyperKYC.FaceData {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct FaceData {
+public struct FaceData : Swift.Codable {
   public var croppedFaceImagePath: Swift.String? {
     get
   }
@@ -455,8 +454,10 @@ public struct FaceData {
   public var asDictionary: [Swift.String : Any] {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct APIResult {
+public struct APIResult : Swift.Codable {
   public var moduleId: Swift.String {
     get
   }
@@ -466,12 +467,14 @@ public struct APIResult {
   public var asDictionary: [Swift.String : Any] {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct APIData {
+public struct APIData : Swift.Codable {
   public var responseCode: Swift.Int? {
     get
   }
-  public var responseBodyRaw: [Swift.String : Any]? {
+  public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
     get
   }
   public var responseHeaders: [Swift.String : Swift.String]? {
@@ -480,16 +483,20 @@ public struct APIData {
   public var asDictionary: [Swift.String : Any] {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct FormResult {
+public struct FormResult : Swift.Codable {
   public var moduleId: Swift.String {
     get
   }
   public var asDictionary: [Swift.String : Any] {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct WebviewResult {
+public struct WebviewResult : Swift.Codable {
   public var moduleId: Swift.String {
     get
   }
@@ -499,14 +506,18 @@ public struct WebviewResult {
   public var asDictionary: [Swift.String : Any] {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
-public struct WebviewData {
+public struct WebviewData : Swift.Codable {
   public var rawData: Swift.String? {
     get
   }
   public var asDictionary: [Swift.String : Any] {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 public struct BarcodeResult : Swift.Codable {
   public var moduleId: Swift.String? {
@@ -515,7 +526,7 @@ public struct BarcodeResult : Swift.Codable {
   public var barcodeData: Swift.String? {
     get
   }
-  public var responseBodyRaw: [Swift.String : Swift.String]? {
+  public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -817,9 +828,10 @@ public struct FaceQualityChecks : Swift.Codable {
     get
   }
   public init(status: Swift.String, transactionId: Swift.String, details: [Swift.String : Swift.String?], errorCode: Swift.Int?, errorMessage: Swift.String?, latestModule: Swift.String?)
+  open func getRawDataJsonString() -> Swift.String?
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HyperKycData : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HyperKycData : ObjectiveC.NSObject, Swift.Codable {
   public var countryResult: HyperKYC.CountryResult? {
     get
   }
@@ -842,6 +854,8 @@ public struct FaceQualityChecks : Swift.Codable {
     get
   }
   @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @frozen public struct AnyDecodable : Swift.Decodable {
   public let value: Any

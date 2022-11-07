@@ -23,5 +23,5 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = 'HyperKYC.xcframework'
     s.ios.resource = 'HyperKYCResources.bundle'
     s.static_framework = true
-    s.dependency 'HyperSnapSDK'
+    s.dependency 'HyperSnapSDK', '~> 4.2.0'
 end
