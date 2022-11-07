@@ -1,17 +1,18 @@
 ## CHANGELOG
 
-### 0.3.8 *[7th Nov 2022]*
-- Added setter to return HyperKYCData raw response
-- Added error codes standardisation 
+### 0.3.8 *[07 Nov 2022]*
+- Add setter to return HyperKYCData raw response (internal usage only)
+- Update standardised error codes
 
 ### 0.3.7 *[29 Oct 2022]*
-- Added ui config with alignment and font customisations
-
+- Add ui config with alignment and font customisations
 
 ### 0.3.6 *[21 Oct 2022]*
 - Enable qr as a part of workflow config
 - Enable disabling liveness and OCR API calls
 - Update text configs to use default folders for default files
+- Send debugInfo with finishTransaction API 
+- Update api headers for the dashboard
 
 ### 0.3.5 *[07 Oct 2022]*
 - Add standard error codes and error messages
