@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
                      }
     s.platform     = :ios
     s.swift_version = '5.4'
-    s.ios.deployment_target  = '9.0'
+    s.ios.deployment_target  = '11.0'
     
     s.source       = {
                         :git => "https://github.com/hyperverge/HyperKYC.git",
