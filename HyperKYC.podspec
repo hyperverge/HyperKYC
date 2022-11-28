@@ -12,16 +12,14 @@ Pod::Spec.new do |s|
                         :type => 'Custom',
                         :file => 'LICENSE'
                      }
-    s.platform     = :ios
-    s.swift_version = '5.4'
-    s.ios.deployment_target  = '9.0'
-    
-    s.source       = {
-                        :git => "https://github.com/hyperverge/HyperKYC.git",
-                        :tag => "#{s.version}"
-                     }
-    s.vendored_frameworks = 'HyperKYC.xcframework'
-    s.ios.resource = 'HyperKYCResources.bundle'
-    s.static_framework = true
-    s.dependency 'HyperSnapSDK', '~> 4.3.0'
+   s.ios.deployment_target = '11.0'
+   s.swift_versions = ["5.4"]
+   s.static_framework = true
+  
+   s.source_files = 'HyperKYC/Classes/**/*'
+   s.resource_bundles = {
+    'HyperKYCResources' => ['HyperKYC/Assets/*']
+  }
+  
+   s.dependency 'HyperSnapSDK', '~> 4.3.0'
 end
