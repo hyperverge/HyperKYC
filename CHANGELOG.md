@@ -1,10 +1,14 @@
 ## CHANGELOG
 
+### 0.5.0 *[02 Dec 2022]*
+- Add support for document detection and auto capture through workflows
+- Add support to update `allowedStatusCodes` through workflows
+
 ### 0.4.0 *[28 Nov 2022]*
-- Migrated to new project struture, min iOS Deployment - 11.0
+- Migrate to new project struture, min iOS Deployment - 11.0
 - Wait for finishTransaction API to finish execution
-- Added qr skip status part of workflow config
-- Merged missing inputs to one single error message
+- Add qr skip status part of workflow config
+- Merge missing inputs to one single error message
 - Issue with response validator from workflow config
 
 ### 0.3.8 *[07 Nov 2022]*
