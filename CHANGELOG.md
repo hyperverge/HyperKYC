@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### 0.3.9 *[13 Dec 2022]*
+- Remove `requestIds` check for finish review call
+- Fix `NIL_RESPONSE_VALUE` bug
+
 ### 0.3.8 *[07 Nov 2022]*
 - Add setter to return HyperKYCData raw response (internal usage only)
 - Update standardised error codes
