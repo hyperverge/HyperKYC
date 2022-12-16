@@ -5,6 +5,8 @@ import Dispatch
 import Foundation
 @_exported import HyperKYC
 import HyperSnapSDK
+import MaterialComponents
+import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MobileCoreServices
 import Swift
 import SystemConfiguration
@@ -241,6 +243,7 @@ public enum HyperKycStatus : Swift.String {
   case manuallyApproved
   case manuallyDeclined
   case ongoing
+  case started
   case needsReview
   case userCancelled
   case error
@@ -449,6 +452,39 @@ public struct RuleChecks : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var plainView: UIKit.UIView {
+    @objc get
+  }
+}
+extension UIKit.UIBarButtonItem {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var plainView: UIKit.UIView {
+    @objc get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class DropDownCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var optionLabel: UIKit.UILabel!
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension HyperKYC.DropDownCell {
+  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func setHighlighted(_ highlighted: Swift.Bool, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCLabel : UIKit.UILabel {
+  @objc deinit
+}
 extension UIKit.UINavigationController {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
     @_Concurrency.MainActor(unsafe) @objc get
@@ -463,7 +499,7 @@ extension UIKit.UINavigationController {
 extension UIKit.UIImage {
   public func withRoundedCorners(radius: CoreGraphics.CGFloat? = nil) -> UIKit.UIImage?
 }
-extension HyperKYC.HKYCCountryPickerContinueButton {
+extension HyperKYC.HKYCPrimaryButton {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var isEnabled: Swift.Bool {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
@@ -471,6 +507,9 @@ extension HyperKYC.HKYCCountryPickerContinueButton {
 }
 extension UIKit.UIColor {
   convenience public init(hex: Swift.String)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func addTapGestureRecognizer(action: (() -> Swift.Void)?)
 }
 public struct FaceCaptureApiDetail : Swift.Codable {
   public var metadata: HyperKYC.Metadata {
@@ -616,6 +655,11 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
+@_hasMissingDesignatedInitializers public class HKYCImageCache {
+  public static let imageCache: HyperKYC.HKYCImageCache
+  final public func image(urlString: Swift.String, imageClosure: @escaping (_ uiImage: UIKit.UIImage) -> Swift.Void)
+  @objc deinit
+}
 @objc @_Concurrency.MainActor(unsafe) public class HKYCActivityLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
@@ -631,15 +675,7 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc @_Concurrency.MainActor(unsafe) public static func setColor(_ color: UIKit.UIColor)
   @objc deinit
 }
-@objc @_Concurrency.MainActor(unsafe) public class HKYCTitleLabel : UIKit.UILabel {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
-  @objc deinit
-}
-@objc @_Concurrency.MainActor(unsafe) public class HKYCDescriptionLabel : UIKit.UILabel {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCTitleLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
@@ -648,7 +684,7 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
   @objc deinit
 }
-@objc @_Concurrency.MainActor(unsafe) public class HKYCSubDescriptionLabel : UIKit.UILabel {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCDescriptionLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
@@ -663,17 +699,6 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
-  @objc deinit
-}
-@objc @_Concurrency.MainActor(unsafe) public class HKYCErrorRetryButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class HKYCSelectedCountryView : UIKit.UIView {
@@ -694,7 +719,7 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
-@objc @_Concurrency.MainActor(unsafe) public class HKYCCountryPickerContinueButton : UIKit.UIButton {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCPrimaryButton : UIKit.UIButton {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
@@ -705,18 +730,7 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
-@objc @_Concurrency.MainActor(unsafe) public class HKYCFormVCAffirmativeButton : UIKit.UIButton {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
-  @objc deinit
-}
-@objc @_Concurrency.MainActor(unsafe) public class HKYCFormVCNegativeButton : UIKit.UIButton {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCSecondaryButton : UIKit.UIButton {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
@@ -732,13 +746,15 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject, Swift.Codable {
   public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   public func setInputs(inputs: [Swift.String : Swift.String])
   public func setDefaultLangCode(language: Swift.String)
   public func addMetadata(metadata: [Swift.String : Swift.String])
   @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc public class HyperKycError : ObjectiveC.NSObject {
   public static let SDK_CONFIG_ERROR: Swift.Int
@@ -1110,6 +1126,12 @@ public struct WorkflowProperties : Swift.Codable {
   public var textConfigSource: [Swift.String : Swift.String]? {
     get
   }
+  public var enableResumeWorkflow: Swift.Bool? {
+    get
+  }
+  public var resumeWorkflowDuration: Swift.Int? {
+    get
+  }
   public var uiConfigSource: Swift.String? {
     get
   }
@@ -1142,6 +1164,7 @@ public struct WorkflowModule : Swift.Codable {
     case type_document
     case type_face
     case type_api
+    case type_dynamic_form
     case type_form
     case type_webview
     case type_barcode
@@ -1241,6 +1264,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var data: HyperKYC.WebviewModuleProperty? {
     get
   }
+  public var sections: [HyperKYC.Section]? {
+    get
+  }
   public var barcodeSkipDelay: Swift.Int? {
     get
   }
@@ -1277,6 +1303,114 @@ public struct WebviewModuleProperty : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public struct Section : Swift.Codable {
+  public var id: Swift.String {
+    get
+  }
+  public var components: [HyperKYC.Component] {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Component : Swift.Codable {
+  public enum ComponentType : Swift.String, Swift.Codable {
+    case vertical
+    case horizontal
+    case label
+    case text
+    case radio
+    case checkbox
+    case dropdown
+    case date
+    case button
+    case divider
+    case file
+    case unknown
+    public init(from decoder: Swift.Decoder) throws
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var id: Swift.String {
+    get
+  }
+  public var type: HyperKYC.Component.ComponentType {
+    get
+  }
+  public var children: [HyperKYC.Component]? {
+    get
+  }
+  public var required: Swift.String? {
+    get
+  }
+  public var enabled: Swift.String? {
+    get
+  }
+  public var visible: Swift.String? {
+    get
+  }
+  public var subType: Swift.String? {
+    get
+  }
+  public var text: Swift.String? {
+    get
+  }
+  public var onClick: HyperKYC.Handler? {
+    get
+  }
+  public var secure: Swift.String? {
+    get
+  }
+  public var keyboard: Swift.String? {
+    get
+  }
+  public var validation: HyperKYC.Validation? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var hint: Swift.String? {
+    get
+  }
+  public var helperText: Swift.String? {
+    get
+  }
+  public var value: Swift.String? {
+    get
+  }
+  public var labels: [Swift.String : Swift.String]? {
+    get
+  }
+  public var items: [Swift.String]? {
+    get
+  }
+  public var format: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Validation : Swift.Codable {
+  public var type: Swift.String? {
+    get
+  }
+  public var value: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Handler : Swift.Codable {
+  public var nextStep: Swift.String {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 public struct WorkflowCondition : Swift.Codable {
   public var if_false: Swift.String {
     get
@@ -1300,6 +1434,17 @@ public struct DocumentsOverride : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+@objc @_inheritsConvenienceInitializers public class WorkFlowStateDelegate : ObjectiveC.NSObject {
+  public struct WorkflowState : Swift.Codable {
+    public func encode(to encoder: Swift.Encoder) throws
+    public init(from decoder: Swift.Decoder) throws
+  }
+  public func saveState()
+  public func deleteWorkflowState(appId: Swift.String, transactionID: Swift.String)
+  public func loadState(transactionID: Swift.String) -> HyperKYC.WorkFlowStateDelegate.WorkflowState?
+  @objc override dynamic public init()
+  @objc deinit
+}
 extension HyperKYC.HyperKycStatus : Swift.Equatable {}
 extension HyperKYC.HyperKycStatus : Swift.Hashable {}
 extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
@@ -1309,3 +1454,6 @@ extension HyperKYC.WorkflowProperties.PlatformKey : Swift.RawRepresentable {}
 extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.Equatable {}
 extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.Hashable {}
 extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.RawRepresentable {}
+extension HyperKYC.Component.ComponentType : Swift.Equatable {}
+extension HyperKYC.Component.ComponentType : Swift.Hashable {}
+extension HyperKYC.Component.ComponentType : Swift.RawRepresentable {}
