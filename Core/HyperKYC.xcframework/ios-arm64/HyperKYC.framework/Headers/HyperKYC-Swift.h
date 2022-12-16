@@ -216,7 +216,27 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+
+@class UILabel;
+@class NSString;
 @class NSCoder;
+
+SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
+@interface DropDownCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified optionLabel;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface DropDownCell (SWIFT_EXTENSION(HyperKYC))
+- (void)awakeFromNib;
+@property (nonatomic, getter=isSelected) BOOL selected;
+@property (nonatomic, getter=isHighlighted) BOOL highlighted;
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+@end
+
 @class UIColor;
 
 SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
@@ -256,34 +276,15 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC31HKYCCountryPickerContinueButton")
-@interface HKYCCountryPickerContinueButton : UIButton
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setBorderColor:(CGColorRef _Nonnull)color;
-+ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
-+ (void)setBorderWidth:(CGFloat)width;
-+ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowOffset:(CGSize)offset;
-+ (void)setTitleFont:(UIFont * _Nonnull)font;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-@interface HKYCCountryPickerContinueButton (SWIFT_EXTENSION(HyperKYC))
-@property (nonatomic, getter=isEnabled) BOOL enabled;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @interface HKYCDescriptionLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setFont:(UIFont * _Nonnull)font;
 + (void)setTextAlignment:(NSTextAlignment)alignment;
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -310,22 +311,16 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC20HKYCErrorRetryButton")
-@interface HKYCErrorRetryButton : UIButton
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setBorderColor:(CGColorRef _Nonnull)color;
-+ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
-+ (void)setBorderWidth:(CGFloat)width;
-+ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
-+ (void)setTitleShadowOffset:(CGSize)offset;
-+ (void)setTitleFont:(UIFont * _Nonnull)font;
+SWIFT_CLASS("_TtC8HyperKYC9HKYCLabel")
+@interface HKYCLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC27HKYCFormVCAffirmativeButton")
-@interface HKYCFormVCAffirmativeButton : UIButton
+SWIFT_CLASS("_TtC8HyperKYC17HKYCPrimaryButton")
+@interface HKYCPrimaryButton : UIButton
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setBorderColor:(CGColorRef _Nonnull)color;
 + (void)setBackgroundColor:(CGColorRef _Nonnull)color;
@@ -334,12 +329,17 @@ SWIFT_CLASS("_TtC8HyperKYC27HKYCFormVCAffirmativeButton")
 + (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
 + (void)setTitleShadowOffset:(CGSize)offset;
 + (void)setTitleFont:(UIFont * _Nonnull)font;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC24HKYCFormVCNegativeButton")
-@interface HKYCFormVCNegativeButton : UIButton
+@interface HKYCPrimaryButton (SWIFT_EXTENSION(HyperKYC))
+@property (nonatomic, getter=isEnabled) BOOL enabled;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
+@interface HKYCSecondaryButton : UIButton
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setBorderColor:(CGColorRef _Nonnull)color;
 + (void)setBackgroundColor:(CGColorRef _Nonnull)color;
@@ -348,7 +348,6 @@ SWIFT_CLASS("_TtC8HyperKYC24HKYCFormVCNegativeButton")
 + (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
 + (void)setTitleShadowOffset:(CGSize)offset;
 + (void)setTitleFont:(UIFont * _Nonnull)font;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -364,26 +363,15 @@ SWIFT_CLASS("_TtC8HyperKYC23HKYCSelectedCountryView")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC23HKYCSubDescriptionLabel")
-@interface HKYCSubDescriptionLabel : UILabel
+SWIFT_CLASS("_TtC8HyperKYC14HKYCTitleLabel")
+@interface HKYCTitleLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setFont:(UIFont * _Nonnull)font;
 + (void)setTextAlignment:(NSTextAlignment)alignment;
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC14HKYCTitleLabel")
-@interface HKYCTitleLabel : UILabel
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setFont:(UIFont * _Nonnull)font;
-+ (void)setTextColor:(UIColor * _Nonnull)color;
-+ (void)setShadowColor:(UIColor * _Nonnull)color;
-+ (void)setShadowOffset:(CGSize)offset;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 @class UIViewController;
@@ -426,6 +414,14 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 
 
 
+@interface UIBarButtonItem (SWIFT_EXTENSION(HyperKYC))
+@property (nonatomic, readonly, strong) UIView * _Nonnull plainView;
+@end
+
+
+
+
+
 
 
 
@@ -436,6 +432,22 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @end
 
 
+
+
+
+
+@interface UIView (SWIFT_EXTENSION(HyperKYC))
+@property (nonatomic, readonly, strong) UIView * _Nonnull plainView;
+@end
+
+
+
+
+
+SWIFT_CLASS("_TtC8HyperKYC21WorkFlowStateDelegate")
+@interface WorkFlowStateDelegate : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

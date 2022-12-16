@@ -1,5 +1,20 @@
 ## CHANGELOG
 
+### 0.6.0 *[16 Dec 2022]*
+- UI rework + refinements
+- Remove `requestIds` check for finish review call
+- Features : 
+  - HTML style support for Text config
+  - Display Instructions screen for back-side document capture also
+  - Support Resume workflow
+  - Form Module - Phase 1
+- Minor bug-fixes
+  - Fix `NIL_RESPONSE_VALUE` bug
+
+### 0.3.9 *[13 Dec 2022]*
+- Remove `requestIds` check for finish review call
+- Fix `NIL_RESPONSE_VALUE` bug
+
 ### 0.5.0 *[02 Dec 2022]*
 - Add support for document detection and auto capture through workflows
 - Add support to update `allowedStatusCodes` through workflows
