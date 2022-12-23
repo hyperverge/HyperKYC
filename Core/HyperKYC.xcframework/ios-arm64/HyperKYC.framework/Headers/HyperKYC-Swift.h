@@ -425,6 +425,9 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 
 
 
+
+
+
 @interface UINavigationController (SWIFT_EXTENSION(HyperKYC))
 @property (nonatomic, readonly) BOOL shouldAutorotate;
 @property (nonatomic, readonly) UIInterfaceOrientation preferredInterfaceOrientationForPresentation;

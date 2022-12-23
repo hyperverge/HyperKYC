@@ -8,6 +8,7 @@
   - Display Instructions screen for back-side document capture also
   - Support Resume workflow
   - Form Module - Phase 1
+  - Adds support for HTML tags in TextViews
 - Minor bug-fixes
   - Fix `NIL_RESPONSE_VALUE` bug
 
