@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/HyperKYC-Swift.h</key>
 		<data>
-		krM3qQXswSlltGrLKxtP0QeRzpY=
+		1ibbdXx8pFzoM4cF23z2zWFDta4=
 		</data>
 		<key>Headers/HyperKYC-umbrella.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		CitTBPXLk2/vxWXROwiOteVHawQ=
+		z5cByj7bu3DJnG2EjWsylSPrFQg=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bWt7qK2gYUvXNGnr+03nhhOo3BU=
+		AzUFOrfNZ2w2AkpFndH3TCauLlo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,11 +55,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			krM3qQXswSlltGrLKxtP0QeRzpY=
+			1ibbdXx8pFzoM4cF23z2zWFDta4=
 			</data>
 			<key>hash2</key>
 			<data>
-			fkzpv3WB5qo8jTK1LSa0vUrg8k3T0oR+Fr7esb2pI1E=
+			M7dFRdm27Y+hb8TDT/xKetyKz0CmoLA+xrlr3h+D3fM=
 			</data>
 		</dict>
 		<key>Headers/HyperKYC-umbrella.h</key>
@@ -110,11 +110,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CitTBPXLk2/vxWXROwiOteVHawQ=
+			z5cByj7bu3DJnG2EjWsylSPrFQg=
 			</data>
 			<key>hash2</key>
 			<data>
-			zXfN7YosjG6LCasnXkfKXbp+BNo6l3MPD6AIH+fBVTI=
+			jufj4hxzJJbGqHMLUwQ5i/Ah4Uonv33PWjRAqy/gDFU=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -143,11 +143,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bWt7qK2gYUvXNGnr+03nhhOo3BU=
+			AzUFOrfNZ2w2AkpFndH3TCauLlo=
 			</data>
 			<key>hash2</key>
 			<data>
-			tpG3zVV1r6MYC4XcNhRvi7A7pxf8rofWh6PxHPVC4Fs=
+			ytyBUOuJsmg9roMkgKvjLMjqVu1AP3m+pxchvD+Q8KM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
