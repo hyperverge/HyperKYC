@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 0.3.10 *[9 Jan 2022]*
+- Fixes side text translations - front and back
+- Update font and font weight keys
+- Enable text config for device orientation
+
 ### 0.3.9 *[13 Dec 2022]*
 - Remove `requestIds` check for finish review call
 - Fix `NIL_RESPONSE_VALUE` bug
