@@ -4,6 +4,7 @@
 - Fixes side text translations - front and back
 - Update font and font weight keys
 - Enable text config for device orientation
+-[PATCH] Fixed back navigation flow bug
 
 ### 0.3.9 *[13 Dec 2022]*
 - Remove `requestIds` check for finish review call
