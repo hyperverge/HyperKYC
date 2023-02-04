@@ -237,6 +237,53 @@ public struct Fieldvalue : Swift.Codable {
   }
   public func encode(to encoder: Swift.Encoder) throws
 }
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class Checkbox : UIKit.UIControl {
+  @objc public enum CheckmarkStyle : Swift.Int {
+    case square
+    case circle
+    case cross
+    case tick
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum BorderStyle : Swift.Int {
+    case square
+    case circle
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var checkmarkStyle: HyperKYC.Checkbox.CheckmarkStyle
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var borderStyle: HyperKYC.Checkbox.BorderStyle
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderLineWidth: CoreGraphics.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkmarkSize: CoreGraphics.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var uncheckedBorderColor: UIKit.UIColor!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkedBorderColor: UIKit.UIColor!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkmarkColor: UIKit.UIColor!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var emoji: Swift.String?
+  @available(swift, obsoleted: 4.1, renamed: "checkboxFillColor", message: "Defaults to a clear color")
+  @_Concurrency.MainActor(unsafe) public var checkboxBackgroundColor: UIKit.UIColor!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkboxClearColor: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkboxFillColor: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderCornerRadius: CoreGraphics.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var increasedTouchRadius: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public var valueChanged: ((_ isChecked: Swift.Bool) -> Swift.Void)?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var isChecked: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var useHapticFeedback: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func point(inside point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
+  @objc deinit
+}
 public enum HyperKycStatus : Swift.String {
   case autoApproved
   case autoDeclined
@@ -482,7 +529,7 @@ extension HyperKYC.DropDownCell {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func setHighlighted(_ highlighted: Swift.Bool, animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCLabel : UIKit.UILabel {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCLabel : UIKit.UITableViewCell {
   @objc deinit
 }
 extension UIKit.UINavigationController {
@@ -739,6 +786,15 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCCheckBox : UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) public var stackView: UIKit.UIStackView {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var checkBoxlabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public var checkBox: HyperKYC.Checkbox!
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class HyperKyc : ObjectiveC.NSObject {
@@ -1097,6 +1153,12 @@ public struct FaceMatchData {
     get
   }
 }
+@objc @_inheritsConvenienceInitializers public class UIUtilities : ObjectiveC.NSObject {
+  public static let shared: HyperKYC.UIUtilities
+  public func setTitleLabelConfigs(titleLabel: HyperKYC.HKYCTitleLabel)
+  @objc override dynamic public init()
+  @objc deinit
+}
 public struct WorkFlowConfig : Swift.Codable {
   public var properties: HyperKYC.WorkflowProperties? {
     get
@@ -1205,6 +1267,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var allowUpload: Swift.Bool? {
+    get
+  }
+  public var supportedUploadFileTypes: [Swift.String]? {
     get
   }
   public var countryId: Swift.String? {
@@ -1361,13 +1426,19 @@ public struct Component : Swift.Codable {
   public var onClick: HyperKYC.Handler? {
     get
   }
+  public var onChange: HyperKYC.Handler? {
+    get
+  }
+  public var onValidated: HyperKYC.Handler? {
+    get
+  }
   public var secure: Swift.String? {
     get
   }
   public var keyboard: Swift.String? {
     get
   }
-  public var validation: HyperKYC.Validation? {
+  public var validation: [HyperKYC.Validation]? {
     get
   }
   public var title: Swift.String? {
@@ -1382,6 +1453,9 @@ public struct Component : Swift.Codable {
   public var value: Swift.String? {
     get
   }
+  public var lines: Swift.Int? {
+    get
+  }
   public var labels: [Swift.String : Swift.String]? {
     get
   }
@@ -1391,21 +1465,49 @@ public struct Component : Swift.Codable {
   public var format: Swift.String? {
     get
   }
+  public var dateRange: HyperKYC.DateRange? {
+    get
+  }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct Validation : Swift.Codable {
-  public var type: Swift.String? {
+  public enum ValidationType : Swift.String, Swift.Codable {
+    case regex
+    case rule
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var type: HyperKYC.Validation.ValidationType? {
     get
   }
   public var value: Swift.String? {
+    get
+  }
+  public var errorMsg: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DateRange : Swift.Codable {
+  public var startMonth: Swift.Int? {
+    get
+  }
+  public var endMonth: Swift.Int? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
 public struct Handler : Swift.Codable {
-  public var nextStep: Swift.String {
+  public var nextStep: Swift.String? {
+    get
+  }
+  public var reloadComponents: [Swift.String]? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
@@ -1431,6 +1533,12 @@ public struct DocumentsOverride : Swift.Codable {
   public var sides: [Swift.String]? {
     get
   }
+  public var name: Swift.String? {
+    get
+  }
+  public var type: Swift.String? {
+    get
+  }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1445,6 +1553,12 @@ public struct DocumentsOverride : Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
+extension HyperKYC.Checkbox.CheckmarkStyle : Swift.Equatable {}
+extension HyperKYC.Checkbox.CheckmarkStyle : Swift.Hashable {}
+extension HyperKYC.Checkbox.CheckmarkStyle : Swift.RawRepresentable {}
+extension HyperKYC.Checkbox.BorderStyle : Swift.Equatable {}
+extension HyperKYC.Checkbox.BorderStyle : Swift.Hashable {}
+extension HyperKYC.Checkbox.BorderStyle : Swift.RawRepresentable {}
 extension HyperKYC.HyperKycStatus : Swift.Equatable {}
 extension HyperKYC.HyperKycStatus : Swift.Hashable {}
 extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
@@ -1457,3 +1571,6 @@ extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.RawRepresentable {}
 extension HyperKYC.Component.ComponentType : Swift.Equatable {}
 extension HyperKYC.Component.ComponentType : Swift.Hashable {}
 extension HyperKYC.Component.ComponentType : Swift.RawRepresentable {}
+extension HyperKYC.Validation.ValidationType : Swift.Equatable {}
+extension HyperKYC.Validation.ValidationType : Swift.Hashable {}
+extension HyperKYC.Validation.ValidationType : Swift.RawRepresentable {}
