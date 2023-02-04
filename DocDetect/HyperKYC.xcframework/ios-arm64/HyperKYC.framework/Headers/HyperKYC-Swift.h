@@ -215,11 +215,97 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+enum CheckmarkStyle : NSInteger;
+enum BorderStyle : NSInteger;
+@class UIColor;
+@class NSString;
+@class NSCoder;
+@class UIEvent;
+
+/// Checkbox is a simple, animation free checkbox and UISwitch alternative designed
+/// to be performant and easy to implement.
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC8HyperKYC8Checkbox")
+@interface Checkbox : UIControl
+/// Shape of the center checkmark that appears when <code>Checkbox.isChecked == true</code>.
+/// <em>Default:</em> <code>CheckmarkStyle.square</code>
+@property (nonatomic) enum CheckmarkStyle checkmarkStyle;
+/// Shape of the outside border containing the checkmarks contents.
+/// Used as a visual indication of where the user can tap.
+/// <em>Default:</em> <code>BorderStyle.square</code>
+@property (nonatomic) enum BorderStyle borderStyle;
+/// Width of the borders stroke.
+/// <em>NOTE</em>
+/// Diagonal/rounded lines tend to appear thicker, so border styles
+/// that use these (.circle) have had their border widths halved to compensate
+/// in order appear similar next to other border styles.
+/// <em>Default:</em> <code>2</code>
+@property (nonatomic) IBInspectable CGFloat borderLineWidth;
+/// Size of the center checkmark element.
+/// Drawn as a percentage of the size of the Checkbox’s draw rect.
+/// <em>Default:</em> <code>0.5</code>
+@property (nonatomic) IBInspectable CGFloat checkmarkSize;
+/// The checboxes border color in its unchecked state.
+/// <em>Default:</em> The current tintColor.
+@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified uncheckedBorderColor;
+/// The checboxes border color in its checked state.
+/// <em>Default:</em> The current tintColor.
+@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified checkedBorderColor;
+/// <em>Default:</em> The current tintColor.
+@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified checkmarkColor;
+/// <em>Default:</em> Replaces the checkmark style with an emoji.
+@property (nonatomic, copy) IBInspectable NSString * _Nullable emoji;
+/// The checkboxes fill color.
+/// <em>Default:</em> <code>UIColoe.Clear</code>
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull checkboxClearColor;
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull checkboxFillColor;
+/// Sets the corner radius for the checkbox border.
+/// <em>Default:</em> <code>0.0</code>
+/// note:
+/// Only applies to checkboxes with <code>BorderStyle.square</code>
+@property (nonatomic) IBInspectable CGFloat borderCornerRadius;
+/// Increases the controls touch area.
+/// Checkbox’s tend to be smaller than regular UIButton elements
+/// and in some cases making them difficult to interact with.
+/// This property helps with that.
+/// <em>Default:</em> <code>5</code>
+@property (nonatomic) IBInspectable CGFloat increasedTouchRadius;
+/// Indicates whether the checkbox is currently in a state of being
+/// checked or not.
+@property (nonatomic) IBInspectable BOOL isChecked;
+/// Determines if tapping the checkbox generates haptic feedback to the user.
+/// <em>Default:</em> <code>true</code>
+@property (nonatomic) IBInspectable BOOL useHapticFeedback;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)drawRect:(CGRect)rect;
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
+@end
+
+/// Shape of the center checkmark that appears when <code>Checkbox.isChecked == true</code>.
+typedef SWIFT_ENUM(NSInteger, CheckmarkStyle, open) {
+/// ■
+  CheckmarkStyleSquare = 0,
+/// ●
+  CheckmarkStyleCircle = 1,
+/// ╳
+  CheckmarkStyleCross = 2,
+/// ✓
+  CheckmarkStyleTick = 3,
+};
+
+/// Shape of the outside box containing the checkmarks contents.
+/// Used as a visual indication of where the user can tap.
+typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
+/// ▢
+  BorderStyleSquare = 0,
+/// ◯
+  BorderStyleCircle = 1,
+};
+
 
 
 @class UILabel;
-@class NSString;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
 @interface DropDownCell : UITableViewCell
@@ -237,7 +323,6 @@ SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 @end
 
-@class UIColor;
 
 SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 @interface HKYCActivityIndicator : UIActivityIndicatorView
@@ -273,6 +358,13 @@ SWIFT_CLASS("_TtC8HyperKYC18HKYCBrandingLayout")
 SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @interface HKYCBundleLocator : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
+@interface HKYCCheckBox : UIStackView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 @end
 
 
@@ -312,9 +404,9 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 
 
 SWIFT_CLASS("_TtC8HyperKYC9HKYCLabel")
-@interface HKYCLabel : UILabel
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@interface HKYCLabel : UITableViewCell
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Null_unspecified)reuseIdentifier SWIFT_UNAVAILABLE;
 @end
 
 
@@ -414,6 +506,7 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 
 
 
+
 @interface UIBarButtonItem (SWIFT_EXTENSION(HyperKYC))
 @property (nonatomic, readonly, strong) UIView * _Nonnull plainView;
 @end
@@ -434,6 +527,11 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @end
 
+
+SWIFT_CLASS("_TtC8HyperKYC11UIUtilities")
+@interface UIUtilities : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 

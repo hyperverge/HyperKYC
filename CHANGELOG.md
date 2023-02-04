@@ -1,4 +1,15 @@
 ## CHANGELOG
+### 0.7.0 *[4 Feb 2023]*
+- uses hypersnap sdk 4.6.0
+- Adds `supportedUploadFileTypes` via document module properties
+- Adds  support for Dynamic form module Phase 2
+- Adds support for additional documents through documentsOverride,
+- Adds support for document name and type override for document module
+- Adds support for documentsSupported ids to be injectable,
+- Improvements to SDK start up time by fetching SDK configs etc in parallel
+- Improvements to UI Config
+- Updates document picker to use item ordering from documentsSupported array
+- Fix for boolean conditional checks 
 
 ### 0.6.0 *[16 Dec 2022]*
 - UI rework + refinements
