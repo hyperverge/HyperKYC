@@ -2,11 +2,11 @@
 
 HyperKyc SDK can be used to create Global DKYC workflows to capture images of ID cards, photos of the face of the user, and perform other operations like face matches, etc all within itself to ease up integration friction on the client end. 
 
-This SDK can be used within iOS native apps and supports all iOS versions from iOS 9
+This SDK can be used within iOS native apps and supports all iOS versions from iOS 11
 
 ## Minimum Requirements
 
-1.  min iOS SDK version 9
+1.  min iOS SDK version 11
 2.  Recommended platform versions :
     1.  xCode 13+
     2.  Swift 5.5
