@@ -1,6 +1,10 @@
 ## CHANGELOG
+### 0.7.1 *[16 Feb 2023]*
+- Uses hypersnap sdk 4.6.1
+- Fix for request body in api module
+
 ### 0.7.0 *[4 Feb 2023]*
-- uses hypersnap sdk 4.6.0
+- Uses hypersnap sdk 4.6.0
 - Adds `supportedUploadFileTypes` via document module properties
 - Adds  support for Dynamic form module Phase 2
 - Adds support for additional documents through documentsOverride,
