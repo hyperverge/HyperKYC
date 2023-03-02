@@ -2,6 +2,7 @@
 ### 0.7.1 *[16 Feb 2023]*
 - Uses hypersnap sdk 4.6.1
 - Fix for request body in api module
+- [Patch] Added fix for html attributed string
 
 ### 0.7.0 *[4 Feb 2023]*
 - Uses hypersnap sdk 4.6.0
