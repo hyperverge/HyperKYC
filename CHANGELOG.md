@@ -1,4 +1,7 @@
 ## CHANGELOG
+### 0.7.2 *[4 March 2023]*
+- Uses hypersnap sdk 4.6.2
+
 ### 0.7.1 *[16 Feb 2023]*
 - Uses hypersnap sdk 4.6.1
 - Fix for request body in api module
