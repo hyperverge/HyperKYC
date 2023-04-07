@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HyperKYC
+import CommonCrypto
 import Dispatch
 import Foundation
 @_exported import HyperKYC
@@ -8,6 +9,9 @@ import HyperSnapSDK
 import MaterialComponents
 import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MobileCoreServices
+import PDFKit
+import PhotosUI
+import QuickLook
 import Swift
 import SystemConfiguration
 import UIKit
@@ -284,6 +288,62 @@ public struct Fieldvalue : Swift.Codable {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func point(inside point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
   @objc deinit
 }
+@objc @_Concurrency.MainActor(unsafe) open class LoaderView : UIKit.UIView {
+  public typealias CompletionBlock = () -> Swift.Void
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var trackTintColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var progressTintColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var innerTintColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var roundedCorners: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var thicknessRatio: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var clockwiseProgress: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var timingFunction: QuartzCore.CAMediaTimingFunction
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var progress: CoreGraphics.CGFloat {
+    @objc get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var indeterminateProgress: CoreGraphics.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var indeterminateDuration: CoreFoundation.CFTimeInterval
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open class var layerClass: Swift.AnyClass {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @objc required dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) open func enableIndeterminate(_ enabled: Swift.Bool = true)
+  @objc deinit
+}
+extension Foundation.NSURL {
+  public func mimeType() -> Swift.String
+}
+extension Foundation.URL {
+  public func mimeType() -> Swift.String
+}
+extension Foundation.NSString {
+  public func mimeType() -> Swift.String
+}
+extension Swift.String {
+  public func mimeType() -> Swift.String
+}
 public enum HyperKycStatus : Swift.String {
   case autoApproved
   case autoDeclined
@@ -499,6 +559,26 @@ public struct RuleChecks : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PickedFile : ObjectiveC.NSObject {
+  public var localUri: Swift.String?
+  public var fileUrl: Swift.String
+  public var fileName: Swift.String?
+  public var sizeInKB: Swift.Int
+  public var fileExtension: Swift.String?
+  public var type: Swift.String?
+  public var state: HyperKYC.PickedFile.State
+  public enum State : Swift.String, Swift.Codable {
+    case loading
+    case success
+    case error
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @objc deinit
+}
 extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc dynamic public var plainView: UIKit.UIView {
     @objc get
@@ -707,6 +787,13 @@ public struct FaceMatchApiStructure : Swift.Codable {
   final public func image(urlString: Swift.String, imageClosure: @escaping (_ uiImage: UIKit.UIImage) -> Swift.Void)
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers public class HKYCSignatureHelper : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  public func setInputs(queryParams: [Swift.String : Swift.String]?, fileHashDictionary: [Swift.String : Swift.String]?, requestBody: [Swift.String : Swift.AnyObject], responseBody: [Swift.String : Swift.AnyObject]?, responseHeaders: [Swift.String : Swift.String]?)
+  public func getMD5HashOfData(_ data: Foundation.Data) -> Swift.String
+  public func verifySignature() -> Swift.Bool
+  @objc deinit
+}
 @objc @_Concurrency.MainActor(unsafe) public class HKYCActivityLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
@@ -740,7 +827,7 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
   @objc deinit
 }
-@objc @_Concurrency.MainActor(unsafe) public class HKYCErrorMessageLabel : UIKit.UILabel {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCErrorMessageLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
@@ -786,6 +873,48 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class DocCollectionViewCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor(unsafe) public var docHolderCard: HyperKYC.HKYCDocHolderCard!
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AddImageCollectionViewCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor(unsafe) public var addImageCard: HyperKYC.HKYCAddImageCard!
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCFileStackView : UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) public var stackImage: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) public var stackLabel: HyperKYC.HKYCDescriptionLabel!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class PaddingLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var bounds: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCDocHolderCard : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var thumbnailImage: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) public var deleteIcon: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) public var sizeLabel: HyperKYC.PaddingLabel!
+  @_Concurrency.MainActor(unsafe) public var nameLabel: HyperKYC.PaddingLabel!
+  @_Concurrency.MainActor(unsafe) public var pickedFile: HyperKYC.PickedFile?
+  @_Concurrency.MainActor(unsafe) public func showloader()
+  @_Concurrency.MainActor(unsafe) public func hideLoader()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCAddImageCard : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var addImage: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCCheckBox : UIKit.UIStackView {
@@ -1305,6 +1434,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var autoCaptureDuration: Swift.Int? {
     get
   }
+  public var defaultCamera: Swift.String? {
+    get
+  }
   public var showInstruction: Swift.Bool? {
     get
   }
@@ -1326,6 +1458,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var allowedStatusCodes: [Swift.Int]? {
     get
   }
+  public var validateSignature: Swift.Bool? {
+    get
+  }
   public var data: HyperKYC.WebviewModuleProperty? {
     get
   }
@@ -1333,6 +1468,25 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var barcodeSkipDelay: Swift.Int? {
+    get
+  }
+  public var enableOverlay: Swift.Bool? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DocumentsOverride : Swift.Codable {
+  public var sidesConfig: HyperKYC.SidesConfig? {
+    get
+  }
+  public var sides: [Swift.String]? {
+    get
+  }
+  public var name: Swift.String? {
+    get
+  }
+  public var type: Swift.String? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
@@ -1380,8 +1534,6 @@ public struct Section : Swift.Codable {
 }
 public struct Component : Swift.Codable {
   public enum ComponentType : Swift.String, Swift.Codable {
-    case vertical
-    case horizontal
     case label
     case text
     case radio
@@ -1444,16 +1596,55 @@ public struct Component : Swift.Codable {
   public var title: Swift.String? {
     get
   }
+  public var subTitle: Swift.String? {
+    get
+  }
   public var hint: Swift.String? {
     get
   }
   public var helperText: Swift.String? {
     get
   }
+  public var helperTextIdle: Swift.String? {
+    get
+  }
+  public var helperTextActive: Swift.String? {
+    get
+  }
+  public var errorTextFile: Swift.String? {
+    get
+  }
+  public var errorTextSizeMax: Swift.String? {
+    get
+  }
+  public var errorTextSizeMin: Swift.String? {
+    get
+  }
+  public var pickerTitle: Swift.String? {
+    get
+  }
+  public var maxFileSize: Swift.Int? {
+    get
+  }
+  public var minFileSize: Swift.Int? {
+    get
+  }
+  public var allowMultipleTypes: Swift.String? {
+    get
+  }
+  public var supportedFiles: [HyperKYC.SupportedFiles]? {
+    get
+  }
   public var value: Swift.String? {
     get
   }
   public var lines: Swift.Int? {
+    get
+  }
+  public var supportedImageFileTypes: [Swift.String]? {
+    get
+  }
+  public var supportedDocumentFileTypes: [Swift.String]? {
     get
   }
   public var labels: [Swift.String : Swift.String]? {
@@ -1493,6 +1684,36 @@ public struct Validation : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public struct SupportedFiles : Swift.Codable {
+  public enum FileType : Swift.String, Swift.Codable {
+    case images
+    case documents
+    case audio
+    case video
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var type: HyperKYC.SupportedFiles.FileType? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var extensions: [Swift.String]? {
+    get
+  }
+  public var overrideAllowedTypes: [HyperKYC.SupportedFiles.FileType]? {
+    get
+  }
+  public var enabled: Swift.Bool? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 public struct DateRange : Swift.Codable {
   public var startMonth: Swift.Int? {
     get
@@ -1526,22 +1747,6 @@ public struct WorkflowCondition : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct DocumentsOverride : Swift.Codable {
-  public var sidesConfig: HyperKYC.SidesConfig? {
-    get
-  }
-  public var sides: [Swift.String]? {
-    get
-  }
-  public var name: Swift.String? {
-    get
-  }
-  public var type: Swift.String? {
-    get
-  }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
 @objc @_inheritsConvenienceInitializers public class WorkFlowStateDelegate : ObjectiveC.NSObject {
   public struct WorkflowState : Swift.Codable {
     public func encode(to encoder: Swift.Encoder) throws
@@ -1562,6 +1767,9 @@ extension HyperKYC.Checkbox.BorderStyle : Swift.RawRepresentable {}
 extension HyperKYC.HyperKycStatus : Swift.Equatable {}
 extension HyperKYC.HyperKycStatus : Swift.Hashable {}
 extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
+extension HyperKYC.PickedFile.State : Swift.Equatable {}
+extension HyperKYC.PickedFile.State : Swift.Hashable {}
+extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Equatable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Hashable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.RawRepresentable {}
@@ -1574,3 +1782,6 @@ extension HyperKYC.Component.ComponentType : Swift.RawRepresentable {}
 extension HyperKYC.Validation.ValidationType : Swift.Equatable {}
 extension HyperKYC.Validation.ValidationType : Swift.Hashable {}
 extension HyperKYC.Validation.ValidationType : Swift.RawRepresentable {}
+extension HyperKYC.SupportedFiles.FileType : Swift.Equatable {}
+extension HyperKYC.SupportedFiles.FileType : Swift.Hashable {}
+extension HyperKYC.SupportedFiles.FileType : Swift.RawRepresentable {}
