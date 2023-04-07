@@ -1,9 +1,18 @@
 ## CHANGELOG
+
 ### 0.8.0 *[6 Apr 2023]*
-- Uses hypersnap sdk 4.7.0
-- Added support for file upload module
-- Added support for signature checks for gkyc apis
-- 
+- Features: 
+    - Add support for file upload feature in dynamic form
+    - Update SDK security
+    - Add `backCamera` support for face module
+    - Add text-config support for finishTransaction & API calls processing texts
+    - Add support to enable/disable overlays from workflow config
+- Bug fixes: 
+    - Fix spinner animation issue
+    - Fix buttons style issue
+- Maintenance: 
+    - Use HyperSnapSDK `4.7.0`
+
 ### 0.7.2 *[4 March 2023]*
 - Uses hypersnap sdk 4.6.2
 
