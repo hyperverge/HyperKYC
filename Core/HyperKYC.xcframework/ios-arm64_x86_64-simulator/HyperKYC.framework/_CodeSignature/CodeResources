@@ -26,11 +26,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TzgBkIwU8TFSSIultH1ISdw0HvM=
+		wFEtnAsiQhcE6dtRdg3520qPyxk=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		W9yoC/auXKcWhCyw5tH0Pa5S9aE=
+		6Zj0kTryFpehGqMZE+iDbYBj9Jg=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		FOD1OjmxHYhuC6i8J3zJVPPCTcw=
+		oYIi8II6+JnKLv1/rrmt91ryiiY=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Aq5i/hCPHOVmcg+4hM61HtdEMfs=
+		GKCYuCAH/ZhIyoW7c5h24F4f7L4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -99,22 +99,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TzgBkIwU8TFSSIultH1ISdw0HvM=
+			wFEtnAsiQhcE6dtRdg3520qPyxk=
 			</data>
 			<key>hash2</key>
 			<data>
-			hmex3KPchQ0l4iJKhtb/va7M55AoDc4TIsrEime8f7Q=
+			BSYoOraTK5Wy9u/iINBkIVIQmBTHbKe0133fMWcj8lA=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			W9yoC/auXKcWhCyw5tH0Pa5S9aE=
+			6Zj0kTryFpehGqMZE+iDbYBj9Jg=
 			</data>
 			<key>hash2</key>
 			<data>
-			wsQADacjzBtR+oade6ObPhlpiIGx1aQ1HcHARKsnAi8=
+			VKF/spakLtUe2ods2oHhne+MLZItyuGArxRXxrm2Vuw=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -132,22 +132,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FOD1OjmxHYhuC6i8J3zJVPPCTcw=
+			oYIi8II6+JnKLv1/rrmt91ryiiY=
 			</data>
 			<key>hash2</key>
 			<data>
-			EHyJ+QjZIXtuJ6cOdDrl890cvw/3FgodbC4ntL/YBk8=
+			MUydGW9l5r5sYZYYL2dy5fcchApw79dzjmcyofioFK4=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Aq5i/hCPHOVmcg+4hM61HtdEMfs=
+			GKCYuCAH/ZhIyoW7c5h24F4f7L4=
 			</data>
 			<key>hash2</key>
 			<data>
-			iwFDevTFtSjamLpWNG2Clen0Msb+s53MaWC3SSkYmng=
+			TlSVYekhLmAtE2X7Sh2eGj7fsAAMKGs77xyfrSPmTUc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
