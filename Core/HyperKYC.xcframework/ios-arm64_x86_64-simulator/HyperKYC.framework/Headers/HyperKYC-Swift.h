@@ -197,6 +197,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreFoundation;
 @import CoreGraphics;
 @import ObjectiveC;
 @import UIKit;
@@ -217,11 +218,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSCoder;
+
+SWIFT_CLASS("_TtC8HyperKYC26AddImageCollectionViewCell")
+@interface AddImageCollectionViewCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
 enum CheckmarkStyle : NSInteger;
 enum BorderStyle : NSInteger;
 @class UIColor;
 @class NSString;
-@class NSCoder;
 @class UIEvent;
 
 /// Checkbox is a simple, animation free checkbox and UISwitch alternative designed
@@ -307,6 +315,13 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
 
 
 
+
+SWIFT_CLASS("_TtC8HyperKYC21DocCollectionViewCell")
+@interface DocCollectionViewCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
 @class UILabel;
 
 SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
@@ -349,6 +364,14 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCActivityLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
+@interface HKYCAddImageCard : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC18HKYCBrandingLayout")
 @interface HKYCBrandingLayout : UIStackView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
@@ -382,6 +405,13 @@ SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC17HKYCDocHolderCard")
+@interface HKYCDocHolderCard : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC16HKYCDocumentCell")
 @interface HKYCDocumentCell : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -396,12 +426,19 @@ SWIFT_CLASS("_TtC8HyperKYC16HKYCDocumentCell")
 
 SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @interface HKYCErrorMessageLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setFont:(UIFont * _Nonnull)font;
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
+@interface HKYCFileStackView : UIStackView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 
@@ -457,6 +494,12 @@ SWIFT_CLASS("_TtC8HyperKYC23HKYCSelectedCountryView")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC19HKYCSignatureHelper")
+@interface HKYCSignatureHelper : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC14HKYCTitleLabel")
 @interface HKYCTitleLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -507,6 +550,60 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC10LoaderView")
+@interface LoaderView : UIView
+/// The color of the empty progress track (gets drawn over)
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull trackTintColor;
+/// The color of the progress bar
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull progressTintColor;
+/// The color the notched out circle within the progress area (if there is one)
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable innerTintColor;
+/// Sets whether or not the corners of the progress bar should be rounded
+@property (nonatomic) IBInspectable BOOL roundedCorners;
+/// Sets how thick the progress bar should be (pinned between <code>0.01</code> and <code>1</code>)
+@property (nonatomic) IBInspectable CGFloat thicknessRatio;
+/// Sets whether or not the animation should be clockwise
+@property (nonatomic) IBInspectable BOOL clockwiseProgress;
+/// Getter for the current progress (not observed from any active animations)
+@property (nonatomic, readonly) IBInspectable CGFloat progress;
+/// Sets how much of the progress bar should be filled during an indeterminate animation, pinned between <code>0.05</code> and <code>0.9</code>
+/// <em>Note:</em> This can be overriden / animated from by using updateProgress(…)
+@property (nonatomic) IBInspectable CGFloat indeterminateProgress;
+/// Controls the speed at which the indeterminate progress bar animates
+@property (nonatomic) IBInspectable CFTimeInterval indeterminateDuration;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layerClass;)
++ (Class _Nonnull)layerClass SWIFT_WARN_UNUSED_RESULT;
+/// Default initializer for the class
+///
+/// returns:
+/// A configured instance of self
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)didMoveToWindow;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
+@interface PaddingLabel : UILabel
+- (void)drawTextInRect:(CGRect)rect;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+@property (nonatomic) CGRect bounds;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
+@interface PickedFile : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 @interface UIBarButtonItem (SWIFT_EXTENSION(HyperKYC))
@@ -756,6 +853,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreFoundation;
 @import CoreGraphics;
 @import ObjectiveC;
 @import UIKit;
@@ -776,11 +874,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class NSCoder;
+
+SWIFT_CLASS("_TtC8HyperKYC26AddImageCollectionViewCell")
+@interface AddImageCollectionViewCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
 enum CheckmarkStyle : NSInteger;
 enum BorderStyle : NSInteger;
 @class UIColor;
 @class NSString;
-@class NSCoder;
 @class UIEvent;
 
 /// Checkbox is a simple, animation free checkbox and UISwitch alternative designed
@@ -866,6 +971,13 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
 
 
 
+
+SWIFT_CLASS("_TtC8HyperKYC21DocCollectionViewCell")
+@interface DocCollectionViewCell : UICollectionViewCell
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
 @class UILabel;
 
 SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
@@ -908,6 +1020,14 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCActivityLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
+@interface HKYCAddImageCard : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (void)layoutSubviews;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC18HKYCBrandingLayout")
 @interface HKYCBrandingLayout : UIStackView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
@@ -941,6 +1061,13 @@ SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC17HKYCDocHolderCard")
+@interface HKYCDocHolderCard : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC16HKYCDocumentCell")
 @interface HKYCDocumentCell : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -955,12 +1082,19 @@ SWIFT_CLASS("_TtC8HyperKYC16HKYCDocumentCell")
 
 SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @interface HKYCErrorMessageLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 + (void)setFont:(UIFont * _Nonnull)font;
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
+@interface HKYCFileStackView : UIStackView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1016,6 +1150,12 @@ SWIFT_CLASS("_TtC8HyperKYC23HKYCSelectedCountryView")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC19HKYCSignatureHelper")
+@interface HKYCSignatureHelper : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC14HKYCTitleLabel")
 @interface HKYCTitleLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -1066,6 +1206,60 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC10LoaderView")
+@interface LoaderView : UIView
+/// The color of the empty progress track (gets drawn over)
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull trackTintColor;
+/// The color of the progress bar
+@property (nonatomic, strong) IBInspectable UIColor * _Nonnull progressTintColor;
+/// The color the notched out circle within the progress area (if there is one)
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable innerTintColor;
+/// Sets whether or not the corners of the progress bar should be rounded
+@property (nonatomic) IBInspectable BOOL roundedCorners;
+/// Sets how thick the progress bar should be (pinned between <code>0.01</code> and <code>1</code>)
+@property (nonatomic) IBInspectable CGFloat thicknessRatio;
+/// Sets whether or not the animation should be clockwise
+@property (nonatomic) IBInspectable BOOL clockwiseProgress;
+/// Getter for the current progress (not observed from any active animations)
+@property (nonatomic, readonly) IBInspectable CGFloat progress;
+/// Sets how much of the progress bar should be filled during an indeterminate animation, pinned between <code>0.05</code> and <code>0.9</code>
+/// <em>Note:</em> This can be overriden / animated from by using updateProgress(…)
+@property (nonatomic) IBInspectable CGFloat indeterminateProgress;
+/// Controls the speed at which the indeterminate progress bar animates
+@property (nonatomic) IBInspectable CFTimeInterval indeterminateDuration;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layerClass;)
++ (Class _Nonnull)layerClass SWIFT_WARN_UNUSED_RESULT;
+/// Default initializer for the class
+///
+/// returns:
+/// A configured instance of self
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)didMoveToWindow;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+
+
+
+SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
+@interface PaddingLabel : UILabel
+- (void)drawTextInRect:(CGRect)rect;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+@property (nonatomic) CGRect bounds;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
+@interface PickedFile : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 
 @interface UIBarButtonItem (SWIFT_EXTENSION(HyperKYC))
