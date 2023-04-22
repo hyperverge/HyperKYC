@@ -410,18 +410,6 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCDocHolderCard")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC16HKYCDocumentCell")
-@interface HKYCDocumentCell : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setBorderColor:(CGColorRef _Nonnull)color;
-+ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
-+ (void)setBorderWidth:(CGFloat)width;
-+ (void)setTitleShadowOffset:(CGSize)offset;
-+ (void)setTitleFont:(UIFont * _Nonnull)font;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @interface HKYCErrorMessageLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -444,6 +432,18 @@ SWIFT_CLASS("_TtC8HyperKYC9HKYCLabel")
 @interface HKYCLabel : UITableViewCell
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Null_unspecified)reuseIdentifier SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC14HKYCPickerView")
+@interface HKYCPickerView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
 @end
 
 
@@ -477,18 +477,6 @@ SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
 + (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
 + (void)setTitleShadowOffset:(CGSize)offset;
 + (void)setTitleFont:(UIFont * _Nonnull)font;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC23HKYCSelectedCountryView")
-@interface HKYCSelectedCountryView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setBorderColor:(CGColorRef _Nonnull)color;
-+ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
-+ (void)setBorderWidth:(CGFloat)width;
-+ (void)setTitleShadowOffset:(CGSize)offset;
-+ (void)setTitleFont:(UIFont * _Nonnull)font;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
