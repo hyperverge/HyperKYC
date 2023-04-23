@@ -835,16 +835,7 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
   @objc deinit
 }
-@objc @_Concurrency.MainActor(unsafe) public class HKYCSelectedCountryView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
-  @objc deinit
-}
-@objc @_Concurrency.MainActor(unsafe) public class HKYCDocumentCell : UIKit.UIView {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCPickerView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
@@ -1428,16 +1419,16 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var disableLiveness: Swift.Bool? {
     get
   }
-  public var autoCapture: Swift.Bool? {
-    get
-  }
-  public var autoCaptureDuration: Swift.Int? {
-    get
-  }
   public var defaultCamera: Swift.String? {
     get
   }
   public var showInstruction: Swift.Bool? {
+    get
+  }
+  public var autoCapture: Swift.Bool? {
+    get
+  }
+  public var autoCaptureDuration: Swift.Int? {
     get
   }
   public var url: Swift.String? {
