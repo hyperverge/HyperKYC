@@ -11,6 +11,7 @@
 
   - Maintenance: 
     - Use HyperSnapSDK `4.8.0`
+
 ### 0.8.0 *[6 Apr 2023]*
 - Features: 
     - Add support for file upload feature in dynamic form
