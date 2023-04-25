@@ -4,12 +4,10 @@
 - Features:
   - Add support for file preview in file upload module
   - Add support for `sdk.device` parameter in config
-  - Enabled customisations for picker screens
-  
-   Bug fixes: 
-    - Fix rounded edges for form module buttons
-  - Maintenance: 
+  - Enable customisations for picker screens
+- Maintenance: 
     - Use HyperSnapSDK `4.8.0`
+
 ### 0.8.0 *[6 Apr 2023]*
 - Features: 
     - Add support for file upload feature in dynamic form
