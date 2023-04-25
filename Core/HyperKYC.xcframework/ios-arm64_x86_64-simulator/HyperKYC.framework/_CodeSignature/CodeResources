@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		vcgMZB5P+JWxAFM5sfUnYYEpwqs=
+		xoZVLGwPobUbFD5IJDh+XtnUEfY=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		tKQNp3hCXNG4Y4PNYFVW8TwRI1Y=
+		UhiKtzS3yzempBPiQj3I8+SoyfE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -110,11 +110,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vcgMZB5P+JWxAFM5sfUnYYEpwqs=
+			xoZVLGwPobUbFD5IJDh+XtnUEfY=
 			</data>
 			<key>hash2</key>
 			<data>
-			BcinW+c3xli476HMvK8ly+nNml7zJNvQNNd8KTxI8r0=
+			6La0SF+g0kEDAh6RBdSt0fkKk7DvID9N9XYDkUVrlpU=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -143,11 +143,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tKQNp3hCXNG4Y4PNYFVW8TwRI1Y=
+			UhiKtzS3yzempBPiQj3I8+SoyfE=
 			</data>
 			<key>hash2</key>
 			<data>
-			OhnFVfR+PmT13wMgMI8SwetpxJvoPTCoSbsIM/A60DA=
+			IxbNKYMlN5DapehFI1Tdy02Ss3GSJBbBF3wOwcvD+l0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
