@@ -1422,6 +1422,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var defaultCamera: Swift.String? {
     get
   }
+  public var enableLookStraight: Swift.Bool? {
+    get
+  }
   public var showInstruction: Swift.Bool? {
     get
   }
