@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+### 0.9.1 *[8 May 2023]*
+- Features:
+  - Add support for `enableLookStraight` from config
+  - Add support for resume workflow on app crash scenarios
+- Maintenance: 
+    - Use HyperSnapSDK `4.8.1`
+    
 ### 0.9.0 *[22 Apr 2023]*
 - Features:
   - Add support for file preview in file upload module
