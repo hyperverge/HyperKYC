@@ -1748,6 +1748,7 @@ public struct WorkflowCondition : Swift.Codable {
   }
   public func saveState()
   public func deleteWorkflowState(appId: Swift.String, transactionID: Swift.String)
+  public func makeStartAPICall(appId: Swift.String, transactionID: Swift.String)
   public func loadState(transactionID: Swift.String) -> HyperKYC.WorkFlowStateDelegate.WorkflowState?
   @objc override dynamic public init()
   @objc deinit
