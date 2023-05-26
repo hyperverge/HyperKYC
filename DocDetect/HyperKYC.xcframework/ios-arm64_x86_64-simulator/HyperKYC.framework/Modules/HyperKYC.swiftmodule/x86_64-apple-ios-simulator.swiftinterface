@@ -1,7 +1,10 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HyperKYC
+import AVFoundation
+import AVKit
 import CommonCrypto
+import CoreMedia
 import Dispatch
 import Foundation
 @_exported import HyperKYC
@@ -11,6 +14,7 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MobileCoreServices
 import PDFKit
 import PhotosUI
+import QuartzCore
 import QuickLook
 import Swift
 import SystemConfiguration
@@ -986,6 +990,9 @@ public struct FaceMatchApiStructure : Swift.Codable {
   public var apiResultList: [HyperKYC.APIResult] {
     get
   }
+  public var sessionRecordingResultList: [HyperKYC.SessionRecordingResult] {
+    get
+  }
   public var formResultList: [HyperKYC.FormResult] {
     get
   }
@@ -998,6 +1005,18 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
+}
+public enum SessionStatus : Swift.Codable {
+  case success
+  case failure
+  case error
+  public static func == (a: HyperKYC.SessionStatus, b: HyperKYC.SessionStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
 }
 public struct KycCountries : Swift.Codable {
   public var countries: [HyperKYC.KycCountry] {
@@ -1188,6 +1207,38 @@ public struct APIData : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public struct SessionRecordingResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var sessionRecordingData: HyperKYC.SessionRecordingData {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SessionRecordingData : Swift.Codable {
+  public var responseCode: Swift.Int? {
+    get
+  }
+  public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var videoUri: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 public struct FormResult : Swift.Codable {
   public var moduleId: Swift.String {
     get
@@ -1342,6 +1393,8 @@ public struct SDKVersion : Swift.Codable {
 }
 public struct WorkflowModule : Swift.Codable {
   public enum WorkflowModuleType : Swift.String, Swift.Codable {
+    case type_start_session_recording
+    case type_stop_session_recording
     case type_country
     case type_document
     case type_face
@@ -1386,6 +1439,15 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var countriesSupported: [Swift.String]? {
     get
   }
+  public var captureAudio: Swift.Bool? {
+    get
+  }
+  public var uploadSession: Swift.Bool? {
+    get
+  }
+  public var stopModuleId: Swift.String? {
+    get
+  }
   public var allowUpload: Swift.Bool? {
     get
   }
@@ -1401,10 +1463,10 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var documentsOverride: [Swift.String : [Swift.String : HyperKYC.DocumentsOverride]]? {
     get
   }
-  public var showReview: Swift.Bool? {
+  public var disableOCR: Swift.Bool? {
     get
   }
-  public var disableOCR: Swift.Bool? {
+  public var showReview: Swift.Bool? {
     get
   }
   public var videoRecording: Swift.Bool? {
@@ -1748,7 +1810,7 @@ public struct WorkflowCondition : Swift.Codable {
   }
   public func saveState()
   public func deleteWorkflowState(appId: Swift.String, transactionID: Swift.String)
-  public func makeStartAPICall(appId: Swift.String, transactionID: Swift.String)
+  public func makeStartAPICall(appId: Swift.String, transactionID: Swift.String, workflowId: Swift.String)
   public func loadState(transactionID: Swift.String) -> HyperKYC.WorkFlowStateDelegate.WorkflowState?
   @objc override dynamic public init()
   @objc deinit
@@ -1765,6 +1827,8 @@ extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
 extension HyperKYC.PickedFile.State : Swift.Equatable {}
 extension HyperKYC.PickedFile.State : Swift.Hashable {}
 extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
+extension HyperKYC.SessionStatus : Swift.Equatable {}
+extension HyperKYC.SessionStatus : Swift.Hashable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Equatable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Hashable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.RawRepresentable {}

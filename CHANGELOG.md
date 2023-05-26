@@ -1,5 +1,13 @@
 ## CHANGELOG
 
+### 0.10.0 *[26 May 2023]*
+- Features:
+  - Add support for `sessionRecording` from config
+  - Add support for analytics
+  - 
+- Maintenance: 
+    - Use HyperSnapSDK `4.9.0`
+
 ### 0.9.1 *[8 May 2023]*
 - Features:
   - Add support for `enableLookStraight` from config
