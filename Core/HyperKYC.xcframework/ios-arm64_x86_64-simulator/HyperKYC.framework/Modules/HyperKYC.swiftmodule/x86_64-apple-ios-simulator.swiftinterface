@@ -1128,6 +1128,9 @@ public struct DocData : Swift.Codable {
   public var docImagePath: Swift.String? {
     get
   }
+  public var retakeAttempts: Swift.Int {
+    get
+  }
   public var action: Swift.String? {
     get
   }
@@ -1164,6 +1167,9 @@ public struct FaceData : Swift.Codable {
     get
   }
   public var action: Swift.String? {
+    get
+  }
+  public var retakeAttempts: Swift.Int {
     get
   }
   public var responseHeaders: [Swift.String : Swift.String]? {
