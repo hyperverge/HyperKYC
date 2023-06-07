@@ -1,12 +1,12 @@
 ## CHANGELOG
-
-### 0.10.0 *[26 May 2023]*
-- Features:
-  - Add support for `sessionRecording` from config
-  - Add support for analytics
-  - 
+### 0.10.1 *[7 Jun 2023]*
+- Add support for session recording module
+- Add support for secure flag to block screen capture/recording/overlays - `secure`
+- Add analytics layer to power sankey charts on the dashboard
+- Add adaptive UI support for iPad
+- updates signature check logic to run for allowedStatusCodes only
 - Maintenance: 
-    - Use HyperSnapSDK `4.9.0`
+    - Use HyperSnapSDK `4.10.0`
 
 ### 0.9.1 *[8 May 2023]*
 - Features:
