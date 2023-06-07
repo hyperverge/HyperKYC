@@ -5,13 +5,16 @@ import AVFoundation
 import AVKit
 import CommonCrypto
 import CoreMedia
+import Darwin
 import Dispatch
 import Foundation
 @_exported import HyperKYC
 import HyperSnapSDK
+import MachO
 import MaterialComponents
 import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MobileCoreServices
+import ObjectiveC
 import PDFKit
 import PhotosUI
 import QuartzCore
@@ -626,6 +629,10 @@ extension UIKit.UINavigationController {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
     @_Concurrency.MainActor(unsafe) @objc get
   }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
 }
 extension UIKit.UIImage {
   public func withRoundedCorners(radius: CoreGraphics.CGFloat? = nil) -> UIKit.UIImage?
@@ -786,9 +793,57 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
+public typealias HKYCFailedCheckType = (check: HyperKYC.HKYCFailedCheck, failMessage: Swift.String)
+public enum HKYCFailedCheck : Swift.CaseIterable {
+  case urlSchemes
+  case existenceOfSuspiciousFiles
+  case suspiciousFilesCanBeOpened
+  case restrictedDirectoriesWriteable
+  case fork
+  case symbolicLinks
+  case dyld
+  case openedPorts
+  case pSelectFlag
+  case suspiciousObjCClasses
+  public static func == (a: HyperKYC.HKYCFailedCheck, b: HyperKYC.HKYCFailedCheck) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [HyperKYC.HKYCFailedCheck]
+  public static var allCases: [HyperKYC.HKYCFailedCheck] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers public class HKYCImageCache {
   public static let imageCache: HyperKYC.HKYCImageCache
   final public func image(urlString: Swift.String, imageClosure: @escaping (_ uiImage: UIKit.UIImage) -> Swift.Void)
+  @objc deinit
+}
+public enum HKYCFileIntegrityCheck {
+  case bundleID(Swift.String)
+  case mobileProvision(Swift.String)
+  case machO(Swift.String, Swift.String)
+}
+extension HyperKYC.HKYCFileIntegrityCheck {
+  public var description: Swift.String {
+    get
+  }
+}
+public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: [HyperKYC.HKYCFileIntegrityCheck])
+@_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
+public class HKYCIOSSecuritySuite {
+  public static func amIJailbroken() -> Swift.Bool
+  public static func amIJailbrokenWithFailMessage() -> (jailbroken: Swift.Bool, failMessage: Swift.String)
+  public static func amIJailbrokenWithFailedChecks() -> (jailbroken: Swift.Bool, failedChecks: [HyperKYC.HKYCFailedCheckType])
+  public static func amIRunInEmulator() -> Swift.Bool
+  public static func amIDebugged() -> Swift.Bool
+  public static func denyDebugger()
+  public static func amITampered(_ checks: [HyperKYC.HKYCFileIntegrityCheck]) -> HyperKYC.HKYCFileIntegrityCheckResult
+  public static func amIReverseEngineered() -> Swift.Bool
+  public static func amIReverseEngineeredWithFailedChecks() -> (reverseEngineered: Swift.Bool, failedChecks: [HyperKYC.HKYCFailedCheckType])
+  public static func amIRuntimeHooked(dyldWhiteList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
+  public static func amIProxied() -> Swift.Bool
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class HKYCSignatureHelper : ObjectiveC.NSObject {
@@ -921,6 +976,10 @@ public struct FaceMatchApiStructure : Swift.Codable {
   @_Concurrency.MainActor(unsafe) public var checkBox: HyperKYC.Checkbox!
   @objc deinit
 }
+@objc @_Concurrency.MainActor(unsafe) public class AdaptiveStackView : UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @objc public class HyperKyc : ObjectiveC.NSObject {
   @objc public static func launch(_ callingVC: UIKit.UIViewController, hyperKycConfig: HyperKYC.HyperKycConfig, _ completionHandler: @escaping (_ hyperKycResult: HyperKYC.HyperKycResult) -> Swift.Void)
   @objc override dynamic public init()
@@ -950,6 +1009,8 @@ public struct FaceMatchApiStructure : Swift.Codable {
   public static let NETWORK_ERROR: Swift.Int
   public static let SIGNATURE_FAILED_ERROR: Swift.Int
   public static let FACE_NOT_DETECTED: Swift.Int
+  public static let DEVICE_ROOTED_ERROR: Swift.Int
+  public static let SECURITY_ERROR: Swift.Int
   public var errorMessage: Swift.String?
   public var errorCode: Swift.Int?
   @objc deinit
@@ -1374,6 +1435,12 @@ public struct WorkflowProperties : Swift.Codable {
   public var uiConfigSource: Swift.String? {
     get
   }
+  public var secure: Swift.Bool? {
+    get
+  }
+  public var mobile: HyperKYC.MobileProperties? {
+    get
+  }
   public enum PlatformKey : Swift.String, Swift.Codable {
     case sdkVersionMobileKey
     case unknown
@@ -1392,6 +1459,13 @@ public struct SDKVersion : Swift.Codable {
     get
   }
   public var maximum: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct MobileProperties : Swift.Codable {
+  public var exitIfRooted: Swift.Bool? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
@@ -1833,6 +1907,8 @@ extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
 extension HyperKYC.PickedFile.State : Swift.Equatable {}
 extension HyperKYC.PickedFile.State : Swift.Hashable {}
 extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
+extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}
+extension HyperKYC.HKYCFailedCheck : Swift.Hashable {}
 extension HyperKYC.SessionStatus : Swift.Equatable {}
 extension HyperKYC.SessionStatus : Swift.Hashable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Equatable {}
