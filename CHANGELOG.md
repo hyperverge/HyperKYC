@@ -4,6 +4,7 @@
 - Add support for secure flag to block screen capture/recording/overlays - `secure`
 - Add analytics layer to power sankey charts on the dashboard
 - Add adaptive UI support for iPad
+- Add support for flags in finishTxn API
 - updates signature check logic to run for allowedStatusCodes only
 - Maintenance: 
     - Use HyperSnapSDK `4.10.0`
