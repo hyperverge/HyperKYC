@@ -1195,6 +1195,12 @@ public struct DocData : Swift.Codable {
   public var action: Swift.String? {
     get
   }
+  public var statusCode: Swift.String? {
+    get
+  }
+  public var statusMessage: Swift.String? {
+    get
+  }
   public var responseHeaders: [Swift.String : Swift.String]? {
     get
   }
@@ -1236,6 +1242,12 @@ public struct FaceData : Swift.Codable {
   public var responseHeaders: [Swift.String : Swift.String]? {
     get
   }
+  public var statusCode: Swift.String? {
+    get
+  }
+  public var statusMessage: Swift.String? {
+    get
+  }
   public var responseResult: HyperKYC.FaceCaptureApiDetail? {
     get
   }
@@ -1260,6 +1272,9 @@ public struct APIResult : Swift.Codable {
 }
 public struct APIData : Swift.Codable {
   public var responseCode: Swift.Int? {
+    get
+  }
+  public var statusMessage: Swift.String? {
     get
   }
   public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
@@ -1353,6 +1368,19 @@ public struct BarcodeResult : Swift.Codable {
     get
   }
   public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ApiFlags : Swift.Codable {
+  public var source: Swift.String? {
+    get
+  }
+  public var subSource: Swift.String? {
+    get
+  }
+  public var values: [Swift.String : Swift.String]? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
