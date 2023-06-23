@@ -643,6 +643,12 @@ extension HyperKYC.HKYCPrimaryButton {
     @_Concurrency.MainActor(unsafe) @objc set
   }
 }
+extension Swift.Dictionary where Key == Swift.String, Value == Swift.Dictionary<Swift.String, Any> {
+  public func getStringValue(key: Swift.String, subKey: Swift.String, defaultText: Swift.String) -> Swift.String
+}
+extension Swift.Dictionary where Key == Swift.String {
+  public func getStringValue(key: Swift.String, defaultText: Swift.String) -> Swift.String
+}
 extension UIKit.UIColor {
   convenience public init(hex: Swift.String)
 }
@@ -1005,6 +1011,7 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   public func setInputs(inputs: [Swift.String : Swift.String])
   public func setDefaultLangCode(language: Swift.String)
+  public func setUseLocation(shouldUse: Swift.Bool)
   public func addMetadata(metadata: [Swift.String : Swift.String])
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
@@ -1210,6 +1217,12 @@ public struct DocData : Swift.Codable {
   public var action: Swift.String? {
     get
   }
+  public var latitude: Swift.Double {
+    get
+  }
+  public var longitude: Swift.Double {
+    get
+  }
   public var statusCode: Swift.String? {
     get
   }
@@ -1249,6 +1262,12 @@ public struct FaceData : Swift.Codable {
     get
   }
   public var action: Swift.String? {
+    get
+  }
+  public var latitude: Swift.Double {
+    get
+  }
+  public var longitude: Swift.Double {
     get
   }
   public var retakeAttempts: Swift.Int {

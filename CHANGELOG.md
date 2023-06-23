@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 0.11.0 *[23 Jun 2023]*
+- Features: 
+    - Add support for [String: Any] text config type
+    - Add support for geo-location validation inputs
+- Maintenance: 
+    - Use HyperSnapSDK `4.11.0`
+    - Refactor the usage of deprecated AVFoundation library
+    
 ### 0.10.1 *[7 Jun 2023]*
 - Add support for session recording module
 - Add support for secure flag to block screen capture/recording/overlays - `secure`
