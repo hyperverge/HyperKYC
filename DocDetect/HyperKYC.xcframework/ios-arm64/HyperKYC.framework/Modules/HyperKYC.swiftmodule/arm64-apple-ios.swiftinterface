@@ -643,11 +643,11 @@ extension HyperKYC.HKYCPrimaryButton {
     @_Concurrency.MainActor(unsafe) @objc set
   }
 }
-extension Swift.Dictionary where Key == Swift.String, Value == Swift.Dictionary<Swift.String, Any> {
-  public func getStringValue(key: Swift.String, subKey: Swift.String, defaultText: Swift.String) -> Swift.String
-}
 extension Swift.Dictionary where Key == Swift.String {
   public func getStringValue(key: Swift.String, defaultText: Swift.String) -> Swift.String
+}
+extension Swift.Dictionary where Key == Swift.String, Value == Swift.Dictionary<Swift.String, Any> {
+  public func getStringValue(key: Swift.String, subKey: Swift.String, defaultText: Swift.String) -> Swift.String
 }
 extension UIKit.UIColor {
   convenience public init(hex: Swift.String)
