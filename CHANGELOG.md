@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 0.12.0 *[30 Jun 2023]*
+- Features: 
+  - Add support to make barcode read mandatory via HVDocConfig `setDisableBarcodeSkip` function
+- Maintenance: 
+    - Use HyperSnapSDK `4.12.0`
+    
 ### 0.11.0 *[23 Jun 2023]*
 - Features: 
     - Add support for [String: Any] text config type

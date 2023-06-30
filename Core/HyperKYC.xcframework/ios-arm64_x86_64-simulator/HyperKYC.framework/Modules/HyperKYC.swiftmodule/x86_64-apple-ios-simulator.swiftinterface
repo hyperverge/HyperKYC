@@ -1593,6 +1593,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var disableOCR: Swift.Bool? {
     get
   }
+  public var disableBarcodeSkip: Swift.Bool? {
+    get
+  }
   public var showReview: Swift.Bool? {
     get
   }
