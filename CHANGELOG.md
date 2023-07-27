@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 0.13.0 *[27 Jul 2023]*
+- Features:
+  - Add support for self video kyc module
+  
+- Maintenance: 
+    - Use HyperSnapSDK `4.13.0`  
 ### 0.12.0 *[30 Jun 2023]*
 - Features: 
   - Add support to make barcode read mandatory via HVDocConfig `setDisableBarcodeSkip` function

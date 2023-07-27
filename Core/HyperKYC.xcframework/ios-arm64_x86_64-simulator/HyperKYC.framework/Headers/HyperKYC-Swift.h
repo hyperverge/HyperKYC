@@ -506,6 +506,29 @@ SWIFT_CLASS("_TtC8HyperKYC14HKYCTitleLabel")
 + (void)setShadowOffset:(CGSize)offset;
 @end
 
+
+SWIFT_CLASS("_TtC8HyperKYC27HKYCVideoStatementDescLabel")
+@interface HKYCVideoStatementDescLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC28HKYCVideoStatementTitleLabel")
+@interface HKYCVideoStatementTitleLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC11HVCamConfig")
+@interface HVCamConfig : NSObject
+@property (nonatomic) BOOL useBackCamera;
+@property (nonatomic) BOOL enableLookStraight;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class UIViewController;
 @class HyperKycConfig;
 @class HyperKycResult;
@@ -1156,6 +1179,29 @@ SWIFT_CLASS("_TtC8HyperKYC14HKYCTitleLabel")
 + (void)setTextColor:(UIColor * _Nonnull)color;
 + (void)setShadowColor:(UIColor * _Nonnull)color;
 + (void)setShadowOffset:(CGSize)offset;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC27HKYCVideoStatementDescLabel")
+@interface HKYCVideoStatementDescLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC28HKYCVideoStatementTitleLabel")
+@interface HKYCVideoStatementTitleLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC11HVCamConfig")
+@interface HVCamConfig : NSObject
+@property (nonatomic) BOOL useBackCamera;
+@property (nonatomic) BOOL enableLookStraight;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 @class UIViewController;
