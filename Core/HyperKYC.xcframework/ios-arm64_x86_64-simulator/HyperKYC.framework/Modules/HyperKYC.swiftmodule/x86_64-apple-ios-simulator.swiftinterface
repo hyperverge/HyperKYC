@@ -17,6 +17,7 @@ import MobileCoreServices
 import ObjectiveC
 import PDFKit
 import PhotosUI
+import PromiseKit
 import QuartzCore
 import QuickLook
 import Swift
@@ -857,6 +858,7 @@ public class HKYCIOSSecuritySuite {
   public func setInputs(queryParams: [Swift.String : Swift.String]?, fileHashDictionary: [Swift.String : Swift.String]?, requestBody: [Swift.String : Swift.AnyObject], responseBody: [Swift.String : Swift.AnyObject]?, responseHeaders: [Swift.String : Swift.String]?)
   public func getMD5HashOfData(_ data: Foundation.Data) -> Swift.String
   public func verifySignature() -> Swift.Bool
+  public func verifyWorkflowSignature(path: Swift.String) -> Swift.Bool
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class HKYCActivityLabel : UIKit.UILabel {
@@ -890,6 +892,14 @@ public class HKYCIOSSecuritySuite {
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCVideoStatementTitleLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCVideoStatementDescLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCErrorMessageLabel : UIKit.UILabel {
@@ -986,6 +996,18 @@ public class HKYCIOSSecuritySuite {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
+@objc public class HVCamConfig : ObjectiveC.NSObject {
+  @objc public var useBackCamera: Swift.Bool
+  @objc public var enableLookStraight: Swift.Bool
+  public init(useBackCamera: Swift.Bool = false, enableLookStraight: Swift.Bool = false)
+  @objc deinit
+}
+public enum FaceState : Swift.Equatable {
+  case facedetected
+  case facenotdetected
+  case capture(fullImageUri: Swift.String, cropImageUri: Swift.String)
+  public static func == (a: HyperKYC.FaceState, b: HyperKYC.FaceState) -> Swift.Bool
+}
 @_inheritsConvenienceInitializers @objc public class HyperKyc : ObjectiveC.NSObject {
   @objc public static func launch(_ callingVC: UIKit.UIViewController, hyperKycConfig: HyperKYC.HyperKycConfig, _ completionHandler: @escaping (_ hyperKycResult: HyperKYC.HyperKycResult) -> Swift.Void)
   @objc override dynamic public init()
@@ -1059,6 +1081,9 @@ public class HKYCIOSSecuritySuite {
     get
   }
   public var sessionRecordingResultList: [HyperKYC.SessionRecordingResult] {
+    get
+  }
+  public var videoStatementResultList: [HyperKYC.VideoStatementResult] {
     get
   }
   public var formResultList: [HyperKYC.FormResult] {
@@ -1331,7 +1356,51 @@ public struct SessionRecordingData : Swift.Codable {
   public var responseHeaders: [Swift.String : Swift.String]? {
     get
   }
-  public var videoUri: Swift.String? {
+  public var videoUrl: Swift.String? {
+    get
+  }
+  public var videoPath: Swift.String? {
+    get
+  }
+  public var completed: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoStatementResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var videoStatementData: HyperKYC.VideoStatementData {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct VideoStatementData : Swift.Codable {
+  public var responseCode: Swift.Int? {
+    get
+  }
+  public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var image: Swift.String? {
+    get
+  }
+  public var statements: Swift.String? {
+    get
+  }
+  public var pass: Swift.String? {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -1522,6 +1591,7 @@ public struct WorkflowModule : Swift.Codable {
   public enum WorkflowModuleType : Swift.String, Swift.Codable {
     case type_start_session_recording
     case type_stop_session_recording
+    case video_statement
     case type_country
     case type_document
     case type_face
@@ -1573,6 +1643,36 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var stopModuleId: Swift.String? {
+    get
+  }
+  public var livenessUrl: Swift.String? {
+    get
+  }
+  public var faceMatchUrl: Swift.String? {
+    get
+  }
+  public var speechToTextMatchUrl: Swift.String? {
+    get
+  }
+  public var logVideoStatementUrl: Swift.String? {
+    get
+  }
+  public var start: Swift.String? {
+    get
+  }
+  public var allowedRestarts: Swift.Int? {
+    get
+  }
+  public var allowedAttempts: Swift.Int? {
+    get
+  }
+  public var faceMatchParams: [HyperKYC.WorkflowModuleRequestParam]? {
+    get
+  }
+  public var userData: [Swift.String : Swift.String]? {
+    get
+  }
+  public var statements: [Swift.String : HyperKYC.Statement]? {
     get
   }
   public var allowUpload: Swift.Bool? {
@@ -1657,6 +1757,60 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var enableOverlay: Swift.Bool? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Statement : Swift.Codable {
+  public var displayTimer: Swift.Bool? {
+    get
+  }
+  public var duration: Swift.Int? {
+    get
+  }
+  public var enable: Swift.String? {
+    get
+  }
+  public var next: Swift.String? {
+    get
+  }
+  public var checks: HyperKYC.Checks? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Checks : Swift.Codable {
+  public var restartFrom: Swift.String? {
+    get
+  }
+  public var liveness: HyperKYC.Check? {
+    get
+  }
+  public var faceMatch: HyperKYC.Check? {
+    get
+  }
+  public var faceDetection: HyperKYC.Check? {
+    get
+  }
+  public var speechToTextMatching: HyperKYC.Check? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Check : Swift.Codable {
+  public var isSync: Swift.Bool? {
+    get
+  }
+  public var enable: Swift.Bool? {
+    get
+  }
+  public var maxOutOfFrameTime: Swift.Int? {
+    get
+  }
+  public var allowIfCheckFailed: Swift.Bool? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
