@@ -321,6 +321,8 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
 
 
 
+
+
 SWIFT_CLASS("_TtC8HyperKYC21DocCollectionViewCell")
 @interface DocCollectionViewCell : UICollectionViewCell
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;

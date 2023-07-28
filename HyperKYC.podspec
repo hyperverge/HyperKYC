@@ -25,7 +25,6 @@ Pod::Spec.new do |s|
 
     s.subspec 'Core' do |cs|
 	cs.dependency 'HyperSnapSDK', '4.13.0'
-        cs.dependency 'PromiseKit', '8.0.0'
 	cs.dependency 'MaterialComponents/TextControls+OutlinedTextFields'
         cs.dependency 'MaterialComponents/TextControls+OutlinedTextAreas'
 	cs.vendored_frameworks = 'Core/HyperKYC.xcframework'
@@ -34,7 +33,6 @@ Pod::Spec.new do |s|
 
     s.subspec 'DocDetect' do |dds|
     	dds.dependency 'HyperSnapSDK/DocDetect', '4.13.0'
-        dds.dependency 'PromiseKit', '8.0.0'
 	dds.dependency 'MaterialComponents/TextControls+OutlinedTextFields'
         dds.dependency 'MaterialComponents/TextControls+OutlinedTextAreas'
 	dds.vendored_frameworks = 'DocDetect/HyperKYC.xcframework'
