@@ -3,11 +3,15 @@
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HyperKYC
 import AVFoundation
 import AVKit
+import Combine
 import CommonCrypto
+import CoreFoundation
 import CoreMedia
 import Darwin
 import Dispatch
 import Foundation
+import Foundation/*.Thread*/
+import Foundation/*.TimeInterval*/
 @_exported import HyperKYC
 import HyperSnapSDK
 import MachO
@@ -17,7 +21,6 @@ import MobileCoreServices
 import ObjectiveC
 import PDFKit
 import PhotosUI
-import PromiseKit
 import QuartzCore
 import QuickLook
 import Swift
@@ -25,6 +28,8 @@ import SystemConfiguration
 import UIKit
 import WebKit
 import _Concurrency
+public func after(seconds: Foundation.TimeInterval) -> HyperKYC.Guarantee<Swift.Void>
+public func after(_ interval: Dispatch.DispatchTimeInterval) -> HyperKYC.Guarantee<Swift.Void>
 @frozen public struct AnyCodable : Swift.Codable {
   public let value: Any
   public init<T>(_ value: T?)
@@ -175,6 +180,22 @@ extension HyperKYC.AnyEncodable : Swift.Hashable {
     get
   }
 }
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension HyperKYC.Guarantee {
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func async() async -> T
+  #endif
+
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension HyperKYC.HVPromise {
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func async() async throws -> T
+  #endif
+
+}
 public struct Metadata : Swift.Codable {
   public var data: Swift.String? {
     get
@@ -248,6 +269,30 @@ public struct Fieldvalue : Swift.Codable {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
+}
+public protocol CatchMixin : HyperKYC.Thenable {
+}
+extension HyperKYC.CatchMixin {
+  @discardableResult
+  public func `catch`(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (Swift.Error) -> Swift.Void) -> HyperKYC.PMKFinalizer
+}
+@_hasMissingDesignatedInitializers public class PMKFinalizer {
+  public func finally(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> Swift.Void)
+  @objc deinit
+}
+extension HyperKYC.CatchMixin {
+  public func recover<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (Swift.Error) throws -> U) -> HyperKYC.HVPromise<Self.T> where U : HyperKYC.Thenable, Self.T == U.T
+  @discardableResult
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Swift.Error) -> HyperKYC.Guarantee<Self.T>) -> HyperKYC.Guarantee<Self.T>
+  public func ensure(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> Swift.Void) -> HyperKYC.HVPromise<Self.T>
+  public func ensureThen(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> HyperKYC.Guarantee<Swift.Void>) -> HyperKYC.HVPromise<Self.T>
+  @discardableResult
+  public func cauterize() -> HyperKYC.PMKFinalizer
+}
+extension HyperKYC.CatchMixin where Self.T == Swift.Void {
+  @discardableResult
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Swift.Error) -> Swift.Void) -> HyperKYC.Guarantee<Swift.Void>
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (Swift.Error) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class Checkbox : UIKit.UIControl {
   @objc public enum CheckmarkStyle : Swift.Int {
@@ -340,6 +385,22 @@ public struct Fieldvalue : Swift.Codable {
   @_Concurrency.MainActor(unsafe) open func enableIndeterminate(_ enabled: Swift.Bool = true)
   @objc deinit
 }
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension HyperKYC.Guarantee {
+  final public func future() -> Combine.Future<T, Swift.Never>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension HyperKYC.HVPromise {
+  final public func future() -> Combine.Future<T, Swift.Error>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Combine.Future {
+  final public func promise() -> HyperKYC.HVPromise<Output>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Combine.Future where Failure == Swift.Never {
+  final public func guarantee() -> HyperKYC.Guarantee<Output>
+}
 extension Foundation.NSURL {
   public func mimeType() -> Swift.String
 }
@@ -352,6 +413,12 @@ extension Foundation.NSString {
 extension Swift.String {
   public func mimeType() -> Swift.String
 }
+public struct PMKConfiguration {
+  public var Q: (map: Dispatch.DispatchQueue?, return: Dispatch.DispatchQueue?)
+  public var catchPolicy: HyperKYC.CatchPolicy
+  public var logHandler: (_ event: HyperKYC.LogEvent) -> Swift.Void
+}
+public var conf: HyperKYC.PMKConfiguration
 public enum HyperKycStatus : Swift.String {
   case autoApproved
   case autoDeclined
@@ -367,6 +434,48 @@ public enum HyperKycStatus : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+extension HyperKYC.HVPromise : Swift.CustomStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+}
+extension HyperKYC.HVPromise : Swift.CustomDebugStringConvertible {
+  final public var debugDescription: Swift.String {
+    get
+  }
+}
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (T?, Swift.Error?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (T, Swift.Error?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (Swift.Error?, T?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap(_ body: (@escaping (Swift.Error?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (T) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+extension HyperKYC.HVPromise {
+  @available(*, deprecated, message: "See `ensure`")
+  final public func always(on q: Dispatch.DispatchQueue = .main, execute body: @escaping () -> Swift.Void) -> HyperKYC.HVPromise<T>
+}
+extension HyperKYC.Thenable where Self.T : Swift.Sequence {
+  @available(*, deprecated, message: "See: `filterValues`")
+  public func filter(on: Dispatch.DispatchQueue? = conf.Q.map, test: @escaping (Self.T.Iterator.Element) -> Swift.Bool) -> HyperKYC.HVPromise<[Self.T.Iterator.Element]>
+}
+extension HyperKYC.Thenable where Self.T : Swift.Collection {
+  @available(*, deprecated, message: "See: `firstValue`")
+  public var first: HyperKYC.HVPromise<Self.T.Element> {
+    get
+  }
+  @available(*, deprecated, message: "See: `lastValue`")
+  public var last: HyperKYC.HVPromise<Self.T.Element> {
+    get
+  }
+}
+extension HyperKYC.Thenable where Self.T : Swift.Sequence, Self.T.Element : Swift.Comparable {
+  @available(*, deprecated, message: "See: `sortedValues`")
+  public func sorted(on: Dispatch.DispatchQueue? = conf.Q.map) -> HyperKYC.HVPromise<[Self.T.Iterator.Element]>
 }
 public struct DocCaptureApiDetail : Swift.Codable {
   public var metadata: HyperKYC.Metadata {
@@ -620,6 +729,44 @@ extension HyperKYC.DropDownCell {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCLabel : UIKit.UITableViewCell {
   @objc deinit
 }
+public enum PMKError : Swift.Error {
+  case invalidCallingConvention
+  case returnedSelf
+  case badInput
+  case cancelled
+  @available(*, deprecated, message: "See: `compactMap`")
+  case flatMap(Any, Any.Type)
+  case compactMap(Any, Any.Type)
+  case emptySequence
+  case noWinner
+}
+extension HyperKYC.PMKError : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension HyperKYC.PMKError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public protocol CancellableError : Swift.Error {
+  var isCancelled: Swift.Bool { get }
+}
+extension Swift.Error {
+  public var isCancelled: Swift.Bool {
+    get
+  }
+}
+public enum CatchPolicy {
+  case allErrors
+  case allErrorsExceptCancellation
+  public static func == (a: HyperKYC.CatchPolicy, b: HyperKYC.CatchPolicy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 extension UIKit.UINavigationController {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
     @_Concurrency.MainActor(unsafe) @objc get
@@ -789,6 +936,51 @@ public struct FaceMatchApiStructure : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public func firstly<U>(execute body: () throws -> U) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+public func firstly<T>(execute body: () -> HyperKYC.Guarantee<T>) -> HyperKYC.Guarantee<T>
+@_hasMissingDesignatedInitializers final public class Guarantee<T> : HyperKYC.Thenable {
+  public static func value(_ value: T) -> HyperKYC.Guarantee<T>
+  public init(resolver body: (@escaping (T) -> Swift.Void) -> Swift.Void)
+  final public func pipe(to: @escaping (HyperKYC.PromiseResult<T>) -> Swift.Void)
+  final public var result: HyperKYC.PromiseResult<T>? {
+    get
+  }
+  final public class func pending() -> (guarantee: HyperKYC.Guarantee<T>, resolve: (T) -> Swift.Void)
+  @objc deinit
+}
+extension HyperKYC.Guarantee {
+  @discardableResult
+  final public func done(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> Swift.Void) -> HyperKYC.Guarantee<Swift.Void>
+  final public func get(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> Swift.Void) -> HyperKYC.Guarantee<T>
+  final public func map<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> U) -> HyperKYC.Guarantee<U>
+  @discardableResult
+  final public func then<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> HyperKYC.Guarantee<U>) -> HyperKYC.Guarantee<U>
+  final public func asVoid() -> HyperKYC.Guarantee<Swift.Void>
+  final public func wait() -> T
+}
+extension HyperKYC.Guarantee where T : Swift.Sequence {
+  final public func mapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U) -> HyperKYC.Guarantee<[U]>
+  final public func flatMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U) -> HyperKYC.Guarantee<[U.Iterator.Element]> where U : Swift.Sequence
+  final public func compactMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U?) -> HyperKYC.Guarantee<[U]>
+  final public func thenMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> HyperKYC.Guarantee<U>) -> HyperKYC.Guarantee<[U]>
+  final public func thenFlatMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U) -> HyperKYC.Guarantee<[U.T.Iterator.Element]> where U : HyperKYC.Thenable, U.T : Swift.Sequence
+  final public func filterValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ isIncluded: @escaping (T.Iterator.Element) -> Swift.Bool) -> HyperKYC.Guarantee<[T.Iterator.Element]>
+  final public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ areInIncreasingOrder: @escaping (T.Iterator.Element, T.Iterator.Element) -> Swift.Bool) -> HyperKYC.Guarantee<[T.Iterator.Element]>
+}
+extension HyperKYC.Guarantee where T : Swift.Sequence, T.Element : Swift.Comparable {
+  final public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil) -> HyperKYC.Guarantee<[T.Iterator.Element]>
+}
+extension HyperKYC.Guarantee where T == Swift.Void {
+  convenience public init()
+  public static var value: HyperKYC.Guarantee<Swift.Void> {
+    get
+  }
+}
+extension Dispatch.DispatchQueue {
+  @available(macOS 10.10, iOS 2.0, tvOS 10.0, watchOS 2.0, *)
+  final public func async<T>(_: HyperKYC.PMKNamespacer, group: Dispatch.DispatchGroup? = nil, qos: Dispatch.DispatchQoS = .default, flags: Dispatch.DispatchWorkItemFlags = [], execute body: @escaping () -> T) -> HyperKYC.Guarantee<T>
+}
+public func hang<T>(_ promise: HyperKYC.HVPromise<T>) throws -> T
 @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCBrandingLayout : UIKit.UIStackView {
   @objc @_Concurrency.MainActor(unsafe) public func showBranding(show: Swift.Bool)
   @objc deinit
@@ -1007,6 +1199,39 @@ public enum FaceState : Swift.Equatable {
   case facenotdetected
   case capture(fullImageUri: Swift.String, cropImageUri: Swift.String)
   public static func == (a: HyperKYC.FaceState, b: HyperKYC.FaceState) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers final public class HVPromise<T> : HyperKYC.Thenable, HyperKYC.CatchMixin {
+  public static func value(_ value: T) -> HyperKYC.HVPromise<T>
+  public init(error: Swift.Error)
+  public init<U>(_ bridge: U) where T == U.T, U : HyperKYC.Thenable
+  public init(resolver body: (HyperKYC.Resolver<T>) throws -> Swift.Void)
+  final public class func pending() -> (promise: HyperKYC.HVPromise<T>, resolver: HyperKYC.Resolver<T>)
+  final public func pipe(to: @escaping (HyperKYC.PromiseResult<T>) -> Swift.Void)
+  final public var result: HyperKYC.PromiseResult<T>? {
+    get
+  }
+  @objc deinit
+}
+extension HyperKYC.HVPromise {
+  final public func wait() throws -> T
+}
+extension HyperKYC.HVPromise where T == Swift.Void {
+  convenience public init()
+  public static var value: HyperKYC.HVPromise<Swift.Void> {
+    get
+  }
+}
+extension Dispatch.DispatchQueue {
+  @available(macOS 10.10, iOS 8.0, tvOS 9.0, watchOS 2.0, *)
+  final public func async<T>(_: HyperKYC.PMKNamespacer, group: Dispatch.DispatchGroup? = nil, qos: Dispatch.DispatchQoS = .default, flags: Dispatch.DispatchWorkItemFlags = [], execute body: @escaping () throws -> T) -> HyperKYC.HVPromise<T>
+}
+public enum PMKNamespacer {
+  case promise
+  public static func == (a: HyperKYC.PMKNamespacer, b: HyperKYC.PMKNamespacer) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 @_inheritsConvenienceInitializers @objc public class HyperKyc : ObjectiveC.NSObject {
   @objc public static func launch(_ callingVC: UIKit.UIViewController, hyperKycConfig: HyperKYC.HyperKycConfig, _ completionHandler: @escaping (_ hyperKycResult: HyperKYC.HyperKycResult) -> Swift.Void)
@@ -1507,12 +1732,128 @@ public struct FaceMatchData {
     get
   }
 }
+public enum LogEvent {
+  case waitOnMainThread
+  case pendingPromiseDeallocated
+  case pendingGuaranteeDeallocated
+  case cauterized(Swift.Error)
+}
+@_hasMissingDesignatedInitializers public class PromiseBox<T> {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SealedBox<T> : HyperKYC.PromiseBox<T> {
+  @objc deinit
+}
+public func race<U>(_ thenables: U...) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+public func race<U>(_ thenables: [U]) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+public func race<T>(_ guarantees: HyperKYC.Guarantee<T>...) -> HyperKYC.Guarantee<T>
+public func race<U>(fulfilled thenables: [U]) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+@_hasMissingDesignatedInitializers final public class Resolver<T> {
+  @objc deinit
+}
+extension HyperKYC.Resolver {
+  final public func fulfill(_ value: T)
+  final public func reject(_ error: Swift.Error)
+  final public func resolve(_ result: HyperKYC.PromiseResult<T>)
+  final public func resolve(_ obj: T?, _ error: Swift.Error?)
+  final public func resolve(_ obj: T, _ error: Swift.Error?)
+  final public func resolve(_ error: Swift.Error?, _ obj: T?)
+}
+extension HyperKYC.Resolver where T == Swift.Void {
+  final public func resolve(_ error: Swift.Error?)
+  final public func fulfill_()
+}
+extension HyperKYC.Resolver {
+  final public func resolve<E>(_ result: Swift.Result<T, E>) where E : Swift.Error
+}
+public enum PromiseResult<T> {
+  case fulfilled(T)
+  case rejected(Swift.Error)
+}
+extension HyperKYC.PromiseResult {
+  public var isFulfilled: Swift.Bool {
+    get
+  }
+}
+public protocol Thenable : AnyObject {
+  associatedtype T
+  func pipe(to: @escaping (HyperKYC.PromiseResult<Self.T>) -> Swift.Void)
+  var result: HyperKYC.PromiseResult<Self.T>? { get }
+}
+extension HyperKYC.Thenable {
+  public func then<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Self.T) throws -> U) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+  public func map<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T) throws -> U) -> HyperKYC.HVPromise<U>
+  public func compactMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T) throws -> U?) -> HyperKYC.HVPromise<U>
+  public func done(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Self.T) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
+  public func get(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Self.T) throws -> Swift.Void) -> HyperKYC.HVPromise<Self.T>
+  public func tap(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (HyperKYC.PromiseResult<Self.T>) -> Swift.Void) -> HyperKYC.HVPromise<Self.T>
+  public func asVoid() -> HyperKYC.HVPromise<Swift.Void>
+}
+extension HyperKYC.Thenable {
+  public var error: Swift.Error? {
+    get
+  }
+  public var isPending: Swift.Bool {
+    get
+  }
+  public var isResolved: Swift.Bool {
+    get
+  }
+  public var isFulfilled: Swift.Bool {
+    get
+  }
+  public var isRejected: Swift.Bool {
+    get
+  }
+  public var value: Self.T? {
+    get
+  }
+}
+extension HyperKYC.Thenable where Self.T : Swift.Sequence {
+  public func mapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> HyperKYC.HVPromise<[U]>
+  public func flatMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> HyperKYC.HVPromise<[U.Iterator.Element]> where U : Swift.Sequence
+  public func compactMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U?) -> HyperKYC.HVPromise<[U]>
+  public func thenMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> HyperKYC.HVPromise<[U.T]> where U : HyperKYC.Thenable
+  public func thenFlatMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> HyperKYC.HVPromise<[U.T.Iterator.Element]> where U : HyperKYC.Thenable, U.T : Swift.Sequence
+  public func filterValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ isIncluded: @escaping (Self.T.Iterator.Element) -> Swift.Bool) -> HyperKYC.HVPromise<[Self.T.Iterator.Element]>
+}
+extension HyperKYC.Thenable where Self.T : Swift.Collection {
+  public var firstValue: HyperKYC.HVPromise<Self.T.Element> {
+    get
+  }
+  public func firstValue(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, where test: @escaping (Self.T.Iterator.Element) -> Swift.Bool) -> HyperKYC.HVPromise<Self.T.Iterator.Element>
+  public var lastValue: HyperKYC.HVPromise<Self.T.Element> {
+    get
+  }
+}
+extension HyperKYC.Thenable where Self.T : Swift.Sequence, Self.T.Element : Swift.Comparable {
+  public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil) -> HyperKYC.HVPromise<[Self.T.Iterator.Element]>
+}
 @objc @_inheritsConvenienceInitializers public class UIUtilities : ObjectiveC.NSObject {
   public static let shared: HyperKYC.UIUtilities
   public func setTitleLabelConfigs(titleLabel: HyperKYC.HKYCTitleLabel)
   @objc override dynamic public init()
   @objc deinit
 }
+public func when<U>(fulfilled thenables: [U]) -> HyperKYC.HVPromise<[U.T]> where U : HyperKYC.Thenable
+public func when<U>(fulfilled promises: U...) -> HyperKYC.HVPromise<Swift.Void> where U : HyperKYC.Thenable, U.T == Swift.Void
+public func when<U>(fulfilled promises: [U]) -> HyperKYC.HVPromise<Swift.Void> where U : HyperKYC.Thenable, U.T == Swift.Void
+public func when<U, V>(fulfilled pu: U, _ pv: V) -> HyperKYC.HVPromise<(U.T, V.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable
+public func when<U, V, W>(fulfilled pu: U, _ pv: V, _ pw: W) -> HyperKYC.HVPromise<(U.T, V.T, W.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable, W : HyperKYC.Thenable
+public func when<U, V, W, X>(fulfilled pu: U, _ pv: V, _ pw: W, _ px: X) -> HyperKYC.HVPromise<(U.T, V.T, W.T, X.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable, W : HyperKYC.Thenable, X : HyperKYC.Thenable
+public func when<U, V, W, X, Y>(fulfilled pu: U, _ pv: V, _ pw: W, _ px: X, _ py: Y) -> HyperKYC.HVPromise<(U.T, V.T, W.T, X.T, Y.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable, W : HyperKYC.Thenable, X : HyperKYC.Thenable, Y : HyperKYC.Thenable
+public func when<It>(fulfilled promiseIterator: It, concurrently: Swift.Int) -> HyperKYC.HVPromise<[It.Element.T]> where It : Swift.IteratorProtocol, It.Element : HyperKYC.Thenable
+public func when<T>(resolved promises: HyperKYC.HVPromise<T>...) -> HyperKYC.Guarantee<[HyperKYC.PromiseResult<T>]>
+public func when<T>(resolved promises: [HyperKYC.HVPromise<T>]) -> HyperKYC.Guarantee<[HyperKYC.PromiseResult<T>]>
+public func when<It>(resolved promiseIterator: It, concurrently: Swift.Int) -> HyperKYC.Guarantee<[HyperKYC.PromiseResult<It.Element.T>]> where It : Swift.IteratorProtocol, It.Element : HyperKYC.Thenable
+public func when(_ guarantees: HyperKYC.Guarantee<Swift.Void>...) -> HyperKYC.Guarantee<Swift.Void>
+public func when<T>(_ guarantees: HyperKYC.Guarantee<T>...) -> HyperKYC.Guarantee<[T]>
+public func when(guarantees: [HyperKYC.Guarantee<Swift.Void>]) -> HyperKYC.Guarantee<Swift.Void>
+public func when<T>(guarantees: [HyperKYC.Guarantee<T>]) -> HyperKYC.Guarantee<[T]>
+public func when<U, V>(guarantees gu: HyperKYC.Guarantee<U>, _ gv: HyperKYC.Guarantee<V>) -> HyperKYC.Guarantee<(U, V)>
+public func when<U, V, W>(guarantees gu: HyperKYC.Guarantee<U>, _ gv: HyperKYC.Guarantee<V>, _ gw: HyperKYC.Guarantee<W>) -> HyperKYC.Guarantee<(U, V, W)>
+public func when<U, V, W, X>(guarantees gu: HyperKYC.Guarantee<U>, _ gv: HyperKYC.Guarantee<V>, _ gw: HyperKYC.Guarantee<W>, _ gx: HyperKYC.Guarantee<X>) -> HyperKYC.Guarantee<(U, V, W, X)>
+public func when<U, V, W, X, Y>(guarantees gu: HyperKYC.Guarantee<U>, _ gv: HyperKYC.Guarantee<V>, _ gw: HyperKYC.Guarantee<W>, _ gx: HyperKYC.Guarantee<X>, _ gy: HyperKYC.Guarantee<Y>) -> HyperKYC.Guarantee<(U, V, W, X, Y)>
 public struct WorkFlowConfig : Swift.Codable {
   public var properties: HyperKYC.WorkflowProperties? {
     get
@@ -2111,8 +2452,12 @@ extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
 extension HyperKYC.PickedFile.State : Swift.Equatable {}
 extension HyperKYC.PickedFile.State : Swift.Hashable {}
 extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
+extension HyperKYC.CatchPolicy : Swift.Equatable {}
+extension HyperKYC.CatchPolicy : Swift.Hashable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Hashable {}
+extension HyperKYC.PMKNamespacer : Swift.Equatable {}
+extension HyperKYC.PMKNamespacer : Swift.Hashable {}
 extension HyperKYC.SessionStatus : Swift.Equatable {}
 extension HyperKYC.SessionStatus : Swift.Hashable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Equatable {}
