@@ -1,8 +1,15 @@
 ## CHANGELOG
+### 0.14.0 *[14 Aug 2023]*
+- Features:
+  - Add default headers part of finish txn api 
+  - Add support for `loggingPercentage` and `effectiveFrom` via Analytics config
+- Maintenance: 
+    - Use HyperSnapSDK `4.14.0`  
+    
 ### 0.13.0 *[27 Jul 2023]*
 - Features:
   - Add support for self video kyc module
-  
+
 - Maintenance: 
     - Use HyperSnapSDK `4.13.0`  
 ### 0.12.0 *[30 Jun 2023]*
