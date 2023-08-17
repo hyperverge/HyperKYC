@@ -3,6 +3,9 @@
 - Features:
   - Add default headers part of finish txn api 
   - Add support for `loggingPercentage` and `effectiveFrom` via Analytics config
+- Bug Fixes: 
+  - Add support for flow backward for dynamic form modules
+  
 - Maintenance: 
     - Use HyperSnapSDK `4.14.0`  
     
