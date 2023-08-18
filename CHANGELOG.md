@@ -3,6 +3,7 @@
 - Features:
   - Add default headers part of finish txn api 
   - Add support for `loggingPercentage` and `effectiveFrom` via Analytics config
+  - Add support for nested conditions parser from third party APIs
 - Bug Fixes: 
   - Add support for flow backward for dynamic form modules
   
