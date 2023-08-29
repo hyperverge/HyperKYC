@@ -726,7 +726,61 @@ extension HyperKYC.DropDownCell {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func setHighlighted(_ highlighted: Swift.Bool, animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
 }
+public struct DynamicFormComponentsAttributes : Swift.Codable {
+  public var font: Swift.String {
+    get
+  }
+  public var fontSize: Swift.String {
+    get
+  }
+  public var fontWeight: Swift.String {
+    get
+  }
+  public var alignment: Swift.String {
+    get
+  }
+  public var color: Swift.String {
+    get
+  }
+  public var backgroundColor: Swift.String {
+    get
+  }
+  public var borderColor: Swift.String {
+    get
+  }
+  public var borderRadius: Swift.String {
+    get
+  }
+  public var icons: HyperKYC.HKYCUIIcons {
+    get
+  }
+  public init()
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct HKYCUIIcons : Swift.Codable {
+  public var primaryButtonIcon: HyperKYC.HKYCUIPrimaryButtonIcon {
+    get
+  }
+  public init()
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
+  public var url: Swift.String {
+    get
+  }
+  public var shouldShow: Swift.Bool {
+    get
+  }
+  public init()
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCLabel : UIKit.UITableViewCell {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCHint : UIKit.UITableViewCell {
   @objc deinit
 }
 public enum PMKError : Swift.Error {
@@ -801,7 +855,7 @@ extension UIKit.UIColor {
   convenience public init(hex: Swift.String)
 }
 extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func addTapGestureRecognizer(action: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public func addTapGestureRecognizer(action: ((_ sender: UIKit.UITapGestureRecognizer) -> Swift.Void)?)
 }
 public struct FaceCaptureApiDetail : Swift.Codable {
   public var metadata: HyperKYC.Metadata {
@@ -1068,6 +1122,10 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   public func verifyWorkflowSignature(path: Swift.String) -> Swift.Bool
   @objc deinit
 }
+@objc @_Concurrency.MainActor(unsafe) public class HKYCClientLogoImageView : UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
 @objc @_Concurrency.MainActor(unsafe) public class HKYCActivityLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
@@ -1094,6 +1152,14 @@ extension HyperKYC.HKYCIOSSecuritySuite {
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCDescriptionLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCHintLabel : UIKit.UILabel {
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
@@ -1162,17 +1228,12 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class PaddingLabel : UIKit.UILabel {
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PaddingLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public func setInsets(withInsets top: CoreGraphics.CGFloat, _ bottom: CoreGraphics.CGFloat, _ left: CoreGraphics.CGFloat, _ right: CoreGraphics.CGFloat)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreGraphics.CGRect)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
     @_Concurrency.MainActor(unsafe) @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var bounds: CoreGraphics.CGRect {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
-  }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCDocHolderCard : UIKit.UIView {
@@ -1190,13 +1251,29 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCCheckBox : UIKit.UIStackView {
-  @_Concurrency.MainActor(unsafe) public var stackView: UIKit.UIStackView {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCCheckBox : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var containerView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var checkBoxlabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public var checkBox: HyperKYC.Checkbox!
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class DottedLineView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var dottedLineColor: UIKit.UIColor {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) public var checkBoxlabel: UIKit.UILabel!
-  @_Concurrency.MainActor(unsafe) public var checkBox: HyperKYC.Checkbox!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class DividerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var dividerLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public var dottedLine: HyperKYC.DottedLineView!
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HintView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var hintLabel: HyperKYC.HKYCHintLabel!
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class AdaptiveStackView : UIKit.UIStackView {
@@ -2232,12 +2309,13 @@ public struct Component : Swift.Codable {
   public enum ComponentType : Swift.String, Swift.Codable {
     case label
     case text
-    case radio
     case checkbox
     case dropdown
     case date
     case button
     case divider
+    case vertical
+    case horizontal
     case file
     case unknown
     public init(from decoder: Swift.Decoder) throws
@@ -2253,7 +2331,7 @@ public struct Component : Swift.Codable {
   public var type: HyperKYC.Component.ComponentType {
     get
   }
-  public var children: [HyperKYC.Component]? {
+  public var subComponents: [HyperKYC.Component]? {
     get
   }
   public var required: Swift.String? {

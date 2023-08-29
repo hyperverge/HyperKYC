@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 0.15.0 *[28 Aug 2023]*
+- Features:
+  - Add support for vertical & divider components in dynamic form module.
+  - Add support for ui config for dynamic form module
+  - Add support for client logos on HV screens
+  - Add support to customise icons for primary buttons
+- Bug Fixes: 
+  - Clear form values after closing the dynamic form module
 ### 0.14.0 *[14 Aug 2023]*
 - Features:
   - Add default headers part of finish txn api 

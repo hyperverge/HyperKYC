@@ -325,10 +325,25 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
 
 
 
+SWIFT_CLASS("_TtC8HyperKYC11DividerView")
+@interface DividerView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC21DocCollectionViewCell")
 @interface DocCollectionViewCell : UICollectionViewCell
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC14DottedLineView")
+@interface DottedLineView : UIView
+- (void)drawRect:(CGRect)rect;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UILabel;
@@ -396,9 +411,19 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 
 
 SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
-@interface HKYCCheckBox : UIStackView
+@interface HKYCCheckBox : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+@class UIImage;
+
+SWIFT_CLASS("_TtC8HyperKYC23HKYCClientLogoImageView")
+@interface HKYCClientLogoImageView : UIImageView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -436,6 +461,25 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
 @interface HKYCFileStackView : UIStackView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC8HKYCHint")
+@interface HKYCHint : UITableViewCell
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Null_unspecified)reuseIdentifier SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
+@interface HKYCHintLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
 @end
 
 
@@ -531,6 +575,13 @@ SWIFT_CLASS("_TtC8HyperKYC11HVCamConfig")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC8HyperKYC8HintView")
+@interface HintView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
 @class UIViewController;
 @class HyperKycConfig;
 @class HyperKycResult;
@@ -611,11 +662,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 
 SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
 @interface PaddingLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)drawTextInRect:(CGRect)rect;
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
-@property (nonatomic) CGRect bounds;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -646,6 +696,7 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic) CGSize preferredContentSize;
 @end
+
 
 
 SWIFT_CLASS("_TtC8HyperKYC11UIUtilities")
@@ -1002,10 +1053,25 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
 
 
 
+SWIFT_CLASS("_TtC8HyperKYC11DividerView")
+@interface DividerView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC21DocCollectionViewCell")
 @interface DocCollectionViewCell : UICollectionViewCell
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC14DottedLineView")
+@interface DottedLineView : UIView
+- (void)drawRect:(CGRect)rect;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UILabel;
@@ -1073,9 +1139,19 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 
 
 SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
-@interface HKYCCheckBox : UIStackView
+@interface HKYCCheckBox : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+@class UIImage;
+
+SWIFT_CLASS("_TtC8HyperKYC23HKYCClientLogoImageView")
+@interface HKYCClientLogoImageView : UIImageView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1113,6 +1189,25 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
 @interface HKYCFileStackView : UIStackView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC8HKYCHint")
+@interface HKYCHint : UITableViewCell
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Null_unspecified)reuseIdentifier SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
+@interface HKYCHintLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
 @end
 
 
@@ -1208,6 +1303,13 @@ SWIFT_CLASS("_TtC8HyperKYC11HVCamConfig")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC8HyperKYC8HintView")
+@interface HintView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
 @class UIViewController;
 @class HyperKycConfig;
 @class HyperKycResult;
@@ -1288,11 +1390,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 
 SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
 @interface PaddingLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (void)drawTextInRect:(CGRect)rect;
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
-@property (nonatomic) CGRect bounds;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1323,6 +1424,7 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic) CGSize preferredContentSize;
 @end
+
 
 
 SWIFT_CLASS("_TtC8HyperKYC11UIUtilities")
