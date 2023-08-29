@@ -7,6 +7,10 @@
   - Add support to customise icons for primary buttons
 - Bug Fixes: 
   - Clear form values after closing the dynamic form module
+  - Fix branding layout issue in LoadingVC
+  - Fix newline character signature issue (present in both HyperSnap & HyperKYC)
+  - Fix Webview constraint issues (happening in iPad)
+  
 ### 0.14.0 *[14 Aug 2023]*
 - Features:
   - Add default headers part of finish txn api 
