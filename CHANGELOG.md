@@ -12,6 +12,8 @@
   - Fix Webview constraint issues (happening in iPad)
   - Fix iPad formsheet closing on iOS 13 & above
   - Fix GET api call error in API Module
+- Maintenance: 
+    - Use HyperSnapSDK `4.15.0`     
   
 ### 0.14.0 *[14 Aug 2023]*
 - Features:
