@@ -10,6 +10,8 @@
   - Fix branding layout issue in LoadingVC
   - Fix newline character signature issue (present in both HyperSnap & HyperKYC)
   - Fix Webview constraint issues (happening in iPad)
+  - Fix iPad formsheet closing on iOS 13 & above
+  - Fix GET api call error in API Module
   
 ### 0.14.0 *[14 Aug 2023]*
 - Features:
