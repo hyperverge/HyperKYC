@@ -1538,7 +1538,7 @@ public struct DocData : Swift.Codable {
   public var docImagePath: Swift.String? {
     get
   }
-  public var retakeAttempts: Swift.Int {
+  public var attemptsCount: Swift.Int {
     get
   }
   public var action: Swift.String? {
@@ -1597,7 +1597,7 @@ public struct FaceData : Swift.Codable {
   public var longitude: Swift.Double {
     get
   }
-  public var retakeAttempts: Swift.Int {
+  public var attemptsCount: Swift.Int {
     get
   }
   public var responseHeaders: [Swift.String : Swift.String]? {
