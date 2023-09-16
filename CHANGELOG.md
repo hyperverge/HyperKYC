@@ -5,11 +5,13 @@
   - Add support for ui config for dynamic form module
   - Add support for client logos on HV screens
   - Add support to customise icons for primary buttons
+  - Add support to expose `attemptsCount` for face & doc capture
 - Bug Fixes: 
   - Clear form values after closing the dynamic form module
   - Fix branding layout issue in LoadingVC
   - Fix newline character signature issue (present in both HyperSnap & HyperKYC)
   - Fix Webview constraint issues (happening in iPad)
+  - Fix  parser for nested json & array within `details`
   
 ### 0.14.0 *[14 Aug 2023]*
 - Features:
