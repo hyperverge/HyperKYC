@@ -321,6 +321,13 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
 };
 
 
+SWIFT_CLASS("_TtC8HyperKYC13DashedOTPView")
+@interface DashedOTPView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 
 
 
@@ -374,16 +381,17 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
-@class UIFont;
 
 SWIFT_CLASS("_TtC8HyperKYC17HKYCActivityLabel")
 @interface HKYCActivityLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setFont:(UIFont * _Nonnull)font;
-+ (void)setTextAlignment:(NSTextAlignment)alignment;
-+ (void)setTextColor:(UIColor * _Nonnull)color;
-+ (void)setShadowColor:(UIColor * _Nonnull)color;
-+ (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC22HKYCActivityTitleLabel")
+@interface HKYCActivityTitleLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -410,6 +418,13 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC12HKYCCardView")
+@interface HKYCCardView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
 @interface HKYCCheckBox : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -426,6 +441,7 @@ SWIFT_CLASS("_TtC8HyperKYC23HKYCClientLogoImageView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class UIFont;
 
 SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @interface HKYCDescriptionLabel : UILabel
@@ -521,6 +537,25 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCPrimaryButton")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC14HKYCRecordView")
+@interface HKYCRecordView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC22HKYCRetakeMessageLabel")
+@interface HKYCRetakeMessageLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
 @interface HKYCSecondaryButton : UIButton
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -538,6 +573,15 @@ SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
 SWIFT_CLASS("_TtC8HyperKYC19HKYCSignatureHelper")
 @interface HKYCSignatureHelper : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC15HKYCStatusLabel")
+@interface HKYCStatusLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)drawTextInRect:(CGRect)rect;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
 @end
 
 
@@ -574,6 +618,7 @@ SWIFT_CLASS("_TtC8HyperKYC11HVCamConfig")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_CLASS("_TtC8HyperKYC8HintView")
@@ -696,6 +741,7 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic) CGSize preferredContentSize;
 @end
+
 
 
 
@@ -1049,6 +1095,13 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
 };
 
 
+SWIFT_CLASS("_TtC8HyperKYC13DashedOTPView")
+@interface DashedOTPView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 
 
 
@@ -1102,16 +1155,17 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
-@class UIFont;
 
 SWIFT_CLASS("_TtC8HyperKYC17HKYCActivityLabel")
 @interface HKYCActivityLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setFont:(UIFont * _Nonnull)font;
-+ (void)setTextAlignment:(NSTextAlignment)alignment;
-+ (void)setTextColor:(UIColor * _Nonnull)color;
-+ (void)setShadowColor:(UIColor * _Nonnull)color;
-+ (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC22HKYCActivityTitleLabel")
+@interface HKYCActivityTitleLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -1138,6 +1192,13 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC12HKYCCardView")
+@interface HKYCCardView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
 @interface HKYCCheckBox : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -1154,6 +1215,7 @@ SWIFT_CLASS("_TtC8HyperKYC23HKYCClientLogoImageView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class UIFont;
 
 SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @interface HKYCDescriptionLabel : UILabel
@@ -1249,6 +1311,25 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCPrimaryButton")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC14HKYCRecordView")
+@interface HKYCRecordView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC22HKYCRetakeMessageLabel")
+@interface HKYCRetakeMessageLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
 @interface HKYCSecondaryButton : UIButton
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -1266,6 +1347,15 @@ SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
 SWIFT_CLASS("_TtC8HyperKYC19HKYCSignatureHelper")
 @interface HKYCSignatureHelper : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC15HKYCStatusLabel")
+@interface HKYCStatusLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)drawTextInRect:(CGRect)rect;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
 @end
 
 
@@ -1302,6 +1392,7 @@ SWIFT_CLASS("_TtC8HyperKYC11HVCamConfig")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_CLASS("_TtC8HyperKYC8HintView")
@@ -1424,6 +1515,7 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic) CGSize preferredContentSize;
 @end
+
 
 
 
