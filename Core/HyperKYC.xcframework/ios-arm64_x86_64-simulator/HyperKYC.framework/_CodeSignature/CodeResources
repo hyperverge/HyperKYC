@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/HyperKYC-Swift.h</key>
 		<data>
-		6s4EcGmNWlfHtavMxkVTCoplMVI=
+		vAQN5aeCo50hYQQ1ebFwTfbx4Yo=
 		</data>
 		<key>Headers/HyperKYC-umbrella.h</key>
 		<data>
@@ -16,33 +16,193 @@
 		<data>
 		H191K6rxqtp73MOMRilQYXQXah8=
 		</data>
+		<key>HyperKYCResources.bundle/Animations/apiProcessing.lottie</key>
+		<data>
+		MXRD3P34kQKxJCeXYQVvPTLJAO4=
+		</data>
+		<key>HyperKYCResources.bundle/Animations/newApiFailureLottie.lottie</key>
+		<data>
+		PAOrJTtY74/Zm6ELMiYZmvGGVj4=
+		</data>
+		<key>HyperKYCResources.bundle/Animations/newApiSuccessLottie.lottie</key>
+		<data>
+		dtliPNPSTKyymTaiiNWBoikFgFg=
+		</data>
+		<key>HyperKYCResources.bundle/Assets.car</key>
+		<data>
+		yU2oN51eXRwYQHfkx5Tsi4r+T6s=
+		</data>
+		<key>HyperKYCResources.bundle/DropDownCell.nib</key>
+		<data>
+		qtgJaDx9zJyvBZMVZnVRrauJclE=
+		</data>
+		<key>HyperKYCResources.bundle/HKYCDropDownTableViewCell.nib</key>
+		<data>
+		hjPd0T1qaHU9Wccj1duMIErPmbA=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/5Vf-Ng-yWL-view-J94-Dy-w51.nib</key>
+		<data>
+		OeNWlXNbFpq4c1xUCnStrrmGV0c=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/6ao-xU-ujD-view-sY1-Qq-QKQ.nib</key>
+		<data>
+		aHbo+bo8lRzujm21DhElEpm9w6I=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/8et-Kk-icy-view-RGu-1h-RT9.nib</key>
+		<data>
+		T5Q1Q7yJjREiEPh58V07V27BhZg=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/DocAlertVC.nib</key>
+		<data>
+		S+Vr6s/oukmARVKtc6osjRYgeZI=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCConsentVC.nib</key>
+		<data>
+		3mFjHhLxWHx9N+7l0x+8VJeBv08=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCCountryPickerVC.nib</key>
+		<data>
+		pXMM389Rxdp88pV9nfyJ+RS6W6M=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCDocumentPickerVC.nib</key>
+		<data>
+		I0WZhAcAYeLzdXVZtmf92ttvcJ8=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCDynamicFormVC.nib</key>
+		<data>
+		6p14WX9Gsk8yEIKncT2qrsSvK+4=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCFilePreviewVC.nib</key>
+		<data>
+		4hGhIeSf/kaSL9SqHo9mkOWPs4Q=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCFormVC.nib</key>
+		<data>
+		SxacEwAJV3cc6uilKWLLaFYJNeU=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCLoadingVC.nib</key>
+		<data>
+		X2EA/l4druAYVYVJEpIUqLGvy/Q=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCReviewVC.nib</key>
+		<data>
+		B0cLHPUNpp/+o9957ko0uWwkWu8=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCUploadingVC.nib</key>
+		<data>
+		jSLlshENyJP5pNC4ZPdMr23zULU=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCVideoStatementInstructionVC.nib</key>
+		<data>
+		ATqYT0XHNHg2yzCkcxRzgSXCrf8=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCVideoStatementVC.nib</key>
+		<data>
+		eWILJSOBe/UN7hamINZ8smFihjY=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCWebviewVC.nib</key>
+		<data>
+		XiLjlWJnBzFsjYmKMhgFwrfS5Lk=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/Info.plist</key>
+		<data>
+		ZYmuEcGIbfPq4pqh1iRlbD5lB+c=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/PYL-gC-K6C-view-Szo-7r-3VJ.nib</key>
+		<data>
+		w9q65jJtBDzgJDaV7W/+tSSxUdU=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/PermissionView.nib</key>
+		<data>
+		ysTSOfGgQyi0ULb7Q3VJohOf30k=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/WcY-gL-dfo-view-yxj-AU-86i.nib</key>
+		<data>
+		YFRZHPUebOnPO9G1qEuRTaN4vmU=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/XCr-Ug-EpO-view-KC7-FR-fdO.nib</key>
+		<data>
+		cM/AjUxQ1GDtaWQf8JHLfDiIGKM=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
+		<data>
+		Ao4J7GRu+DnNBu8edCbIv+n3UyM=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/aod-eg-jIy-view-cik-kw-2VQ.nib</key>
+		<data>
+		cLieq5dEBMm5CmQ4WhuRa2F7ui4=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/mac-FU-dMc-view-2hK-Qu-0Nt.nib</key>
+		<data>
+		2a7u4KXf8qBQQHwAJhy81LQ3kVo=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/ojg-3a-ScU-view-ea5-Y0-uwR.nib</key>
+		<data>
+		RpzNO/BIkmkeYqzbOLhfPGkEG8o=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/oy3-L7-DmX-view-kqX-fr-nCF.nib</key>
+		<data>
+		Ki44U7jfjd2JJpMEKaDATig67xQ=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/v2v-mR-VgE-view-IYv-xj-Y7g.nib</key>
+		<data>
+		rUSFIGxxhnR22eE7eq4rZRd1fAI=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/xZH-KN-bx2-view-4Fv-NR-8nM.nib</key>
+		<data>
+		XqS1VofTkE7rWscHiJIW/F99now=
+		</data>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/y6Y-zv-EA8-view-qse-pC-fc5.nib</key>
+		<data>
+		LbRi4CnrZr8n9Uu8jkHeb4wihhI=
+		</data>
+		<key>HyperKYCResources.bundle/Info.plist</key>
+		<data>
+		i+Z74QWoRCwUmvUYCif/ysbgOkk=
+		</data>
+		<key>HyperKYCResources.bundle/Lib/Mulish-Bold.ttf</key>
+		<data>
+		CBcJ1T7yOFI8JX0lRFce+lUoFVI=
+		</data>
+		<key>HyperKYCResources.bundle/Lib/Mulish-Regular.ttf</key>
+		<data>
+		iaQfUmRnLS0cEXaNilMlre7gz6M=
+		</data>
+		<key>HyperKYCResources.bundle/Lib/Mulish-SemiBold.ttf</key>
+		<data>
+		8PtQ4hWs9SsdkHDbERtNR3ujegU=
+		</data>
+		<key>HyperKYCResources.bundle/Lib/country_codes.csv</key>
+		<data>
+		QolVzlv8vvK6jXIvsSLRptbBgn4=
+		</data>
 		<key>Info.plist</key>
 		<data>
-		UN09mmHKCtnpor2/eVkXwqW7/J4=
+		9RLIubC0Po1HdFtW6QLt73HCatY=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ApjkGA/5Mduuedq00suqlN4QD3A=
+		NVYztX10NI1nWEC17EZkoAecsgs=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		oV/kM55xGT0aaFP49HGSKMVxhVU=
+		HuETu7TDGu6UVJ06JFcMQL8J1Ks=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		g/gGGNMd59et/PtqlYYcH6IpoK4=
+		dvI8liTNIOsOtGnEbEaxSEaXCII=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		g5AgiLig9cibwHXVPPVw/ZGjl9c=
+		rIjoI3EQ1QWCyT1trMiSpoeodqI=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		EkSUzihUlmjBwE8jbQvMPivrrH8=
+		L4VauSmi1mr4J5aAeFOWtWKDqmU=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zXqxSvGIVuWRIreT9Q9dPDyDYkY=
+		3j10dgFP+fJ7UJ55+SrBDPOkzwc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,11 +215,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6s4EcGmNWlfHtavMxkVTCoplMVI=
+			vAQN5aeCo50hYQQ1ebFwTfbx4Yo=
 			</data>
 			<key>hash2</key>
 			<data>
-			DAVaSJmt8vhB3Sjh01mzECB2w8wOD3nVtsaTX/i/Xps=
+			vnejgHZHlbb5A3PDdw7SFq+uBSS3IFuIBm22YXecaW0=
 			</data>
 		</dict>
 		<key>Headers/HyperKYC-umbrella.h</key>
@@ -84,70 +244,510 @@
 			GfxtQ5aKGP8hyo+Up2gcnowF3Vy418zmR6h8ugKffes=
 			</data>
 		</dict>
+		<key>HyperKYCResources.bundle/Animations/apiProcessing.lottie</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MXRD3P34kQKxJCeXYQVvPTLJAO4=
+			</data>
+			<key>hash2</key>
+			<data>
+			4RiGgHbj32FpfZJUnWRhyKbfWftghqwp8al/10Gil7I=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/Animations/newApiFailureLottie.lottie</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			PAOrJTtY74/Zm6ELMiYZmvGGVj4=
+			</data>
+			<key>hash2</key>
+			<data>
+			0uNAg2PDmrsxpbpn22OoWYrdeFnAHsQUE3IH9ZB2V9A=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/Animations/newApiSuccessLottie.lottie</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			dtliPNPSTKyymTaiiNWBoikFgFg=
+			</data>
+			<key>hash2</key>
+			<data>
+			Q6PsejxInFcOYQxcC6uc/w5TSVOlKWxldv9QWGLTL4c=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/Assets.car</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yU2oN51eXRwYQHfkx5Tsi4r+T6s=
+			</data>
+			<key>hash2</key>
+			<data>
+			yY5sY4z5nnumWNSLNpjkob6Hq4gv6XqD44RkK99WknQ=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/DropDownCell.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qtgJaDx9zJyvBZMVZnVRrauJclE=
+			</data>
+			<key>hash2</key>
+			<data>
+			GDey4qfi7/WhtMc8IkJ3yahoVnY8mKWDPsha5GXhgik=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HKYCDropDownTableViewCell.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hjPd0T1qaHU9Wccj1duMIErPmbA=
+			</data>
+			<key>hash2</key>
+			<data>
+			pLWOHQX1blQbfYDGTiVpKwYhxnpr6MXzHLrpisNU3JU=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/5Vf-Ng-yWL-view-J94-Dy-w51.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OeNWlXNbFpq4c1xUCnStrrmGV0c=
+			</data>
+			<key>hash2</key>
+			<data>
+			+lMNABdFcBZUnLPlsqPn6o5VgJ0ejKdYnnAkymbS8EU=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/6ao-xU-ujD-view-sY1-Qq-QKQ.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aHbo+bo8lRzujm21DhElEpm9w6I=
+			</data>
+			<key>hash2</key>
+			<data>
+			Lro0r62b2A0uL1b41alGpady1F9nSFkMZtSyubGyGSw=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/8et-Kk-icy-view-RGu-1h-RT9.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			T5Q1Q7yJjREiEPh58V07V27BhZg=
+			</data>
+			<key>hash2</key>
+			<data>
+			70ztYzV5mmSdxKb3YGbM2OJTc8EjTn/GEpaZYvMAgCo=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/DocAlertVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			S+Vr6s/oukmARVKtc6osjRYgeZI=
+			</data>
+			<key>hash2</key>
+			<data>
+			v7xJ4HyHVKTxfR183tg2AFhICLRH9U8y7TsWyt2znx8=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCConsentVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3mFjHhLxWHx9N+7l0x+8VJeBv08=
+			</data>
+			<key>hash2</key>
+			<data>
+			nwkOY4xoLYAhM9AkUMGpd0peSEoVw7Ffdqt/jkKI40M=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCCountryPickerVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pXMM389Rxdp88pV9nfyJ+RS6W6M=
+			</data>
+			<key>hash2</key>
+			<data>
+			8n8Ww9jKXVBLsxpjLad1uzlm56MsJ1M/UV5jcKehsGQ=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCDocumentPickerVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			I0WZhAcAYeLzdXVZtmf92ttvcJ8=
+			</data>
+			<key>hash2</key>
+			<data>
+			//WGGHeHazMFb6K6UZCw+FZXep97fpZIVatSrR15vD8=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCDynamicFormVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6p14WX9Gsk8yEIKncT2qrsSvK+4=
+			</data>
+			<key>hash2</key>
+			<data>
+			21YWzCWknzTlb9igSZAJmjEv7Eq7jNRHiBR6vVMjl9s=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCFilePreviewVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4hGhIeSf/kaSL9SqHo9mkOWPs4Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			jcQXbnAuZdK/ihCAtj1oAjjLmWc4x5mi9/mydQ3HjBk=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCFormVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SxacEwAJV3cc6uilKWLLaFYJNeU=
+			</data>
+			<key>hash2</key>
+			<data>
+			Yex0peFZz3GNMFYuKhgJBS4aPWLBB1uA+KVo1NBAxrs=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCLoadingVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			X2EA/l4druAYVYVJEpIUqLGvy/Q=
+			</data>
+			<key>hash2</key>
+			<data>
+			BQHPsFTOPr7nkuqQN6kbVYzyuj/nyaYSChPNaJZ61Gc=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCReviewVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			B0cLHPUNpp/+o9957ko0uWwkWu8=
+			</data>
+			<key>hash2</key>
+			<data>
+			/JfP8V0FkUcUOFhmLzlXQw1YvnIzRWy0vvgMl1vZkfM=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCUploadingVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jSLlshENyJP5pNC4ZPdMr23zULU=
+			</data>
+			<key>hash2</key>
+			<data>
+			CKeex+veN7ubphkpdrygFAJsRlvRMkLJDqfavSWwDXk=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCVideoStatementInstructionVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ATqYT0XHNHg2yzCkcxRzgSXCrf8=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ya6nAwt6aEv5ZGryW+K25gOFQdOsVDuFwB6Ow9liLuo=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCVideoStatementVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eWILJSOBe/UN7hamINZ8smFihjY=
+			</data>
+			<key>hash2</key>
+			<data>
+			hKCcKXESk6bSQRFY1LdQuQs9Pk2EYDWR6DkiiDEH7Ws=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/HKYCWebviewVC.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XiLjlWJnBzFsjYmKMhgFwrfS5Lk=
+			</data>
+			<key>hash2</key>
+			<data>
+			Fzf+u4GZYcwCRTsAuy9mC66d0JOx1sSwI4rrxlHY56s=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ZYmuEcGIbfPq4pqh1iRlbD5lB+c=
+			</data>
+			<key>hash2</key>
+			<data>
+			1xyOqWkkQQCP/p/FGI1pxJlHv+orZYjge5YJL1oOKsw=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/PYL-gC-K6C-view-Szo-7r-3VJ.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			w9q65jJtBDzgJDaV7W/+tSSxUdU=
+			</data>
+			<key>hash2</key>
+			<data>
+			sIBfKoDAzRCSPIL9tncag/y732Jp49H0rcYw83w2lY4=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/PermissionView.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ysTSOfGgQyi0ULb7Q3VJohOf30k=
+			</data>
+			<key>hash2</key>
+			<data>
+			kKQXz/IkBmwA3P5zuPdIOETZ9HmTGIXg+QjejJoeg4g=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/WcY-gL-dfo-view-yxj-AU-86i.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YFRZHPUebOnPO9G1qEuRTaN4vmU=
+			</data>
+			<key>hash2</key>
+			<data>
+			TVnpBAezfDj48bNMNxaXyYAfK0mXbki4G2V8DHWL8Qk=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/XCr-Ug-EpO-view-KC7-FR-fdO.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cM/AjUxQ1GDtaWQf8JHLfDiIGKM=
+			</data>
+			<key>hash2</key>
+			<data>
+			N9Mq4YyrilzhyqLTOdZuQ/mddxfyh0cFu2jxpbLb1eg=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/Y6W-OH-hqX-view-5EZ-qb-Rvc.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ao4J7GRu+DnNBu8edCbIv+n3UyM=
+			</data>
+			<key>hash2</key>
+			<data>
+			h/UMxG4orWAJbUHM/BcwqdGjUME64FZy35j+GIdoy6Y=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/aod-eg-jIy-view-cik-kw-2VQ.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			cLieq5dEBMm5CmQ4WhuRa2F7ui4=
+			</data>
+			<key>hash2</key>
+			<data>
+			hkm0PIMzHkkgY8NEwfEeYKFOWf9nNaAH9mDbqd0fQP0=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/mac-FU-dMc-view-2hK-Qu-0Nt.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2a7u4KXf8qBQQHwAJhy81LQ3kVo=
+			</data>
+			<key>hash2</key>
+			<data>
+			5x1ZtK6uXJ3p1GmWTLogfNjRqPsWKiJX2ZVbUhcukuM=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/ojg-3a-ScU-view-ea5-Y0-uwR.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RpzNO/BIkmkeYqzbOLhfPGkEG8o=
+			</data>
+			<key>hash2</key>
+			<data>
+			IbtfwTvuziRux1RLlQyOoXAgSgp9Q9uMVIuzma+NsKs=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/oy3-L7-DmX-view-kqX-fr-nCF.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Ki44U7jfjd2JJpMEKaDATig67xQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			ZqTDAMQ462MM24oFmpdlgA1LYlzjBp2F8fPO92CXMvs=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/v2v-mR-VgE-view-IYv-xj-Y7g.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			rUSFIGxxhnR22eE7eq4rZRd1fAI=
+			</data>
+			<key>hash2</key>
+			<data>
+			sCoUP96xV6U2LXj9VrLDP+fe4iM2jFH+dGYlwlFWScM=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/xZH-KN-bx2-view-4Fv-NR-8nM.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XqS1VofTkE7rWscHiJIW/F99now=
+			</data>
+			<key>hash2</key>
+			<data>
+			29/17C7KRAF1oK1P3Ln0xsw4t6QG+5X9di2eJCMQUNg=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/HyperKYCPreview.storyboardc/y6Y-zv-EA8-view-qse-pC-fc5.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LbRi4CnrZr8n9Uu8jkHeb4wihhI=
+			</data>
+			<key>hash2</key>
+			<data>
+			AIPA4hik6HsttokFm2HE1GcCSv1BkOdaX5vXRTEq3dw=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			i+Z74QWoRCwUmvUYCif/ysbgOkk=
+			</data>
+			<key>hash2</key>
+			<data>
+			rzEo4bRrKtFVHXoDevq67+A3un5IzU6EAmWVtNSAhuM=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/Lib/Mulish-Bold.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			CBcJ1T7yOFI8JX0lRFce+lUoFVI=
+			</data>
+			<key>hash2</key>
+			<data>
+			AY/rORieq4oOz81cDkB6VJMvXJrpNNSyjWmgV/wxzsg=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/Lib/Mulish-Regular.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iaQfUmRnLS0cEXaNilMlre7gz6M=
+			</data>
+			<key>hash2</key>
+			<data>
+			7lR+bxrdV/UPQltYBLXQrvL7paTpHZcvkwvh/COmPP4=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/Lib/Mulish-SemiBold.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8PtQ4hWs9SsdkHDbERtNR3ujegU=
+			</data>
+			<key>hash2</key>
+			<data>
+			IYivB/e8XVwNScpCIqbYbjB7TPqnpP4ROd1I3UJUnhA=
+			</data>
+		</dict>
+		<key>HyperKYCResources.bundle/Lib/country_codes.csv</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QolVzlv8vvK6jXIvsSLRptbBgn4=
+			</data>
+			<key>hash2</key>
+			<data>
+			UhUr1uutVRBTQ1tQ0wkD/C8gL6JyfpKnOWkMk0i+VHQ=
+			</data>
+		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ApjkGA/5Mduuedq00suqlN4QD3A=
+			NVYztX10NI1nWEC17EZkoAecsgs=
 			</data>
 			<key>hash2</key>
 			<data>
-			W75KbDhdSKzgCI9RCE6fISx5CWVhU+PKUemQjR0QBrc=
+			zU63NNnJfdMTBdmmhZeMDMMKYU4GjlRDyDsxOoz3WJo=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oV/kM55xGT0aaFP49HGSKMVxhVU=
+			HuETu7TDGu6UVJ06JFcMQL8J1Ks=
 			</data>
 			<key>hash2</key>
 			<data>
-			MdmKWvSbUiLQRWBF3aAtfFjpMs5RKtcB9owFl97O04s=
+			jsN4Yyt2Csp65KY9ETMuxoYFPP1Qr9S6yQaJmYZau+4=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			g/gGGNMd59et/PtqlYYcH6IpoK4=
+			dvI8liTNIOsOtGnEbEaxSEaXCII=
 			</data>
 			<key>hash2</key>
 			<data>
-			llac0S+82+6ZRiVSSlaCvcBzIJZM6hS3vye7mucjTSs=
+			y8VAKeYIJrVa/mFZHjlR2BIj4833jls3srjZt55WHL4=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			g5AgiLig9cibwHXVPPVw/ZGjl9c=
+			rIjoI3EQ1QWCyT1trMiSpoeodqI=
 			</data>
 			<key>hash2</key>
 			<data>
-			q2uzleeg5CGhQ2TkEkZjkpBv08yMdASCzOKSGsim1j4=
+			65+m4QGUzgh+c7pNpsXjum8Dgic10JTUPuWwP2ROdrc=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EkSUzihUlmjBwE8jbQvMPivrrH8=
+			L4VauSmi1mr4J5aAeFOWtWKDqmU=
 			</data>
 			<key>hash2</key>
 			<data>
-			YKzrr/ofgM7kPRe96xidcfKuPR7e/DTkV6JdZHk+MtE=
+			ilMk8GEi36oucwRT+LGtXx5NmPhbJ5hHRccJfwLTgX0=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zXqxSvGIVuWRIreT9Q9dPDyDYkY=
+			3j10dgFP+fJ7UJ55+SrBDPOkzwc=
 			</data>
 			<key>hash2</key>
 			<data>
-			lvozJKT3C23fAhuQ8iJvnitITv8ydITpeRwmv5hdb9o=
+			TqanzgNU0IIRBSEqsjNoqWMjBWgv1o3qBt6uCt06Ey0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

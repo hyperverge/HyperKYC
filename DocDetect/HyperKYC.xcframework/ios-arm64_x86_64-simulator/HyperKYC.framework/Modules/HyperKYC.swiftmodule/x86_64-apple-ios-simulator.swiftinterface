@@ -323,7 +323,6 @@ extension HyperKYC.CatchMixin where Self.T == Swift.Void {
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkedBorderColor: UIKit.UIColor!
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkmarkColor: UIKit.UIColor!
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var emoji: Swift.String?
-  @available(swift, obsoleted: 4.1, renamed: "checkboxFillColor", message: "Defaults to a clear color")
   @_Concurrency.MainActor(unsafe) public var checkboxBackgroundColor: UIKit.UIColor!
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkboxClearColor: UIKit.UIColor
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkboxFillColor: UIKit.UIColor
@@ -385,6 +384,9 @@ extension HyperKYC.CatchMixin where Self.T == Swift.Void {
   @_Concurrency.MainActor(unsafe) open func enableIndeterminate(_ enabled: Swift.Bool = true)
   @objc deinit
 }
+extension HyperKYC.LoaderView {
+  @_Concurrency.MainActor(unsafe) public func stopAnimation()
+}
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension HyperKYC.Guarantee {
   final public func future() -> Combine.Future<T, Swift.Never>
@@ -434,6 +436,32 @@ public enum HyperKycStatus : Swift.String {
   public var rawValue: Swift.String {
     get
   }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class CustomDatePicker : UIKit.UIPickerView {
+  @_Concurrency.MainActor(unsafe) open var date: Foundation.Date {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var month: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var year: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var onDateSelected: ((_ month: Swift.Int, _ year: Swift.Int) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public func addTarget(_ target: Any?, action: ObjectiveC.Selector, for controlEvents: UIKit.UIControl.Event)
+  @_Concurrency.MainActor(unsafe) public func removeTarget()
+  @_Concurrency.MainActor(unsafe) public func removeTarget(_ target: Any?, action: ObjectiveC.Selector?, for controlEvents: UIKit.UIControl.Event)
+  @_Concurrency.MainActor(unsafe) public func setDate(_ date: Foundation.Date, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func update()
+  @objc deinit
+}
+extension HyperKYC.CustomDatePicker : UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
 }
 extension HyperKYC.HVPromise : Swift.CustomStringConvertible {
   final public var description: Swift.String {
@@ -1113,11 +1141,10 @@ public class HKYCIOSSecuritySuite {
 }
 @objc @_Concurrency.MainActor(unsafe) public class HKYCActivityLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCActivityTitleLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class HKYCActivityIndicator : UIKit.UIActivityIndicatorView {
@@ -2165,6 +2192,12 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var validateSignature: Swift.Bool? {
     get
   }
+  public var showEndState: Swift.String? {
+    get
+  }
+  public var isSuccess: Swift.String? {
+    get
+  }
   public var data: HyperKYC.WebviewModuleProperty? {
     get
   }
@@ -2416,6 +2449,9 @@ public struct Component : Swift.Codable {
     get
   }
   public var dateRange: HyperKYC.DateRange? {
+    get
+  }
+  public var content: Swift.String? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws

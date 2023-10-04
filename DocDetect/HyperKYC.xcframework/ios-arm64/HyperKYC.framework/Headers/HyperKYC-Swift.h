@@ -319,6 +319,23 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
 };
 
 
+/// A control for the inputting of month and year values in a view that uses a spinning-wheel or slot-machine metaphor.
+SWIFT_CLASS("_TtC8HyperKYC16CustomDatePicker")
+@interface CustomDatePicker : UIPickerView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSAttributedString;
+
+@interface CustomDatePicker (SWIFT_EXTENSION(HyperKYC)) <UIPickerViewDataSource, UIPickerViewDelegate>
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+- (NSAttributedString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
 
 
 
@@ -372,16 +389,17 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
-@class UIFont;
 
 SWIFT_CLASS("_TtC8HyperKYC17HKYCActivityLabel")
 @interface HKYCActivityLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-+ (void)setFont:(UIFont * _Nonnull)font;
-+ (void)setTextAlignment:(NSTextAlignment)alignment;
-+ (void)setTextColor:(UIColor * _Nonnull)color;
-+ (void)setShadowColor:(UIColor * _Nonnull)color;
-+ (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC22HKYCActivityTitleLabel")
+@interface HKYCActivityTitleLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
@@ -424,6 +442,7 @@ SWIFT_CLASS("_TtC8HyperKYC23HKYCClientLogoImageView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class UIFont;
 
 SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @interface HKYCDescriptionLabel : UILabel
@@ -572,6 +591,7 @@ SWIFT_CLASS("_TtC8HyperKYC11HVCamConfig")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_CLASS("_TtC8HyperKYC8HintView")
