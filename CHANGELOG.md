@@ -1,4 +1,15 @@
 ## CHANGELOG
+
+### 0.16.0 *[04 Oct 2023]*
+- Features:
+  - Add support for end states animations to `document`, `face` and `api` modules
+  - Add support to expose `enabled`, `visible` and `required` fields for form components
+  - Add support for `content` property for `date` component within `dynamicForm`
+- Bug Fixes:
+  - Fix condition parser logic
+- Maintenance:
+  - No updates here. Continue to use HyperSnapSDK `4.15.0`
+
 ### 0.15.0 *[28 Aug 2023]*
 - Features:
   - Add support for vertical & divider components in dynamic form module.
@@ -24,21 +35,20 @@
   - Add support for nested conditions parser from third party APIs
 - Bug Fixes: 
   - Add support for flow backward for dynamic form modules
-  
 - Maintenance: 
     - Use HyperSnapSDK `4.14.0`  
     
 ### 0.13.0 *[27 Jul 2023]*
 - Features:
   - Add support for self video kyc module
-
 - Maintenance: 
-    - Use HyperSnapSDK `4.13.0`  
+    - Use HyperSnapSDK `4.13.0` 
+
 ### 0.12.0 *[30 Jun 2023]*
 - Features: 
   - Add support to make barcode read mandatory via HVDocConfig `setDisableBarcodeSkip` function
 - Maintenance: 
-    - Use HyperSnapSDK `4.12.0`
+  - Use HyperSnapSDK `4.12.0`
     
 ### 0.11.0 *[23 Jun 2023]*
 - Features: 
