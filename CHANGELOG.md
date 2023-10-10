@@ -1,7 +1,7 @@
 ## CHANGELOG
 ### 0.17.0 *[10 Oct 2023]*
 - Features: 
-  - Add support for video statement OTP module
+  - Add support for video statement v2 module
  - Maintenance:
   - Use HyperSnapSDK `4.16.0` 
 ### 0.16.0 *[04 Oct 2023]*
