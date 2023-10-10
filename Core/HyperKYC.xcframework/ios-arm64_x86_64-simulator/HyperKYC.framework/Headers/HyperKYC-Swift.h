@@ -428,6 +428,13 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC12HKYCCardView")
+@interface HKYCCardView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
 @interface HKYCCheckBox : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -540,6 +547,25 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCPrimaryButton")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC14HKYCRecordView")
+@interface HKYCRecordView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC22HKYCRetakeMessageLabel")
+@interface HKYCRetakeMessageLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
 @interface HKYCSecondaryButton : UIButton
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -557,6 +583,15 @@ SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
 SWIFT_CLASS("_TtC8HyperKYC19HKYCSignatureHelper")
 @interface HKYCSignatureHelper : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC15HKYCStatusLabel")
+@interface HKYCStatusLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)drawTextInRect:(CGRect)rect;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
 @end
 
 
@@ -579,10 +614,29 @@ SWIFT_CLASS("_TtC8HyperKYC27HKYCVideoStatementDescLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC29HKYCVideoStatementHelperLabel")
+@interface HKYCVideoStatementHelperLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC28HKYCVideoStatementTitleLabel")
 @interface HKYCVideoStatementTitleLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC22HKYCVideoStatementView")
+@interface HKYCVideoStatementView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -716,6 +770,7 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic) CGSize preferredContentSize;
 @end
+
 
 
 
@@ -1176,6 +1231,13 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC12HKYCCardView")
+@interface HKYCCardView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
 @interface HKYCCheckBox : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -1288,6 +1350,25 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCPrimaryButton")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC14HKYCRecordView")
+@interface HKYCRecordView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC22HKYCRetakeMessageLabel")
+@interface HKYCRetakeMessageLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
 @interface HKYCSecondaryButton : UIButton
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -1305,6 +1386,15 @@ SWIFT_CLASS("_TtC8HyperKYC19HKYCSecondaryButton")
 SWIFT_CLASS("_TtC8HyperKYC19HKYCSignatureHelper")
 @interface HKYCSignatureHelper : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC15HKYCStatusLabel")
+@interface HKYCStatusLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)drawTextInRect:(CGRect)rect;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
 @end
 
 
@@ -1327,10 +1417,29 @@ SWIFT_CLASS("_TtC8HyperKYC27HKYCVideoStatementDescLabel")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC29HKYCVideoStatementHelperLabel")
+@interface HKYCVideoStatementHelperLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setFont:(UIFont * _Nonnull)font;
++ (void)setTextAlignment:(NSTextAlignment)alignment;
++ (void)setTextColor:(UIColor * _Nonnull)color;
++ (void)setShadowColor:(UIColor * _Nonnull)color;
++ (void)setShadowOffset:(CGSize)offset;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC28HKYCVideoStatementTitleLabel")
 @interface HKYCVideoStatementTitleLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC22HKYCVideoStatementView")
+@interface HKYCVideoStatementView : UIView
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1464,6 +1573,7 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic) CGSize preferredContentSize;
 @end
+
 
 
 
