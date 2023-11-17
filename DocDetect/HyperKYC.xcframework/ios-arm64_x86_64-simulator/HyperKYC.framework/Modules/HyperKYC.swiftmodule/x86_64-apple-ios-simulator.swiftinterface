@@ -789,6 +789,9 @@ public struct DynamicFormComponentsAttributes : Swift.Codable {
   public var backgroundColor: Swift.String {
     get
   }
+  public var circleBorderColor: Swift.String {
+    get
+  }
   public var borderColor: Swift.String {
     get
   }
@@ -796,6 +799,30 @@ public struct DynamicFormComponentsAttributes : Swift.Codable {
     get
   }
   public var icons: HyperKYC.HKYCUIIcons {
+    get
+  }
+  public var marginBottom: Swift.String {
+    get
+  }
+  public var marginTop: Swift.String {
+    get
+  }
+  public var marginLeft: Swift.String {
+    get
+  }
+  public var marginRight: Swift.String {
+    get
+  }
+  public var paddingBottom: Swift.String {
+    get
+  }
+  public var paddingTop: Swift.String {
+    get
+  }
+  public var paddingLeft: Swift.String {
+    get
+  }
+  public var paddingRight: Swift.String {
     get
   }
   public init()
@@ -820,12 +847,6 @@ public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
   public init()
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCLabel : UIKit.UITableViewCell {
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCHint : UIKit.UITableViewCell {
-  @objc deinit
 }
 public enum PMKError : Swift.Error {
   case invalidCallingConvention
@@ -896,7 +917,7 @@ extension Swift.Dictionary where Key == Swift.String {
   public func getStringValue(key: Swift.String, defaultText: Swift.String) -> Swift.String
 }
 extension UIKit.UIColor {
-  convenience public init(hex: Swift.String)
+  convenience public init(hex: Swift.String, defaultColor: UIKit.UIColor? = nil)
 }
 extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public func addTapGestureRecognizer(action: ((_ sender: UIKit.UITapGestureRecognizer) -> Swift.Void)?)
@@ -1202,11 +1223,9 @@ public class HKYCIOSSecuritySuite {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCHintLabel : UIKit.UILabel {
-  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCBlockLabel : UIKit.UILabel {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCVideoStatementTitleLabel : UIKit.UILabel {
@@ -1246,6 +1265,17 @@ public class HKYCIOSSecuritySuite {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCSecondaryButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCTertiaryButton : UIKit.UIButton {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
@@ -1589,6 +1619,9 @@ public struct CountryResult : Swift.Codable {
   public var baseUrl: Swift.String? {
     get
   }
+  public var attempts: Swift.Int {
+    get
+  }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1600,6 +1633,9 @@ public struct DocResult : Swift.Codable {
     get
   }
   public var docDataList: [HyperKYC.DocData] {
+    get
+  }
+  public var attempts: Swift.Int {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -1652,6 +1688,9 @@ public struct FaceResult : Swift.Codable {
   public var faceData: HyperKYC.FaceData {
     get
   }
+  public var attempts: Swift.Int {
+    get
+  }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -1702,6 +1741,9 @@ public struct APIResult : Swift.Codable {
   public var apiData: HyperKYC.APIData {
     get
   }
+  public var attempts: Swift.Int {
+    get
+  }
   public var asDictionary: [Swift.String : Any] {
     get
   }
@@ -1732,6 +1774,9 @@ public struct SessionRecordingResult : Swift.Codable {
     get
   }
   public var sessionRecordingData: HyperKYC.SessionRecordingData {
+    get
+  }
+  public var attempts: Swift.Int {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -1772,6 +1817,9 @@ public struct VideoStatementResult : Swift.Codable {
   public var videoStatementData: HyperKYC.VideoStatementData {
     get
   }
+  public var attempts: Swift.Int {
+    get
+  }
   public var asDictionary: [Swift.String : Any] {
     get
   }
@@ -1808,6 +1856,9 @@ public struct VideoStatementV2Result : Swift.Codable {
     get
   }
   public var videoStatementV2Data: HyperKYC.VideoStatementV2Data {
+    get
+  }
+  public var attempts: Swift.Int {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -1851,6 +1902,9 @@ public struct FormResult : Swift.Codable {
   public var moduleId: Swift.String {
     get
   }
+  public var attempts: Swift.Int {
+    get
+  }
   public var asDictionary: [Swift.String : Any] {
     get
   }
@@ -1862,6 +1916,9 @@ public struct WebviewResult : Swift.Codable {
     get
   }
   public var webviewData: HyperKYC.WebviewData {
+    get
+  }
+  public var attempts: Swift.Int {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -1891,6 +1948,9 @@ public struct BarcodeResult : Swift.Codable {
     get
   }
   public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var attempts: Swift.Int {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -2175,6 +2235,9 @@ public struct WorkflowModule : Swift.Codable {
     get
   }
   public var nextStep: Swift.String {
+    get
+  }
+  public var uiStyle: Swift.String? {
     get
   }
   public var previousStep: Swift.String? {
@@ -2529,6 +2592,9 @@ public struct Component : Swift.Codable {
     case vertical
     case horizontal
     case file
+    case image
+    case loader
+    case timer
     case unknown
     public init(from decoder: Swift.Decoder) throws
     public init?(rawValue: Swift.String)
@@ -2555,10 +2621,19 @@ public struct Component : Swift.Codable {
   public var visible: Swift.String? {
     get
   }
+  public var dynamicHandlers: HyperKYC.DynamicHandlers? {
+    get
+  }
   public var subType: Swift.String? {
     get
   }
   public var text: Swift.String? {
+    get
+  }
+  public var loading: Swift.String? {
+    get
+  }
+  public var duration: Swift.String? {
     get
   }
   public var onClick: HyperKYC.Handler? {
@@ -2568,6 +2643,9 @@ public struct Component : Swift.Codable {
     get
   }
   public var onValidated: HyperKYC.Handler? {
+    get
+  }
+  public var onComplete: HyperKYC.Handler? {
     get
   }
   public var secure: Swift.String? {
@@ -2648,6 +2726,18 @@ public struct Component : Swift.Codable {
   public var content: Swift.String? {
     get
   }
+  public var width: Swift.String? {
+    get
+  }
+  public var height: Swift.String? {
+    get
+  }
+  public var blockCount: Swift.String? {
+    get
+  }
+  public var blockLength: Swift.String? {
+    get
+  }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -2668,6 +2758,16 @@ public struct Validation : Swift.Codable {
     get
   }
   public var errorMsg: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct DynamicHandlers : Swift.Codable {
+  public var children: [Swift.String]? {
+    get
+  }
+  public var handlers: [HyperKYC.Handler]? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
@@ -2714,10 +2814,56 @@ public struct DateRange : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct Handler : Swift.Codable {
+  public var rule: Swift.String? {
+    get
+  }
   public var nextStep: Swift.String? {
     get
   }
   public var reloadComponents: [Swift.String]? {
+    get
+  }
+  public var reload: [Swift.String : HyperKYC.ReloadProperties]? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ReloadProperties : Swift.Codable {
+  public var enabled: Swift.String? {
+    get
+  }
+  public var required: Swift.String? {
+    get
+  }
+  public var visible: Swift.String? {
+    get
+  }
+  public var value: Swift.String? {
+    get
+  }
+  public var text: Swift.String? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var hint: Swift.String? {
+    get
+  }
+  public var helperText: Swift.String? {
+    get
+  }
+  public var items: [Swift.String]? {
+    get
+  }
+  public var labels: [Swift.String : Swift.String]? {
+    get
+  }
+  public var loading: Swift.String? {
+    get
+  }
+  public var subTitle: Swift.String? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
