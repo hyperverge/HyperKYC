@@ -414,6 +414,13 @@ SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC14HKYCBlockLabel")
+@interface HKYCBlockLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC18HKYCBrandingLayout")
 @interface HKYCBrandingLayout : UIStackView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
@@ -490,29 +497,10 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC8HKYCHint")
-@interface HKYCHint : UITableViewCell
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Null_unspecified)reuseIdentifier SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
 @interface HKYCHintLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-+ (void)setFont:(UIFont * _Nonnull)font;
-+ (void)setTextAlignment:(NSTextAlignment)alignment;
-+ (void)setTextColor:(UIColor * _Nonnull)color;
-+ (void)setShadowColor:(UIColor * _Nonnull)color;
-+ (void)setShadowOffset:(CGSize)offset;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC9HKYCLabel")
-@interface HKYCLabel : UITableViewCell
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Null_unspecified)reuseIdentifier SWIFT_UNAVAILABLE;
 @end
 
 
@@ -592,6 +580,20 @@ SWIFT_CLASS("_TtC8HyperKYC15HKYCStatusLabel")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)drawTextInRect:(CGRect)rect;
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC18HKYCTertiaryButton")
+@interface HKYCTertiaryButton : UIButton
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
 @end
 
 
@@ -770,7 +772,6 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic) CGSize preferredContentSize;
 @end
-
 
 
 
@@ -1217,6 +1218,13 @@ SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC14HKYCBlockLabel")
+@interface HKYCBlockLabel : UILabel
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC18HKYCBrandingLayout")
 @interface HKYCBrandingLayout : UIStackView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
@@ -1293,29 +1301,10 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC8HKYCHint")
-@interface HKYCHint : UITableViewCell
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Null_unspecified)reuseIdentifier SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
 @interface HKYCHintLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-+ (void)setFont:(UIFont * _Nonnull)font;
-+ (void)setTextAlignment:(NSTextAlignment)alignment;
-+ (void)setTextColor:(UIColor * _Nonnull)color;
-+ (void)setShadowColor:(UIColor * _Nonnull)color;
-+ (void)setShadowOffset:(CGSize)offset;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC9HKYCLabel")
-@interface HKYCLabel : UITableViewCell
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Null_unspecified)reuseIdentifier SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1395,6 +1384,20 @@ SWIFT_CLASS("_TtC8HyperKYC15HKYCStatusLabel")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)drawTextInRect:(CGRect)rect;
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC18HKYCTertiaryButton")
+@interface HKYCTertiaryButton : UIButton
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
++ (void)setBorderColor:(CGColorRef _Nonnull)color;
++ (void)setBackgroundColor:(CGColorRef _Nonnull)color;
++ (void)setBorderWidth:(CGFloat)width;
++ (void)setTitleColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowColor:(UIColor * _Nullable)color for:(UIControlState)state;
++ (void)setTitleShadowOffset:(CGSize)offset;
++ (void)setTitleFont:(UIFont * _Nonnull)font;
 @end
 
 
@@ -1573,7 +1576,6 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @property (nonatomic, readonly) UIInterfaceOrientationMask supportedInterfaceOrientations;
 @property (nonatomic) CGSize preferredContentSize;
 @end
-
 
 
 
