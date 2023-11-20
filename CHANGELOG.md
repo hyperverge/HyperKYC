@@ -1,4 +1,18 @@
 ## CHANGELOG
+### 0.18.0 *[17 Oct 2023]*
+- Features: 
+    - Add support for no-UI API child modules
+    - Add support for `horizontal` component
+    - Add support for `image`, `timer` and `loader` components
+    - Add support for `blocks` subType for `text` component - OTP use-cases
+    - Add support for margin and padding customisation for form components
+    - Add support for container components to be clickable
+    - Add support to expose `attempts` for all modules
+    - Add support to reload individual form component properties via `reload`, deprecating `reloadComponents`
+    - Fix `onValidated` handler to be only called when the component's value is valid
+- Maintenance:
+  - Use HyperSnapSDK `4.16.0`
+
 ### 0.17.0 *[10 Oct 2023]*
 - Features: 
   - Add support for video statement v2 module
