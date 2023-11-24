@@ -10,6 +10,8 @@
     - Add support to expose `attempts` for all modules
     - Add support to reload individual form component properties via `reload`, deprecating `reloadComponents`
     - Fix `onValidated` handler to be only called when the component's value is valid
+- Bug Fixes:
+  - Fix country picker search text logic 
 - Maintenance:
   - Use HyperSnapSDK `4.16.0`
 
