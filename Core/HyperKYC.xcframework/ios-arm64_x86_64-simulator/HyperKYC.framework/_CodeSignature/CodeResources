@@ -174,7 +174,7 @@
 		</data>
 		<key>HyperKYCResources.bundle/Info.plist</key>
 		<data>
-		4i7VH4mg78kJmVBjBWCqBcEKSDY=
+		BmkA2cHd11F55jKH0jMQeewyZNM=
 		</data>
 		<key>HyperKYCResources.bundle/Lib/Mulish-Bold.ttf</key>
 		<data>
@@ -194,7 +194,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fvG3xToLWzJQKGyQsIG76w+MUKM=
+		Pbq0EDrXLh2VCvPFyuDK31ikah8=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -206,7 +206,7 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cPfPeR4bV2BxOnbiptIjRewHjC4=
+		Nf/5MujdnCXGQkvSoXc5qaDkuXA=
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -218,7 +218,7 @@
 		</data>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		sgiWAU0DSLm9JtbYRXtKFLvu67A=
+		EYPAKAULvOz9mlI67OBvIIS0o1Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -693,11 +693,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4i7VH4mg78kJmVBjBWCqBcEKSDY=
+			BmkA2cHd11F55jKH0jMQeewyZNM=
 			</data>
 			<key>hash2</key>
 			<data>
-			cDBGD0gk9ZmjVWg9q4+q/GcLpW4F30bSZ3ViW2NoNvQ=
+			8+OsGB9TCD+qba/4IDZVOnct+mx4UPTIV23pok8llwM=
 			</data>
 		</dict>
 		<key>HyperKYCResources.bundle/Lib/Mulish-Bold.ttf</key>
@@ -770,11 +770,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			cPfPeR4bV2BxOnbiptIjRewHjC4=
+			Nf/5MujdnCXGQkvSoXc5qaDkuXA=
 			</data>
 			<key>hash2</key>
 			<data>
-			BKWoM5pLzrmL0274CQlHzCFArAQ6fBY43FCUTCD4OD4=
+			xdJRNjjhx8KvQaScUirCZ2YWO4937HNQjgS1fkca3Aw=
 			</data>
 		</dict>
 		<key>Modules/HyperKYC.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -803,11 +803,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sgiWAU0DSLm9JtbYRXtKFLvu67A=
+			EYPAKAULvOz9mlI67OBvIIS0o1Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			hE7zktugcU2fz8dBdKtMBPgTUmIZjFDSas3svr9I+EM=
+			zVsUY0Zw80TjgoGSn/gd8zDIviDGZpFGK3LzY6YTnQY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
