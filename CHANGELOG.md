@@ -1,5 +1,13 @@
 ## CHANGELOG
-### 0.18.0 *[17 Oct 2023]*
+### 0.18.1 *[28 Nov 2023]*
+- Features: 
+ - Add support for resume workflow for form modules
+- Bug Fixes:
+  - Fix bug with signature validation for api calls
+- Maintenance:
+  - Use HyperSnapSDK `4.17.0`
+  
+### 0.18.0 *[17 Nov 2023]*
 - Features: 
     - Add support for no-UI API child modules
     - Add support for `horizontal` component
