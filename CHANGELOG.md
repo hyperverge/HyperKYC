@@ -2,8 +2,10 @@
 ### 0.18.1 *[28 Nov 2023]*
 - Features: 
  - Add support for resume workflow for form modules
+ - Add support to redirect to apps from webview module
 - Bug Fixes:
   - Fix bug with signature validation for api calls
+  - Fix bug with country search navigation 
 - Maintenance:
   - Use HyperSnapSDK `4.17.0`
   
