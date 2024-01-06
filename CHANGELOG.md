@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 0.18.2 *[6 Jan 2024]*
+- Bug Fixes:
+  - Fix bug with datepicker closing after every selection
+  - Fix bug with webview not loading with no network connection
+- Maintenance:
+  - Use HyperSnapSDK `4.17.1`
+
 ### 0.18.1 *[28 Nov 2023]*
 - Features: 
  - Add support for resume workflow for form modules
