@@ -1,10 +1,10 @@
 ## CHANGELOG
 ### 0.18.3 *[17 Jan 2024]*
 - Bug Fixes:
-  - Fix bug with finish transaction api url for other countries
-  - Fix bug in injecting values for form components
-  - Fix deleting saved state for local resume
-  
+    - Fix bug with the finish transaction API URL for other countries
+    - Fix bug in injecting values for form components
+    - Fix issue with deleting saved state for local resume
+
 - Maintenance:
   - Use HyperSnapSDK `4.17.1`
 
