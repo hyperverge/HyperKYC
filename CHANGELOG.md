@@ -1,4 +1,14 @@
 ## CHANGELOG
+### 0.18.3 *[17 Jan 2024]*
+- Bug Fixes:
+    - Fix bug with the finish transaction API URL for other countries
+    - Fix bug in injecting values for form components
+    - Fix issue with deleting saved state for local resume
+
+- Maintenance:
+  - Use HyperSnapSDK `4.17.1`
+
+
 ### 0.18.2 *[6 Jan 2024]*
 - Bug Fixes:
   - Fix bug with datepicker closing after every selection
