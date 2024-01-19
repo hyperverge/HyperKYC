@@ -340,6 +340,7 @@ SWIFT_CLASS("_TtC8HyperKYC16CustomDatePicker")
 
 
 
+
 SWIFT_CLASS("_TtC8HyperKYC11DividerView")
 @interface DividerView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
@@ -663,6 +664,7 @@ SWIFT_CLASS("_TtC8HyperKYC8HintView")
 SWIFT_CLASS("_TtC8HyperKYC8HyperKyc")
 @interface HyperKyc : NSObject
 + (void)launch:(UIViewController * _Nonnull)callingVC hyperKycConfig:(HyperKycConfig * _Nonnull)hyperKycConfig :(void (^ _Nonnull)(HyperKycResult * _Nonnull))completionHandler;
++ (NSString * _Nonnull)createUniqueId SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -747,6 +749,12 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @interface PickedFile : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC17ResumeFileHandler")
+@interface ResumeFileHandler : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

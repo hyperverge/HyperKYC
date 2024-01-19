@@ -1,4 +1,12 @@
 ## CHANGELOG
+
+### 0.19.0 *[19 Jan 2024]*
+- Features 
+    - Add support for cross platform resume functionality
+- Maintenance:
+  - Use HyperSnapSDK `4.18.0`
+
+
 ### 0.18.3 *[17 Jan 2024]*
 - Bug Fixes:
     - Fix bug with the finish transaction API URL for other countries
