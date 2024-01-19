@@ -1446,6 +1446,7 @@ public enum PMKNamespacer {
 }
 @_inheritsConvenienceInitializers @objc public class HyperKyc : ObjectiveC.NSObject {
   @objc public static func launch(_ callingVC: UIKit.UIViewController, hyperKycConfig: HyperKYC.HyperKycConfig, _ completionHandler: @escaping (_ hyperKycResult: HyperKYC.HyperKycResult) -> Swift.Void)
+  @objc public static func createUniqueId() -> Swift.String
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1453,6 +1454,7 @@ public enum PMKNamespacer {
   public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   public func setInputs(inputs: [Swift.String : Swift.String])
+  public func setUniqueId(uuid: Swift.String)
   public func setDefaultLangCode(language: Swift.String)
   public func setUseLocation(shouldUse: Swift.Bool)
   public func addMetadata(metadata: [Swift.String : Swift.String])
@@ -1653,6 +1655,12 @@ public struct DocResult : Swift.Codable {
   public var attempts: Swift.Int {
     get
   }
+  public var requestIds: [Swift.String] {
+    get
+  }
+  public var apiFlags: [HyperKYC.ApiFlags]? {
+    get
+  }
   public var asDictionary: [Swift.String : Any] {
     get
   }
@@ -1704,6 +1712,12 @@ public struct FaceResult : Swift.Codable {
     get
   }
   public var attempts: Swift.Int {
+    get
+  }
+  public var requestIds: [Swift.String] {
+    get
+  }
+  public var apiFlags: [HyperKYC.ApiFlags]? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
@@ -1759,6 +1773,12 @@ public struct APIResult : Swift.Codable {
   public var attempts: Swift.Int {
     get
   }
+  public var requestIds: [Swift.String] {
+    get
+  }
+  public var apiFlags: [HyperKYC.ApiFlags]? {
+    get
+  }
   public var asDictionary: [Swift.String : Any] {
     get
   }
@@ -1792,6 +1812,9 @@ public struct SessionRecordingResult : Swift.Codable {
     get
   }
   public var attempts: Swift.Int {
+    get
+  }
+  public var requestIds: [Swift.String] {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -1835,6 +1858,9 @@ public struct VideoStatementResult : Swift.Codable {
   public var attempts: Swift.Int {
     get
   }
+  public var requestIds: [Swift.String] {
+    get
+  }
   public var asDictionary: [Swift.String : Any] {
     get
   }
@@ -1874,6 +1900,9 @@ public struct VideoStatementV2Result : Swift.Codable {
     get
   }
   public var attempts: Swift.Int {
+    get
+  }
+  public var requestIds: [Swift.String] {
     get
   }
   public var asDictionary: [Swift.String : Any] {
@@ -2063,6 +2092,122 @@ extension HyperKYC.PromiseResult {
     get
   }
 }
+@objc @_inheritsConvenienceInitializers public class ResumeFileHandler : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct WorkflowState : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ResumeState : Swift.Codable {
+  public var status: Swift.String? {
+    get
+  }
+  public var statusCode: Swift.Int? {
+    get
+  }
+  public var result: HyperKYC.ResumeResult? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SaveResumeState : Swift.Codable {
+  public var transactionMetadata: HyperKYC.TransactionMetadata? {
+    get
+  }
+  public var moduleExecutionOrder: [Swift.String]? {
+    get
+  }
+  public var moduleData: [Swift.String : HyperKYC.ModuleData]? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ResumeResult : Swift.Codable {
+  public var metadata: HyperKYC.ResumeMetadata? {
+    get
+  }
+  public var transactionMetadata: HyperKYC.TransactionMetadata? {
+    get
+  }
+  public var moduleExecutionOrder: [Swift.String]? {
+    get
+  }
+  public var moduleData: [Swift.String : HyperKYC.ModuleData]? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ResumeMetadata : Swift.Codable {
+  public var appId: Swift.String? {
+    get
+  }
+  public var appKey: Swift.String? {
+    get
+  }
+  public var accessToken: Swift.String? {
+    get
+  }
+  public var transactionId: Swift.String? {
+    get
+  }
+  public var workflowId: Swift.String? {
+    get
+  }
+  public var uniqueId: Swift.String? {
+    get
+  }
+  public var journeyId: Swift.String? {
+    get
+  }
+  public var inputs: [Swift.String : Swift.String]? {
+    get
+  }
+  public var workflowHash: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TransactionMetadata : Swift.Codable {
+  public var status: Swift.String? {
+    get
+  }
+  public var numberOfAttempts: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ModuleData : Swift.Codable {
+  public var expireAt: Swift.Int64? {
+    get
+  }
+  public var action: Swift.String? {
+    get
+  }
+  public var variables: [Swift.String : HyperKYC.AnyCodable?]? {
+    get
+  }
+  public var flags: [[Swift.String : HyperKYC.AnyCodable]]? {
+    get
+  }
+  public var requestIds: [Swift.String]? {
+    get
+  }
+  public var parentModuleId: Swift.String? {
+    get
+  }
+  public var attempts: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 public protocol Thenable : AnyObject {
   associatedtype T
   func pipe(to: @escaping (HyperKYC.PromiseResult<Self.T>) -> Swift.Void)
@@ -2174,6 +2319,9 @@ public struct WorkflowProperties : Swift.Codable {
     get
   }
   public var enableResumeWorkflow: Swift.Bool? {
+    get
+  }
+  public var enableServerSideResume: Swift.Bool? {
     get
   }
   public var resumeWorkflowDuration: Swift.Int? {
@@ -2404,6 +2552,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var isSuccess: Swift.String? {
+    get
+  }
+  public var expiresAfter: Swift.String? {
     get
   }
   public var data: HyperKYC.WebviewModuleProperty? {
@@ -2898,14 +3049,10 @@ public struct WorkflowCondition : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class WorkFlowStateDelegate : ObjectiveC.NSObject {
-  public struct WorkflowState : Swift.Codable {
-    public func encode(to encoder: Swift.Encoder) throws
-    public init(from decoder: Swift.Decoder) throws
-  }
-  public func saveState()
-  public func deleteWorkflowState(appId: Swift.String, transactionID: Swift.String)
-  public func makeStartAPICall(appId: Swift.String, transactionID: Swift.String, workflowId: Swift.String)
-  public func loadState(transactionID: Swift.String) -> HyperKYC.WorkFlowStateDelegate.WorkflowState?
+  public func deleteModule(moduleId: Swift.String)
+  public func saveState(moduleId: Swift.String, status: Swift.String? = nil, parentModuleID: Swift.String? = nil, completionHandler: ((Swift.Error?) -> Swift.Void)? = nil)
+  public func deleteWorkflowState(transactionID: Swift.String)
+  public func makeStartAPICall()
   @objc override dynamic public init()
   @objc deinit
 }
