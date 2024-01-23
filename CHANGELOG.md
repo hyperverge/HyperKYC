@@ -3,6 +3,10 @@
 ### 0.19.0 *[19 Jan 2024]*
 - Features 
     - Add support for cross platform resume functionality
+    - Add support for webview to not depend on sdk inputs to serve UserAgent string for OAuth/RPD
+
+- Bug Fixes :
+      - Fix video statement v2 to have a default statement text - `{{otp}}`     
 - Maintenance:
   - Use HyperSnapSDK `4.18.0`
 
