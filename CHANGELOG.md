@@ -1,4 +1,15 @@
 ## CHANGELOG
+### 0.20.0 *[23 Jan 2024]*
+- Features 
+    - Add support for footers in dynamic form module
+    - Add support for back button icon customisations 
+    - Add support for back button in webview module - `showBackButton`
+    - Add support for client logo in webview module 
+    - Update back button visibility based on `previousStep`
+  - Bug Fixes 
+    - Fix button component value reset to `no` onstart
+- Maintenance:
+  - Use HyperSnapSDK `4.19.0`
 
 ### 0.19.0 *[19 Jan 2024]*
 - Features 
