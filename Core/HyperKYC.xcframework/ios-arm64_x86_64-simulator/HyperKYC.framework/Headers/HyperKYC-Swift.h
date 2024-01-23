@@ -699,6 +699,13 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC24KeyboardLayoutConstraint")
+@interface KeyboardLayoutConstraint : NSLayoutConstraint
+- (void)awakeFromNib;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC10LoaderView")
 @interface LoaderView : UIView
 /// The color of the empty progress track (gets drawn over)
@@ -1508,6 +1515,13 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @interface HyperKycResult : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC24KeyboardLayoutConstraint")
+@interface KeyboardLayoutConstraint : NSLayoutConstraint
+- (void)awakeFromNib;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

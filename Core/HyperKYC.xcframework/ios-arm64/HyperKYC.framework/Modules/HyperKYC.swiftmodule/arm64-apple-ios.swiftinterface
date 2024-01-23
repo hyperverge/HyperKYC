@@ -1552,6 +1552,11 @@ public enum SessionStatus : Swift.Codable {
   }
   public init(from decoder: Swift.Decoder) throws
 }
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class KeyboardLayoutConstraint : UIKit.NSLayoutConstraint {
+  @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @objc override dynamic public init()
+}
 public struct KycCountries : Swift.Codable {
   public var countries: [HyperKYC.KycCountry] {
     get
@@ -2560,6 +2565,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var data: HyperKYC.WebviewModuleProperty? {
     get
   }
+  public var showBackButton: Swift.Bool? {
+    get
+  }
   public var sections: [HyperKYC.Section]? {
     get
   }
@@ -2743,6 +2751,9 @@ public struct Section : Swift.Codable {
   public var components: [HyperKYC.Component] {
     get
   }
+  public var footer: HyperKYC.Footer? {
+    get
+  }
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -2902,6 +2913,13 @@ public struct Component : Swift.Codable {
     get
   }
   public var blockLength: Swift.String? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Footer : Swift.Codable {
+  public var components: [HyperKYC.Component] {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
