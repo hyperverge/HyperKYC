@@ -3067,7 +3067,7 @@ public struct WorkflowCondition : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class WorkFlowStateDelegate : ObjectiveC.NSObject {
-  public func deleteModule(moduleId: Swift.String)
+  public func deleteModule(moduleIds: [Swift.String])
   public func saveState(moduleId: Swift.String, status: Swift.String? = nil, parentModuleID: Swift.String? = nil, completionHandler: ((Swift.Error?) -> Swift.Void)? = nil)
   public func deleteWorkflowState(transactionID: Swift.String)
   public func makeStartAPICall()
