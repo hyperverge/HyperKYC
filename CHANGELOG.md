@@ -6,6 +6,7 @@
     - Add support for back button in webview module - `showBackButton`
     - Add support for client logo in webview module 
     - Update back button visibility based on `previousStep`
+    - Update back navigation functionality for multiple cases
   - Bug Fixes 
     - Fix button component value reset to `no` onstart
 - Maintenance:
