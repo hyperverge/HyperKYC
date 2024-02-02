@@ -2167,7 +2167,7 @@ public struct TransactionMetadata : Swift.Codable {
   public var status: Swift.String? {
     get
   }
-  public var numberOfAttempts: Swift.String? {
+  public var moduleToResumeFrom: Swift.String? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
@@ -3046,6 +3046,19 @@ public struct WorkflowCondition : Swift.Codable {
     get
   }
   public var rule: Swift.String {
+    get
+  }
+  public var ifTrueConfigs: HyperKYC.EvalResultConfigs? {
+    get
+  }
+  public var ifFalseConfigs: HyperKYC.EvalResultConfigs? {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct EvalResultConfigs : Swift.Codable {
+  public var resumeFrom: Swift.String? {
     get
   }
   public func encode(to encoder: Swift.Encoder) throws
