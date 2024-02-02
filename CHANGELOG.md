@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 0.20.1 *[2 Feb 2024]*
+- Features 
+ - Migrate analytics fully from Rudderstack to Apollo
+ - Add support to resume for `auto_declined` for cross platform resume
+
+- Maintenance:
+  - Use HyperSnapSDK `4.19.1`
+  
 ### 0.20.0 *[23 Jan 2024]*
 - Features 
     - Add support for footers in dynamic form module
