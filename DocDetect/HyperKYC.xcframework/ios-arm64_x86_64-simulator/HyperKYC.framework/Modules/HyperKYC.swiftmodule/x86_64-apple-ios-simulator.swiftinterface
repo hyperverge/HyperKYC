@@ -825,6 +825,12 @@ public struct DynamicFormComponentsAttributes : Swift.Codable {
   public var paddingRight: Swift.String {
     get
   }
+  public var lineHeight: Swift.String {
+    get
+  }
+  public var charSpacing: Swift.String {
+    get
+  }
   public init()
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
@@ -1284,6 +1290,10 @@ public class HKYCIOSSecuritySuite {
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCBackgroundImageView : UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class DocCollectionViewCell : UIKit.UICollectionViewCell {
@@ -2551,6 +2561,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var showBackButton: Swift.Bool? {
+    get
+  }
+  public var reloadOnRedirectFailure: Swift.Bool? {
     get
   }
   public var sections: [HyperKYC.Section]? {

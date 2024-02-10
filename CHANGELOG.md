@@ -1,4 +1,15 @@
 ## CHANGELOG
+### 0.21.0 *[9 Feb 2024]*
+- Features
+    - Add support for dynamic variable injection across modules
+    - Add support to customise background across all screens on the SDK
+- Bug Fixes
+    - Handle app not installed scenarios for reverse penny drop flows
+
+ - Maintenance:
+  - Use HyperSnapSDK `4.20.0`
+
+
 ### 0.20.1 *[2 Feb 2024]*
 - Features 
  - Migrate analytics fully from Rudderstack to Apollo
