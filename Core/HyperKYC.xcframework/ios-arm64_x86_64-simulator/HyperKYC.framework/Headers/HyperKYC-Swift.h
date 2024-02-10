@@ -414,6 +414,16 @@ SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
 - (void)layoutSubviews;
 @end
 
+@class UIImage;
+
+SWIFT_CLASS("_TtC8HyperKYC23HKYCBackgroundImageView")
+@interface HKYCBackgroundImageView : UIImageView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
+@end
+
 
 SWIFT_CLASS("_TtC8HyperKYC14HKYCBlockLabel")
 @interface HKYCBlockLabel : UILabel
@@ -449,7 +459,6 @@ SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 @end
 
-@class UIImage;
 
 SWIFT_CLASS("_TtC8HyperKYC23HKYCClientLogoImageView")
 @interface HKYCClientLogoImageView : UIImageView
@@ -1233,6 +1242,16 @@ SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
 - (void)layoutSubviews;
 @end
 
+@class UIImage;
+
+SWIFT_CLASS("_TtC8HyperKYC23HKYCBackgroundImageView")
+@interface HKYCBackgroundImageView : UIImageView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithImage:(UIImage * _Nullable)image highlightedImage:(UIImage * _Nullable)highlightedImage SWIFT_UNAVAILABLE;
+@end
+
 
 SWIFT_CLASS("_TtC8HyperKYC14HKYCBlockLabel")
 @interface HKYCBlockLabel : UILabel
@@ -1268,7 +1287,6 @@ SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 @end
 
-@class UIImage;
 
 SWIFT_CLASS("_TtC8HyperKYC23HKYCClientLogoImageView")
 @interface HKYCClientLogoImageView : UIImageView
