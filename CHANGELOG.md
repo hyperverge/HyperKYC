@@ -5,6 +5,7 @@
     - Add support to customise background across all screens on the SDK
 - Bug Fixes
     - Handle app not installed scenarios for reverse penny drop flows
+    - Handle secret nil for urls when signature verification is enabled
 
  - Maintenance:
   - Use HyperSnapSDK `4.20.0`
