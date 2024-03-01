@@ -3,6 +3,8 @@
 - Features
     - Add support for dynamic variable injection across modules
     - Add support to customise background across all screens on the SDK
+    -  Update `logVideoStatement` request body.
+    - UI/UX fixes for VideoStatement V2 when face not detected.
 - Bug Fixes
     - Handle app not installed scenarios for reverse penny drop flows
     - Handle secret nil for urls when signature verification is enabled
