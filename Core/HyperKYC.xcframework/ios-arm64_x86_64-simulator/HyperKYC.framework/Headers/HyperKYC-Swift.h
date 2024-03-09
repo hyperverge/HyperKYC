@@ -383,6 +383,7 @@ SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
 @end
 
 
+
 SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 @interface HKYCActivityIndicator : UIActivityIndicatorView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -511,6 +512,13 @@ SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
 @interface HKYCHintLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC16HKYCNFCItemLabel")
+@interface HKYCNFCItemLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -761,6 +769,15 @@ SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
+
+
+SWIFT_CLASS("_TtC8HyperKYC14PassportReader") SWIFT_AVAILABILITY(ios,introduced=13)
+@interface PassportReader : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 
 
 SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
@@ -1211,6 +1228,7 @@ SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
 @end
 
 
+
 SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 @interface HKYCActivityIndicator : UIActivityIndicatorView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -1339,6 +1357,13 @@ SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
 @interface HKYCHintLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC16HKYCNFCItemLabel")
+@interface HKYCNFCItemLabel : UILabel
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1589,6 +1614,15 @@ SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
+
+
+SWIFT_CLASS("_TtC8HyperKYC14PassportReader") SWIFT_AVAILABILITY(ios,introduced=13)
+@interface PassportReader : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 
 
 SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
