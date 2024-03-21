@@ -1178,7 +1178,7 @@ public class HKYCIOSSecuritySuite {
 }
 @objc @_inheritsConvenienceInitializers public class HKYCSignatureHelper : ObjectiveC.NSObject {
   @objc override dynamic public init()
-  public func setInputs(queryParams: [Swift.String : Swift.String]?, fileHashDictionary: [Swift.String : Swift.String]?, requestBody: [Swift.String : Swift.AnyObject], responseBody: [Swift.String : Swift.AnyObject]?, responseHeaders: [Swift.String : Swift.String]?)
+  public func setInputs(queryParams: [Swift.String : Swift.String]?, fileHashDictionary: [Swift.String : Swift.String]?, requestBody: [Swift.String : Swift.AnyObject], requestHeaders: [Swift.String : Swift.String]?, responseBody: [Swift.String : Swift.AnyObject]?, responseHeaders: [Swift.String : Swift.String]?)
   public func getMD5HashOfData(_ data: Foundation.Data) -> Swift.String
   public func verifySignature() -> Swift.Bool
   public func verifyWorkflowSignature(path: Swift.String) -> Swift.Bool
