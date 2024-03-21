@@ -6,6 +6,6 @@ framework module HyperKYC {
 }
 
 module HyperKYC.Swift {
-  header "HyperKYC-Swift.h"
-  requires objc
+    header "HyperKYC-Swift.h"
+    requires objc
 }
