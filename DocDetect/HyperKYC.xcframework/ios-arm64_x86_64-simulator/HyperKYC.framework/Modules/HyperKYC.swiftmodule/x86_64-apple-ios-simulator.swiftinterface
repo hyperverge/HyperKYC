@@ -854,6 +854,16 @@ public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public enum DynamicConstraints {
+  case centerHorizontal
+  case centerVertical
+  case center
+  public static func == (a: HyperKYC.DynamicConstraints, b: HyperKYC.DynamicConstraints) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public enum PMKError : Swift.Error {
   case invalidCallingConvention
   case returnedSelf
@@ -1161,8 +1171,7 @@ extension HyperKYC.HKYCFileIntegrityCheck {
   }
 }
 public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: [HyperKYC.HKYCFileIntegrityCheck])
-@_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
-public class HKYCIOSSecuritySuite {
+@_hasMissingDesignatedInitializers public class HKYCIOSSecuritySuite {
   public static func amIJailbroken() -> Swift.Bool
   public static func amIJailbrokenWithFailMessage() -> (jailbroken: Swift.Bool, failMessage: Swift.String)
   public static func amIJailbrokenWithFailedChecks() -> (jailbroken: Swift.Bool, failedChecks: [HyperKYC.HKYCFailedCheckType])
@@ -3097,6 +3106,8 @@ extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
 extension HyperKYC.PickedFile.State : Swift.Equatable {}
 extension HyperKYC.PickedFile.State : Swift.Hashable {}
 extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
+extension HyperKYC.DynamicConstraints : Swift.Equatable {}
+extension HyperKYC.DynamicConstraints : Swift.Hashable {}
 extension HyperKYC.CatchPolicy : Swift.Equatable {}
 extension HyperKYC.CatchPolicy : Swift.Hashable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}
