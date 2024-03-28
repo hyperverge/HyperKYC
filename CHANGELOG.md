@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 0.21.1 *[28 Mar 2024]*
+- Features
+  - Add support for file type picked pre-defined variables for form module. ex: `imagesPicked` etc
+- Bug Fixes 
+  - Fix alignment issues for few components in dynamic forms
+  - Fix issue with dynamic handlers which component is hidden
+  
 ### 0.21.0 *[9 Feb 2024]*
 - Features
     - Add support for dynamic variable injection across modules
