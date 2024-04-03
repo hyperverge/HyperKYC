@@ -1,10 +1,20 @@
 ## CHANGELOG
+### 0.21.2 *[3 Apr 2024]*
+- Bug Fixes 
+  - Fix alignment issues for hint labels
+- Maintenance:
+  - Use HyperSnapSDK `4.20.0`
+
 ### 0.21.1 *[28 Mar 2024]*
 - Features
   - Add support for file type picked pre-defined variables for form module. ex: `imagesPicked` etc
 - Bug Fixes 
   - Fix alignment issues for few components in dynamic forms
   - Fix issue with dynamic handlers which component is hidden
+
+   - Maintenance:
+  - Use HyperSnapSDK `4.20.0`
+
   
 ### 0.21.0 *[9 Feb 2024]*
 - Features
