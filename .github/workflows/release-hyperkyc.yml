@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "deploy"
   deploy:
     # The type of runner that the job will run on
-    runs-on: macOS-latest
+    runs-on: macOS-14
     
     # Environment to be used for pushing HyperKYC to cocoapods
     environment: production
