@@ -1,0 +1,3206 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HyperKYC
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import AVKit
+import AudioToolbox
+import Combine
+import CommonCrypto
+import CoreFoundation
+import CoreMedia
+import CoreNFC
+import CryptoKit
+import Darwin
+import Dispatch
+import Foundation
+import Foundation/*.Thread*/
+import Foundation/*.TimeInterval*/
+@_exported import HyperKYC
+import HyperSnapSDK
+import MachO
+import MaterialComponents
+import MaterialComponents.MaterialTextControls_OutlinedTextFields
+import MobileCoreServices
+import ObjectiveC
+import PDFKit
+import PhotosUI
+import QuartzCore
+import QuickLook
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public func after(seconds: Foundation.TimeInterval) -> HyperKYC.Guarantee<Swift.Void>
+public func after(_ interval: Dispatch.DispatchTimeInterval) -> HyperKYC.Guarantee<Swift.Void>
+@frozen public struct AnyCodable : Swift.Codable {
+  public let value: Any
+  public init<T>(_ value: T?)
+}
+extension HyperKYC.AnyCodable : HyperKYC._AnyEncodable, HyperKYC._AnyDecodable {
+}
+extension HyperKYC.AnyCodable : Swift.Equatable {
+  public static func == (lhs: HyperKYC.AnyCodable, rhs: HyperKYC.AnyCodable) -> Swift.Bool
+}
+extension HyperKYC.AnyCodable : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyCodable : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByNilLiteral {
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByBooleanLiteral {
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByIntegerLiteral {
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByFloatLiteral {
+  public typealias FloatLiteralType = Swift.Double
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByStringLiteral {
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByArrayLiteral {
+  public typealias ArrayLiteralElement = Any
+}
+extension HyperKYC.AnyCodable : Swift.ExpressibleByDictionaryLiteral {
+  public typealias Key = Swift.AnyHashable
+  public typealias Value = Any
+}
+extension HyperKYC.AnyCodable : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@frozen public struct AnyDecodable : Swift.Decodable {
+  public let value: Any
+  public init<T>(_ value: T?)
+}
+@usableFromInline
+internal protocol _AnyDecodable {
+  var value: Any { get }
+  init<T>(_ value: T?)
+}
+extension HyperKYC.AnyDecodable : HyperKYC._AnyDecodable {
+}
+extension HyperKYC._AnyDecodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension HyperKYC.AnyDecodable : Swift.Equatable {
+  public static func == (lhs: HyperKYC.AnyDecodable, rhs: HyperKYC.AnyDecodable) -> Swift.Bool
+}
+extension HyperKYC.AnyDecodable : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyDecodable : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyDecodable : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@frozen public struct AnyEncodable : Swift.Encodable {
+  public let value: Any
+  public init<T>(_ value: T?)
+}
+@usableFromInline
+internal protocol _AnyEncodable {
+  var value: Any { get }
+  init<T>(_ value: T?)
+}
+extension HyperKYC.AnyEncodable : HyperKYC._AnyEncodable {
+}
+extension HyperKYC._AnyEncodable {
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension HyperKYC.AnyEncodable : Swift.Equatable {
+  public static func == (lhs: HyperKYC.AnyEncodable, rhs: HyperKYC.AnyEncodable) -> Swift.Bool
+}
+extension HyperKYC.AnyEncodable : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyEncodable : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByNilLiteral {
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByBooleanLiteral {
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByIntegerLiteral {
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByFloatLiteral {
+  public typealias FloatLiteralType = Swift.Double
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByStringLiteral {
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByStringInterpolation {
+  public typealias StringInterpolation = Swift.DefaultStringInterpolation
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByArrayLiteral {
+  public typealias ArrayLiteralElement = Any
+}
+extension HyperKYC.AnyEncodable : Swift.ExpressibleByDictionaryLiteral {
+  public typealias Key = Swift.AnyHashable
+  public typealias Value = Any
+}
+extension HyperKYC._AnyEncodable {
+  public init(nilLiteral _: ())
+  public init(booleanLiteral value: Swift.Bool)
+  public init(integerLiteral value: Swift.Int)
+  public init(floatLiteral value: Swift.Double)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(arrayLiteral elements: Any...)
+  public init(dictionaryLiteral elements: (Swift.AnyHashable, Any)...)
+}
+extension HyperKYC.AnyEncodable : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension HyperKYC.Guarantee {
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func async() async -> T
+  #endif
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension HyperKYC.HVPromise {
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func async() async throws -> T
+  #endif
+}
+public struct Metadata : Swift.Codable {
+  public var data: Swift.String? {
+    get
+  }
+  public var customerId: Swift.String? {
+    get
+  }
+  public var requestId: Swift.String? {
+    get
+  }
+  public var transactionId: Swift.String? {
+    get
+  }
+  public var attemptCount: Swift.Int? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Summary : Swift.Codable {
+  public var action: Swift.String? {
+    get
+  }
+  public var details: [HyperKYC.Details] {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Details : Swift.Codable {
+  public var code: Swift.String? {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct InputImageUrls : Swift.Codable {
+  public var image: Swift.String? {
+    get
+  }
+  public var image1: Swift.String? {
+    get
+  }
+  public var image2: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Fieldvalue : Swift.Codable {
+  public var value: Swift.String? {
+    get
+  }
+  public var confidence: Swift.String? {
+    get
+  }
+  public var score: Swift.Double? {
+    get
+  }
+  public var reviewNeeded: Swift.String? {
+    get
+  }
+  public var line1: Swift.String? {
+    get
+  }
+  public var line2: Swift.String? {
+    get
+  }
+  public init(value: Swift.String? = nil, confidence: Swift.String? = nil, score: Swift.Double? = nil, reviewNeeded: Swift.String? = nil, line1: Swift.String? = nil, line2: Swift.String? = nil)
+  public init(from decoder: any Swift.Decoder) throws
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public protocol CatchMixin : HyperKYC.Thenable {
+}
+extension HyperKYC.CatchMixin {
+  @discardableResult
+  public func `catch`(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) -> Swift.Void) -> HyperKYC.PMKFinalizer
+}
+@_hasMissingDesignatedInitializers public class PMKFinalizer {
+  public func finally(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> Swift.Void)
+  @objc deinit
+}
+extension HyperKYC.CatchMixin {
+  public func recover<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) throws -> U) -> HyperKYC.HVPromise<Self.T> where U : HyperKYC.Thenable, Self.T == U.T
+  @discardableResult
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (any Swift.Error) -> HyperKYC.Guarantee<Self.T>) -> HyperKYC.Guarantee<Self.T>
+  public func ensure(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> Swift.Void) -> HyperKYC.HVPromise<Self.T>
+  public func ensureThen(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> HyperKYC.Guarantee<Swift.Void>) -> HyperKYC.HVPromise<Self.T>
+  @discardableResult
+  public func cauterize() -> HyperKYC.PMKFinalizer
+}
+extension HyperKYC.CatchMixin where Self.T == () {
+  @discardableResult
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (any Swift.Error) -> Swift.Void) -> HyperKYC.Guarantee<Swift.Void>
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
+}
+@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class Checkbox : UIKit.UIControl {
+  @objc public enum CheckmarkStyle : Swift.Int {
+    case square
+    case circle
+    case cross
+    case tick
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum BorderStyle : Swift.Int {
+    case square
+    case circle
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var checkmarkStyle: HyperKYC.Checkbox.CheckmarkStyle
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var borderStyle: HyperKYC.Checkbox.BorderStyle
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderLineWidth: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkmarkSize: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var uncheckedBorderColor: UIKit.UIColor!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkedBorderColor: UIKit.UIColor!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkmarkColor: UIKit.UIColor!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var emoji: Swift.String?
+  @_Concurrency.MainActor(unsafe) public var checkboxBackgroundColor: UIKit.UIColor!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkboxClearColor: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkboxFillColor: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderCornerRadius: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var increasedTouchRadius: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public var valueChanged: ((_ isChecked: Swift.Bool) -> Swift.Void)?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var isChecked: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var useHapticFeedback: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func point(inside point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) open class LoaderView : UIKit.UIView {
+  public typealias CompletionBlock = () -> Swift.Void
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var trackTintColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var progressTintColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var innerTintColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var roundedCorners: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var thicknessRatio: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var clockwiseProgress: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var timingFunction: QuartzCore.CAMediaTimingFunction
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var progress: CoreFoundation.CGFloat {
+    @objc get
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var indeterminateProgress: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var indeterminateDuration: CoreFoundation.CFTimeInterval
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open class var layerClass: Swift.AnyClass {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) open func enableIndeterminate(_ enabled: Swift.Bool = true)
+  @objc deinit
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension HyperKYC.Guarantee {
+  final public func future() -> Combine.Future<T, Swift.Never>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension HyperKYC.HVPromise {
+  final public func future() -> Combine.Future<T, any Swift.Error>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Combine.Future {
+  final public func promise() -> HyperKYC.HVPromise<Output>
+}
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Combine.Future where Failure == Swift.Never {
+  final public func guarantee() -> HyperKYC.Guarantee<Output>
+}
+extension Foundation.NSURL {
+  public func mimeType() -> Swift.String
+}
+extension Foundation.URL {
+  public func mimeType() -> Swift.String
+}
+extension Foundation.NSString {
+  public func mimeType() -> Swift.String
+}
+extension Swift.String {
+  public func mimeType() -> Swift.String
+}
+public struct PMKConfiguration {
+  public var Q: (map: Dispatch.DispatchQueue?, return: Dispatch.DispatchQueue?)
+  public var catchPolicy: HyperKYC.CatchPolicy
+  public var logHandler: (_ event: HyperKYC.LogEvent) -> Swift.Void
+}
+public var conf: HyperKYC.PMKConfiguration
+public enum HyperKycStatus : Swift.String {
+  case autoApproved
+  case autoDeclined
+  case manuallyApproved
+  case manuallyDeclined
+  case ongoing
+  case started
+  case needsReview
+  case userCancelled
+  case error
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class CustomDatePicker : UIKit.UIPickerView {
+  @_Concurrency.MainActor(unsafe) open var date: Foundation.Date {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) open var month: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var year: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) open var onDateSelected: ((_ month: Swift.Int, _ year: Swift.Int) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public func addTarget(_ target: Any?, action: ObjectiveC.Selector, for controlEvents: UIKit.UIControl.Event)
+  @_Concurrency.MainActor(unsafe) public func removeTarget()
+  @_Concurrency.MainActor(unsafe) public func removeTarget(_ target: Any?, action: ObjectiveC.Selector?, for controlEvents: UIKit.UIControl.Event)
+  @_Concurrency.MainActor(unsafe) public func setDate(_ date: Foundation.Date, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func update()
+  @objc deinit
+}
+extension HyperKYC.CustomDatePicker : UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
+}
+extension HyperKYC.HVPromise : Swift.CustomStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+}
+extension HyperKYC.HVPromise : Swift.CustomDebugStringConvertible {
+  final public var debugDescription: Swift.String {
+    get
+  }
+}
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (T?, (any Swift.Error)?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (T, (any Swift.Error)?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping ((any Swift.Error)?, T?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap(_ body: (@escaping ((any Swift.Error)?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
+@available(*, deprecated, message: "See `init(resolver:)`")
+public func wrap<T>(_ body: (@escaping (T) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+extension HyperKYC.HVPromise {
+  @available(*, deprecated, message: "See `ensure`")
+  final public func always(on q: Dispatch.DispatchQueue = .main, execute body: @escaping () -> Swift.Void) -> HyperKYC.HVPromise<T>
+}
+extension HyperKYC.Thenable where Self.T : Swift.Sequence {
+  @available(*, deprecated, message: "See: `filterValues`")
+  public func filter(on: Dispatch.DispatchQueue? = conf.Q.map, test: @escaping (Self.T.Iterator.Element) -> Swift.Bool) -> HyperKYC.HVPromise<[Self.T.Iterator.Element]>
+}
+extension HyperKYC.Thenable where Self.T : Swift.Collection {
+  @available(*, deprecated, message: "See: `firstValue`")
+  public var first: HyperKYC.HVPromise<Self.T.Element> {
+    get
+  }
+  @available(*, deprecated, message: "See: `lastValue`")
+  public var last: HyperKYC.HVPromise<Self.T.Element> {
+    get
+  }
+}
+extension HyperKYC.Thenable where Self.T : Swift.Sequence, Self.T.Element : Swift.Comparable {
+  @available(*, deprecated, message: "See: `sortedValues`")
+  public func sorted(on: Dispatch.DispatchQueue? = conf.Q.map) -> HyperKYC.HVPromise<[Self.T.Iterator.Element]>
+}
+public struct DocCaptureApiDetail : Swift.Codable {
+  public var metadata: HyperKYC.Metadata {
+    get
+  }
+  public var status: Swift.String {
+    get
+  }
+  public var statusCode: Swift.Int {
+    get
+  }
+  public var result: HyperKYC.DocResultObject? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DocResultObject : Swift.Codable {
+  public var details: [HyperKYC.OCRApiStructure]? {
+    get
+  }
+  public var error: Swift.String? {
+    get
+  }
+  public var summary: HyperKYC.Summary? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OCRApiStructure : Swift.Codable {
+  public var idType: Swift.String? {
+    get
+  }
+  public var fieldsExtracted: HyperKYC.FieldsExtracted? {
+    get
+  }
+  public var qualityChecks: HyperKYC.DocQualityChecks? {
+    get
+  }
+  public var ruleChecks: HyperKYC.RuleChecks? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FieldsExtracted : Swift.Codable {
+  public var idNumber: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var firstName: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var middleName: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var lastName: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var fullName: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var dateOfBirth: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var dateOfIssue: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var dateOfExpiry: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var countryCode: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var type: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var gender: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var placeOfBirth: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var placeOfIssue: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var yearOfBirth: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var age: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var fatherName: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var motherName: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var husbandName: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var spouseName: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var nationality: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var mrzString: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var hometown: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var address: HyperKYC.Address? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Address : Swift.Codable {
+  public var value: Swift.String? {
+    get
+  }
+  public var confidence: Swift.String? {
+    get
+  }
+  public var score: HyperKYC.AnyCodable? {
+    get
+  }
+  public var houseNumber: Swift.String? {
+    get
+  }
+  public var additionalInfo: Swift.String? {
+    get
+  }
+  public var province: Swift.String? {
+    get
+  }
+  public var district: Swift.String? {
+    get
+  }
+  public var street: Swift.String? {
+    get
+  }
+  public var zipCode: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DocQualityChecks : Swift.Codable {
+  public var blur: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var glare: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var blackAndWhite: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var capturedFromScreen: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var whiteBackground: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var cutId: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct RuleChecks : Swift.Codable {
+  public var idNumberInvalid: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PickedFile : ObjectiveC.NSObject {
+  public var localUri: Swift.String?
+  public var fileUrl: Swift.String
+  public var fileName: Swift.String?
+  public var sizeInKB: Swift.Int
+  public var fileExtension: Swift.String?
+  public var type: Swift.String?
+  public var state: HyperKYC.PickedFile.State
+  public enum State : Swift.String, Swift.Codable {
+    case loading
+    case success
+    case error
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var plainView: UIKit.UIView {
+    @objc get
+  }
+}
+extension UIKit.UIBarButtonItem {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public var plainView: UIKit.UIView {
+    @objc get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class DropDownCell : UIKit.UITableViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak open var optionLabel: UIKit.UILabel!
+  @available(iOS 3.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension HyperKYC.DropDownCell {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func setHighlighted(_ highlighted: Swift.Bool, animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+}
+public struct DynamicFormComponentsAttributes : Swift.Codable {
+  public var font: Swift.String {
+    get
+  }
+  public var fontSize: Swift.String {
+    get
+  }
+  public var fontWeight: Swift.String {
+    get
+  }
+  public var alignment: Swift.String {
+    get
+  }
+  public var color: Swift.String {
+    get
+  }
+  public var backgroundColor: Swift.String {
+    get
+  }
+  public var circleBorderColor: Swift.String {
+    get
+  }
+  public var borderColor: Swift.String {
+    get
+  }
+  public var borderRadius: Swift.String {
+    get
+  }
+  public var icons: HyperKYC.HKYCUIIcons {
+    get
+  }
+  public var marginBottom: Swift.String {
+    get
+  }
+  public var marginTop: Swift.String {
+    get
+  }
+  public var marginLeft: Swift.String {
+    get
+  }
+  public var marginRight: Swift.String {
+    get
+  }
+  public var paddingBottom: Swift.String {
+    get
+  }
+  public var paddingTop: Swift.String {
+    get
+  }
+  public var paddingLeft: Swift.String {
+    get
+  }
+  public var paddingRight: Swift.String {
+    get
+  }
+  public var lineHeight: Swift.String {
+    get
+  }
+  public var charSpacing: Swift.String {
+    get
+  }
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HKYCUIIcons : Swift.Codable {
+  public var primaryButtonIcon: HyperKYC.HKYCUIPrimaryButtonIcon {
+    get
+  }
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
+  public var url: Swift.String {
+    get
+  }
+  public var shouldShow: Swift.Bool {
+    get
+  }
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum DynamicConstraints {
+  case centerHorizontal
+  case centerVertical
+  case center
+  public static func == (a: HyperKYC.DynamicConstraints, b: HyperKYC.DynamicConstraints) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PMKError : Swift.Error {
+  case invalidCallingConvention
+  case returnedSelf
+  case badInput
+  case cancelled
+  @available(*, deprecated, message: "See: `compactMap`")
+  case flatMap(Any, any Any.Type)
+  case compactMap(Any, any Any.Type)
+  case emptySequence
+  case noWinner
+}
+extension HyperKYC.PMKError : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension HyperKYC.PMKError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public protocol CancellableError : Swift.Error {
+  var isCancelled: Swift.Bool { get }
+}
+extension Swift.Error {
+  public var isCancelled: Swift.Bool {
+    get
+  }
+}
+public enum CatchPolicy {
+  case allErrors
+  case allErrorsExceptCancellation
+  public static func == (a: HyperKYC.CatchPolicy, b: HyperKYC.CatchPolicy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredInterfaceOrientationForPresentation: UIKit.UIInterfaceOrientation {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredContentSize: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+}
+extension UIKit.UIImage {
+  public func withRoundedCorners(radius: CoreFoundation.CGFloat? = nil) -> UIKit.UIImage?
+}
+extension HyperKYC.HKYCPrimaryButton {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var isEnabled: Swift.Bool {
+    @objc get
+    @objc set
+  }
+}
+extension Swift.Dictionary where Key == Swift.String, Value == [Swift.String : Any] {
+  public func getStringValue(key: Swift.String, subKey: Swift.String, defaultText: Swift.String) -> Swift.String
+}
+extension Swift.Dictionary where Key == Swift.String {
+  public func getStringValue(key: Swift.String, defaultText: Swift.String) -> Swift.String
+}
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.String, defaultColor: UIKit.UIColor? = nil)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func addTapGestureRecognizer(action: ((_ sender: UIKit.UITapGestureRecognizer) -> Swift.Void)?)
+}
+public struct FaceCaptureApiDetail : Swift.Codable {
+  public var metadata: HyperKYC.Metadata {
+    get
+  }
+  public var status: Swift.String {
+    get
+  }
+  public var statusCode: Swift.Int {
+    get
+  }
+  public var result: HyperKYC.FaceResultObject? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceResultObject : Swift.Codable {
+  public var details: HyperKYC.LivenessApiStructure? {
+    get
+  }
+  public var error: Swift.String? {
+    get
+  }
+  public var summary: HyperKYC.Summary? {
+    get
+  }
+  public var inputImageUrls: HyperKYC.InputImageUrls? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LivenessApiStructure : Swift.Codable {
+  public var liveFace: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var live: Swift.String? {
+    get
+  }
+  public var livenessScore: Swift.String? {
+    get
+  }
+  public var toBeReviewed: Swift.String? {
+    get
+  }
+  public var qualityChecks: HyperKYC.FaceQualityChecks? {
+    get
+  }
+  public var error: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceQualityChecks : Swift.Codable {
+  public var eyesClosed: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var maskPresent: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var multipleFaces: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var blur: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceMatchApiDetail : Swift.Codable {
+  public var metadata: HyperKYC.Metadata {
+    get
+  }
+  public var status: Swift.String {
+    get
+  }
+  public var statusCode: Swift.Int {
+    get
+  }
+  public var result: HyperKYC.FaceMatchResult? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceMatchResult : Swift.Codable {
+  public var details: HyperKYC.FaceMatchApiStructure? {
+    get
+  }
+  public var error: Swift.String? {
+    get
+  }
+  public var summary: HyperKYC.Summary? {
+    get
+  }
+  public var inputImageUrls: HyperKYC.InputImageUrls? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceMatchApiStructure : Swift.Codable {
+  public var matchScore: Swift.Float? {
+    get
+  }
+  public var conf: Swift.Float? {
+    get
+  }
+  public var match: HyperKYC.Fieldvalue? {
+    get
+  }
+  public var toBeReviewed: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public func firstly<U>(execute body: () throws -> U) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+public func firstly<T>(execute body: () -> HyperKYC.Guarantee<T>) -> HyperKYC.Guarantee<T>
+@_hasMissingDesignatedInitializers final public class Guarantee<T> : HyperKYC.Thenable {
+  public static func value(_ value: T) -> HyperKYC.Guarantee<T>
+  public init(resolver body: (@escaping (T) -> Swift.Void) -> Swift.Void)
+  final public func pipe(to: @escaping (HyperKYC.PromiseResult<T>) -> Swift.Void)
+  final public var result: HyperKYC.PromiseResult<T>? {
+    get
+  }
+  final public class func pending() -> (guarantee: HyperKYC.Guarantee<T>, resolve: (T) -> Swift.Void)
+  @objc deinit
+}
+extension HyperKYC.Guarantee {
+  @discardableResult
+  final public func done(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> Swift.Void) -> HyperKYC.Guarantee<Swift.Void>
+  final public func get(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> Swift.Void) -> HyperKYC.Guarantee<T>
+  final public func map<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> U) -> HyperKYC.Guarantee<U>
+  @discardableResult
+  final public func then<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (T) -> HyperKYC.Guarantee<U>) -> HyperKYC.Guarantee<U>
+  final public func asVoid() -> HyperKYC.Guarantee<Swift.Void>
+  final public func wait() -> T
+}
+extension HyperKYC.Guarantee where T : Swift.Sequence {
+  final public func mapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U) -> HyperKYC.Guarantee<[U]>
+  final public func flatMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U) -> HyperKYC.Guarantee<[U.Iterator.Element]> where U : Swift.Sequence
+  final public func compactMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U?) -> HyperKYC.Guarantee<[U]>
+  final public func thenMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> HyperKYC.Guarantee<U>) -> HyperKYC.Guarantee<[U]>
+  final public func thenFlatMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (T.Iterator.Element) -> U) -> HyperKYC.Guarantee<[U.T.Iterator.Element]> where U : HyperKYC.Thenable, U.T : Swift.Sequence
+  final public func filterValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ isIncluded: @escaping (T.Iterator.Element) -> Swift.Bool) -> HyperKYC.Guarantee<[T.Iterator.Element]>
+  final public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ areInIncreasingOrder: @escaping (T.Iterator.Element, T.Iterator.Element) -> Swift.Bool) -> HyperKYC.Guarantee<[T.Iterator.Element]>
+}
+extension HyperKYC.Guarantee where T : Swift.Sequence, T.Element : Swift.Comparable {
+  final public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil) -> HyperKYC.Guarantee<[T.Iterator.Element]>
+}
+extension HyperKYC.Guarantee where T == () {
+  convenience public init()
+  public static var value: HyperKYC.Guarantee<Swift.Void> {
+    get
+  }
+}
+extension Dispatch.DispatchQueue {
+  @available(macOS 10.10, iOS 2.0, tvOS 10.0, watchOS 2.0, *)
+  final public func async<T>(_: HyperKYC.PMKNamespacer, group: Dispatch.DispatchGroup? = nil, qos: Dispatch.DispatchQoS = .default, flags: Dispatch.DispatchWorkItemFlags = [], execute body: @escaping () -> T) -> HyperKYC.Guarantee<T>
+}
+public func hang<T>(_ promise: HyperKYC.HVPromise<T>) throws -> T
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCBrandingLayout : UIKit.UIStackView {
+  @objc @_Concurrency.MainActor(unsafe) public func showBranding(show: Swift.Bool)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class HKYCBundleLocator : ObjectiveC.NSObject {
+  public static func getParentApplicationBundleId() -> Swift.String?
+  public static func getHyperKYCResourcesBundle() -> Foundation.Bundle?
+  public static func getHVResourcesBundle() -> Foundation.Bundle?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public typealias HKYCFailedCheckType = (check: HyperKYC.HKYCFailedCheck, failMessage: Swift.String)
+public enum HKYCFailedCheck : Swift.CaseIterable {
+  case urlSchemes
+  case existenceOfSuspiciousFiles
+  case suspiciousFilesCanBeOpened
+  case restrictedDirectoriesWriteable
+  case fork
+  case symbolicLinks
+  case dyld
+  case openedPorts
+  case pSelectFlag
+  case suspiciousObjCClasses
+  public static func == (a: HyperKYC.HKYCFailedCheck, b: HyperKYC.HKYCFailedCheck) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [HyperKYC.HKYCFailedCheck]
+  public static var allCases: [HyperKYC.HKYCFailedCheck] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class HKYCImageCache {
+  public static let imageCache: HyperKYC.HKYCImageCache
+  final public func image(urlString: Swift.String, imageClosure: @escaping (_ uiImage: UIKit.UIImage) -> Swift.Void)
+  @objc deinit
+}
+public enum HKYCFileIntegrityCheck {
+  case bundleID(Swift.String)
+  case mobileProvision(Swift.String)
+  case machO(Swift.String, Swift.String)
+}
+extension HyperKYC.HKYCFileIntegrityCheck {
+  public var description: Swift.String {
+    get
+  }
+}
+public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: [HyperKYC.HKYCFileIntegrityCheck])
+@_hasMissingDesignatedInitializers public class HKYCIOSSecuritySuite {
+  public static func amIJailbroken() -> Swift.Bool
+  public static func amIJailbrokenWithFailMessage() -> (jailbroken: Swift.Bool, failMessage: Swift.String)
+  public static func amIJailbrokenWithFailedChecks() -> (jailbroken: Swift.Bool, failedChecks: [HyperKYC.HKYCFailedCheckType])
+  public static func amIRunInEmulator() -> Swift.Bool
+  public static func amIDebugged() -> Swift.Bool
+  public static func denyDebugger()
+  public static func amITampered(_ checks: [HyperKYC.HKYCFileIntegrityCheck]) -> HyperKYC.HKYCFileIntegrityCheckResult
+  public static func amIReverseEngineered() -> Swift.Bool
+  public static func amIReverseEngineeredWithFailedChecks() -> (reverseEngineered: Swift.Bool, failedChecks: [HyperKYC.HKYCFailedCheckType])
+  public static func amIRuntimeHooked(dyldWhiteList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
+  public static func amIProxied() -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class HKYCSignatureHelper : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  public func setInputs(queryParams: [Swift.String : Swift.String]?, fileHashDictionary: [Swift.String : Swift.String]?, requestBody: [Swift.String : Swift.AnyObject], requestHeaders: [Swift.String : Swift.String]?, responseBody: [Swift.String : Swift.AnyObject]?, responseHeaders: [Swift.String : Swift.String]?)
+  public func getMD5HashOfData(_ data: Foundation.Data) -> Swift.String
+  public func verifySignature() -> Swift.Bool
+  public func verifyWorkflowSignature(path: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCClientLogoImageView : UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCActivityLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCActivityTitleLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCActivityIndicator : UIKit.UIActivityIndicatorView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setStyle(_ style: UIKit.UIActivityIndicatorView.Style)
+  @objc @_Concurrency.MainActor(unsafe) public static func setColor(_ color: UIKit.UIColor)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCTitleLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCDescriptionLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCStatusLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCHintLabel : UIKit.UILabel {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCBlockLabel : UIKit.UILabel {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCVideoStatementTitleLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCVideoStatementDescLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCErrorMessageLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCPickerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreFoundation.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreFoundation.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCPrimaryButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreFoundation.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreFoundation.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCSecondaryButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreFoundation.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreFoundation.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCTertiaryButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreFoundation.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreFoundation.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCBackgroundImageView : UIKit.UIImageView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class DocCollectionViewCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor(unsafe) public var docHolderCard: HyperKYC.HKYCDocHolderCard!
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AddImageCollectionViewCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor(unsafe) public var addImageCard: HyperKYC.HKYCAddImageCard!
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCFileStackView : UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) public var stackImage: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) public var stackLabel: HyperKYC.HKYCDescriptionLabel!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCRetakeMessageLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PaddingLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public func setInsets(withInsets top: CoreFoundation.CGFloat, _ bottom: CoreFoundation.CGFloat, _ left: CoreFoundation.CGFloat, _ right: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCDocHolderCard : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var thumbnailImage: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) public var deleteIcon: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) public var sizeLabel: HyperKYC.PaddingLabel!
+  @_Concurrency.MainActor(unsafe) public var nameLabel: HyperKYC.PaddingLabel!
+  @_Concurrency.MainActor(unsafe) public var pickedFile: HyperKYC.PickedFile?
+  @_Concurrency.MainActor(unsafe) public func showloader()
+  @_Concurrency.MainActor(unsafe) public func hideLoader()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCAddImageCard : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var addImage: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCRecordView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var dotView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var label: UIKit.UILabel!
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCCheckBox : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var containerView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var checkBoxlabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public var checkBox: HyperKYC.Checkbox!
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class DottedLineView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var dottedLineColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class DividerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var dividerLabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public var dottedLine: HyperKYC.DottedLineView!
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCCardView : UIKit.UIView {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCVideoStatementHelperLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCVideoStatementView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var stackHolder: UIKit.UIStackView!
+  @_Concurrency.MainActor(unsafe) public var content: Swift.String!
+  @_Concurrency.MainActor(unsafe) public var codeSet: Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HintView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var hintLabel: HyperKYC.HKYCHintLabel!
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class AdaptiveStackView : UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor(unsafe) public class HKYCNFCItemLabel : UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public class HVCamConfig : ObjectiveC.NSObject {
+  @objc public var useBackCamera: Swift.Bool
+  @objc public var enableLookStraight: Swift.Bool
+  public init(useBackCamera: Swift.Bool = false, enableLookStraight: Swift.Bool = false)
+  @objc deinit
+}
+public enum FaceState : Swift.Equatable {
+  case facedetected
+  case facenotdetected
+  case capture(fullImageUri: Swift.String, cropImageUri: Swift.String)
+  public static func == (a: HyperKYC.FaceState, b: HyperKYC.FaceState) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers final public class HVPromise<T> : HyperKYC.Thenable, HyperKYC.CatchMixin {
+  public static func value(_ value: T) -> HyperKYC.HVPromise<T>
+  public init(error: any Swift.Error)
+  public init<U>(_ bridge: U) where T == U.T, U : HyperKYC.Thenable
+  public init(resolver body: (HyperKYC.Resolver<T>) throws -> Swift.Void)
+  final public class func pending() -> (promise: HyperKYC.HVPromise<T>, resolver: HyperKYC.Resolver<T>)
+  final public func pipe(to: @escaping (HyperKYC.PromiseResult<T>) -> Swift.Void)
+  final public var result: HyperKYC.PromiseResult<T>? {
+    get
+  }
+  @objc deinit
+}
+extension HyperKYC.HVPromise {
+  final public func wait() throws -> T
+}
+extension HyperKYC.HVPromise where T == () {
+  convenience public init()
+  public static var value: HyperKYC.HVPromise<Swift.Void> {
+    get
+  }
+}
+extension Dispatch.DispatchQueue {
+  @available(macOS 10.10, iOS 8.0, tvOS 9.0, watchOS 2.0, *)
+  final public func async<T>(_: HyperKYC.PMKNamespacer, group: Dispatch.DispatchGroup? = nil, qos: Dispatch.DispatchQoS = .default, flags: Dispatch.DispatchWorkItemFlags = [], execute body: @escaping () throws -> T) -> HyperKYC.HVPromise<T>
+}
+public enum PMKNamespacer {
+  case promise
+  public static func == (a: HyperKYC.PMKNamespacer, b: HyperKYC.PMKNamespacer) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class HyperKyc : ObjectiveC.NSObject {
+  @objc public static func prefetch(appId: Swift.String, workflowId: Swift.String)
+  @objc public static func launch(_ callingVC: UIKit.UIViewController, hyperKycConfig: HyperKYC.HyperKycConfig, _ completionHandler: @escaping (_ hyperKycResult: HyperKYC.HyperKycResult) -> Swift.Void)
+  @objc public static func createUniqueId() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject, Swift.Codable {
+  public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
+  public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
+  public func setInputs(inputs: [Swift.String : Swift.String])
+  public func setUniqueId(uuid: Swift.String)
+  public func setDefaultLangCode(language: Swift.String)
+  public func setUseLocation(shouldUse: Swift.Bool)
+  public func addMetadata(metadata: [Swift.String : Swift.String])
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objc public class HyperKycError : ObjectiveC.NSObject {
+  public static let SDK_CONFIG_ERROR: Swift.Int
+  public static let SDK_INPUT_ERROR: Swift.Int
+  public static let USER_CANCELLED_ERROR: Swift.Int
+  public static let WORKFLOW_ERROR: Swift.Int
+  public static let SDK_VERSION_ERROR: Swift.Int
+  public static let PERMISSIONS_ERROR: Swift.Int
+  public static let HARDWARE_ERROR: Swift.Int
+  public static let GPS_ACCESS_DENIED: Swift.Int
+  public static let QR_SCANNER_ERROR: Swift.Int
+  public static let SSL_CONNECT_ERROR: Swift.Int
+  public static let NETWORK_ERROR: Swift.Int
+  public static let SIGNATURE_FAILED_ERROR: Swift.Int
+  public static let FACE_NOT_DETECTED: Swift.Int
+  public static let DEVICE_ROOTED_ERROR: Swift.Int
+  public static let SECURITY_ERROR: Swift.Int
+  public static let UNSUPPORTED_NFC: Swift.Int
+  public static let AUTHENTICATION_FAILED: Swift.Int
+  public static let DATE_FORMAT_ERROR: Swift.Int
+  public var errorMessage: Swift.String?
+  public var errorCode: Swift.Int?
+  @objc deinit
+}
+@objc public class HyperKycResult : ObjectiveC.NSObject {
+  public var status: Swift.String! {
+    get
+  }
+  public var transactionId: Swift.String! {
+    get
+  }
+  public var details: [Swift.String : Swift.String?] {
+    get
+  }
+  public var errorCode: Swift.Int? {
+    get
+  }
+  public var errorMessage: Swift.String? {
+    get
+  }
+  public var latestModule: Swift.String? {
+    get
+  }
+  public init(status: Swift.String, transactionId: Swift.String, details: [Swift.String : Swift.String?], errorCode: Swift.Int?, errorMessage: Swift.String?, latestModule: Swift.String?)
+  open func getRawDataJsonString() -> Swift.String?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HyperKycData : ObjectiveC.NSObject, Swift.Codable {
+  public var countryResult: HyperKYC.CountryResult? {
+    get
+  }
+  public var docResultList: [HyperKYC.DocResult] {
+    get
+  }
+  public var faceResult: HyperKYC.FaceResult? {
+    get
+  }
+  public var apiResultList: [HyperKYC.APIResult] {
+    get
+  }
+  public var sessionRecordingResultList: [HyperKYC.SessionRecordingResult] {
+    get
+  }
+  public var videoStatementResultList: [HyperKYC.VideoStatementResult] {
+    get
+  }
+  public var videoStatementV2ResultList: [HyperKYC.VideoStatementV2Result] {
+    get
+  }
+  public var formResultList: [HyperKYC.FormResult] {
+    get
+  }
+  public var webviewResultList: [HyperKYC.WebviewResult] {
+    get
+  }
+  public var barcodeResultList: [HyperKYC.BarcodeResult] {
+    get
+  }
+  public var nfcResultList: [HyperKYC.NFCResult] {
+    get
+  }
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public enum SessionStatus : Swift.Codable {
+  case success
+  case failure
+  case error
+  public static func == (a: HyperKYC.SessionStatus, b: HyperKYC.SessionStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class KeyboardLayoutConstraint : UIKit.NSLayoutConstraint {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+}
+public struct KycCountries : Swift.Codable {
+  public var countries: [HyperKYC.KycCountry] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KycCountry : Swift.Codable {
+  public var id: Swift.String {
+    get
+  }
+  public var name: Swift.String {
+    get
+  }
+  public var region: Swift.String? {
+    get
+  }
+  public var enabled: Swift.Bool {
+    get
+  }
+  public var documents: [HyperKYC.KycDocument] {
+    get
+  }
+  public var base_url: Swift.String {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KycDocument : Swift.Codable, Swift.Hashable {
+  public var id: Swift.String {
+    get
+  }
+  public var name: Swift.String {
+    get
+  }
+  public var sides: [Swift.String] {
+    get
+  }
+  public var type: Swift.String {
+    get
+  }
+  public var sidesConfig: HyperKYC.SidesConfig? {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: HyperKYC.KycDocument, b: HyperKYC.KycDocument) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SidesConfig : Swift.Codable, Swift.Hashable {
+  public var readBarcode: [Swift.String]? {
+    get
+  }
+  public var disableOCR: [Swift.String]? {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: HyperKYC.SidesConfig, b: HyperKYC.SidesConfig) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CountryResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var id: Swift.String? {
+    get
+  }
+  public var name: Swift.String? {
+    get
+  }
+  public var region: Swift.String? {
+    get
+  }
+  public var baseUrl: Swift.String? {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DocResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var documentId: Swift.String {
+    get
+  }
+  public var docDataList: [HyperKYC.DocData] {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var requestIds: [Swift.String] {
+    get
+  }
+  public var apiFlags: [HyperKYC.ApiFlags]? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DocData : Swift.Codable {
+  public var side: Swift.String? {
+    get
+  }
+  public var docImagePath: Swift.String? {
+    get
+  }
+  public var attemptsCount: Swift.Int {
+    get
+  }
+  public var action: Swift.String? {
+    get
+  }
+  public var latitude: Swift.Double {
+    get
+  }
+  public var longitude: Swift.Double {
+    get
+  }
+  public var statusCode: Swift.String? {
+    get
+  }
+  public var statusMessage: Swift.String? {
+    get
+  }
+  public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var responseResult: HyperKYC.DocCaptureApiDetail? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var faceData: HyperKYC.FaceData {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var requestIds: [Swift.String] {
+    get
+  }
+  public var apiFlags: [HyperKYC.ApiFlags]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FaceData : Swift.Codable {
+  public var croppedFaceImagePath: Swift.String? {
+    get
+  }
+  public var fullFaceImagePath: Swift.String? {
+    get
+  }
+  public var videoPath: Swift.String? {
+    get
+  }
+  public var action: Swift.String? {
+    get
+  }
+  public var latitude: Swift.Double {
+    get
+  }
+  public var longitude: Swift.Double {
+    get
+  }
+  public var attemptsCount: Swift.Int {
+    get
+  }
+  public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var statusCode: Swift.String? {
+    get
+  }
+  public var statusMessage: Swift.String? {
+    get
+  }
+  public var responseResult: HyperKYC.FaceCaptureApiDetail? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct APIResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var apiData: HyperKYC.APIData {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var requestIds: [Swift.String] {
+    get
+  }
+  public var apiFlags: [HyperKYC.ApiFlags]? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct APIData : Swift.Codable {
+  public var responseCode: Swift.Int? {
+    get
+  }
+  public var statusMessage: Swift.String? {
+    get
+  }
+  public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SessionRecordingResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var sessionRecordingData: HyperKYC.SessionRecordingData {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var requestIds: [Swift.String] {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SessionRecordingData : Swift.Codable {
+  public var responseCode: Swift.Int? {
+    get
+  }
+  public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var videoUrl: Swift.String? {
+    get
+  }
+  public var videoPath: Swift.String? {
+    get
+  }
+  public var completed: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VideoStatementResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var videoStatementData: HyperKYC.VideoStatementData {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var requestIds: [Swift.String] {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VideoStatementData : Swift.Codable {
+  public var responseCode: Swift.Int? {
+    get
+  }
+  public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var image: Swift.String? {
+    get
+  }
+  public var statements: Swift.String? {
+    get
+  }
+  public var pass: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VideoStatementV2Result : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var videoStatementV2Data: HyperKYC.VideoStatementV2Data {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var requestIds: [Swift.String] {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VideoStatementV2Data : Swift.Codable {
+  public var responseCode: Swift.Int? {
+    get
+  }
+  public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var imagePath: Swift.String? {
+    get
+  }
+  public var videoPath: Swift.String? {
+    get
+  }
+  public var statement: Swift.String? {
+    get
+  }
+  public var videoUrl: Swift.String? {
+    get
+  }
+  public var attemptsCount: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct FormResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WebviewResult : Swift.Codable {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var webviewData: HyperKYC.WebviewData {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WebviewData : Swift.Codable {
+  public var rawData: Swift.String? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct NFCResult : Swift.Codable {
+  public var moduleId: Swift.String? {
+    get
+  }
+  public var nfcData: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var nfcStatus: Swift.String? {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BarcodeResult : Swift.Codable {
+  public var moduleId: Swift.String? {
+    get
+  }
+  public var barcodeData: Swift.String? {
+    get
+  }
+  public var barcodeStatus: Swift.String? {
+    get
+  }
+  public var responseBodyRaw: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var attempts: Swift.Int {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ApiFlags : Swift.Codable {
+  public var source: Swift.String? {
+    get
+  }
+  public var subSource: Swift.String? {
+    get
+  }
+  public var values: [Swift.String : Swift.String]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@available(*, deprecated, message: "Use generic APIResult")
+public struct FaceMatchDataResult {
+  public var moduleId: Swift.String {
+    get
+  }
+  public var documentId: Swift.String {
+    get
+  }
+  public var facematchData: HyperKYC.FaceMatchData {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+}
+@available(*, deprecated, message: "Use generic APIData")
+public struct FaceMatchData {
+  public var action: Swift.String? {
+    get
+  }
+  public var responseHeaders: [Swift.String : Swift.String]? {
+    get
+  }
+  public var responseResult: HyperKYC.FaceMatchApiDetail? {
+    get
+  }
+  public var responseResultRaw: [Swift.String : Any]? {
+    get
+  }
+  public var asDictionary: [Swift.String : Any] {
+    get
+  }
+}
+public enum LogEvent {
+  case waitOnMainThread
+  case pendingPromiseDeallocated
+  case pendingGuaranteeDeallocated
+  case cauterized(any Swift.Error)
+}
+public struct UIFlowModel {
+}
+@_hasMissingDesignatedInitializers public class PromiseBox<T> {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SealedBox<T> : HyperKYC.PromiseBox<T> {
+  @objc deinit
+}
+public func race<U>(_ thenables: U...) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+public func race<U>(_ thenables: [U]) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+public func race<T>(_ guarantees: HyperKYC.Guarantee<T>...) -> HyperKYC.Guarantee<T>
+public func race<U>(fulfilled thenables: [U]) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+@_hasMissingDesignatedInitializers final public class Resolver<T> {
+  @objc deinit
+}
+extension HyperKYC.Resolver {
+  final public func fulfill(_ value: T)
+  final public func reject(_ error: any Swift.Error)
+  final public func resolve(_ result: HyperKYC.PromiseResult<T>)
+  final public func resolve(_ obj: T?, _ error: (any Swift.Error)?)
+  final public func resolve(_ obj: T, _ error: (any Swift.Error)?)
+  final public func resolve(_ error: (any Swift.Error)?, _ obj: T?)
+}
+extension HyperKYC.Resolver where T == () {
+  final public func resolve(_ error: (any Swift.Error)?)
+  final public func fulfill_()
+}
+extension HyperKYC.Resolver {
+  final public func resolve<E>(_ result: Swift.Result<T, E>) where E : Swift.Error
+}
+public enum PromiseResult<T> {
+  case fulfilled(T)
+  case rejected(any Swift.Error)
+}
+extension HyperKYC.PromiseResult {
+  public var isFulfilled: Swift.Bool {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class ResumeFileHandler : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct WorkflowState : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ResumeState : Swift.Codable {
+  public var status: Swift.String? {
+    get
+  }
+  public var statusCode: Swift.Int? {
+    get
+  }
+  public var result: HyperKYC.ResumeResult? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SaveResumeState : Swift.Codable {
+  public var transactionMetadata: HyperKYC.TransactionMetadata? {
+    get
+  }
+  public var moduleExecutionOrder: [Swift.String]? {
+    get
+  }
+  public var moduleData: [Swift.String : HyperKYC.ModuleData]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ResumeResult : Swift.Codable {
+  public var metadata: HyperKYC.ResumeMetadata? {
+    get
+  }
+  public var transactionMetadata: HyperKYC.TransactionMetadata? {
+    get
+  }
+  public var moduleExecutionOrder: [Swift.String]? {
+    get
+  }
+  public var moduleData: [Swift.String : HyperKYC.ModuleData]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ResumeMetadata : Swift.Codable {
+  public var appId: Swift.String? {
+    get
+  }
+  public var appKey: Swift.String? {
+    get
+  }
+  public var accessToken: Swift.String? {
+    get
+  }
+  public var transactionId: Swift.String? {
+    get
+  }
+  public var workflowId: Swift.String? {
+    get
+  }
+  public var uniqueId: Swift.String? {
+    get
+  }
+  public var journeyId: Swift.String? {
+    get
+  }
+  public var inputs: [Swift.String : Swift.String]? {
+    get
+  }
+  public var workflowHash: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TransactionMetadata : Swift.Codable {
+  public var status: Swift.String? {
+    get
+  }
+  public var moduleToResumeFrom: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ModuleData : Swift.Codable {
+  public var expireAt: Swift.Int64? {
+    get
+  }
+  public var action: Swift.String? {
+    get
+  }
+  public var variables: [Swift.String : HyperKYC.AnyCodable?]? {
+    get
+  }
+  public var flags: [[Swift.String : HyperKYC.AnyCodable]]? {
+    get
+  }
+  public var requestIds: [Swift.String]? {
+    get
+  }
+  public var parentModuleId: Swift.String? {
+    get
+  }
+  public var attempts: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol Thenable : AnyObject {
+  associatedtype T
+  func pipe(to: @escaping (HyperKYC.PromiseResult<Self.T>) -> Swift.Void)
+  var result: HyperKYC.PromiseResult<Self.T>? { get }
+}
+extension HyperKYC.Thenable {
+  public func then<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Self.T) throws -> U) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+  public func map<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T) throws -> U) -> HyperKYC.HVPromise<U>
+  public func compactMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T) throws -> U?) -> HyperKYC.HVPromise<U>
+  public func done(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Self.T) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
+  public func get(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Self.T) throws -> Swift.Void) -> HyperKYC.HVPromise<Self.T>
+  public func tap(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (HyperKYC.PromiseResult<Self.T>) -> Swift.Void) -> HyperKYC.HVPromise<Self.T>
+  public func asVoid() -> HyperKYC.HVPromise<Swift.Void>
+}
+extension HyperKYC.Thenable {
+  public var error: (any Swift.Error)? {
+    get
+  }
+  public var isPending: Swift.Bool {
+    get
+  }
+  public var isResolved: Swift.Bool {
+    get
+  }
+  public var isFulfilled: Swift.Bool {
+    get
+  }
+  public var isRejected: Swift.Bool {
+    get
+  }
+  public var value: Self.T? {
+    get
+  }
+}
+extension HyperKYC.Thenable where Self.T : Swift.Sequence {
+  public func mapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> HyperKYC.HVPromise<[U]>
+  public func flatMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> HyperKYC.HVPromise<[U.Iterator.Element]> where U : Swift.Sequence
+  public func compactMapValues<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U?) -> HyperKYC.HVPromise<[U]>
+  public func thenMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> HyperKYC.HVPromise<[U.T]> where U : HyperKYC.Thenable
+  public func thenFlatMap<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ transform: @escaping (Self.T.Iterator.Element) throws -> U) -> HyperKYC.HVPromise<[U.T.Iterator.Element]> where U : HyperKYC.Thenable, U.T : Swift.Sequence
+  public func filterValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ isIncluded: @escaping (Self.T.Iterator.Element) -> Swift.Bool) -> HyperKYC.HVPromise<[Self.T.Iterator.Element]>
+}
+extension HyperKYC.Thenable where Self.T : Swift.Collection {
+  public var firstValue: HyperKYC.HVPromise<Self.T.Element> {
+    get
+  }
+  public func firstValue(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, where test: @escaping (Self.T.Iterator.Element) -> Swift.Bool) -> HyperKYC.HVPromise<Self.T.Iterator.Element>
+  public var lastValue: HyperKYC.HVPromise<Self.T.Element> {
+    get
+  }
+}
+extension HyperKYC.Thenable where Self.T : Swift.Sequence, Self.T.Element : Swift.Comparable {
+  public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil) -> HyperKYC.HVPromise<[Self.T.Iterator.Element]>
+}
+@objc @_inheritsConvenienceInitializers public class UIUtilities : ObjectiveC.NSObject {
+  public static let shared: HyperKYC.UIUtilities
+  public func setTitleLabelConfigs(titleLabel: HyperKYC.HKYCTitleLabel)
+  public func setStatementHelperLabelConfigs(statementHelperLabel: HyperKYC.HKYCVideoStatementHelperLabel)
+  public func setLoaderLabelConfigs(loaderLabel: HyperKYC.HKYCActivityLabel)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: Swift.ArraySlice<Swift.UInt8>) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: [Swift.UInt8]) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func toAsn1Length(_ data: Swift.Int) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcHash(data: [Swift.UInt8], hashAlgorithm: Swift.String) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA1Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA224Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA256Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA512Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA384Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+public func when<U>(fulfilled thenables: [U]) -> HyperKYC.HVPromise<[U.T]> where U : HyperKYC.Thenable
+public func when(fulfilled thenables: [any HyperKYC.Thenable]) -> HyperKYC.HVPromise<[Any]>
+public func when<U>(fulfilled promises: U...) -> HyperKYC.HVPromise<Swift.Void> where U : HyperKYC.Thenable, U.T == ()
+public func when<U>(fulfilled promises: [U]) -> HyperKYC.HVPromise<Swift.Void> where U : HyperKYC.Thenable, U.T == ()
+public func when<U, V>(fulfilled pu: U, _ pv: V) -> HyperKYC.HVPromise<(U.T, V.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable
+public func when<U, V, W>(fulfilled pu: U, _ pv: V, _ pw: W) -> HyperKYC.HVPromise<(U.T, V.T, W.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable, W : HyperKYC.Thenable
+public func when<U, V, W, X>(fulfilled pu: U, _ pv: V, _ pw: W, _ px: X) -> HyperKYC.HVPromise<(U.T, V.T, W.T, X.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable, W : HyperKYC.Thenable, X : HyperKYC.Thenable
+public func when<U, V, W, X, Y>(fulfilled pu: U, _ pv: V, _ pw: W, _ px: X, _ py: Y) -> HyperKYC.HVPromise<(U.T, V.T, W.T, X.T, Y.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable, W : HyperKYC.Thenable, X : HyperKYC.Thenable, Y : HyperKYC.Thenable
+public func when<It>(fulfilled promiseIterator: It, concurrently: Swift.Int) -> HyperKYC.HVPromise<[It.Element.T]> where It : Swift.IteratorProtocol, It.Element : HyperKYC.Thenable
+public func when<T>(resolved promises: HyperKYC.HVPromise<T>...) -> HyperKYC.Guarantee<[HyperKYC.PromiseResult<T>]>
+public func when<T>(resolved promises: [HyperKYC.HVPromise<T>]) -> HyperKYC.Guarantee<[HyperKYC.PromiseResult<T>]>
+public func when<It>(resolved promiseIterator: It, concurrently: Swift.Int) -> HyperKYC.Guarantee<[HyperKYC.PromiseResult<It.Element.T>]> where It : Swift.IteratorProtocol, It.Element : HyperKYC.Thenable
+public func when(_ guarantees: HyperKYC.Guarantee<Swift.Void>...) -> HyperKYC.Guarantee<Swift.Void>
+public func when<T>(_ guarantees: HyperKYC.Guarantee<T>...) -> HyperKYC.Guarantee<[T]>
+public func when(guarantees: [HyperKYC.Guarantee<Swift.Void>]) -> HyperKYC.Guarantee<Swift.Void>
+public func when<T>(guarantees: [HyperKYC.Guarantee<T>]) -> HyperKYC.Guarantee<[T]>
+public func when<U, V>(guarantees gu: HyperKYC.Guarantee<U>, _ gv: HyperKYC.Guarantee<V>) -> HyperKYC.Guarantee<(U, V)>
+public func when<U, V, W>(guarantees gu: HyperKYC.Guarantee<U>, _ gv: HyperKYC.Guarantee<V>, _ gw: HyperKYC.Guarantee<W>) -> HyperKYC.Guarantee<(U, V, W)>
+public func when<U, V, W, X>(guarantees gu: HyperKYC.Guarantee<U>, _ gv: HyperKYC.Guarantee<V>, _ gw: HyperKYC.Guarantee<W>, _ gx: HyperKYC.Guarantee<X>) -> HyperKYC.Guarantee<(U, V, W, X)>
+public func when<U, V, W, X, Y>(guarantees gu: HyperKYC.Guarantee<U>, _ gv: HyperKYC.Guarantee<V>, _ gw: HyperKYC.Guarantee<W>, _ gx: HyperKYC.Guarantee<X>, _ gy: HyperKYC.Guarantee<Y>) -> HyperKYC.Guarantee<(U, V, W, X, Y)>
+public struct WorkFlowConfig : Swift.Codable {
+  public var properties: HyperKYC.WorkflowProperties? {
+    get
+  }
+  public var modules: [HyperKYC.WorkflowModule] {
+    get
+  }
+  public var conditions: [Swift.String : HyperKYC.WorkflowCondition]? {
+    get
+  }
+  public var conditionalVariables: [Swift.String : HyperKYC.WorkflowCondition]? {
+    get
+  }
+  public var sdkResponse: [Swift.String : Swift.String]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowProperties : Swift.Codable {
+  public var sdkVersions: [Swift.String : HyperKYC.SDKVersion]? {
+    get
+  }
+  public var inputsRequired: [Swift.String : Swift.String]? {
+    get
+  }
+  public var textConfigSource: [Swift.String : Swift.String]? {
+    get
+  }
+  public var enableResumeWorkflow: Swift.Bool? {
+    get
+  }
+  public var enableServerSideResume: Swift.Bool? {
+    get
+  }
+  public var resumeWorkflowDuration: Swift.Int? {
+    get
+  }
+  public var uiConfigSource: Swift.String? {
+    get
+  }
+  public var secure: Swift.Bool? {
+    get
+  }
+  public var mobile: HyperKYC.MobileProperties? {
+    get
+  }
+  public enum PlatformKey : Swift.String, Swift.Codable {
+    case sdkVersionMobileKey
+    case unknown
+    public init(from decoder: any Swift.Decoder) throws
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SDKVersion : Swift.Codable {
+  public var minimum: Swift.String? {
+    get
+  }
+  public var maximum: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MobileProperties : Swift.Codable {
+  public var exitIfRooted: Swift.Bool? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowModule : Swift.Codable {
+  public enum WorkflowModuleType : Swift.String, Swift.Codable {
+    case type_start_session_recording
+    case type_stop_session_recording
+    case video_statement
+    case video_statement_v2
+    case type_country
+    case type_document
+    case type_face
+    case type_api
+    case type_dynamic_form
+    case type_form
+    case type_webview
+    case type_barcode
+    case type_nfc
+    case unknown
+    public init(from decoder: any Swift.Decoder) throws
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var id: Swift.String {
+    get
+  }
+  public var type: HyperKYC.WorkflowModule.WorkflowModuleType {
+    get
+  }
+  public var subType: Swift.String {
+    get
+  }
+  public var nextStep: Swift.String {
+    get
+  }
+  public var uiStyle: Swift.String? {
+    get
+  }
+  public var previousStep: Swift.String? {
+    get
+  }
+  public var properties: HyperKYC.WorkflowModuleProperties? {
+    get
+  }
+  public var variables: [HyperKYC.WorkflowModuleVariable]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowModuleProperties : Swift.Codable {
+  public var countriesSupported: [Swift.String]? {
+    get
+  }
+  public var captureAudio: Swift.Bool? {
+    get
+  }
+  public var uploadSession: Swift.Bool? {
+    get
+  }
+  public var stopModuleId: Swift.String? {
+    get
+  }
+  public var livenessUrl: Swift.String? {
+    get
+  }
+  public var faceMatchUrl: Swift.String? {
+    get
+  }
+  public var speechToTextMatchUrl: Swift.String? {
+    get
+  }
+  public var logVideoStatementUrl: Swift.String? {
+    get
+  }
+  public var start: Swift.String? {
+    get
+  }
+  public var allowedRestarts: Swift.Int? {
+    get
+  }
+  public var faceMatchParams: [HyperKYC.WorkflowModuleRequestParam]? {
+    get
+  }
+  public var statements: [Swift.String : HyperKYC.Statement]? {
+    get
+  }
+  public var allowedAttempts: Swift.Int? {
+    get
+  }
+  public var userData: [Swift.String : Swift.String]? {
+    get
+  }
+  public var liveness: HyperKYC.VideoStatementAPI? {
+    get
+  }
+  public var faceMatch: HyperKYC.VideoStatementAPI? {
+    get
+  }
+  public var speechToTextMatch: HyperKYC.VideoStatementAPI? {
+    get
+  }
+  public var logVideoStatement: HyperKYC.VideoStatementAPI? {
+    get
+  }
+  public var videoUpload: HyperKYC.VideoStatementAPI? {
+    get
+  }
+  public var statement: HyperKYC.StatementV2? {
+    get
+  }
+  public var allowUpload: Swift.Bool? {
+    get
+  }
+  public var supportedUploadFileTypes: [Swift.String]? {
+    get
+  }
+  public var countryId: Swift.String? {
+    get
+  }
+  public var documentsSupported: [Swift.String : [Swift.String]]? {
+    get
+  }
+  public var documentsOverride: [Swift.String : [Swift.String : HyperKYC.DocumentsOverride]]? {
+    get
+  }
+  public var disableOCR: Swift.Bool? {
+    get
+  }
+  public var disableBarcodeSkip: Swift.Bool? {
+    get
+  }
+  public var showReview: Swift.Bool? {
+    get
+  }
+  public var videoRecording: Swift.Bool? {
+    get
+  }
+  public var videoRecordingDuration: Swift.Int? {
+    get
+  }
+  public var alertTextBox: Swift.Bool? {
+    get
+  }
+  public var disableLiveness: Swift.Bool? {
+    get
+  }
+  public var defaultCamera: Swift.String? {
+    get
+  }
+  public var enableLookStraight: Swift.Bool? {
+    get
+  }
+  public var showInstruction: Swift.Bool? {
+    get
+  }
+  public var autoCapture: Swift.Bool? {
+    get
+  }
+  public var autoCaptureDuration: Swift.Int? {
+    get
+  }
+  public var url: Swift.String? {
+    get
+  }
+  public var apiType: Swift.String? {
+    get
+  }
+  public var headers: [Swift.String : Swift.String]? {
+    get
+  }
+  public var requestParameters: [HyperKYC.WorkflowModuleRequestParam]? {
+    get
+  }
+  public var requestBody: [Swift.String : HyperKYC.AnyCodable]? {
+    get
+  }
+  public var allowedStatusCodes: [Swift.Int]? {
+    get
+  }
+  public var validateSignature: Swift.Bool? {
+    get
+  }
+  public var showEndState: Swift.String? {
+    get
+  }
+  public var isSuccess: Swift.String? {
+    get
+  }
+  public var expiresAfter: Swift.String? {
+    get
+  }
+  public var data: HyperKYC.WebviewModuleProperty? {
+    get
+  }
+  public var showBackButton: Swift.Bool? {
+    get
+  }
+  public var reloadOnRedirectFailure: Swift.Bool? {
+    get
+  }
+  public var sections: [HyperKYC.Section]? {
+    get
+  }
+  public var barcodeSkipDelay: Swift.Int? {
+    get
+  }
+  public var nfcSkipDelay: Swift.Int? {
+    get
+  }
+  public var nfcAuthentication: [Swift.String : Swift.String]? {
+    get
+  }
+  public var enableOverlay: Swift.Bool? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Statement : Swift.Codable {
+  public var displayTimer: Swift.Bool? {
+    get
+  }
+  public var duration: Swift.Int? {
+    get
+  }
+  public var enable: Swift.String? {
+    get
+  }
+  public var next: Swift.String? {
+    get
+  }
+  public var checks: HyperKYC.Checks? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Checks : Swift.Codable {
+  public var restartFrom: Swift.String? {
+    get
+  }
+  public var liveness: HyperKYC.Check? {
+    get
+  }
+  public var faceMatch: HyperKYC.Check? {
+    get
+  }
+  public var faceDetection: HyperKYC.Check? {
+    get
+  }
+  public var speechToTextMatching: HyperKYC.Check? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Check : Swift.Codable {
+  public var isSync: Swift.Bool? {
+    get
+  }
+  public var enable: Swift.Bool? {
+    get
+  }
+  public var maxOutOfFrameTime: Swift.Int? {
+    get
+  }
+  public var allowIfCheckFailed: Swift.Bool? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct VideoStatementAPI : Swift.Codable {
+  public var url: Swift.String? {
+    get
+  }
+  public var headers: [Swift.String : Swift.String]? {
+    get
+  }
+  public var parameters: [HyperKYC.WorkflowModuleRequestParam]? {
+    get
+  }
+  public var allowedStatusCodes: [Swift.Int]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct StatementV2 : Swift.Codable {
+  public var type: Swift.String? {
+    get
+  }
+  public var displayTimer: Swift.String? {
+    get
+  }
+  public var minimumDuration: Swift.Int? {
+    get
+  }
+  public var duration: Swift.Int? {
+    get
+  }
+  public var checks: HyperKYC.ChecksV2? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ChecksV2 : Swift.Codable {
+  public var liveness: HyperKYC.CheckV2? {
+    get
+  }
+  public var faceMatch: HyperKYC.CheckV2? {
+    get
+  }
+  public var faceDetection: HyperKYC.CheckV2? {
+    get
+  }
+  public var speechToTextMatch: HyperKYC.CheckV2? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CheckV2 : Swift.Codable {
+  public var enable: Swift.String? {
+    get
+  }
+  public var allowIfCheckFailed: Swift.String? {
+    get
+  }
+  public var rule: Swift.String? {
+    get
+  }
+  public var maxOutOfFrameTime: Swift.Int? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DocumentsOverride : Swift.Codable {
+  public var sidesConfig: HyperKYC.SidesConfig? {
+    get
+  }
+  public var sides: [Swift.String]? {
+    get
+  }
+  public var name: Swift.String? {
+    get
+  }
+  public var type: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowModuleRequestParam : Swift.Codable {
+  public var name: Swift.String {
+    get
+  }
+  public var value: Swift.String {
+    get
+  }
+  public var type: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowModuleVariable : Swift.Codable {
+  public var name: Swift.String {
+    get
+  }
+  public var path: Swift.String {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WebviewModuleProperty : Swift.Codable {
+  public var queryParams: [Swift.String : Swift.String]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Authentication : Swift.Codable {
+  public var documentId: Swift.String? {
+    get
+  }
+  public var dateOfBirth: Swift.String? {
+    get
+  }
+  public var dateOfExpiry: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Section : Swift.Codable {
+  public var id: Swift.String {
+    get
+  }
+  public var components: [HyperKYC.Component] {
+    get
+  }
+  public var footer: HyperKYC.Footer? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Component : Swift.Codable {
+  public enum ComponentType : Swift.String, Swift.Codable {
+    case label
+    case text
+    case checkbox
+    case dropdown
+    case date
+    case button
+    case divider
+    case vertical
+    case horizontal
+    case file
+    case image
+    case loader
+    case timer
+    case unknown
+    public init(from decoder: any Swift.Decoder) throws
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var id: Swift.String {
+    get
+  }
+  public var type: HyperKYC.Component.ComponentType {
+    get
+  }
+  public var subComponents: [HyperKYC.Component]? {
+    get
+  }
+  public var required: Swift.String? {
+    get
+  }
+  public var enabled: Swift.String? {
+    get
+  }
+  public var visible: Swift.String? {
+    get
+  }
+  public var dynamicHandlers: HyperKYC.DynamicHandlers? {
+    get
+  }
+  public var subType: Swift.String? {
+    get
+  }
+  public var text: Swift.String? {
+    get
+  }
+  public var loading: Swift.String? {
+    get
+  }
+  public var duration: Swift.String? {
+    get
+  }
+  public var onClick: HyperKYC.Handler? {
+    get
+  }
+  public var onChange: HyperKYC.Handler? {
+    get
+  }
+  public var onValidated: HyperKYC.Handler? {
+    get
+  }
+  public var onComplete: HyperKYC.Handler? {
+    get
+  }
+  public var secure: Swift.String? {
+    get
+  }
+  public var keyboard: Swift.String? {
+    get
+  }
+  public var validation: [HyperKYC.Validation]? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var subTitle: Swift.String? {
+    get
+  }
+  public var hint: Swift.String? {
+    get
+  }
+  public var helperText: Swift.String? {
+    get
+  }
+  public var helperTextIdle: Swift.String? {
+    get
+  }
+  public var helperTextActive: Swift.String? {
+    get
+  }
+  public var errorTextFile: Swift.String? {
+    get
+  }
+  public var errorTextSizeMax: Swift.String? {
+    get
+  }
+  public var errorTextSizeMin: Swift.String? {
+    get
+  }
+  public var pickerTitle: Swift.String? {
+    get
+  }
+  public var maxFileSize: Swift.Int? {
+    get
+  }
+  public var minFileSize: Swift.Int? {
+    get
+  }
+  public var allowMultipleTypes: Swift.String? {
+    get
+  }
+  public var supportedFiles: [HyperKYC.SupportedFiles]? {
+    get
+  }
+  public var value: Swift.String? {
+    get
+  }
+  public var lines: Swift.Int? {
+    get
+  }
+  public var supportedImageFileTypes: [Swift.String]? {
+    get
+  }
+  public var supportedDocumentFileTypes: [Swift.String]? {
+    get
+  }
+  public var labels: [Swift.String : Swift.String]? {
+    get
+  }
+  public var items: [Swift.String]? {
+    get
+  }
+  public var format: Swift.String? {
+    get
+  }
+  public var dateRange: HyperKYC.DateRange? {
+    get
+  }
+  public var content: Swift.String? {
+    get
+  }
+  public var width: Swift.String? {
+    get
+  }
+  public var height: Swift.String? {
+    get
+  }
+  public var blockCount: Swift.String? {
+    get
+  }
+  public var blockLength: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Footer : Swift.Codable {
+  public var components: [HyperKYC.Component] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Validation : Swift.Codable {
+  public enum ValidationType : Swift.String, Swift.Codable {
+    case regex
+    case rule
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var type: HyperKYC.Validation.ValidationType? {
+    get
+  }
+  public var value: Swift.String? {
+    get
+  }
+  public var errorMsg: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DynamicHandlers : Swift.Codable {
+  public var children: [Swift.String]? {
+    get
+  }
+  public var handlers: [HyperKYC.Handler]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SupportedFiles : Swift.Codable {
+  public enum FileType : Swift.String, Swift.Codable {
+    case images
+    case documents
+    case audios
+    case videos
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var type: HyperKYC.SupportedFiles.FileType? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var extensions: [Swift.String]? {
+    get
+  }
+  public var overrideAllowedTypes: [HyperKYC.SupportedFiles.FileType]? {
+    get
+  }
+  public var enabled: Swift.Bool? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DateRange : Swift.Codable {
+  public var startMonth: Swift.Int? {
+    get
+  }
+  public var endMonth: Swift.Int? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Handler : Swift.Codable {
+  public var rule: Swift.String? {
+    get
+  }
+  public var nextStep: Swift.String? {
+    get
+  }
+  public var reloadComponents: [Swift.String]? {
+    get
+  }
+  public var reload: [Swift.String : HyperKYC.ReloadProperties]? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ReloadProperties : Swift.Codable {
+  public var enabled: Swift.String? {
+    get
+  }
+  public var required: Swift.String? {
+    get
+  }
+  public var visible: Swift.String? {
+    get
+  }
+  public var value: Swift.String? {
+    get
+  }
+  public var text: Swift.String? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var hint: Swift.String? {
+    get
+  }
+  public var helperText: Swift.String? {
+    get
+  }
+  public var items: [Swift.String]? {
+    get
+  }
+  public var labels: [Swift.String : Swift.String]? {
+    get
+  }
+  public var loading: Swift.String? {
+    get
+  }
+  public var subTitle: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowCondition : Swift.Codable {
+  public var if_false: Swift.String {
+    get
+  }
+  public var if_true: Swift.String {
+    get
+  }
+  public var rule: Swift.String {
+    get
+  }
+  public var ifTrueConfigs: HyperKYC.EvalResultConfigs? {
+    get
+  }
+  public var ifFalseConfigs: HyperKYC.EvalResultConfigs? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EvalResultConfigs : Swift.Codable {
+  public var resumeFrom: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers public class WorkFlowStateDelegate : ObjectiveC.NSObject {
+  public func deleteModule(moduleIds: [Swift.String])
+  public func saveState(moduleId: Swift.String, status: Swift.String? = nil, parentModuleID: Swift.String? = nil, completionHandler: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  public func deleteWorkflowState(transactionID: Swift.String)
+  public func makeStartAPICall()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension HyperKYC.Checkbox.CheckmarkStyle : Swift.Equatable {}
+extension HyperKYC.Checkbox.CheckmarkStyle : Swift.Hashable {}
+extension HyperKYC.Checkbox.CheckmarkStyle : Swift.RawRepresentable {}
+extension HyperKYC.Checkbox.BorderStyle : Swift.Equatable {}
+extension HyperKYC.Checkbox.BorderStyle : Swift.Hashable {}
+extension HyperKYC.Checkbox.BorderStyle : Swift.RawRepresentable {}
+extension HyperKYC.HyperKycStatus : Swift.Equatable {}
+extension HyperKYC.HyperKycStatus : Swift.Hashable {}
+extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
+extension HyperKYC.PickedFile.State : Swift.Equatable {}
+extension HyperKYC.PickedFile.State : Swift.Hashable {}
+extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
+extension HyperKYC.DynamicConstraints : Swift.Equatable {}
+extension HyperKYC.DynamicConstraints : Swift.Hashable {}
+extension HyperKYC.CatchPolicy : Swift.Equatable {}
+extension HyperKYC.CatchPolicy : Swift.Hashable {}
+extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}
+extension HyperKYC.HKYCFailedCheck : Swift.Hashable {}
+extension HyperKYC.PMKNamespacer : Swift.Equatable {}
+extension HyperKYC.PMKNamespacer : Swift.Hashable {}
+extension HyperKYC.SessionStatus : Swift.Equatable {}
+extension HyperKYC.SessionStatus : Swift.Hashable {}
+extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Equatable {}
+extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Hashable {}
+extension HyperKYC.WorkflowProperties.PlatformKey : Swift.RawRepresentable {}
+extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.Equatable {}
+extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.Hashable {}
+extension HyperKYC.WorkflowModule.WorkflowModuleType : Swift.RawRepresentable {}
+extension HyperKYC.Component.ComponentType : Swift.Equatable {}
+extension HyperKYC.Component.ComponentType : Swift.Hashable {}
+extension HyperKYC.Component.ComponentType : Swift.RawRepresentable {}
+extension HyperKYC.Validation.ValidationType : Swift.Equatable {}
+extension HyperKYC.Validation.ValidationType : Swift.Hashable {}
+extension HyperKYC.Validation.ValidationType : Swift.RawRepresentable {}
+extension HyperKYC.SupportedFiles.FileType : Swift.Equatable {}
+extension HyperKYC.SupportedFiles.FileType : Swift.Hashable {}
+extension HyperKYC.SupportedFiles.FileType : Swift.RawRepresentable {}
