@@ -1,4 +1,19 @@
 ## CHANGELOG
+### 0.22.0 *[8 Apr 2024]*
+- Features
+    - Add support for lottie color customisation
+    - Add support to prefetch UI configs
+    - Add support for NFC module
+    - Add support for minimum recording duration for video statement V2
+    - Update to reduced HyperVerge branding sizes 
+    - Support injection for additional module properties
+- Bug Fixes
+    - Fix black-blinking effect
+    - Fix textfield bugs
+    - Fix unwanted behaviour caused by `variables` object being absent in module properties
+- Maintenance:
+    - Use HyperSnapSDK `4.21.0`
+
 ### 0.21.2 *[3 Apr 2024]*
 - Bug Fixes 
   - Fix alignment issues for hint labels
