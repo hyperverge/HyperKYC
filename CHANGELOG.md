@@ -1,4 +1,15 @@
 ## CHANGELOG
+### 0.22.1 *[22 Apr 2024]*
+- Features
+    - Add support for NFC instruction screen
+    - Add support for handling error states thrown by NFC module gracefully within the workflow
+- Bug Fixes
+    - Fix Retry button inconsistency
+    - Fix Loader animation performance issues
+    - Fix multiple scans for Date fields
+- Maintenance:
+    - Use HyperSnapSDK `4.21.1`
+    
 ### 0.22.0 *[8 Apr 2024]*
 - Features
     - Add support for lottie color customisation

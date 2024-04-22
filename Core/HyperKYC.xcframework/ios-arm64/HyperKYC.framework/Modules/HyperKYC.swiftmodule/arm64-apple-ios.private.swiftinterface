@@ -863,6 +863,19 @@ public enum DynamicConstraints {
     get
   }
 }
+public enum CustomViewTags : Swift.Int {
+  case datePicker
+  case dropDown
+  case textField
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension MaterialComponents.MDCOutlinedTextField {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
+}
 public enum PMKError : Swift.Error {
   case invalidCallingConvention
   case returnedSelf
@@ -1500,8 +1513,9 @@ public enum PMKNamespacer {
   public static let FACE_NOT_DETECTED: Swift.Int
   public static let DEVICE_ROOTED_ERROR: Swift.Int
   public static let SECURITY_ERROR: Swift.Int
-  public static let UNSUPPORTED_NFC: Swift.Int
-  public static let AUTHENTICATION_FAILED: Swift.Int
+  public static let NFC_UNAVAILABLE_ERROR: Swift.Int
+  public static let NFC_AUTHENTICATION_ERROR: Swift.Int
+  public static let NFC_CONNECTION_ERROR: Swift.Int
   public static let DATE_FORMAT_ERROR: Swift.Int
   public var errorMessage: Swift.String?
   public var errorCode: Swift.Int?
@@ -2022,6 +2036,15 @@ public struct NFCResult : Swift.Codable {
     get
   }
   public var nfcStatus: Swift.String? {
+    get
+  }
+  public var nfcLastStep: Swift.String? {
+    get
+  }
+  public var nfcErrorMessage: Swift.String? {
+    get
+  }
+  public var nfcErrorCode: Swift.Int {
     get
   }
   public var attempts: Swift.Int {
@@ -3195,6 +3218,9 @@ extension HyperKYC.PickedFile.State : Swift.Hashable {}
 extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
 extension HyperKYC.DynamicConstraints : Swift.Equatable {}
 extension HyperKYC.DynamicConstraints : Swift.Hashable {}
+extension HyperKYC.CustomViewTags : Swift.Equatable {}
+extension HyperKYC.CustomViewTags : Swift.Hashable {}
+extension HyperKYC.CustomViewTags : Swift.RawRepresentable {}
 extension HyperKYC.CatchPolicy : Swift.Equatable {}
 extension HyperKYC.CatchPolicy : Swift.Hashable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}

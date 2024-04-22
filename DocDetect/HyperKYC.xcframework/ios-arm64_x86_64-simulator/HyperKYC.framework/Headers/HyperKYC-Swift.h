@@ -279,6 +279,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreFoundation;
 @import CoreGraphics;
+@import MaterialComponents;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -847,6 +848,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 @end
 
 
+
+@interface MDCOutlinedTextField (SWIFT_EXTENSION(HyperKYC))
+/// Overrides the default behavior to determine whether a specific action can be performed on the text field.
+- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
+@end
 
 
 
@@ -1209,6 +1215,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreFoundation;
 @import CoreGraphics;
+@import MaterialComponents;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -1777,6 +1784,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 @end
 
 
+
+@interface MDCOutlinedTextField (SWIFT_EXTENSION(HyperKYC))
+/// Overrides the default behavior to determine whether a specific action can be performed on the text field.
+- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
+@end
 
 
 
