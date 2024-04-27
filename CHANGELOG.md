@@ -1,4 +1,11 @@
 ## CHANGELOG
+
+### 0.22.2 *[27 Apr 2024]*
+- Bug Fixes
+    - Fix NFC crash happening on iOS 17.x versions and above
+- Maintenance:
+    - Use HyperSnapSDK `4.21.2`
+
 ### 0.22.1 *[22 Apr 2024]*
 - Features
     - Add support for NFC instruction screen
