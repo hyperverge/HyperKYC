@@ -797,6 +797,12 @@ public struct DynamicFormComponentsAttributes : Swift.Codable {
   public var borderRadius: Swift.String {
     get
   }
+  public var selectedBorderColor: Swift.String {
+    get
+  }
+  public var disabledBorderColor: Swift.String {
+    get
+  }
   public var icons: HyperKYC.HKYCUIIcons {
     get
   }
@@ -1372,6 +1378,11 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
   @_Concurrency.MainActor(unsafe) public var containerView: UIKit.UIView!
   @_Concurrency.MainActor(unsafe) public var checkBoxlabel: UIKit.UILabel!
   @_Concurrency.MainActor(unsafe) public var checkBox: HyperKYC.Checkbox!
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCRadio : UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) public var radiolabel: UIKit.UILabel!
+  @_Concurrency.MainActor(unsafe) public var radioButton: HyperKYC.RadioButton!
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class DottedLineView : UIKit.UIView {
@@ -2128,6 +2139,48 @@ public func race<U>(_ thenables: U...) -> HyperKYC.HVPromise<U.T> where U : Hype
 public func race<U>(_ thenables: [U]) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
 public func race<T>(_ guarantees: HyperKYC.Guarantee<T>...) -> HyperKYC.Guarantee<T>
 public func race<U>(fulfilled thenables: [U]) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor(unsafe) public class RadioButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var animationDuration: Swift.Double
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var iconSize: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var indicatorSize: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var fillColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderStrokeWidth: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var indicatorColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var marginWidth: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var iconSquare: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var icon: UIKit.UIImage!
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var iconSelected: UIKit.UIImage!
+  @_Concurrency.MainActor(unsafe) public var valueChanged: ((_ isChecked: Swift.Bool) -> Swift.Void)?
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var setIcon: UIKit.UIImage {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var setIconSelected: UIKit.UIImage {
+    @objc get
+    @objc set(newValue)
+  }
+  @_Concurrency.MainActor(unsafe) public var setAnimationDuration: CoreFoundation.CFTimeInterval {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers final public class Resolver<T> {
   @objc deinit
 }
@@ -2865,6 +2918,7 @@ public struct Component : Swift.Codable {
     case label
     case text
     case checkbox
+    case radio
     case dropdown
     case date
     case button
@@ -2971,6 +3025,9 @@ public struct Component : Swift.Codable {
     get
   }
   public var minFileSize: Swift.Int? {
+    get
+  }
+  public var maxNumberOfFiles: Swift.String? {
     get
   }
   public var allowMultipleTypes: Swift.String? {
