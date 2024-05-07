@@ -638,6 +638,13 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCPrimaryButton")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC9HKYCRadio")
+@interface HKYCRadio : UIStackView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC14HKYCRecordView")
 @interface HKYCRecordView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -871,6 +878,29 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @interface PickedFile : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC8HyperKYC11RadioButton")
+@interface RadioButton : UIButton
+@property (nonatomic) IBInspectable CGFloat iconSize;
+@property (nonatomic) IBInspectable CGFloat indicatorSize;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColor;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable fillColor;
+@property (nonatomic) IBInspectable CGFloat borderStrokeWidth;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable indicatorColor;
+@property (nonatomic) IBInspectable CGFloat marginWidth;
+@property (nonatomic) IBInspectable BOOL iconSquare;
+@property (nonatomic, strong) IBInspectable UIImage * _Null_unspecified icon;
+@property (nonatomic, strong) IBInspectable UIImage * _Null_unspecified iconSelected;
+@property (nonatomic, strong) IBInspectable UIImage * _Nonnull setIcon;
+@property (nonatomic, strong) IBInspectable UIImage * _Nonnull setIconSelected;
+- (void)prepareForInterfaceBuilder;
+@property (nonatomic, getter=isSelected) BOOL selected;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)drawRect:(CGRect)rect;
 @end
 
 
@@ -1574,6 +1604,13 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCPrimaryButton")
 @end
 
 
+SWIFT_CLASS("_TtC8HyperKYC9HKYCRadio")
+@interface HKYCRadio : UIStackView
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC14HKYCRecordView")
 @interface HKYCRecordView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -1807,6 +1844,29 @@ SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
 @interface PickedFile : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+IB_DESIGNABLE
+SWIFT_CLASS("_TtC8HyperKYC11RadioButton")
+@interface RadioButton : UIButton
+@property (nonatomic) IBInspectable CGFloat iconSize;
+@property (nonatomic) IBInspectable CGFloat indicatorSize;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColor;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable fillColor;
+@property (nonatomic) IBInspectable CGFloat borderStrokeWidth;
+@property (nonatomic, strong) IBInspectable UIColor * _Nullable indicatorColor;
+@property (nonatomic) IBInspectable CGFloat marginWidth;
+@property (nonatomic) IBInspectable BOOL iconSquare;
+@property (nonatomic, strong) IBInspectable UIImage * _Null_unspecified icon;
+@property (nonatomic, strong) IBInspectable UIImage * _Null_unspecified iconSelected;
+@property (nonatomic, strong) IBInspectable UIImage * _Nonnull setIcon;
+@property (nonatomic, strong) IBInspectable UIImage * _Nonnull setIconSelected;
+- (void)prepareForInterfaceBuilder;
+@property (nonatomic, getter=isSelected) BOOL selected;
+- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (void)drawRect:(CGRect)rect;
 @end
 
 

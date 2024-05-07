@@ -1,5 +1,14 @@
 ## CHANGELOG
 
+### 0.23.0 *[7 May 2024]*
+- Features
+    - Add support for radio button component in dynamic forms
+    - Add support for `maxNumberOfFiles` for fileUpload component
+    - Add support for privacy manifest 
+- Bug Fixes
+    - Fix issue with button component value updation 
+    - Fix issue with processing rules in dynamicHandlers
+    
 ### 0.22.2 *[27 Apr 2024]*
 - Bug Fixes
     - Fix NFC crash happening on iOS 17.x versions and above
