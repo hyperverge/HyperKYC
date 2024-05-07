@@ -8,6 +8,8 @@
 - Bug Fixes
     - Fix issue with button component value updation 
     - Fix issue with processing rules in dynamicHandlers
+- Maintenance:
+    - Use HyperSnapSDK `4.22.1`
     
 ### 0.22.2 *[27 Apr 2024]*
 - Bug Fixes
