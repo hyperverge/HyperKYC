@@ -8,6 +8,7 @@ import AudioToolbox
 import Combine
 import CommonCrypto
 import CoreFoundation
+import CoreGraphics
 import CoreMedia
 import CoreNFC
 import CryptoKit
@@ -788,6 +789,9 @@ public struct DynamicFormComponentsAttributes : Swift.Codable {
   public var backgroundColor: Swift.String {
     get
   }
+  public var selectedBackgroundColor: Swift.String {
+    get
+  }
   public var circleBorderColor: Swift.String {
     get
   }
@@ -798,6 +802,9 @@ public struct DynamicFormComponentsAttributes : Swift.Codable {
     get
   }
   public var selectedBorderColor: Swift.String {
+    get
+  }
+  public var selectedTextColor: Swift.String {
     get
   }
   public var disabledBorderColor: Swift.String {
@@ -1323,6 +1330,13 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class HKYCListCollectionViewCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor(unsafe) public var containerView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var listCell: UIKit.UIStackView!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class DocCollectionViewCell : UIKit.UICollectionViewCell {
   @_Concurrency.MainActor(unsafe) public var docHolderCard: HyperKYC.HKYCDocHolderCard!
   @objc deinit
@@ -1383,6 +1397,19 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCRadio : UIKit.UIStackView {
   @_Concurrency.MainActor(unsafe) public var radiolabel: UIKit.UILabel!
   @_Concurrency.MainActor(unsafe) public var radioButton: HyperKYC.RadioButton!
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCChip : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var chipButton: HyperKYC.HKYCChipButton!
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCChipButton : UIKit.UIButton {
+  @_Concurrency.MainActor(unsafe) public var trailingIcon: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) public var leadingIcon: UIKit.UIImageView!
+  @_Concurrency.MainActor(unsafe) public var buttonSelected: Swift.Bool {
+    get
+    set
+  }
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class DottedLineView : UIKit.UIView {
@@ -2929,6 +2956,8 @@ public struct Component : Swift.Codable {
     case image
     case loader
     case timer
+    case list
+    case chip
     case unknown
     public init(from decoder: any Swift.Decoder) throws
     public init?(rawValue: Swift.String)
@@ -2944,6 +2973,9 @@ public struct Component : Swift.Codable {
     get
   }
   public var subComponents: [HyperKYC.Component]? {
+    get
+  }
+  public var itemsGenerator: HyperKYC.AnyCodable? {
     get
   }
   public var required: Swift.String? {
@@ -3036,7 +3068,13 @@ public struct Component : Swift.Codable {
   public var supportedFiles: [HyperKYC.SupportedFiles]? {
     get
   }
-  public var value: Swift.String? {
+  public var value: HyperKYC.AnyCodable? {
+    get
+  }
+  public var data: HyperKYC.AnyCodable? {
+    get
+  }
+  public var selected: Swift.String? {
     get
   }
   public var lines: Swift.Int? {
@@ -3046,6 +3084,15 @@ public struct Component : Swift.Codable {
     get
   }
   public var supportedDocumentFileTypes: [Swift.String]? {
+    get
+  }
+  public var numberOfColumns: Swift.String? {
+    get
+  }
+  public var leadingIcon: HyperKYC.IconProperties? {
+    get
+  }
+  public var trailingIcon: HyperKYC.IconProperties? {
     get
   }
   public var labels: [Swift.String : Swift.String]? {
@@ -3158,6 +3205,9 @@ public struct DateRange : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct Handler : Swift.Codable {
+  public var debounce: Swift.String? {
+    get
+  }
   public var rule: Swift.String? {
     get
   }
@@ -3173,6 +3223,19 @@ public struct Handler : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+public struct IconProperties : Swift.Codable {
+  public var imageUrl: Swift.String? {
+    get
+  }
+  public var selectedImageUrl: Swift.String? {
+    get
+  }
+  public var disabledImageUrl: Swift.String? {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public struct ReloadProperties : Swift.Codable {
   public var enabled: Swift.String? {
     get
@@ -3181,6 +3244,9 @@ public struct ReloadProperties : Swift.Codable {
     get
   }
   public var visible: Swift.String? {
+    get
+  }
+  public var selected: Swift.String? {
     get
   }
   public var value: Swift.String? {
@@ -3208,6 +3274,9 @@ public struct ReloadProperties : Swift.Codable {
     get
   }
   public var subTitle: Swift.String? {
+    get
+  }
+  public var data: HyperKYC.AnyCodable? {
     get
   }
   public func encode(to encoder: any Swift.Encoder) throws
