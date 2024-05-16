@@ -1,5 +1,16 @@
 ## CHANGELOG
-
+### 0.24.0 *[16 May 2024]*
+- Features
+    - Add support for chip component in dynamic forms
+    - Add support for list component in dynamic form 
+    - Add support for `vertical` and `grid` layout structure in list component
+    - Add support for single selection mode in list component
+    - Update API module to retry thrice when network fails and for 5xx errors
+    - Add debounce support for `onChange` handler
+    - Enhance analytics for back press events
+- Maintenance:
+    - Use HyperSnapSDK `4.22.2`
+    
 ### 0.23.0 *[7 May 2024]*
 - Features
     - Add support for radio button component in dynamic forms
