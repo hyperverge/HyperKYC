@@ -8,6 +8,8 @@
     - Update API module to retry thrice when network fails and for 5xx errors
     - Add debounce support for `onChange` handler
     - Enhance analytics for back press events
+- Bug Fixes 
+    - UI/UX fixes for textfield components when `required = yes` 
 - Maintenance:
     - Use HyperSnapSDK `4.22.2`
     
