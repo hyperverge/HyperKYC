@@ -1401,6 +1401,7 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCChip : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public var chipButton: HyperKYC.HKYCChipButton!
+  @_Concurrency.MainActor(unsafe) public var widthConstraint: UIKit.NSLayoutConstraint!
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCChipButton : UIKit.UIButton {
