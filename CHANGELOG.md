@@ -1,4 +1,16 @@
 ## CHANGELOG
+### 0.24.1 *[24 May 2024]*
+- Enhancements
+    - onChange and validation enhancements
+    - Support staggered variation of `list` component
+    - Support `width` & `height` customisation of `loader` component
+- Bug-fixes
+    - Fix `[]` not supported in `list` component 
+    - Partial fix for dynamic handlers restart issue
+    - Fix `text` not present bug in `label` component
+- Maintenance:
+    - Use HyperSnapSDK `4.22.3`
+    
 ### 0.24.0 *[16 May 2024]*
 - Features
     - Add support for chip component in dynamic forms
