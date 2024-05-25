@@ -1468,7 +1468,7 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_Concurrency.MainActor(unsafe) public class HKYCNFCItemLabel : UIKit.UILabel {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCNFCItemLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
@@ -2750,10 +2750,16 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var barcodeSkipDelay: Swift.Int? {
     get
   }
+  public var nfcShowSkipButton: Swift.Bool? {
+    get
+  }
   public var nfcSkipDelay: Swift.Int? {
     get
   }
   public var nfcAuthentication: [Swift.String : Swift.String]? {
+    get
+  }
+  public var retryOnNFCError: Swift.Int? {
     get
   }
   public var enableOverlay: Swift.Bool? {
