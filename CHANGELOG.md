@@ -1,4 +1,14 @@
 ## CHANGELOG
+### 0.24.2 *[28 May 2024]*
+- Enhancements
+    - Support retry attempts for NFC module using `allowedAttempts`
+    - Support enabling/disabling the skip button for NFC modules using `nfcShowSkipButton`
+    
+- Bug-fixes
+    - Fix UI/UIX issues on NFC module
+- Maintenance:
+    - Use HyperSnapSDK `4.22.3`
+    
 ### 0.24.1 *[24 May 2024]*
 - Enhancements
     - onChange and validation enhancements
