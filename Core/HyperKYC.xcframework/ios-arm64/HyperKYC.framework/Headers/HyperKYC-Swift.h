@@ -623,8 +623,8 @@ SWIFT_CLASS("_TtC8HyperKYC26HKYCListCollectionViewCell")
 
 SWIFT_CLASS("_TtC8HyperKYC16HKYCNFCItemLabel")
 @interface HKYCNFCItemLabel : UILabel
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 

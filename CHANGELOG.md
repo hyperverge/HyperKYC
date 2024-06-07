@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 0.24.3 *[7 June 2024]*
+- Bug-fixes
+    - Fix npe crash with file upload component
+- Maintenance:
+    - Use HyperSnapSDK `4.22.3`
+    
 ### 0.24.2 *[28 May 2024]*
 - Enhancements
     - Support retry attempts for NFC module using `allowedAttempts`
