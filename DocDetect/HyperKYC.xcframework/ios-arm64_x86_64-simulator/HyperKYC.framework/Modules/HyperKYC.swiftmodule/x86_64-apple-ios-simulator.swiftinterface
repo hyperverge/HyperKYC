@@ -5,6 +5,7 @@
 import AVFoundation
 import AVKit
 import AudioToolbox
+import BackgroundTasks
 import Combine
 import CommonCrypto
 import CoreFoundation
@@ -453,31 +454,47 @@ public enum HyperKycStatus : Swift.String {
     get
   }
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class CustomDatePicker : UIKit.UIPickerView {
-  @_Concurrency.MainActor(unsafe) open var date: Foundation.Date {
-    get
-    set
-  }
-  @_Concurrency.MainActor(unsafe) open var month: Swift.Int {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) open var year: Swift.Int {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) open var onDateSelected: ((_ month: Swift.Int, _ year: Swift.Int) -> Swift.Void)?
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) public func addTarget(_ target: Any?, action: ObjectiveC.Selector, for controlEvents: UIKit.UIControl.Event)
-  @_Concurrency.MainActor(unsafe) public func removeTarget()
-  @_Concurrency.MainActor(unsafe) public func removeTarget(_ target: Any?, action: ObjectiveC.Selector?, for controlEvents: UIKit.UIControl.Event)
-  @_Concurrency.MainActor(unsafe) public func setDate(_ date: Foundation.Date, animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) public func update()
+public protocol JobConstraint {
+  func willSchedule(queue: HyperKYC.SqOperationQueue, operation: HyperKYC.SqOperation) throws
+  func willRun(operation: HyperKYC.SqOperation) throws
+  func run(operation: HyperKYC.SqOperation) -> Swift.Bool
+}
+public protocol CodableConstraint : HyperKYC.JobConstraint, Swift.Encodable {
+  init?(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers open class SimpleConstraint : HyperKYC.JobConstraint {
+  public func willSchedule(queue: HyperKYC.SqOperationQueue, operation: HyperKYC.SqOperation) throws
+  public func willRun(operation: HyperKYC.SqOperation) throws
+  public func run(operation: HyperKYC.SqOperation) -> Swift.Bool
   @objc deinit
 }
-extension HyperKYC.CustomDatePicker : UIKit.UIPickerViewDelegate, UIKit.UIPickerViewDataSource {
-  @_Concurrency.MainActor(unsafe) @objc dynamic open func numberOfComponents(in pickerView: UIKit.UIPickerView) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, numberOfRowsInComponent component: Swift.Int) -> Swift.Int
-  @_Concurrency.MainActor(unsafe) @objc dynamic open func pickerView(_ pickerView: UIKit.UIPickerView, didSelectRow row: Swift.Int, inComponent component: Swift.Int)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func pickerView(_ pickerView: UIKit.UIPickerView, attributedTitleForRow row: Swift.Int, forComponent component: Swift.Int) -> Foundation.NSAttributedString?
+public enum Executor : Swift.Int {
+  case foreground
+  case background
+  case any
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension HyperKYC.Executor : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum RetryConstraint {
+  case retry(delay: Foundation.TimeInterval)
+  case cancel
+  case exponential(initial: Foundation.TimeInterval)
+  case exponentialWithLimit(initial: Foundation.TimeInterval, maxDelay: Foundation.TimeInterval)
+}
+public protocol ConstraintMaker {
+  func make(from decoder: any Swift.Decoder) throws -> [any HyperKYC.CodableConstraint]
+}
+open class DefaultConstraintMaker : HyperKYC.ConstraintMaker {
+  public init()
+  open func make(from decoder: any Swift.Decoder) throws -> [any HyperKYC.CodableConstraint]
+  @objc deinit
 }
 extension HyperKYC.HVPromise : Swift.CustomStringConvertible {
   final public var description: Swift.String {
@@ -1619,6 +1636,82 @@ public enum SessionStatus : Swift.Codable {
   }
   public init(from decoder: any Swift.Decoder) throws
 }
+@_hasMissingDesignatedInitializers public class HyperLogger {
+  public static var shared: HyperKYC.HyperLogger
+  public func setup(withConfig hyperLoggerConfig: HyperKYC.HyperLoggerConfig)
+  public func log(level: HyperKYC.HyperLogLevel = .debug, message: Swift.String)
+  public func flush(to hyperLoggerEndpointConfig: HyperKYC.HyperLoggerEndpointConfig)
+  public func deleteLogFolder(at folderPath: Swift.String)
+  public func isHyperLoggerActive() -> Swift.Bool
+  @objc deinit
+}
+public class HyperLoggerConfig {
+  public var folderName: Swift.String
+  public var fileName: Swift.String
+  public init(folderName: Swift.String, fileName: Swift.String)
+  @objc deinit
+}
+public class HyperLoggerEndpointConfig {
+  public var url: Swift.String
+  public var requestHeaders: [Swift.String : Swift.String]
+  public var requestBody: [Swift.String : Swift.AnyObject]
+  public init(url: Swift.String, requestHeaders: [Swift.String : Swift.String], requestBody: [Swift.String : Swift.AnyObject])
+  @objc deinit
+}
+public enum HyperLogLevel : Swift.CustomStringConvertible {
+  case debug
+  case error
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: HyperKYC.HyperLogLevel, b: HyperKYC.HyperLogLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+final public class JobBuilder {
+  public init(type: Swift.String)
+  public init(jobBuilder: HyperKYC.JobBuilder)
+  final public func singleInstance(forId: Swift.String, override: Swift.Bool = false, includeExecutingJob: Swift.Bool = true) -> Self
+  final public func parallel(queueName: Swift.String) -> Self
+  final public func delay(time: Foundation.TimeInterval) -> Self
+  final public func deadline(date: Foundation.Date) -> Self
+  final public func periodic(limit: HyperKYC.Limit = .unlimited, interval: Foundation.TimeInterval = 0) -> Self
+  @available(iOS 13.0, tvOS 13.0, macOS 10.15, *)
+  final public func periodic(limit: HyperKYC.Limit = .unlimited, interval: Foundation.TimeInterval = 0, executor: HyperKYC.Executor = .foreground) -> Self
+  final public func persist() -> Self
+  final public func retry(limit: HyperKYC.Limit) -> Self
+  final public func addTag(tag: Swift.String) -> Self
+  final public func with(params: [Swift.String : Any]) -> Self
+  final public func priority(priority: Foundation.Operation.QueuePriority) -> Self
+  final public func service(quality: Foundation.QualityOfService) -> Self
+  final public func requireCharging() -> Self
+  final public func timeout(value: Foundation.TimeInterval) -> Self
+  final public func add(constraint: any HyperKYC.JobConstraint) -> Self
+  final public func copy() -> HyperKYC.JobBuilder
+  final public func build() -> HyperKYC.JobInfo
+  final public func schedule(manager: HyperKYC.SwiftQueueManager)
+  @objc deinit
+}
+public struct JobInfo {
+  public let type: Swift.String
+  public var queueName: Swift.String
+  public var params: [Swift.String : Any]
+  public var priority: Foundation.Operation.QueuePriority
+  public var qualityOfService: Foundation.QualityOfService
+  public let createTime: Foundation.Date
+}
+extension HyperKYC.JobInfo : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public class DecodableSerializer : HyperKYC.JobInfoSerializer {
+  public init(maker: any HyperKYC.ConstraintMaker, encoder: Foundation.JSONEncoder = JSONEncoder(), decoder: Foundation.JSONDecoder = JSONDecoder())
+  public func serialize(info: HyperKYC.JobInfo) throws -> Swift.String
+  public func deserialize(json: Swift.String) throws -> HyperKYC.JobInfo
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class KeyboardLayoutConstraint : UIKit.NSLayoutConstraint {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
   @objc deinit
@@ -2157,6 +2250,24 @@ public enum LogEvent {
 }
 public struct UIFlowModel {
 }
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: Swift.ArraySlice<Swift.UInt8>) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: [Swift.UInt8]) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func toAsn1Length(_ data: Swift.Int) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcHash(data: [Swift.UInt8], hashAlgorithm: Swift.String) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA1Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA224Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA256Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA512Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA384Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
 @_hasMissingDesignatedInitializers public class PromiseBox<T> {
   @objc deinit
 }
@@ -2352,6 +2463,176 @@ public struct ModuleData : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+@objc @_hasMissingDesignatedInitializers final public class SqOperation : Foundation.Operation {
+  final public let info: HyperKYC.JobInfo
+  final public let logger: any HyperKYC.SwiftQueueLogger
+  final public let dispatchQueue: Dispatch.DispatchQueue
+  final public var nextRunSchedule: Foundation.Date?
+  @objc override final public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc override final public var queuePriority: Foundation.Operation.QueuePriority {
+    @objc get
+    @objc set
+  }
+  @available(iOS 8.0, macCatalyst 13.0, *)
+  @objc override final public var qualityOfService: Foundation.QualityOfService {
+    @objc get
+    @objc set
+  }
+  @objc override final public var isExecuting: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc override final public var isFinished: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc override final public func start()
+  @objc override final public func cancel()
+  final public func run()
+  @objc deinit
+}
+extension HyperKYC.SqOperation : HyperKYC.JobResult {
+  final public func done(_ result: HyperKYC.JobCompletion)
+}
+@objc @_hasMissingDesignatedInitializers final public class SqOperationQueue : Foundation.OperationQueue {
+  @objc override final public func addOperation(_ ope: Foundation.Operation)
+  @objc deinit
+}
+public protocol JobCreator {
+  func create(type: Swift.String, params: [Swift.String : Any]?) -> any HyperKYC.Job
+}
+public protocol QueueCreator {
+  func create(queueName: Swift.String) -> any HyperKYC.Queue
+}
+public protocol JobPersister {
+  func restore() -> [Swift.String]
+  func restore(queueName: Swift.String) -> [Swift.String]
+  func put(queueName: Swift.String, taskId: Swift.String, data: Swift.String)
+  func remove(queueName: Swift.String, taskId: Swift.String)
+  func clearAll()
+}
+public protocol JobInfoSerializer {
+  func serialize(info: HyperKYC.JobInfo) throws -> Swift.String
+  func deserialize(json: Swift.String) throws -> HyperKYC.JobInfo
+}
+public protocol JobResult {
+  func done(_ result: HyperKYC.JobCompletion)
+}
+public enum JobCompletion {
+  case success
+  case fail(any Swift.Error)
+}
+public protocol Job {
+  func onRun(callback: any HyperKYC.JobResult)
+  func onRetry(error: any Swift.Error) -> HyperKYC.RetryConstraint
+  func onRemove(result: HyperKYC.JobCompletion)
+}
+public protocol Queue {
+  var name: Swift.String { get }
+  var maxConcurrent: Swift.Int { get }
+}
+public enum BasicQueue {
+  case synchronous
+  case concurrent
+  case custom(Swift.String)
+}
+public class BasicQueueCreator : HyperKYC.QueueCreator {
+  public init()
+  public func create(queueName: Swift.String) -> any HyperKYC.Queue
+  @objc deinit
+}
+extension HyperKYC.BasicQueue : HyperKYC.Queue {
+  public var name: Swift.String {
+    get
+  }
+  public var maxConcurrent: Swift.Int {
+    get
+  }
+}
+public protocol JobListener {
+  func onJobScheduled(job: HyperKYC.JobInfo)
+  func onBeforeRun(job: HyperKYC.JobInfo)
+  func onAfterRun(job: HyperKYC.JobInfo, result: HyperKYC.JobCompletion)
+  func onTerminated(job: HyperKYC.JobInfo, result: HyperKYC.JobCompletion)
+}
+public enum Limit {
+  case unlimited
+  case limited(Swift.Double)
+}
+public enum SwiftQueueError : Swift.Error {
+  case canceled
+  case deadline
+  case duplicate
+  case onRetryCancel(any Swift.Error)
+  case timeout
+}
+public enum LogLevel : Swift.Int {
+  case verbose
+  case warning
+  case error
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension HyperKYC.LogLevel {
+  public var description: Swift.String {
+    get
+  }
+}
+public protocol SwiftQueueLogger {
+  func log(_ level: HyperKYC.LogLevel, jobId: @autoclosure () -> Swift.String?, message: @autoclosure () -> Swift.String)
+}
+open class ConsoleLogger : HyperKYC.SwiftQueueLogger {
+  public init(min: HyperKYC.LogLevel = .verbose)
+  final public func log(_ level: HyperKYC.LogLevel, jobId: @autoclosure () -> Swift.String?, message: @autoclosure () -> Swift.String)
+  open func printComputed(output: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class NoLogger : HyperKYC.SwiftQueueLogger {
+  public static let shared: HyperKYC.NoLogger
+  public func log(_ level: HyperKYC.LogLevel, jobId: @autoclosure () -> Swift.String?, message: @autoclosure () -> Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SwiftQueueManager {
+  final public var isSuspended: Swift.Bool {
+    get
+    set
+  }
+  final public func enqueue(info: HyperKYC.JobInfo)
+  final public func cancelAllOperations()
+  final public func cancelOperations(tag: Swift.String)
+  final public func cancelOperations(uuid: Swift.String)
+  final public func waitUntilAllOperationsAreFinished()
+  @objc deinit
+}
+extension HyperKYC.SwiftQueueManager {
+  final public func queueCount() -> Swift.Int
+  final public func getAll() -> [Swift.String : [HyperKYC.JobInfo]]
+}
+final public class SwiftQueueManagerBuilder {
+  public init(creator: any HyperKYC.JobCreator, queueCreator: any HyperKYC.QueueCreator = BasicQueueCreator())
+  final public func set(persister: any HyperKYC.JobPersister) -> Self
+  final public func set(serializer: any HyperKYC.JobInfoSerializer) -> Self
+  final public func set(logger: any HyperKYC.SwiftQueueLogger) -> Self
+  final public func set(isSuspended: Swift.Bool) -> Self
+  final public func set(initInBackground: Swift.Bool) -> Self
+  final public func set(listener: any HyperKYC.JobListener) -> Self
+  final public func set(dispatchQueue: Dispatch.DispatchQueue) -> Self
+  final public func set(enqueueDispatcher: Dispatch.DispatchQueue) -> Self
+  final public func build() -> HyperKYC.SwiftQueueManager
+  @objc deinit
+}
+@available(iOS 13.0, tvOS 13.0, macCatalyst 13.1, *)
+extension HyperKYC.SwiftQueueManager {
+  final public func registerForBackgroundTask(forTaskWithUUID: Swift.String)
+  final public func applicationDidEnterBackground()
+  final public func cancelAllBackgroundTask()
+}
 public protocol Thenable : AnyObject {
   associatedtype T
   func pipe(to: @escaping (HyperKYC.PromiseResult<Self.T>) -> Swift.Void)
@@ -2414,24 +2695,22 @@ extension HyperKYC.Thenable where Self.T : Swift.Sequence, Self.T.Element : Swif
   @objc override dynamic public init()
   @objc deinit
 }
-@available(iOS 13, macOS 10.15, *)
-public func asn1Length(_ data: Swift.ArraySlice<Swift.UInt8>) throws -> (Swift.Int, Swift.Int)
-@available(iOS 13, macOS 10.15, *)
-public func asn1Length(_ data: [Swift.UInt8]) throws -> (Swift.Int, Swift.Int)
-@available(iOS 13, macOS 10.15, *)
-public func toAsn1Length(_ data: Swift.Int) throws -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcHash(data: [Swift.UInt8], hashAlgorithm: Swift.String) throws -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA1Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA224Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA256Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA512Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA384Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+public class UserDefaultsPersister : HyperKYC.JobPersister {
+  public init(key: Swift.String = "SwiftQueueInfo")
+  public func restore() -> [Swift.String]
+  public func restore(queueName: Swift.String) -> [Swift.String]
+  public func put(queueName: Swift.String, taskId: Swift.String, data: Swift.String)
+  public func remove(queueName: Swift.String, taskId: Swift.String)
+  public func clearAll()
+  @objc deinit
+}
+extension HyperKYC.Limit : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension HyperKYC.Limit : Swift.Equatable {
+  public static func == (lhs: HyperKYC.Limit, rhs: HyperKYC.Limit) -> Swift.Bool
+}
 public func when<U>(fulfilled thenables: [U]) -> HyperKYC.HVPromise<[U.T]> where U : HyperKYC.Thenable
 public func when(fulfilled thenables: [any HyperKYC.Thenable]) -> HyperKYC.HVPromise<[Any]>
 public func when<U>(fulfilled promises: U...) -> HyperKYC.HVPromise<Swift.Void> where U : HyperKYC.Thenable, U.T == ()
@@ -3316,7 +3595,6 @@ public struct EvalResultConfigs : Swift.Codable {
   public func deleteModule(moduleIds: [Swift.String])
   public func saveState(moduleId: Swift.String, status: Swift.String? = nil, parentModuleID: Swift.String? = nil, completionHandler: (((any Swift.Error)?) -> Swift.Void)? = nil)
   public func deleteWorkflowState(transactionID: Swift.String)
-  public func makeStartAPICall()
   @objc override dynamic public init()
   @objc deinit
 }
@@ -3329,6 +3607,9 @@ extension HyperKYC.Checkbox.BorderStyle : Swift.RawRepresentable {}
 extension HyperKYC.HyperKycStatus : Swift.Equatable {}
 extension HyperKYC.HyperKycStatus : Swift.Hashable {}
 extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
+extension HyperKYC.Executor : Swift.Equatable {}
+extension HyperKYC.Executor : Swift.Hashable {}
+extension HyperKYC.Executor : Swift.RawRepresentable {}
 extension HyperKYC.PickedFile.State : Swift.Equatable {}
 extension HyperKYC.PickedFile.State : Swift.Hashable {}
 extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
@@ -3345,6 +3626,11 @@ extension HyperKYC.PMKNamespacer : Swift.Equatable {}
 extension HyperKYC.PMKNamespacer : Swift.Hashable {}
 extension HyperKYC.SessionStatus : Swift.Equatable {}
 extension HyperKYC.SessionStatus : Swift.Hashable {}
+extension HyperKYC.HyperLogLevel : Swift.Equatable {}
+extension HyperKYC.HyperLogLevel : Swift.Hashable {}
+extension HyperKYC.LogLevel : Swift.Equatable {}
+extension HyperKYC.LogLevel : Swift.Hashable {}
+extension HyperKYC.LogLevel : Swift.RawRepresentable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Equatable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Hashable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.RawRepresentable {}
