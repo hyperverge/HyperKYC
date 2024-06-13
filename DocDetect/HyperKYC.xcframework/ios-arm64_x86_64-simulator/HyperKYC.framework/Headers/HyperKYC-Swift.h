@@ -279,6 +279,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreFoundation;
 @import CoreGraphics;
+@import Foundation;
 @import MaterialComponents;
 @import ObjectiveC;
 @import UIKit;
@@ -404,22 +405,6 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
   BorderStyleCircle = 1,
 };
 
-
-/// A control for the inputting of month and year values in a view that uses a spinning-wheel or slot-machine metaphor.
-SWIFT_CLASS("_TtC8HyperKYC16CustomDatePicker")
-@interface CustomDatePicker : UIPickerView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSAttributedString;
-
-@interface CustomDatePicker (SWIFT_EXTENSION(HyperKYC)) <UIPickerViewDataSource, UIPickerViewDelegate>
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
-- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
-- (NSAttributedString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
-@end
 
 
 
@@ -929,6 +914,32 @@ SWIFT_CLASS("_TtC8HyperKYC11RadioButton")
 SWIFT_CLASS("_TtC8HyperKYC17ResumeFileHandler")
 @interface ResumeFileHandler : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC11SqOperation")
+@interface SqOperation : NSOperation
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic) NSOperationQueuePriority queuePriority;
+@property (nonatomic) NSQualityOfService qualityOfService SWIFT_AVAILABILITY(maccatalyst,introduced=13.0) SWIFT_AVAILABILITY(ios,introduced=8.0);
+@property (nonatomic, getter=isExecuting) BOOL executing;
+@property (nonatomic, getter=isFinished) BOOL finished;
+- (void)start;
+- (void)cancel;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+
+
+SWIFT_CLASS("_TtC8HyperKYC16SqOperationQueue")
+@interface SqOperationQueue : NSOperationQueue
+- (void)addOperation:(NSOperation * _Nonnull)ope;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -1267,6 +1278,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import CoreFoundation;
 @import CoreGraphics;
+@import Foundation;
 @import MaterialComponents;
 @import ObjectiveC;
 @import UIKit;
@@ -1392,22 +1404,6 @@ typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
   BorderStyleCircle = 1,
 };
 
-
-/// A control for the inputting of month and year values in a view that uses a spinning-wheel or slot-machine metaphor.
-SWIFT_CLASS("_TtC8HyperKYC16CustomDatePicker")
-@interface CustomDatePicker : UIPickerView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-@class NSAttributedString;
-
-@interface CustomDatePicker (SWIFT_EXTENSION(HyperKYC)) <UIPickerViewDataSource, UIPickerViewDelegate>
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
-- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
-- (NSAttributedString * _Nullable)pickerView:(UIPickerView * _Nonnull)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
-@end
 
 
 
@@ -1917,6 +1913,32 @@ SWIFT_CLASS("_TtC8HyperKYC11RadioButton")
 SWIFT_CLASS("_TtC8HyperKYC17ResumeFileHandler")
 @interface ResumeFileHandler : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8HyperKYC11SqOperation")
+@interface SqOperation : NSOperation
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic) NSOperationQueuePriority queuePriority;
+@property (nonatomic) NSQualityOfService qualityOfService SWIFT_AVAILABILITY(maccatalyst,introduced=13.0) SWIFT_AVAILABILITY(ios,introduced=8.0);
+@property (nonatomic, getter=isExecuting) BOOL executing;
+@property (nonatomic, getter=isFinished) BOOL finished;
+- (void)start;
+- (void)cancel;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+
+
+SWIFT_CLASS("_TtC8HyperKYC16SqOperationQueue")
+@interface SqOperationQueue : NSOperationQueue
+- (void)addOperation:(NSOperation * _Nonnull)ope;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 

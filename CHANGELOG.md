@@ -1,4 +1,13 @@
 ## CHANGELOG
+### 0.24.4 *[13 Jun 2024]*
+- Bug-fixes
+    - Fix journeyId being empty when the user kills the app and resumes
+    - Fix totalTimespent unit issues
+- Enhancements:
+    - Perform start transaction api call when SDK is launched
+- Maintenance:
+    - Use HyperSnapSDK `4.22.3`
+
 ### 0.24.3 *[7 June 2024]*
 - Bug-fixes
     - Fix npe crash with file upload component
