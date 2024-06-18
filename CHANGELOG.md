@@ -1,5 +1,10 @@
 ## CHANGELOG
-
+### 0.22.2 *[18 Jun 2024]*
+- Bug Fixes
+    - Remove CoreNFC from weak_frameworks list
+- Maintenance:
+    - Use HyperSnapSDK `4.21.2`
+    
 ### 0.22.2 *[27 Apr 2024]*
 - Bug Fixes
     - Fix NFC crash happening on iOS 17.x versions and above
