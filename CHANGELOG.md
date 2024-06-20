@@ -1,4 +1,18 @@
 ## CHANGELOG
+### 0.25.0 *[20 Jun 2024]*
+- Features
+    - Support Webforms 
+        - Support for `useWebForm` key in workflow config properties and module properties
+        - Support real-time updates to websdk version used in web forms
+    - Make Finish Transaction and final CPR call blocking calls
+    - Show Retry screens incase of network issues when performing API calls and showing WebViews 
+- Bug-fixes
+    - Fix file upload counter issue
+    - Fix brief appearance of black screen in WebViews in dark mode
+    - Fix connection issues present in NFC module
+- Maintenance
+    - Use HyperSnapSDK `4.23.0`
+    
 ### 0.24.4 *[13 Jun 2024]*
 - Bug-fixes
     - Fix journeyId being empty when the user kills the app and resumes
