@@ -1572,6 +1572,7 @@ public enum PMKNamespacer {
   public static let NFC_UNAVAILABLE_ERROR: Swift.Int
   public static let NFC_AUTHENTICATION_ERROR: Swift.Int
   public static let NFC_CONNECTION_ERROR: Swift.Int
+  public static let FORM_V2_ERROR: Swift.Int
   public static let DATE_FORMAT_ERROR: Swift.Int
   public var errorMessage: Swift.String?
   public var errorCode: Swift.Int?
@@ -2792,6 +2793,9 @@ public struct WorkflowProperties : Swift.Codable {
   public var mobile: HyperKYC.MobileProperties? {
     get
   }
+  public var useWebForm: Swift.Bool? {
+    get
+  }
   public enum PlatformKey : Swift.String, Swift.Codable {
     case sdkVersionMobileKey
     case unknown
@@ -3024,6 +3028,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var sections: [HyperKYC.Section]? {
+    get
+  }
+  public var useWebForm: Swift.Bool? {
     get
   }
   public var barcodeSkipDelay: Swift.Int? {
@@ -3607,7 +3614,7 @@ public struct EvalResultConfigs : Swift.Codable {
 }
 @objc @_inheritsConvenienceInitializers public class WorkFlowStateDelegate : ObjectiveC.NSObject {
   public func deleteModule(moduleIds: [Swift.String])
-  public func saveState(moduleId: Swift.String, status: Swift.String? = nil, parentModuleID: Swift.String? = nil, completionHandler: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  public func saveState(moduleId: Swift.String, status: Swift.String? = nil, parentModuleID: Swift.String? = nil, completionHandler: ((HyperKYC.HyperKycError?) -> Swift.Void)? = nil)
   public func deleteWorkflowState(transactionID: Swift.String)
   @objc override dynamic public init()
   @objc deinit
