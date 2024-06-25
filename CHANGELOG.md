@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 0.25.1 *[25 Jun 2024]*
+- Enhancements
+    - Use cloudfront bucket to fetch WebSDK
+- Bug-fixes
+    - Fix Webform launching issues when SDK is launched multiple times 
+- Maintenance
+    - Use HyperSnapSDK `4.23.0`
+    
 ### 0.25.0 *[20 Jun 2024]*
 - Features
     - Support Webforms 
