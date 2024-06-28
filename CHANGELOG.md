@@ -1,4 +1,16 @@
 ## CHANGELOG
+### 0.26.0 *[28 Jun 2024]*
+- Enhancements
+    - Support for retry for network error on face & doc capture screens
+    - Support for text customisation for network error messages using `hk_api_network_error_text`
+    - Support for text customisation for Retry & Cancel using `hk_retry_button_text`, `hk_cancel_button_text`
+    - Support for `cancel` button after retrying for 3 attempts on error screen
+    - Support for `moduleId_subType` key for textConfig in workflow 
+- Bug-fixes
+    - Fix multi-line statement for VideoStatement module
+    - Fix file upload image preview getting duplicated
+    - Fix filename when file is uploaded using file component
+
 ### 0.25.1 *[25 Jun 2024]*
 - Enhancements
     - Use cloudfront bucket to fetch WebSDK

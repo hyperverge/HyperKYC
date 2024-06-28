@@ -968,6 +968,10 @@ extension HyperKYC.HKYCPrimaryButton {
     @objc set
   }
 }
+extension UIKit.UILabel {
+  @_Concurrency.MainActor(unsafe) public func fontSizeToFit(maxFontSize: CoreFoundation.CGFloat = 100, minFontScale: CoreFoundation.CGFloat = 0.1, rectSize: CoreFoundation.CGSize? = nil)
+  @_Concurrency.MainActor(unsafe) public func fontSizeThatFits(text string: Swift.String, maxFontSize: CoreFoundation.CGFloat = 100, minFontScale: CoreFoundation.CGFloat = 0.1, rectSize: CoreFoundation.CGSize? = nil) -> CoreFoundation.CGFloat
+}
 extension Swift.Dictionary where Key == Swift.String, Value == [Swift.String : Any] {
   public func getStringValue(key: Swift.String, subKey: Swift.String, defaultText: Swift.String) -> Swift.String
 }
@@ -1285,12 +1289,8 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCStatusLabel : UIKit.UILabel {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCStatusLabel : HyperKYC.FittableFontLabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
-    @objc get
-  }
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCHintLabel : UIKit.UILabel {
@@ -1475,6 +1475,32 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @_Concurrency.MainActor(unsafe) public var stackHolder: UIKit.UIStackView!
   @_Concurrency.MainActor(unsafe) public var content: Swift.String!
   @_Concurrency.MainActor(unsafe) public var codeSet: Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class FittableFontLabel : UIKit.UILabel {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var autoAdjustFontSize: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var maxFontSize: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var minFontScale: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var leftInset: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var rightInset: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var topInset: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var bottomInset: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var text: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var frame: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func prepareForInterfaceBuilder()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func drawText(in rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HintView : UIKit.UIView {
