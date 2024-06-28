@@ -454,6 +454,30 @@ SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
 
 
 
+SWIFT_CLASS("_TtC8HyperKYC17FittableFontLabel")
+@interface FittableFontLabel : UILabel
+/// If true, the font size will be adjusted each time that the text or the frame change.
+@property (nonatomic) IBInspectable BOOL autoAdjustFontSize;
+/// The biggest font size to use during drawing. The default value is the current font size
+@property (nonatomic) IBInspectable CGFloat maxFontSize;
+/// The scale factor that determines the smallest font size to use during drawing. The default value is 0.1
+@property (nonatomic) IBInspectable CGFloat minFontScale;
+/// UIEdgeInset
+@property (nonatomic) IBInspectable CGFloat leftInset;
+@property (nonatomic) IBInspectable CGFloat rightInset;
+@property (nonatomic) IBInspectable CGFloat topInset;
+@property (nonatomic) IBInspectable CGFloat bottomInset;
+@property (nonatomic, copy) NSString * _Nullable text;
+@property (nonatomic) CGRect frame;
+- (void)prepareForInterfaceBuilder;
+- (void)awakeFromNib;
+- (void)drawTextInRect:(CGRect)rect;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 @interface HKYCActivityIndicator : UIActivityIndicatorView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -691,11 +715,9 @@ SWIFT_CLASS("_TtC8HyperKYC19HKYCSignatureHelper")
 
 
 SWIFT_CLASS("_TtC8HyperKYC15HKYCStatusLabel")
-@interface HKYCStatusLabel : UILabel
+@interface HKYCStatusLabel : FittableFontLabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)drawTextInRect:(CGRect)rect;
-@property (nonatomic, readonly) CGSize intrinsicContentSize;
 @end
 
 
@@ -946,6 +968,7 @@ SWIFT_CLASS("_TtC8HyperKYC16SqOperationQueue")
 @interface UIBarButtonItem (SWIFT_EXTENSION(HyperKYC))
 @property (nonatomic, readonly, strong) UIView * _Nonnull plainView;
 @end
+
 
 
 
@@ -1453,6 +1476,30 @@ SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
 
 
 
+SWIFT_CLASS("_TtC8HyperKYC17FittableFontLabel")
+@interface FittableFontLabel : UILabel
+/// If true, the font size will be adjusted each time that the text or the frame change.
+@property (nonatomic) IBInspectable BOOL autoAdjustFontSize;
+/// The biggest font size to use during drawing. The default value is the current font size
+@property (nonatomic) IBInspectable CGFloat maxFontSize;
+/// The scale factor that determines the smallest font size to use during drawing. The default value is 0.1
+@property (nonatomic) IBInspectable CGFloat minFontScale;
+/// UIEdgeInset
+@property (nonatomic) IBInspectable CGFloat leftInset;
+@property (nonatomic) IBInspectable CGFloat rightInset;
+@property (nonatomic) IBInspectable CGFloat topInset;
+@property (nonatomic) IBInspectable CGFloat bottomInset;
+@property (nonatomic, copy) NSString * _Nullable text;
+@property (nonatomic) CGRect frame;
+- (void)prepareForInterfaceBuilder;
+- (void)awakeFromNib;
+- (void)drawTextInRect:(CGRect)rect;
+@property (nonatomic, readonly) CGSize intrinsicContentSize;
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 @interface HKYCActivityIndicator : UIActivityIndicatorView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -1690,11 +1737,9 @@ SWIFT_CLASS("_TtC8HyperKYC19HKYCSignatureHelper")
 
 
 SWIFT_CLASS("_TtC8HyperKYC15HKYCStatusLabel")
-@interface HKYCStatusLabel : UILabel
+@interface HKYCStatusLabel : FittableFontLabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)drawTextInRect:(CGRect)rect;
-@property (nonatomic, readonly) CGSize intrinsicContentSize;
 @end
 
 
@@ -1945,6 +1990,7 @@ SWIFT_CLASS("_TtC8HyperKYC16SqOperationQueue")
 @interface UIBarButtonItem (SWIFT_EXTENSION(HyperKYC))
 @property (nonatomic, readonly, strong) UIView * _Nonnull plainView;
 @end
+
 
 
 
