@@ -1554,13 +1554,13 @@ public enum PMKNamespacer {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject, Swift.Codable {
-  public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
-  public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
-  public func setInputs(inputs: [Swift.String : Swift.String])
-  public func setUniqueId(uuid: Swift.String)
-  public func setDefaultLangCode(language: Swift.String)
-  public func setUseLocation(shouldUse: Swift.Bool)
-  public func addMetadata(metadata: [Swift.String : Swift.String])
+  @objc public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
+  @objc public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
+  @objc public func setInputs(inputs: [Swift.String : Swift.String])
+  @objc public func setUniqueId(uuid: Swift.String)
+  @objc public func setDefaultLangCode(language: Swift.String)
+  @objc public func setUseLocation(shouldUse: Swift.Bool)
+  @objc public func addMetadata(metadata: [Swift.String : Swift.String])
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -2418,7 +2418,13 @@ public struct ResumeResult : Swift.Codable {
   public var moduleExecutionOrder: [Swift.String]? {
     get
   }
+  public var workflowExecutionOrder: [Swift.String]? {
+    get
+  }
   public var moduleData: [Swift.String : HyperKYC.ModuleData]? {
+    get
+  }
+  public var userDetails: [Swift.String : Swift.String]? {
     get
   }
   public func encode(to encoder: any Swift.Encoder) throws
@@ -2462,6 +2468,12 @@ public struct TransactionMetadata : Swift.Codable {
   public var moduleToResumeFrom: Swift.String? {
     get
   }
+  public var errorCode: Swift.String? {
+    get
+  }
+  public var errorMessage: Swift.String? {
+    get
+  }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -2485,6 +2497,12 @@ public struct ModuleData : Swift.Codable {
     get
   }
   public var attempts: Swift.String? {
+    get
+  }
+  public var injectedRule: Swift.String? {
+    get
+  }
+  public var ruleOutcome: Swift.String? {
     get
   }
   public func encode(to encoder: any Swift.Encoder) throws
@@ -2818,6 +2836,7 @@ public struct WorkflowProperties : Swift.Codable {
       get
     }
   }
+  public func isServerSideResumeEnabled() -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
