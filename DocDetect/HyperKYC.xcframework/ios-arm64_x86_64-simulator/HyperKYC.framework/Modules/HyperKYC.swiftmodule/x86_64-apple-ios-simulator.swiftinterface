@@ -975,6 +975,9 @@ extension UIKit.UILabel {
 extension Swift.Dictionary where Key == Swift.String, Value == [Swift.String : Any] {
   public func getStringValue(key: Swift.String, subKey: Swift.String, defaultText: Swift.String) -> Swift.String
 }
+extension Swift.Dictionary where Key == Swift.String, Value == HyperKYC.AnyCodable {
+  public func extractKeys(responseHeaders: [Swift.String : Swift.String]?, statusCode: Swift.String?, statusMessage: Swift.String?) -> [Swift.String : Swift.String]
+}
 extension Swift.Dictionary where Key == Swift.String {
   public func getStringValue(key: Swift.String, defaultText: Swift.String) -> Swift.String
 }

@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 0.26.1 *[24 Jul 2024]*
+- Bug-fixes
+    - Fix height for Retry button on loading screen
+    - Fix api flags, to not include success cases, now checks `result.summary.details`
+    - Fix non-String values for api flags
+    
 ### 0.26.0 *[28 Jun 2024]*
 - Enhancements
     - Support for retry for network error on face & doc capture screens
