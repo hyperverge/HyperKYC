@@ -1,4 +1,8 @@
 ## CHANGELOG
+### 0.26.2 *[26 Jul 2024]*
+- Maintenance
+    - Use HyperSnapSDK `4.23.1`
+    
 ### 0.26.1 *[24 Jul 2024]*
 - Bug-fixes
     - Fix height for Retry button on loading screen
