@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 0.26.3 *[1 Aug 2024]*
+- Bug-fixes
+    - Fix crash happening in NFC module
+    - Fix errors wrt to `nfcErrorCode` in NFC module
+
+- Maintenance
+    - Use HyperSnapSDK `4.23.1`
 ### 0.26.2 *[26 Jul 2024]*
 - Maintenance
     - Use HyperSnapSDK `4.23.1`
