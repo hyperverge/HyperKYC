@@ -1571,13 +1571,13 @@ public enum PMKNamespacer {
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject, Swift.Codable {
-  public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
-  public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
-  public func setInputs(inputs: [Swift.String : Swift.String])
-  public func setUniqueId(uuid: Swift.String)
-  public func setDefaultLangCode(language: Swift.String)
-  public func setUseLocation(shouldUse: Swift.Bool)
-  public func addMetadata(metadata: [Swift.String : Swift.String])
+  @objc public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
+  @objc public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
+  @objc public func setInputs(inputs: [Swift.String : Swift.String])
+  @objc public func setUniqueId(uuid: Swift.String)
+  @objc public func setDefaultLangCode(language: Swift.String)
+  @objc public func setUseLocation(shouldUse: Swift.Bool)
+  @objc public func addMetadata(metadata: [Swift.String : Swift.String])
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -2866,6 +2866,7 @@ public struct WorkflowModule : Swift.Codable {
     case type_face
     case type_api
     case type_dynamic_form
+    case type_dynamic_form_v2
     case type_form
     case type_webview
     case type_barcode
@@ -3636,6 +3637,9 @@ public struct WorkflowCondition : Swift.Codable {
 }
 public struct EvalResultConfigs : Swift.Codable {
   public var resumeFrom: Swift.String? {
+    get
+  }
+  public var reason: Swift.String? {
     get
   }
   public func encode(to encoder: any Swift.Encoder) throws

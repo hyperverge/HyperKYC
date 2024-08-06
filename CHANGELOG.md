@@ -1,4 +1,14 @@
 ## CHANGELOG
+### 0.27.0 *[6 Aug 2024]*
+- Features
+ - Add support for dynamic form V2
+ - Adds support to enable background image on loader screens
+- Enhancements 
+ - Add support for `reason` in `ifTrueConfigs` and `ifFalseConfigs` in the workflow; send `failureReason` in FT call
+ - Update webform version to `8.8.1`
+- Maintenance
+    - Use HyperSnapSDK `4.23.1`
+    
 ### 0.26.3 *[1 Aug 2024]*
 - Bug-fixes
     - Fix crash happening in NFC module
