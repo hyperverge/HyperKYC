@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 0.27.1 *[9 Aug 2024]*
+- Bug-fixes
+    - Added nil check for savedTimeStamp for local resume
+- Maintenance
+    - Use HyperSnapSDK `4.23.1`
+    
 ### 0.27.0 *[6 Aug 2024]*
 - Features
  - Add support for dynamic form V2
