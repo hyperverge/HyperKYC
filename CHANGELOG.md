@@ -1,5 +1,5 @@
 ## CHANGELOG
-### 0.27.1 *[9 Aug 2024]*
+### 0.27.2 *[14 Aug 2024]*
 - Enhancements
     - Added support for System Busy error for NFC adapter
 - Maintenance
