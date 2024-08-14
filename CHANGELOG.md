@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 0.27.2 *[14 Aug 2024]*
+- Enhancements
+    - Added support for System Busy error for NFC adapter
+- Maintenance
+    - Use HyperSnapSDK `4.23.1`
+    s
 ### 0.27.1 *[9 Aug 2024]*
 - Bug-fixes
     - Added nil check for savedTimeStamp for local resume
