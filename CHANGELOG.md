@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 0.28.0 *[21 Aug 2024]*
+- Features
+    - Add UI config support for custom background image for non-capture screens
+    - Add UI config support for capture-screen related UI elements
+- Maintenance
+    - Use HyperSnapSDK `4.24.0`
+
 ### 0.27.1 *[9 Aug 2024]*
 - Bug-fixes
     - Added nil check for savedTimeStamp for local resume
