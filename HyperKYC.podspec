@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'HyperKYC'
-    s.version      = '0.27.2'
+    s.version      = '0.28.0'
     s.summary      = "HyperVerge's iOS Framework for capturing documents and faces to be used with our AI Engines"
     s.description  = <<-DESC
                     HyperKyc SDK can be used to create Global DKYC workflows to capture images of ID cards, photos of the face of the user, and perform other operations like face matches, etc all within itself to ease up integration friction on the client end.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     s.default_subspecs = "Core"
 
     s.subspec 'Core' do |cs|
-	cs.dependency 'HyperSnapSDK', '4.23.1'
+	cs.dependency 'HyperSnapSDK', '4.24.0'
 	cs.dependency 'MaterialComponents/TextControls+OutlinedTextFields'
         cs.dependency 'MaterialComponents/TextControls+OutlinedTextAreas'
 	cs.vendored_frameworks = 'Core/HyperKYC.xcframework'
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'DocDetect' do |dds|
-    	dds.dependency 'HyperSnapSDK/DocDetect', '4.23.1'
+    	dds.dependency 'HyperSnapSDK/DocDetect', '4.24.0'
 	dds.dependency 'MaterialComponents/TextControls+OutlinedTextFields'
         dds.dependency 'MaterialComponents/TextControls+OutlinedTextAreas'
 	dds.vendored_frameworks = 'DocDetect/HyperKYC.xcframework'
