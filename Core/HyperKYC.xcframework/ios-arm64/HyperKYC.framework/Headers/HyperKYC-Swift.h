@@ -820,7 +820,7 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycConfig")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithAppId:(NSString * _Nonnull)appId appKey:(NSString * _Nonnull)appKey workflowId:(NSString * _Nonnull)workflowId transactionId:(NSString * _Nonnull)transactionId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithAccessToken:(NSString * _Nonnull)accessToken workflowId:(NSString * _Nonnull)workflowId transactionId:(NSString * _Nonnull)transactionId OBJC_DESIGNATED_INITIALIZER;
-- (void)setInputsWithInputs:(NSDictionary<NSString *, NSString *> * _Nonnull)inputs;
+- (void)setInputsWithInputs:(NSDictionary<NSString *, id> * _Nonnull)inputs;
 - (void)setUniqueIdWithUuid:(NSString * _Nonnull)uuid;
 - (void)setDefaultLangCodeWithLanguage:(NSString * _Nonnull)language;
 - (void)setUseLocationWithShouldUse:(BOOL)shouldUse;

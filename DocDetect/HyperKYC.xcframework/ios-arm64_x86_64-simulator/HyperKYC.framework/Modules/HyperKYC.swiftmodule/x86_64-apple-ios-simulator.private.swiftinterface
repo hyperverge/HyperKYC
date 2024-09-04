@@ -5,6 +5,7 @@
 import AVFoundation
 import AVKit
 import AudioToolbox
+import AuthenticationServices
 import BackgroundTasks
 import Combine
 import CommonCrypto
@@ -1559,7 +1560,7 @@ public enum PMKNamespacer {
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   @objc public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
-  @objc public func setInputs(inputs: [Swift.String : Swift.String])
+  @objc public func setInputs(inputs: [Swift.String : Any])
   @objc public func setUniqueId(uuid: Swift.String)
   @objc public func setDefaultLangCode(language: Swift.String)
   @objc public func setUseLocation(shouldUse: Swift.Bool)
@@ -1588,6 +1589,7 @@ public enum PMKNamespacer {
   public static let NFC_AUTHENTICATION_ERROR: Swift.Int
   public static let NFC_CONNECTION_ERROR: Swift.Int
   public static let FORM_V2_ERROR: Swift.Int
+  public static let BROWSER_NOT_SUPPORTED: Swift.Int
   public static let DATE_FORMAT_ERROR: Swift.Int
   public var errorMessage: Swift.String?
   public var errorCode: Swift.Int?
@@ -2449,7 +2451,7 @@ public struct ResumeMetadata : Swift.Codable {
   public var journeyId: Swift.String? {
     get
   }
-  public var inputs: [Swift.String : Swift.String]? {
+  public var inputs: [Swift.String : HyperKYC.AnyCodable]? {
     get
   }
   public var workflowHash: Swift.String? {
@@ -3041,6 +3043,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var reloadOnRedirectFailure: Swift.Bool? {
+    get
+  }
+  public var openInAppBrowser: Swift.Bool? {
     get
   }
   public var sections: [HyperKYC.Section]? {

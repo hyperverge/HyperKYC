@@ -1,4 +1,13 @@
 ## CHANGELOG
+### 0.29.0 *[4 Sept 2024]*
+- Features
+    - Add support for native OAuth modules
+    - Add support to add any type variable for `inputs`
+- Enhancements 
+    - Update analytics to track background and foreground events
+- Maintenance
+    - Use HyperSnapSDK `4.24.0`
+    
 ### 0.28.0 *[21 Aug 2024]*
 - Features
     - Add UI config support for custom background image for non-capture screens
