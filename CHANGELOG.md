@@ -1,7 +1,7 @@
 ## CHANGELOG
 ### 0.29.1 *[6 Sept 2024]*
 - Bug-fixes
-    - Fix mime type for files upload using API module
+    - Fix mime type for files uploaded using API module
     - Fix `callbackUrlScheme` injection from inputs
     
 ### 0.29.0 *[4 Sept 2024]*
