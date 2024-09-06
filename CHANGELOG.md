@@ -1,7 +1,7 @@
 ## CHANGELOG
 ### 0.29.1 *[6 Sept 2024]*
 - Bug-fixes
-    - Fix mime type for files uploaded using API module
+    - Update api mimetype logic to use picked file extensions instead of `requestParameters[].type`
     - Fix `callbackUrlScheme` injection from inputs
     
 ### 0.29.0 *[4 Sept 2024]*
