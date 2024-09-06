@@ -1,10 +1,16 @@
 ## CHANGELOG
+### 0.29.1 *[6 Sept 2024]*
+- Bug-fixes
+    - Fix mime type for files uploaded using API module
+    - Fix `callbackUrlScheme` injection from inputs
+    
 ### 0.29.0 *[4 Sept 2024]*
 - Features
     - Add support for native OAuth modules
     - Add support to add any type variable for `inputs`
 - Enhancements 
     - Update analytics to track background and foreground events
+    - Expose `workflowId` with inputs
 - Maintenance
     - Use HyperSnapSDK `4.24.0`
     
