@@ -1609,7 +1609,7 @@ public enum PMKNamespacer {
   public var errorCode: Swift.Int?
   @objc deinit
 }
-@objc public class HyperKycResult : ObjectiveC.NSObject {
+@objc public class HyperKycResult : ObjectiveC.NSObject, Swift.Codable {
   public var status: Swift.String! {
     get
   }
@@ -1631,6 +1631,8 @@ public enum PMKNamespacer {
   public init(status: Swift.String, transactionId: Swift.String, details: [Swift.String : Swift.String?], errorCode: Swift.Int?, errorMessage: Swift.String?, latestModule: Swift.String?)
   open func getRawDataJsonString() -> Swift.String?
   @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HyperKycData : ObjectiveC.NSObject, Swift.Codable {
   public var countryResult: HyperKYC.CountryResult? {
