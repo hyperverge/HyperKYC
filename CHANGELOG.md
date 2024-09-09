@@ -1,4 +1,7 @@
 ## CHANGELOG
+### 0.30.0 *[09 Sep 2024]*
+- [INTERNAL] Add support for Web Core (Disabled by default, appId Opt-in)
+
 ### 0.29.1 *[6 Sept 2024]*
 - Bug-fixes
     - Update api mimetype logic to use picked file extensions instead of `requestParameters[].type`

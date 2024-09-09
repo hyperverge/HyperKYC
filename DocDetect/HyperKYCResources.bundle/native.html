@@ -20,8 +20,9 @@
         y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "mn4nvovyjk");
 
-
+    //  TODO: Understand more about this code and check if we can strip out unnecessary functions
     function getQueryParams() {
+        //  FIXME: `url` is not used, can be removed?
         // Get the current URL
         const url = window.location.href;
 
@@ -45,7 +46,7 @@
     
     
     //  FIXME: Remove this once formv2 is optimised
-    function startLoader1() {
+    function startLoader() {
       const hyperKycConfig = new HyperKycConfig(
         "jwtToken",
         "workflowId",
@@ -57,7 +58,7 @@
     }
     //  FIXME: Remove this once formv2 is optimised
     document.addEventListener("DOMContentLoaded", (event) => {
-      startLoader1();
+      startLoader();
     });
 </script>
 
