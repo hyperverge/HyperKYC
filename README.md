@@ -8,7 +8,7 @@ This SDK can be used within iOS native apps and supports all iOS versions from i
 
 1.  min iOS SDK version 11
 2.  Recommended platform versions :
-    1.  xCode 13+
+    1.  xCode 15.1+
     2.  Swift 5.5
     3.  Cocoapods 1.11.x
 
