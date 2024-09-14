@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 0.29.2 *[14 Sept 2024]*
+- Enhancements 
+    - Update webform version to `8.8.3`
+    - Add `sdk` type to default inputs
+- Bug-fixes
+    - Fix no-limit dateOfExpiry for nfc module
+    
 ### 0.29.1 *[6 Sept 2024]*
 - Bug-fixes
     - Fix mime type for files uploaded using API module
