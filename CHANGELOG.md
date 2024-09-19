@@ -1,6 +1,12 @@
 ## CHANGELOG
+### 0.30.1 *[19 Sep 2024]*
+- Enhancements 
+    - Add support for step wise analytics in NFC module
+- Maintenance
+    - Use HyperSnapSDK `4.24.0`
+
 ### 0.30.0 *[09 Sep 2024]*
-- [INTERNAL] Add support for Web Core (Disabled by default, appId Opt-in)
+- Add support for Web Core (Disabled by default, appId Opt-in)
 
 ### 0.29.1 *[6 Sept 2024]*
 - Bug-fixes
