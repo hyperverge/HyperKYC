@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'HyperKYC'
-    s.version      = '0.30.0'
+    s.version      = '0.30.1'
     s.summary      = "HyperVerge's iOS Framework for capturing documents and faces to be used with our AI Engines"
     s.description  = <<-DESC
                     HyperKyc SDK can be used to create Global DKYC workflows to capture images of ID cards, photos of the face of the user, and perform other operations like face matches, etc all within itself to ease up integration friction on the client end.
