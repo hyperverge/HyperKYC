@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 0.30.2 *[27 Sep 2024]*
+- Enhancements 
+    - Add support for `sdk.platform`
+- Maintenance
+    - Use HyperSnapSDK `4.24.0`
 ### 0.30.1 *[19 Sep 2024]*
 - Enhancements 
     - Add support for step wise analytics in NFC module
