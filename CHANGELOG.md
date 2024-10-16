@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 0.31.0 *[16 Oct 2024]*
+- Enhancements
+    - Added support for incomplete scan and introduced new errorCode `125`
+    - Fixed issue with CPR and list component used in `webForms`
+    - Fixed infinite loading that happens when signature verification is enabled for API module
+- Maintenance
+    - Use HyperSnapSDK `4.24.0`
+    
 ### 0.30.2 *[27 Sep 2024]*
 - Enhancements 
     - Add support for `sdk.platform`
