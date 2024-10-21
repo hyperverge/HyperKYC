@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
     s.platform     = :ios
     s.ios.deployment_target  = '11.0'
     s.swift_version = '5.4'
-    s.weak_frameworks = ['CoreNFC', 'CryptoKit']
     s.default_subspecs = "Core"
 
     s.subspec 'Core' do |cs|
