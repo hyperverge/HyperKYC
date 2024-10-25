@@ -1886,6 +1886,9 @@ public struct DocData : Swift.Codable {
   public var longitude: Swift.Double {
     get
   }
+  public var submittedTimestamp: Swift.Int64? {
+    get
+  }
   public var statusCode: Swift.String? {
     get
   }
@@ -1943,6 +1946,9 @@ public struct FaceData : Swift.Codable {
     get
   }
   public var attemptsCount: Swift.Int {
+    get
+  }
+  public var submittedTimestamp: Swift.Int64? {
     get
   }
   public var responseHeaders: [Swift.String : Swift.String]? {
