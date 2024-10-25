@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 0.32.0 *[25 Oct 2024]*
+- Enhancements
+    - Add support for `submittedTimestamp` in HVResponse for doc & face modules
+    - Optimised uploading of data in webCore mode
+- Maintenance
+    - Use HyperSnapSDK `4.25.0`
+    
 ### 0.31.0 *[16 Oct 2024]*
 - Enhancements
     - Added support for incomplete scan and introduced new errorCode `125`
