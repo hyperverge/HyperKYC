@@ -5,6 +5,7 @@
     - Optimised uploading of data in webCore mode
 - Maintenance
     - Use HyperSnapSDK `4.25.0`
+    - Use WebSDK `8.10.1`
     
 ### 0.31.0 *[16 Oct 2024]*
 - Enhancements
