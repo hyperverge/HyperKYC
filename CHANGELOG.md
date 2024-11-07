@@ -2,7 +2,7 @@
 ### 0.33.0 *[7 Nov 2024]*
 - Enhancements
     - Add uiConfig support for `processingLabel` & `processingHintLabel`
-    - Add support to return with error if there is a workflow issue
+    - Add support to return an error if there is an issue with the HyperKYC workflow configuration.
 - Maintenance
     - Use HyperSnapSDK `4.26.0`
     
