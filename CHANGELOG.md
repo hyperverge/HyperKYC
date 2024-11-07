@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 0.33.0 *[7 Nov 2024]*
+- Enhancements
+    - Add uiConfig support for `processingLabel` & `processingHintLabel`
+    - Add support to return with error if there is a workflow issue
+- Maintenance
+    - Use HyperSnapSDK `4.26.0`
+    
 ### 0.32.0 *[25 Oct 2024]*
 - Enhancements
     - Add support for `submittedTimestamp` in HVResponse for doc & face modules
