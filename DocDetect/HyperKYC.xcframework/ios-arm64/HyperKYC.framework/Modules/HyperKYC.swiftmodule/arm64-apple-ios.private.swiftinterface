@@ -1173,7 +1173,16 @@ extension Dispatch.DispatchQueue {
 }
 public func hang<T>(_ promise: HyperKYC.HVPromise<T>) throws -> T
 @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCBrandingLayout : UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) public var label: UIKit.UILabel {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var shieldLogo: UIKit.UIImageView {
+    get
+    set
+  }
   @objc @_Concurrency.MainActor(unsafe) public func showBranding(show: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func updateUI()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class HKYCBundleLocator : ObjectiveC.NSObject {

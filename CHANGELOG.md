@@ -1,4 +1,11 @@
 ## CHANGELOG
+
+### 0.34.0 *[20 Nov 2024]*
+- Enhancements
+    - Add uiConfig support for branding layout on all screens
+- Maintenance
+    - Use HyperSnapSDK `4.27.0`
+    
 ### 0.33.0 *[7 Nov 2024]*
 - Enhancements
     - Add uiConfig support for `processingLabel` & `processingHintLabel`
