@@ -3,15 +3,11 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
-    <link rel="preload" href="https://hv-camera-web-sg.s3-ap-southeast-1.amazonaws.com/hyperverge-web-sdk@8.10.1/src/sdk.webcore.min.js" as="script" />
-    <!-- <script src="../src/sdk.native.min.js"></script> -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js" as="script" />
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js" as="script" />
+    <link rel="preload" href="https://hv-camera-web-sg.s3-ap-southeast-1.amazonaws.com/hyperverge-web-sdk@8.11.0/src/sdk.webcore.min.js" as="script" />
 </head>
 
 <body>
-     <script src="https://hv-camera-web-sg.s3-ap-southeast-1.amazonaws.com/hyperverge-web-sdk@8.10.1/src/sdk.webcore.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+     <script src="https://hv-camera-web-sg.s3-ap-southeast-1.amazonaws.com/hyperverge-web-sdk@8.11.0/src/sdk.webcore.min.js"></script>
 </body>
 <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
@@ -45,22 +41,6 @@
     // Custom code to set the user ID
     clarity("set", "userId", "transactionIdToBeReplacedInCode_f48ae56d-60e9-4b5f-a9a9-373e1a65bdc8");
     
-    
-    //  FIXME: Support color customisation for this loader animation
-    function startLoader() {
-      const hyperKycConfig = new HyperKycConfig(
-        "jwtToken",
-        "workflowId",
-        "transactionId"
-      );
-      hyperKycConfig.clientLogo = '';
-      //    hyperKycConfig.supportDarkMode(true);
-      startLottieLoader({ config: hyperKycConfig, lottie: '',  mainDescription: '', subDescription: '' });
-    }
-    //  FIXME: Support color customisation for this loader animation
-    document.addEventListener("DOMContentLoaded", (event) => {
-      startLoader();
-    });
 </script>
 
 </html>
