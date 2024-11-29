@@ -1,5 +1,13 @@
 ## CHANGELOG
 
+### 0.35.0 *[29 Nov 2024]*
+- Enhancements
+    - Add support for gradient backgrounds on buttons
+    - Add suport for prefetch functionality in webCore mode
+- Maintenance
+    - Use HyperSnapSDK `4.28.0`
+
+
 ### 0.34.0 *[20 Nov 2024]*
 - Enhancements
     - Add uiConfig support for branding layout on all screens
