@@ -1,5 +1,11 @@
 ## CHANGELOG
-
+### 0.36.0 *[18 Dec 2024]*
+- Enhancements
+    - Support `about:` schemes on webviews
+    - Change the priority of loader lottie
+- Maintenance
+    - Use HyperSnapSDK `4.28.1`
+    
 ### 0.35.0 *[29 Nov 2024]*
 - Enhancements
     - Add support for gradient backgrounds on buttons
