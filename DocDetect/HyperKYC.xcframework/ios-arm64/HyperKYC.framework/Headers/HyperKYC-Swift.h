@@ -841,9 +841,16 @@ SWIFT_CLASS("_TtC8HyperKYC13HyperKycError")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class NSNumber;
 
 SWIFT_CLASS("_TtC8HyperKYC14HyperKycResult")
 @interface HyperKycResult : NSObject
+@property (nonatomic, readonly, copy) NSString * _Null_unspecified status;
+@property (nonatomic, readonly, copy) NSString * _Null_unspecified transactionId;
+@property (nonatomic, readonly, copy) NSString * _Nullable errorMessage;
+@property (nonatomic, readonly, copy) NSString * _Nullable latestModule;
+- (NSNumber * _Nullable)getErrorCodeNumber SWIFT_WARN_UNUSED_RESULT;
+- (NSDictionary * _Nullable)getDetailsDict SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
