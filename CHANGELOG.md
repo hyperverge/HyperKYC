@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 0.37.0 *[19 Dec 2024]*
+- Enhancements
+    - Add support to increment attemptsCount based on `moduleId`
+- Maintenance
+    - Use HyperSnapSDK `4.29.0`
 ### 0.36.0 *[18 Dec 2024]*
 - Enhancements
     - Support `about:` schemes on webviews
