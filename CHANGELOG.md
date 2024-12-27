@@ -1,4 +1,14 @@
 ## CHANGELOG
+### 0.37.1 *[27 Dec 2024]*
+- Enhancements
+    - Remove PII data from api calls 
+    - Add support for load time events in webCore mode
+
+- Bug Fixes 
+    - Disable navigation gestures on webviews
+- Maintenance
+    - Use HyperSnapSDK `4.29.0`
+    
 ### 0.37.0 *[19 Dec 2024]*
 - Enhancements
     - Add support to increment attemptsCount based on `moduleId`
