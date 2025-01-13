@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 0.37.2 *[13 Jan 2025]*
+- Enhancements
+    - Add support for webview optimisations
+  - Maintenance
+    - Use HyperSnapSDK `4.29.1`
+      
 ### 0.37.1 *[27 Dec 2024]*
 - Enhancements
     - Remove PII data from api calls 
