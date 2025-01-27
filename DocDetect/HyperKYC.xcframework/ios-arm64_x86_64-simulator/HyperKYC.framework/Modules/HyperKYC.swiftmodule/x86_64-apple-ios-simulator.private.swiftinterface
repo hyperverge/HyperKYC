@@ -1600,6 +1600,7 @@ public enum PMKNamespacer {
   public static let FORM_V2_ERROR: Swift.Int
   public static let BROWSER_NOT_SUPPORTED: Swift.Int
   public static let NFC_INCOMPLETE_SCAN_ERROR: Swift.Int
+  public static let PRIVACY_CONSENT_DENIED_ERROR: Swift.Int
   public static let DATE_FORMAT_ERROR: Swift.Int
   public var errorMessage: Swift.String?
   public var errorCode: Swift.Int?
