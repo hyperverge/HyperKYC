@@ -1,4 +1,9 @@
 ## CHANGELOG
+
+### 0.38.1 *[14 Feb 2025]*
+- Maintenance:
+    - Use HyperSnapSDK `4.30.1`
+    
 ### 0.38.0 *[27 Jan 2025]*
 - Enhancements:
     - Add support for consent screens before selfie capture module
