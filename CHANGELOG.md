@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### 0.39.0 *[18 Feb 2025]*
+- Enhancements:
+    - Add security enchancements to face module
+- Maintenance:
+    - Use HyperSnapSDK `4.31.0`
 ### 0.38.1 *[14 Feb 2025]*
 - Maintenance:
     - Use HyperSnapSDK `4.30.1`

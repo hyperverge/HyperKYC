@@ -1237,11 +1237,15 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
   public static func amIRunInEmulator() -> Swift.Bool
   public static func amIDebugged() -> Swift.Bool
   public static func denyDebugger()
+  public static func isParentPidUnexpected() -> Swift.Bool
   public static func amITampered(_ checks: [HyperKYC.HKYCFileIntegrityCheck]) -> HyperKYC.HKYCFileIntegrityCheckResult
   public static func amIReverseEngineered() -> Swift.Bool
   public static func amIReverseEngineeredWithFailedChecks() -> (reverseEngineered: Swift.Bool, failedChecks: [HyperKYC.HKYCFailedCheckType])
   public static func amIRuntimeHooked(dyldWhiteList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
+  public static func amIRuntimeHooked(dyldAllowList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
   public static func amIProxied() -> Swift.Bool
+  @available(iOS 16, *)
+  public static func amIInLockdownMode() -> Swift.Bool
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class HKYCSignatureHelper : ObjectiveC.NSObject {

@@ -1214,6 +1214,16 @@ public enum HKYCFailedCheck : Swift.CaseIterable {
     get
   }
 }
+public enum DyldChainedImportFormat : Swift.UInt32 {
+  case general
+  case addend
+  case addend64
+  public init?(rawValue: Swift.UInt32)
+  public typealias RawValue = Swift.UInt32
+  public var rawValue: Swift.UInt32 {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers public class HKYCImageCache {
   public static let imageCache: HyperKYC.HKYCImageCache
   final public func image(urlString: Swift.String, imageClosure: @escaping (_ uiImage: UIKit.UIImage) -> Swift.Void)
@@ -1230,7 +1240,7 @@ extension HyperKYC.HKYCFileIntegrityCheck {
   }
 }
 public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: [HyperKYC.HKYCFileIntegrityCheck])
-public enum IntegrityCheckerImageTarget {
+public enum HKYCIntegrityCheckerImageTarget {
   case `default`
   case custom(Swift.String)
 }
@@ -1241,11 +1251,15 @@ public enum IntegrityCheckerImageTarget {
   public static func amIRunInEmulator() -> Swift.Bool
   public static func amIDebugged() -> Swift.Bool
   public static func denyDebugger()
+  public static func isParentPidUnexpected() -> Swift.Bool
   public static func amITampered(_ checks: [HyperKYC.HKYCFileIntegrityCheck]) -> HyperKYC.HKYCFileIntegrityCheckResult
   public static func amIReverseEngineered() -> Swift.Bool
   public static func amIReverseEngineeredWithFailedChecks() -> (reverseEngineered: Swift.Bool, failedChecks: [HyperKYC.HKYCFailedCheckType])
   public static func amIRuntimeHooked(dyldWhiteList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
+  public static func amIRuntimeHooked(dyldAllowList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
   public static func amIProxied() -> Swift.Bool
+  @available(iOS 16, *)
+  public static func amIInLockdownMode() -> Swift.Bool
   @objc deinit
 }
 extension HyperKYC.HKYCIOSSecuritySuite {
@@ -1253,8 +1267,8 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   public static func denyMSHook(_ functionAddress: Swift.UnsafeMutableRawPointer) -> Swift.UnsafeMutableRawPointer?
   public static func denySymbolHook(_ symbol: Swift.String)
   public static func denySymbolHook(_ symbol: Swift.String, at image: Swift.UnsafePointer<MachO.mach_header>, imageSlide slide: Swift.Int)
-  public static func getMachOFileHashValue(_ target: HyperKYC.IntegrityCheckerImageTarget = .default) -> Swift.String?
-  public static func findLoadedDylibs(_ target: HyperKYC.IntegrityCheckerImageTarget = .default) -> [Swift.String]?
+  public static func getMachOFileHashValue(_ target: HyperKYC.HKYCIntegrityCheckerImageTarget = .default) -> Swift.String?
+  public static func findLoadedDylibs(_ target: HyperKYC.HKYCIntegrityCheckerImageTarget = .default) -> [Swift.String]?
   public static func hasBreakpointAt(_ functionAddr: Swift.UnsafeRawPointer, functionSize: Darwin.vm_size_t?) -> Swift.Bool
   public static func hasWatchpoint() -> Swift.Bool
 }
@@ -3700,6 +3714,9 @@ extension HyperKYC.CatchPolicy : Swift.Equatable {}
 extension HyperKYC.CatchPolicy : Swift.Hashable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Hashable {}
+extension HyperKYC.DyldChainedImportFormat : Swift.Equatable {}
+extension HyperKYC.DyldChainedImportFormat : Swift.Hashable {}
+extension HyperKYC.DyldChainedImportFormat : Swift.RawRepresentable {}
 extension HyperKYC.PMKNamespacer : Swift.Equatable {}
 extension HyperKYC.PMKNamespacer : Swift.Hashable {}
 extension HyperKYC.SessionStatus : Swift.Equatable {}
