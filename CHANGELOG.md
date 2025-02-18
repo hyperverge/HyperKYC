@@ -2,7 +2,7 @@
 
 ### 0.39.0 *[18 Feb 2025]*
 - Enhancements:
-    - Add payload encryption for face module via webCore
+    - Add security enhancements for face module via webCore
 - Bug Fixes:
     - Rename SwiftyRSA classes to HVSwiftyRSA to resolve conflicts
     - Add skip button status changes for NFC Module
