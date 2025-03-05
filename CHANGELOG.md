@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+### 0.40.0 *[04 Mar 2025]*
+- Enhancements:
+    - Prevent multiple launches
+    - Add support for `VideoStatementV2` module in WebCore mode
+    - Add support for `sdk.installedApps` predefined variable in WebCore mode
+    - Update default webcore version to `8.14.2`
+    
 ### 0.39.1 *[21 Feb 2025]*
 - Maintenance:
     - Use HyperSnapSDK `4.31.1`
