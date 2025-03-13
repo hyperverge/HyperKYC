@@ -45,7 +45,7 @@ jobs:
           
       # Runs a set of commands to push HyperKyc (HYPERKYC_VERSION) to cocoapods
       - name: Push HyperSnapSDK (HYPERKYC_VERSION) to cocoapods
-        env: 
+        env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
           pod spec lint HyperKYC.podspec --allow-warnings --verbose
@@ -53,7 +53,7 @@ jobs:
       
       # Runs a command to let you know that HyperKyc (HYPERKYC_VERSION) has been released
       - name: Log HyperKyc (HYPERKYC_VERSION) release
-        env: 
+        env:
           HYPERKYC_VERSION: ${{ secrets.HYPERKYC_VERSION }}
         run: |
           echo HyperKyc "$HYPERKYC_VERSION" has been pushed to cocoapods

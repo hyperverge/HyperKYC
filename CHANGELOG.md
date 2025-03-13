@@ -1,5 +1,8 @@
 ## CHANGELOG
-
+### 0.40.1 *[13 Mar 2025]*
+- Enhancements:
+    - Update default webcore version to `9.1.0`
+    
 ### 0.40.0 *[04 Mar 2025]*
 - Enhancements:
     - Prevent multiple launches
