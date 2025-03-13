@@ -42,38 +42,9 @@ jobs:
         run: |
           git tag "$HYPERKYC_VERSION"
           git push origin --tags
-    
-      # Build HyperKyc SDK (Modify if using workspace/scheme)
-      - name: Build iOS SDK
-        run: |
-          xcodebuild clean build \
-          -workspace HyperKYC.xcworkspace \  # Update if needed
-          -scheme HyperKYC \  # Update with correct scheme
-          -configuration Release \
-          -derivedDataPath build
-
-      #  Install Sentry CLI
-      - name: Install Sentry CLI
-        run: curl -sL https://sentry.io/get-cli/ | bash
-
-      #  Upload dSYM to Sentry
-      - name: Upload dSYM to Sentry
-        env:
-          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
-          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
-        run: |
-          export SENTRY_DSYM_PATH="$(find build -name '*.dSYM' -print0 | xargs -0)"
-          if [ -z "$SENTRY_DSYM_PATH" ]; then
-            echo "No dSYM files found. Skipping upload."
-          else
-            sentry-cli upload-dsym --org "$SENTRY_ORG" --project "$SENTRY_PROJECT" --auth-token "$SENTRY_AUTH_TOKEN" "$SENTRY_DSYM_PATH"
-            echo "dSYM successfully uploaded to Sentry!"
-          fi
-
           
       # Runs a set of commands to push HyperKyc (HYPERKYC_VERSION) to cocoapods
-      - name: Push HyperKYC (HYPERKYC_VERSION) to cocoapods
+      - name: Push HyperSnapSDK (HYPERKYC_VERSION) to cocoapods
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
@@ -82,7 +53,7 @@ jobs:
       
       # Runs a command to let you know that HyperKyc (HYPERKYC_VERSION) has been released
       - name: Log HyperKyc (HYPERKYC_VERSION) release
-        env: 
+        env:
           HYPERKYC_VERSION: ${{ secrets.HYPERKYC_VERSION }}
         run: |
           echo HyperKyc "$HYPERKYC_VERSION" has been pushed to cocoapods
