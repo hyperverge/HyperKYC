@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 0.41.0 *[28 Mar 2025]*
+- Enhancements:
+    - Add security enhancements for doc module via webCore
+    - Add prefetch optimisation to reduce initial load time
+    - Update default webcore version to `9.2.1`
+    - Add support for `showConsent` to configure consent screens via workflow
+- Maintenance:
+    - Use HyperSnapSDK `4.33.0`
 ### 0.40.1 *[13 Mar 2025]*
 - Enhancements:
     - Update default webcore version to `9.1.0`
