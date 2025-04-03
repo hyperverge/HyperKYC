@@ -1903,6 +1903,9 @@ public struct DocData : Swift.Codable {
   public var submittedTimestamp: Swift.Int64? {
     get
   }
+  public var barcodeData: Swift.String? {
+    get
+  }
   public var statusCode: Swift.String? {
     get
   }
@@ -3027,6 +3030,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var autoCaptureDuration: Swift.Int? {
+    get
+  }
+  public var assistiveCapture: Swift.Bool? {
     get
   }
   public var url: Swift.String? {

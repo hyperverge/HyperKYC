@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 0.42.0 *[3 Apr 2025]*
+- Enhancements:
+    - Add support for `assistiveCapture` in document capture flow using 
+- Maintenance:
+    - Use HyperSnapSDK `4.34.0`
 ### 0.41.0 *[28 Mar 2025]*
 - Enhancements:
     - Add security enhancements for doc module via webCore
