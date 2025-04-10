@@ -1,4 +1,8 @@
 ## CHANGELOG
+### 0.42.1 *[10 Apr 2025]*
+- Enhancements:
+    - Add support for `exitOnCancel` in webViews via webcore mode
+
 ### 0.42.0 *[3 Apr 2025]*
 - Enhancements:
     - Add support for `assistiveCapture` in document capture flow using 

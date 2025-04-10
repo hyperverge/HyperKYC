@@ -3077,6 +3077,9 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var openInAppBrowser: Swift.Bool? {
     get
   }
+  public var exitOnCancel: Swift.String? {
+    get
+  }
   public var sections: [HyperKYC.Section]? {
     get
   }
