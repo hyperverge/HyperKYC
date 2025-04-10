@@ -2,6 +2,9 @@
 ### 0.42.1 *[10 Apr 2025]*
 - Enhancements:
     - Add support for `exitOnCancel` in webViews via webcore mode
+    - Update default webcore version to `9.2.2`
+- Maintenance:
+    - Use HyperSnapSDK `4.34.0`
 
 ### 0.42.0 *[3 Apr 2025]*
 - Enhancements:
