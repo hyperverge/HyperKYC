@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 0.43.0 *[17 Apr 2025]*
+- Enhancements:
+    - Add support for `parallel sessions` in doc & face modules
+    - Update `accessToken` parsing in  `HyperKYCConfig`
+    - Update default webcore version to `9.3.0`
+- Maintenance:
+    - Use HyperSnapSDK `4.35.0`
+    
 ### 0.42.1 *[10 Apr 2025]*
 - Enhancements:
     - Add support for `exitOnCancel` in webViews via webcore mode

@@ -1630,6 +1630,7 @@ public enum PMKNamespacer {
   public static let NFC_INCOMPLETE_SCAN_ERROR: Swift.Int
   public static let PRIVACY_CONSENT_DENIED_ERROR: Swift.Int
   public static let DATE_FORMAT_ERROR: Swift.Int
+  public static let CHECK_SESSION_ERROR: Swift.Int
   public var errorMessage: Swift.String?
   public var errorCode: Swift.Int?
   @objc deinit
@@ -3099,9 +3100,6 @@ public struct WorkflowModuleProperties : Swift.Codable {
     get
   }
   public var openInAppBrowser: Swift.Bool? {
-    get
-  }
-  public var exitOnCancel: Swift.String? {
     get
   }
   public var sections: [HyperKYC.Section]? {
