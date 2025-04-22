@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 0.44.0 *[22 Apr 2025]*
+- Enhancements:
+    - Add support for file download in webViews
+- Maintenance:
+    - Use HyperSnapSDK `4.35.0`
 ### 0.43.0 *[17 Apr 2025]*
 - Enhancements:
     - Add support for `parallel sessions` in doc & face modules
