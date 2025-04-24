@@ -765,6 +765,102 @@ extension HyperKYC.DropDownCell {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func setHighlighted(_ highlighted: Swift.Bool, animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
 }
+public struct DynamicFormComponentsAttributes : Swift.Codable {
+  public var font: Swift.String {
+    get
+  }
+  public var fontSize: Swift.String {
+    get
+  }
+  public var fontWeight: Swift.String {
+    get
+  }
+  public var alignment: Swift.String {
+    get
+  }
+  public var color: Swift.String {
+    get
+  }
+  public var backgroundColor: Swift.String {
+    get
+  }
+  public var selectedBackgroundColor: Swift.String {
+    get
+  }
+  public var circleBorderColor: Swift.String {
+    get
+  }
+  public var borderColor: Swift.String {
+    get
+  }
+  public var borderRadius: Swift.String {
+    get
+  }
+  public var selectedBorderColor: Swift.String {
+    get
+  }
+  public var selectedTextColor: Swift.String {
+    get
+  }
+  public var disabledBorderColor: Swift.String {
+    get
+  }
+  public var icons: HyperKYC.HKYCUIIcons {
+    get
+  }
+  public var marginBottom: Swift.String {
+    get
+  }
+  public var marginTop: Swift.String {
+    get
+  }
+  public var marginLeft: Swift.String {
+    get
+  }
+  public var marginRight: Swift.String {
+    get
+  }
+  public var paddingBottom: Swift.String {
+    get
+  }
+  public var paddingTop: Swift.String {
+    get
+  }
+  public var paddingLeft: Swift.String {
+    get
+  }
+  public var paddingRight: Swift.String {
+    get
+  }
+  public var lineHeight: Swift.String {
+    get
+  }
+  public var charSpacing: Swift.String {
+    get
+  }
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HKYCUIIcons : Swift.Codable {
+  public var primaryButtonIcon: HyperKYC.HKYCUIPrimaryButtonIcon {
+    get
+  }
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
+  public var url: Swift.String {
+    get
+  }
+  public var shouldShow: Swift.Bool {
+    get
+  }
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 public enum PMKError : Swift.Error {
   case invalidCallingConvention
   case returnedSelf
@@ -2567,102 +2663,6 @@ extension HyperKYC.Thenable where Self.T : Swift.Collection {
 }
 extension HyperKYC.Thenable where Self.T : Swift.Sequence, Self.T.Element : Swift.Comparable {
   public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil) -> HyperKYC.HVPromise<[Self.T.Iterator.Element]>
-}
-public struct DynamicFormComponentsAttributes : Swift.Codable {
-  public var font: Swift.String {
-    get
-  }
-  public var fontSize: Swift.String {
-    get
-  }
-  public var fontWeight: Swift.String {
-    get
-  }
-  public var alignment: Swift.String {
-    get
-  }
-  public var color: Swift.String {
-    get
-  }
-  public var backgroundColor: Swift.String {
-    get
-  }
-  public var selectedBackgroundColor: Swift.String {
-    get
-  }
-  public var circleBorderColor: Swift.String {
-    get
-  }
-  public var borderColor: Swift.String {
-    get
-  }
-  public var borderRadius: Swift.String {
-    get
-  }
-  public var selectedBorderColor: Swift.String {
-    get
-  }
-  public var selectedTextColor: Swift.String {
-    get
-  }
-  public var disabledBorderColor: Swift.String {
-    get
-  }
-  public var icons: HyperKYC.HKYCUIIcons {
-    get
-  }
-  public var marginBottom: Swift.String {
-    get
-  }
-  public var marginTop: Swift.String {
-    get
-  }
-  public var marginLeft: Swift.String {
-    get
-  }
-  public var marginRight: Swift.String {
-    get
-  }
-  public var paddingBottom: Swift.String {
-    get
-  }
-  public var paddingTop: Swift.String {
-    get
-  }
-  public var paddingLeft: Swift.String {
-    get
-  }
-  public var paddingRight: Swift.String {
-    get
-  }
-  public var lineHeight: Swift.String {
-    get
-  }
-  public var charSpacing: Swift.String {
-    get
-  }
-  public init()
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct HKYCUIIcons : Swift.Codable {
-  public var primaryButtonIcon: HyperKYC.HKYCUIPrimaryButtonIcon {
-    get
-  }
-  public init()
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
-  public var url: Swift.String {
-    get
-  }
-  public var shouldShow: Swift.Bool {
-    get
-  }
-  public init()
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class UIUtilities : ObjectiveC.NSObject {
   public static let shared: HyperKYC.UIUtilities
