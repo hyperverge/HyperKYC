@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 0.45.0 *[30 Apr 2025]*
+- Enhancements:
+    - Add support for `showCloseIcon` to display exit functionality via webCore 
+    - Update default webcore version to `9.3.3`
+- Maintenance:
+    - Use HyperSnapSDK `4.36.0`
+
 ### 0.44.0 *[22 Apr 2025]*
 - Enhancements:
     - Add support for file download in webViews
