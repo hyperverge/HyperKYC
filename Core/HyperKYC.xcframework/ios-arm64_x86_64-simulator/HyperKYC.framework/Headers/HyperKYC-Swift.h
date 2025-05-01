@@ -280,7 +280,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreFoundation;
 @import CoreGraphics;
 @import Foundation;
-@import MaterialComponents;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -309,13 +308,6 @@ SWIFT_CLASS("_TtC8HyperKYC17AdaptiveStackView")
 @interface AdaptiveStackView : UIStackView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC26AddImageCollectionViewCell")
-@interface AddImageCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 enum CheckmarkStyle : NSInteger;
@@ -419,13 +411,6 @@ SWIFT_CLASS("_TtC8HyperKYC11DividerView")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC21DocCollectionViewCell")
-@interface DocCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC14DottedLineView")
 @interface DottedLineView : UIView
 - (void)drawRect:(CGRect)rect;
@@ -499,14 +484,6 @@ SWIFT_CLASS("_TtC8HyperKYC22HKYCActivityTitleLabel")
 @interface HKYCActivityTitleLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
-@interface HKYCAddImageCard : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (void)layoutSubviews;
 @end
 
 @class UIImage;
@@ -591,13 +568,6 @@ SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC17HKYCDocHolderCard")
-@interface HKYCDocHolderCard : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @interface HKYCErrorMessageLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -609,24 +579,10 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
-@interface HKYCFileStackView : UIStackView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
 @interface HKYCHintLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC26HKYCListCollectionViewCell")
-@interface HKYCListCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -891,13 +847,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 
 
 
-@interface MDCOutlinedTextField (SWIFT_EXTENSION(HyperKYC))
-/// Overrides the default behavior to determine whether a specific action can be performed on the text field.
-- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-
 
 
 
@@ -907,13 +856,6 @@ SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
 - (void)drawTextInRect:(CGRect)rect;
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
-@interface PickedFile : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -1309,7 +1251,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreFoundation;
 @import CoreGraphics;
 @import Foundation;
-@import MaterialComponents;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -1338,13 +1279,6 @@ SWIFT_CLASS("_TtC8HyperKYC17AdaptiveStackView")
 @interface AdaptiveStackView : UIStackView
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC26AddImageCollectionViewCell")
-@interface AddImageCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 enum CheckmarkStyle : NSInteger;
@@ -1448,13 +1382,6 @@ SWIFT_CLASS("_TtC8HyperKYC11DividerView")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC21DocCollectionViewCell")
-@interface DocCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC14DottedLineView")
 @interface DottedLineView : UIView
 - (void)drawRect:(CGRect)rect;
@@ -1528,14 +1455,6 @@ SWIFT_CLASS("_TtC8HyperKYC22HKYCActivityTitleLabel")
 @interface HKYCActivityTitleLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
-@interface HKYCAddImageCard : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (void)layoutSubviews;
 @end
 
 @class UIImage;
@@ -1620,13 +1539,6 @@ SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC17HKYCDocHolderCard")
-@interface HKYCDocHolderCard : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @interface HKYCErrorMessageLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -1638,24 +1550,10 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
-@interface HKYCFileStackView : UIStackView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
 @interface HKYCHintLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC26HKYCListCollectionViewCell")
-@interface HKYCListCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1920,13 +1818,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 
 
 
-@interface MDCOutlinedTextField (SWIFT_EXTENSION(HyperKYC))
-/// Overrides the default behavior to determine whether a specific action can be performed on the text field.
-- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
-
 
 
 
@@ -1936,13 +1827,6 @@ SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
 - (void)drawTextInRect:(CGRect)rect;
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
-@interface PickedFile : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 

@@ -10,7 +10,6 @@ import BackgroundTasks
 import Combine
 import CommonCrypto
 import CoreFoundation
-import CoreGraphics
 import CoreMedia
 import CoreNFC
 import CryptoKit
@@ -22,8 +21,6 @@ import Foundation/*.TimeInterval*/
 @_exported import HyperKYC
 import HyperSnapSDK
 import MachO
-import MaterialComponents
-import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MobileCoreServices
 import ObjectiveC
 import PDFKit
@@ -738,26 +735,6 @@ public struct RuleChecks : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PickedFile : ObjectiveC.NSObject {
-  public var localUri: Swift.String?
-  public var fileUrl: Swift.String
-  public var fileName: Swift.String?
-  public var sizeInKB: Swift.Int
-  public var fileExtension: Swift.String?
-  public var type: Swift.String?
-  public var state: HyperKYC.PickedFile.State
-  public enum State : Swift.String, Swift.Codable {
-    case loading
-    case success
-    case error
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  @objc deinit
-}
 extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc dynamic public var plainView: UIKit.UIView {
     @objc get
@@ -883,29 +860,6 @@ public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
   public init()
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-public enum DynamicConstraints {
-  case centerHorizontal
-  case centerVertical
-  case center
-  public static func == (a: HyperKYC.DynamicConstraints, b: HyperKYC.DynamicConstraints) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public enum CustomViewTags : Swift.Int {
-  case datePicker
-  case dropDown
-  case textField
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension MaterialComponents.MDCOutlinedTextField {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
 }
 public enum PMKError : Swift.Error {
   case invalidCallingConvention
@@ -1187,8 +1141,8 @@ public func hang<T>(_ promise: HyperKYC.HVPromise<T>) throws -> T
 }
 @_inheritsConvenienceInitializers @objc public class HKYCBundleLocator : ObjectiveC.NSObject {
   public static func getParentApplicationBundleId() -> Swift.String?
+  public static func registerFonts()
   public static func getHyperKYCResourcesBundle() -> Foundation.Bundle?
-  public static func getHVResourcesBundle() -> Foundation.Bundle?
   @objc override dynamic public init()
   @objc deinit
 }
@@ -1364,27 +1318,6 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class HKYCListCollectionViewCell : UIKit.UICollectionViewCell {
-  @_Concurrency.MainActor(unsafe) public var containerView: UIKit.UIView!
-  @_Concurrency.MainActor(unsafe) public var listCell: UIKit.UIStackView!
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class DocCollectionViewCell : UIKit.UICollectionViewCell {
-  @_Concurrency.MainActor(unsafe) public var docHolderCard: HyperKYC.HKYCDocHolderCard!
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AddImageCollectionViewCell : UIKit.UICollectionViewCell {
-  @_Concurrency.MainActor(unsafe) public var addImageCard: HyperKYC.HKYCAddImageCard!
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCFileStackView : UIKit.UIStackView {
-  @_Concurrency.MainActor(unsafe) public var stackImage: UIKit.UIImageView!
-  @_Concurrency.MainActor(unsafe) public var stackLabel: HyperKYC.HKYCDescriptionLabel!
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @objc deinit
-}
 @objc @_Concurrency.MainActor(unsafe) public class HKYCRetakeMessageLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
@@ -1400,21 +1333,6 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
     @objc get
   }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCDocHolderCard : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var thumbnailImage: UIKit.UIImageView!
-  @_Concurrency.MainActor(unsafe) public var deleteIcon: UIKit.UIImageView!
-  @_Concurrency.MainActor(unsafe) public var sizeLabel: HyperKYC.PaddingLabel!
-  @_Concurrency.MainActor(unsafe) public var nameLabel: HyperKYC.PaddingLabel!
-  @_Concurrency.MainActor(unsafe) public var pickedFile: HyperKYC.PickedFile?
-  @_Concurrency.MainActor(unsafe) public func showloader()
-  @_Concurrency.MainActor(unsafe) public func hideLoader()
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCAddImageCard : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public var addImage: UIKit.UIImageView!
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCRecordView : UIKit.UIView {
@@ -1605,7 +1523,6 @@ public enum PMKNamespacer {
   public static let BROWSER_NOT_SUPPORTED: Swift.Int
   public static let NFC_INCOMPLETE_SCAN_ERROR: Swift.Int
   public static let PRIVACY_CONSENT_DENIED_ERROR: Swift.Int
-  public static let SDK_EXIT_ERROR: Swift.Int
   public static let DATE_FORMAT_ERROR: Swift.Int
   public static let CHECK_SESSION_ERROR: Swift.Int
   public var errorMessage: Swift.String?
@@ -3686,14 +3603,6 @@ extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
 extension HyperKYC.Executor : Swift.Equatable {}
 extension HyperKYC.Executor : Swift.Hashable {}
 extension HyperKYC.Executor : Swift.RawRepresentable {}
-extension HyperKYC.PickedFile.State : Swift.Equatable {}
-extension HyperKYC.PickedFile.State : Swift.Hashable {}
-extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
-extension HyperKYC.DynamicConstraints : Swift.Equatable {}
-extension HyperKYC.DynamicConstraints : Swift.Hashable {}
-extension HyperKYC.CustomViewTags : Swift.Equatable {}
-extension HyperKYC.CustomViewTags : Swift.Hashable {}
-extension HyperKYC.CustomViewTags : Swift.RawRepresentable {}
 extension HyperKYC.CatchPolicy : Swift.Equatable {}
 extension HyperKYC.CatchPolicy : Swift.Hashable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}
