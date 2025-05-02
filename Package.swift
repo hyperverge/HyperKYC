@@ -19,7 +19,7 @@ let package = Package(
              .package(
                  name: "HyperSnapSDK",
                  url: "https://github.com/hyperverge/capture-ios-sdk.git",
-                 from: "4.35.0-spm"
+                 branch: "release/4.35.0-spm"
              )
     ],
     targets: [
