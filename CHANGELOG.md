@@ -2,7 +2,7 @@
 ### 0.45.0 *[30 Apr 2025]*
 - Enhancements:
     - Add support for `showCloseIcon` to display exit functionality via webCore 
-    - Update default webcore version to `9.3.3`
+    - Update default webcore version to `9.4.0`
 - Maintenance:
     - Use HyperSnapSDK `4.36.0`
 
