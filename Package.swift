@@ -15,11 +15,12 @@ let package = Package(
     ],
     dependencies: [
         // Pull in HyperSnapSDK from its SPM-friendly branch
-        .package(
-            name: "HyperSnapSDK",
-            url: "https://github.com/hyperverge/capture-ios-sdk.git",
-            .branch("release/4.35.0-spm")
-        )
+        // Uses the tag you created
+             .package(
+                 name: "HyperSnapSDK",
+                 url: "https://github.com/hyperverge/capture-ios-sdk.git",
+                 from: "4.35.0-spm"
+             )
     ],
     targets: [
         // 1) Your static HyperKYC XCFramework
