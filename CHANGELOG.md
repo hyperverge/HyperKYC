@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 0.45.1 *[6 May 2025]*
+- Enhancements:
+    - Add analytics logs for SDK-background and SDK-foreground events in WebCore mode
+    - Update default webCore version to `9.4.1`
+- Bug Fixes:
+    - Fix NFC related crashes when scanning is in progress
+- Maintenance:
+    - Use HyperSnapSDK `4.36.0`
 ### 0.45.0 *[30 Apr 2025]*
 - Enhancements:
     - Add support for `showCloseIcon` to display exit functionality via webCore 
