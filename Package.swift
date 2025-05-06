@@ -1,4 +1,4 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
@@ -19,7 +19,7 @@ let package = Package(
              .package(
                  name: "HyperSnapSDK",
                  url: "https://github.com/hyperverge/capture-ios-sdk.git",
-                 branch: "release/4.35.0-spm"
+                 exact: "4.35.0-spm"
              )
     ],
     targets: [
