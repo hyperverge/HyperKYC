@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "capture-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hyperverge/capture-ios-sdk.git",
+      "state" : {
+        "branch" : "release/4.35.1-spm",
+        "revision" : "ef151edc498536d72ad60e7954fb0e7806467abb"
+      }
+    }
+  ],
+  "version" : 2
+}
