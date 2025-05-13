@@ -1,4 +1,7 @@
 ## CHANGELOG
+### 0.45.2 *[13 May 2025]*
+- Bug Fixes:
+    - Fix NFC instruction screen flicker in  native flow
 ### 0.45.1 *[6 May 2025]*
 - Enhancements:
     - Add analytics logs for SDK-background and SDK-foreground events in WebCore mode
