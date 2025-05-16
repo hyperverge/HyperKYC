@@ -1591,6 +1591,8 @@ public enum PMKNamespacer {
   @objc public static func prefetch(appId: Swift.String, workflowId: Swift.String)
   @objc public static func launch(_ callingVC: UIKit.UIViewController, hyperKycConfig: HyperKYC.HyperKycConfig, _ completionHandler: @escaping (_ hyperKycResult: HyperKYC.HyperKycResult) -> Swift.Void)
   @objc public static func createUniqueId() -> Swift.String
+  @objc public static func addEventListener(_ listener: @escaping (_ event: [Swift.String : Any]) -> Swift.Void)
+  @objc public static func removeAllEventListeners()
   @objc override dynamic public init()
   @objc deinit
 }
