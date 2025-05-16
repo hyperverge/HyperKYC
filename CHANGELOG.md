@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 0.46.0 *[16 May 2025]*
+- Enhancements:
+    - Add support for real-time events using `HyperKYC.addEventListener` and `HyperKYC.removeAllEventListeners`
+    - Update default webCore version to `9.7.0`
+- Maintenance:
+    - Use HyperSnapSDK `4.36.1`
 ### 0.45.2 *[13 May 2025]*
 - Bug Fixes:
     - Fix NFC instruction screen flicker in  native flow

@@ -810,6 +810,20 @@ SWIFT_CLASS("_TtC8HyperKYC8HyperKyc")
 + (void)prefetchWithAppId:(NSString * _Nonnull)appId workflowId:(NSString * _Nonnull)workflowId;
 + (void)launch:(UIViewController * _Nonnull)callingVC hyperKycConfig:(HyperKycConfig * _Nonnull)hyperKycConfig :(void (^ _Nonnull)(HyperKycResult * _Nonnull))completionHandler;
 + (NSString * _Nonnull)createUniqueId SWIFT_WARN_UNUSED_RESULT;
+/// Registers a new event listener to receive HyperKYC events.
+/// Event listeners allow your application to respond to various events that occur
+/// during the HyperKYC journey. Events are delivered as JSONObject instances containing
+/// event-specific data.Registers an event listener to receive events dispatched from the SDK.
+/// note:
+/// Listeners are retained in memory and should be removed using <code>removeAllEventListeners()</code>
+/// when they are no longer needed to avoid memory leaks.
+/// \param listener A function that will be called when events occur. The function receives a JSONObject containing event details.
+///
++ (void)addEventListener:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nonnull))listener;
+/// Removes all registered event listeners.
+/// Call this method when you no longer want to receive HyperKYC events.
+/// This prevents memory leaks from lingering event listeners.
++ (void)removeAllEventListeners;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
