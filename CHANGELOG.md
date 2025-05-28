@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 0.46.1 *[28 May 2025]*
+- Bug Fixes:
+    - Add support for `Cancel` in the initial load page
+    - Fix issues happening when prefetch is called multiple times
+- Maintenance:
+    - Use HyperSnapSDK `4.36.1`
+    
+    
 ### 0.46.0 *[16 May 2025]*
 - Enhancements:
     - Add support for real-time events using `HyperKYC.addEventListener` and `HyperKYC.removeAllEventListeners`
