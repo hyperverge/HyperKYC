@@ -7,12 +7,6 @@
     - Added support for crash reporting on HV SDKs `(HyperKYC/CrashGuard)`
 - Maintenance:
     - Use HyperSnapSDK `4.38.0`
-
-- Bug Fixes:
-    - Add support for `Cancel` in the initial load page
-    - Fix issues happening when prefetch is called multiple times
-- Maintenance:
-    - Use HyperSnapSDK `4.36.1`
     
 ### 0.46.1 *[28 May 2025]*
 - Bug Fixes:
