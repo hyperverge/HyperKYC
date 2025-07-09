@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name HyperKYC
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
 import Combine
@@ -28,6 +29,8 @@ import SystemConfiguration
 import UIKit
 import WebKit
 import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
 public func after(seconds: Foundation.TimeInterval) -> HyperKYC.Guarantee<Swift.Void>
 public func after(_ interval: Dispatch.DispatchTimeInterval) -> HyperKYC.Guarantee<Swift.Void>
 @frozen public struct AnyCodable : Swift.Codable {
@@ -90,7 +93,7 @@ internal protocol _AnyDecodable {
 extension HyperKYC.AnyDecodable : HyperKYC._AnyDecodable {
 }
 extension HyperKYC._AnyDecodable {
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension HyperKYC.AnyDecodable : Swift.Equatable {
   public static func == (lhs: HyperKYC.AnyDecodable, rhs: HyperKYC.AnyDecodable) -> Swift.Bool
@@ -123,7 +126,7 @@ internal protocol _AnyEncodable {
 extension HyperKYC.AnyEncodable : HyperKYC._AnyEncodable {
 }
 extension HyperKYC._AnyEncodable {
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 extension HyperKYC.AnyEncodable : Swift.Equatable {
   public static func == (lhs: HyperKYC.AnyEncodable, rhs: HyperKYC.AnyEncodable) -> Swift.Bool
@@ -182,19 +185,15 @@ extension HyperKYC.AnyEncodable : Swift.Hashable {
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension HyperKYC.Guarantee {
-  
   #if compiler(>=5.3) && $AsyncAwait
   final public func async() async -> T
   #endif
-
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension HyperKYC.HVPromise {
-  
   #if compiler(>=5.3) && $AsyncAwait
   final public func async() async throws -> T
   #endif
-
 }
 public struct Metadata : Swift.Codable {
   public var data: Swift.String? {
@@ -215,8 +214,8 @@ public struct Metadata : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Summary : Swift.Codable {
   public var action: Swift.String? {
@@ -228,8 +227,8 @@ public struct Summary : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Details : Swift.Codable {
   public var code: Swift.String? {
@@ -241,8 +240,8 @@ public struct Details : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct InputImageUrls : Swift.Codable {
   public var image: Swift.String? {
@@ -257,8 +256,8 @@ public struct InputImageUrls : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Fieldvalue : Swift.Codable {
   public var value: Swift.String? {
@@ -280,35 +279,35 @@ public struct Fieldvalue : Swift.Codable {
     get
   }
   public init(value: Swift.String? = nil, confidence: Swift.String? = nil, score: Swift.Double? = nil, reviewNeeded: Swift.String? = nil, line1: Swift.String? = nil, line2: Swift.String? = nil)
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public protocol CatchMixin : HyperKYC.Thenable {
 }
 extension HyperKYC.CatchMixin {
   @discardableResult
-  public func `catch`(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (Swift.Error) -> Swift.Void) -> HyperKYC.PMKFinalizer
+  public func `catch`(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) -> Swift.Void) -> HyperKYC.PMKFinalizer
 }
 @_hasMissingDesignatedInitializers public class PMKFinalizer {
   public func finally(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> Swift.Void)
   @objc deinit
 }
 extension HyperKYC.CatchMixin {
-  public func recover<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (Swift.Error) throws -> U) -> HyperKYC.HVPromise<Self.T> where U : HyperKYC.Thenable, Self.T == U.T
+  public func recover<U>(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) throws -> U) -> HyperKYC.HVPromise<Self.T> where U : HyperKYC.Thenable, Self.T == U.T
   @discardableResult
-  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Swift.Error) -> HyperKYC.Guarantee<Self.T>) -> HyperKYC.Guarantee<Self.T>
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (any Swift.Error) -> HyperKYC.Guarantee<Self.T>) -> HyperKYC.Guarantee<Self.T>
   public func ensure(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> Swift.Void) -> HyperKYC.HVPromise<Self.T>
   public func ensureThen(on: Dispatch.DispatchQueue? = conf.Q.return, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping () -> HyperKYC.Guarantee<Swift.Void>) -> HyperKYC.HVPromise<Self.T>
   @discardableResult
   public func cauterize() -> HyperKYC.PMKFinalizer
 }
-extension HyperKYC.CatchMixin where Self.T == Swift.Void {
+extension HyperKYC.CatchMixin where Self.T == () {
   @discardableResult
-  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (Swift.Error) -> Swift.Void) -> HyperKYC.Guarantee<Swift.Void>
-  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (Swift.Error) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (any Swift.Error) -> Swift.Void) -> HyperKYC.Guarantee<Swift.Void>
+  public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor(unsafe) open class Checkbox : UIKit.UIControl {
   @objc public enum CheckmarkStyle : Swift.Int {
@@ -333,8 +332,8 @@ extension HyperKYC.CatchMixin where Self.T == Swift.Void {
   }
   @objc @_Concurrency.MainActor(unsafe) dynamic public var checkmarkStyle: HyperKYC.Checkbox.CheckmarkStyle
   @objc @_Concurrency.MainActor(unsafe) dynamic public var borderStyle: HyperKYC.Checkbox.BorderStyle
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderLineWidth: CoreGraphics.CGFloat
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkmarkSize: CoreGraphics.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderLineWidth: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkmarkSize: CoreFoundation.CGFloat
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var uncheckedBorderColor: UIKit.UIColor!
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkedBorderColor: UIKit.UIColor!
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkmarkColor: UIKit.UIColor!
@@ -342,18 +341,18 @@ extension HyperKYC.CatchMixin where Self.T == Swift.Void {
   @_Concurrency.MainActor(unsafe) public var checkboxBackgroundColor: UIKit.UIColor!
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkboxClearColor: UIKit.UIColor
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var checkboxFillColor: UIKit.UIColor
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderCornerRadius: CoreGraphics.CGFloat
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var increasedTouchRadius: CoreGraphics.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var borderCornerRadius: CoreFoundation.CGFloat
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var increasedTouchRadius: CoreFoundation.CGFloat
   @_Concurrency.MainActor(unsafe) public var valueChanged: ((_ isChecked: Swift.Bool) -> Swift.Void)?
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var isChecked: Swift.Bool {
     @objc get
     @objc set
   }
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) public var useHapticFeedback: Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func point(inside point: CoreGraphics.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func point(inside point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) open class LoaderView : UIKit.UIView {
@@ -374,7 +373,7 @@ extension HyperKYC.CatchMixin where Self.T == Swift.Void {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var thicknessRatio: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var thicknessRatio: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
@@ -383,18 +382,18 @@ extension HyperKYC.CatchMixin where Self.T == Swift.Void {
     @objc set
   }
   @_Concurrency.MainActor(unsafe) open var timingFunction: QuartzCore.CAMediaTimingFunction
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var progress: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var progress: CoreFoundation.CGFloat {
     @objc get
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var indeterminateProgress: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var indeterminateProgress: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var indeterminateDuration: CoreFoundation.CFTimeInterval
   @_Concurrency.MainActor(unsafe) @objc override dynamic open class var layerClass: Swift.AnyClass {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
-  @objc required dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init()
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToWindow()
   @_Concurrency.MainActor(unsafe) open func enableIndeterminate(_ enabled: Swift.Bool = true)
@@ -409,7 +408,7 @@ extension HyperKYC.Guarantee {
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension HyperKYC.HVPromise {
-  final public func future() -> Combine.Future<T, Swift.Error>
+  final public func future() -> Combine.Future<T, any Swift.Error>
 }
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension Combine.Future {
@@ -490,13 +489,13 @@ extension HyperKYC.HVPromise : Swift.CustomDebugStringConvertible {
   }
 }
 @available(*, deprecated, message: "See `init(resolver:)`")
-public func wrap<T>(_ body: (@escaping (T?, Swift.Error?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+public func wrap<T>(_ body: (@escaping (T?, (any Swift.Error)?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
 @available(*, deprecated, message: "See `init(resolver:)`")
-public func wrap<T>(_ body: (@escaping (T, Swift.Error?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+public func wrap<T>(_ body: (@escaping (T, (any Swift.Error)?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
 @available(*, deprecated, message: "See `init(resolver:)`")
-public func wrap<T>(_ body: (@escaping (Swift.Error?, T?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
+public func wrap<T>(_ body: (@escaping ((any Swift.Error)?, T?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
 @available(*, deprecated, message: "See `init(resolver:)`")
-public func wrap(_ body: (@escaping (Swift.Error?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
+public func wrap(_ body: (@escaping ((any Swift.Error)?) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
 @available(*, deprecated, message: "See `init(resolver:)`")
 public func wrap<T>(_ body: (@escaping (T) -> Swift.Void) throws -> Swift.Void) -> HyperKYC.HVPromise<T>
 extension HyperKYC.HVPromise {
@@ -537,8 +536,8 @@ public struct DocCaptureApiDetail : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DocResultObject : Swift.Codable {
   public var details: [HyperKYC.OCRApiStructure]? {
@@ -553,8 +552,8 @@ public struct DocResultObject : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct OCRApiStructure : Swift.Codable {
   public var idType: Swift.String? {
@@ -572,8 +571,8 @@ public struct OCRApiStructure : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FieldsExtracted : Swift.Codable {
   public var idNumber: HyperKYC.Fieldvalue? {
@@ -648,8 +647,8 @@ public struct FieldsExtracted : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Address : Swift.Codable {
   public var value: Swift.String? {
@@ -682,8 +681,8 @@ public struct Address : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DocQualityChecks : Swift.Codable {
   public var blur: HyperKYC.Fieldvalue? {
@@ -707,8 +706,8 @@ public struct DocQualityChecks : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct RuleChecks : Swift.Codable {
   public var idNumberInvalid: HyperKYC.Fieldvalue? {
@@ -717,8 +716,8 @@ public struct RuleChecks : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PickedFile : ObjectiveC.NSObject {
   public var localUri: Swift.String?
@@ -758,14 +757,14 @@ extension UIKit.UIBarButtonItem {
   @objc deinit
 }
 extension HyperKYC.DropDownCell {
-  @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var isSelected: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+    @objc get
+    @objc set
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var isHighlighted: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+    @objc get
+    @objc set
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func setHighlighted(_ highlighted: Swift.Bool, animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
@@ -826,16 +825,16 @@ public struct DynamicFormComponentsAttributes : Swift.Codable {
     get
   }
   public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct HKYCUIIcons : Swift.Codable {
   public var primaryButtonIcon: HyperKYC.HKYCUIPrimaryButtonIcon {
     get
   }
   public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
   public var url: Swift.String {
@@ -845,8 +844,8 @@ public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
     get
   }
   public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum PMKError : Swift.Error {
   case invalidCallingConvention
@@ -854,8 +853,8 @@ public enum PMKError : Swift.Error {
   case badInput
   case cancelled
   @available(*, deprecated, message: "See: `compactMap`")
-  case flatMap(Any, Any.Type)
-  case compactMap(Any, Any.Type)
+  case flatMap(Any, any Any.Type)
+  case compactMap(Any, any Any.Type)
   case emptySequence
   case noWinner
 }
@@ -888,29 +887,29 @@ public enum CatchPolicy {
 }
 extension UIKit.UINavigationController {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredInterfaceOrientationForPresentation: UIKit.UIInterfaceOrientation {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredContentSize: CoreGraphics.CGSize {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredContentSize: CoreFoundation.CGSize {
+    @objc get
+    @objc set
   }
 }
 extension UIKit.UIImage {
-  public func withRoundedCorners(radius: CoreGraphics.CGFloat? = nil) -> UIKit.UIImage?
+  public func withRoundedCorners(radius: CoreFoundation.CGFloat? = nil) -> UIKit.UIImage?
 }
 extension HyperKYC.HKYCPrimaryButton {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open var isEnabled: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+    @objc get
+    @objc set
   }
 }
-extension Swift.Dictionary where Key == Swift.String, Value == Swift.Dictionary<Swift.String, Any> {
+extension Swift.Dictionary where Key == Swift.String, Value == [Swift.String : Any] {
   public func getStringValue(key: Swift.String, subKey: Swift.String, defaultText: Swift.String) -> Swift.String
 }
 extension Swift.Dictionary where Key == Swift.String {
@@ -938,8 +937,8 @@ public struct FaceCaptureApiDetail : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FaceResultObject : Swift.Codable {
   public var details: HyperKYC.LivenessApiStructure? {
@@ -957,8 +956,8 @@ public struct FaceResultObject : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct LivenessApiStructure : Swift.Codable {
   public var liveFace: HyperKYC.Fieldvalue? {
@@ -982,8 +981,8 @@ public struct LivenessApiStructure : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FaceQualityChecks : Swift.Codable {
   public var eyesClosed: HyperKYC.Fieldvalue? {
@@ -1001,8 +1000,8 @@ public struct FaceQualityChecks : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FaceMatchApiDetail : Swift.Codable {
   public var metadata: HyperKYC.Metadata {
@@ -1020,8 +1019,8 @@ public struct FaceMatchApiDetail : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FaceMatchResult : Swift.Codable {
   public var details: HyperKYC.FaceMatchApiStructure? {
@@ -1039,8 +1038,8 @@ public struct FaceMatchResult : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FaceMatchApiStructure : Swift.Codable {
   public var matchScore: Swift.Float? {
@@ -1058,8 +1057,8 @@ public struct FaceMatchApiStructure : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public func firstly<U>(execute body: () throws -> U) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
 public func firstly<T>(execute body: () -> HyperKYC.Guarantee<T>) -> HyperKYC.Guarantee<T>
@@ -1095,7 +1094,7 @@ extension HyperKYC.Guarantee where T : Swift.Sequence {
 extension HyperKYC.Guarantee where T : Swift.Sequence, T.Element : Swift.Comparable {
   final public func sortedValues(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil) -> HyperKYC.Guarantee<[T.Iterator.Element]>
 }
-extension HyperKYC.Guarantee where T == Swift.Void {
+extension HyperKYC.Guarantee where T == () {
   convenience public init()
   public static var value: HyperKYC.Guarantee<Swift.Void> {
     get
@@ -1217,7 +1216,7 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCDescriptionLabel : UIKit.UILabel {
@@ -1226,14 +1225,14 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCStatusLabel : UIKit.UILabel {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
-    @_Concurrency.MainActor(unsafe) @objc get
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
   }
   @objc deinit
 }
@@ -1256,15 +1255,15 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @objc @_Concurrency.MainActor(unsafe) public static func setFont(_ font: UIKit.UIFont)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCPickerView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreFoundation.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
@@ -1272,10 +1271,10 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreFoundation.CGFloat)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
@@ -1283,10 +1282,10 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreFoundation.CGFloat)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
@@ -1294,10 +1293,10 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor(unsafe) public static func setBorderColor(_ color: CoreGraphics.CGColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setBackgroundColor(_ color: CoreGraphics.CGColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreGraphics.CGFloat)
+  @objc @_Concurrency.MainActor(unsafe) public static func setBorderWidth(_ width: CoreFoundation.CGFloat)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowColor(_ color: UIKit.UIColor?, for state: UIKit.UIControl.State)
-  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setTitleShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc @_Concurrency.MainActor(unsafe) public static func setTitleFont(_ font: UIKit.UIFont)
   @objc deinit
 }
@@ -1312,7 +1311,7 @@ extension HyperKYC.HKYCIOSSecuritySuite {
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HKYCFileStackView : UIKit.UIStackView {
   @_Concurrency.MainActor(unsafe) public var stackImage: UIKit.UIImageView!
   @_Concurrency.MainActor(unsafe) public var stackLabel: HyperKYC.HKYCDescriptionLabel!
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @objc deinit
 }
 @objc @_Concurrency.MainActor(unsafe) public class HKYCRetakeMessageLabel : UIKit.UILabel {
@@ -1321,14 +1320,14 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PaddingLabel : UIKit.UILabel {
-  @_Concurrency.MainActor(unsafe) public func setInsets(withInsets top: CoreGraphics.CGFloat, _ bottom: CoreGraphics.CGFloat, _ left: CoreGraphics.CGFloat, _ right: CoreGraphics.CGFloat)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
-    @_Concurrency.MainActor(unsafe) @objc get
+  @_Concurrency.MainActor(unsafe) public func setInsets(withInsets top: CoreFoundation.CGFloat, _ bottom: CoreFoundation.CGFloat, _ left: CoreFoundation.CGFloat, _ right: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func drawText(in rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
   }
   @objc deinit
 }
@@ -1363,8 +1362,8 @@ extension HyperKYC.HKYCIOSSecuritySuite {
     get
     set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreGraphics.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
@@ -1382,7 +1381,7 @@ extension HyperKYC.HKYCIOSSecuritySuite {
   @objc @_Concurrency.MainActor(unsafe) public static func setTextAlignment(_ alignment: UIKit.NSTextAlignment)
   @objc @_Concurrency.MainActor(unsafe) public static func setTextColor(_ color: UIKit.UIColor)
   @objc @_Concurrency.MainActor(unsafe) public static func setShadowColor(_ color: UIKit.UIColor)
-  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreGraphics.CGSize)
+  @objc @_Concurrency.MainActor(unsafe) public static func setShadowOffset(_ offset: CoreFoundation.CGSize)
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class HKYCVideoStatementView : UIKit.UIView {
@@ -1413,7 +1412,7 @@ public enum FaceState : Swift.Equatable {
 }
 @_hasMissingDesignatedInitializers final public class HVPromise<T> : HyperKYC.Thenable, HyperKYC.CatchMixin {
   public static func value(_ value: T) -> HyperKYC.HVPromise<T>
-  public init(error: Swift.Error)
+  public init(error: any Swift.Error)
   public init<U>(_ bridge: U) where T == U.T, U : HyperKYC.Thenable
   public init(resolver body: (HyperKYC.Resolver<T>) throws -> Swift.Void)
   final public class func pending() -> (promise: HyperKYC.HVPromise<T>, resolver: HyperKYC.Resolver<T>)
@@ -1426,7 +1425,7 @@ public enum FaceState : Swift.Equatable {
 extension HyperKYC.HVPromise {
   final public func wait() throws -> T
 }
-extension HyperKYC.HVPromise where T == Swift.Void {
+extension HyperKYC.HVPromise where T == () {
   convenience public init()
   public static var value: HyperKYC.HVPromise<Swift.Void> {
     get
@@ -1457,8 +1456,8 @@ public enum PMKNamespacer {
   public func setUseLocation(shouldUse: Swift.Bool)
   public func addMetadata(metadata: [Swift.String : Swift.String])
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers @objc public class HyperKycError : ObjectiveC.NSObject {
   public static let SDK_CONFIG_ERROR: Swift.Int
@@ -1535,8 +1534,8 @@ public enum PMKNamespacer {
     get
   }
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public enum SessionStatus : Swift.Codable {
   case success
@@ -1544,18 +1543,18 @@ public enum SessionStatus : Swift.Codable {
   case error
   public static func == (a: HyperKYC.SessionStatus, b: HyperKYC.SessionStatus) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct KycCountries : Swift.Codable {
   public var countries: [HyperKYC.KycCountry] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct KycCountry : Swift.Codable {
   public var id: Swift.String {
@@ -1576,8 +1575,8 @@ public struct KycCountry : Swift.Codable {
   public var base_url: Swift.String {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct KycDocument : Swift.Codable, Swift.Hashable {
   public var id: Swift.String {
@@ -1597,11 +1596,11 @@ public struct KycDocument : Swift.Codable, Swift.Hashable {
   }
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: HyperKYC.KycDocument, b: HyperKYC.KycDocument) -> Swift.Bool
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct SidesConfig : Swift.Codable, Swift.Hashable {
   public var readBarcode: [Swift.String]? {
@@ -1612,11 +1611,11 @@ public struct SidesConfig : Swift.Codable, Swift.Hashable {
   }
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: HyperKYC.SidesConfig, b: HyperKYC.SidesConfig) -> Swift.Bool
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct CountryResult : Swift.Codable {
   public var moduleId: Swift.String {
@@ -1637,8 +1636,8 @@ public struct CountryResult : Swift.Codable {
   public var attempts: Swift.Int {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DocResult : Swift.Codable {
   public var moduleId: Swift.String {
@@ -1656,8 +1655,8 @@ public struct DocResult : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DocData : Swift.Codable {
   public var side: Swift.String? {
@@ -1693,8 +1692,8 @@ public struct DocData : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FaceResult : Swift.Codable {
   public var moduleId: Swift.String {
@@ -1706,8 +1705,8 @@ public struct FaceResult : Swift.Codable {
   public var attempts: Swift.Int {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FaceData : Swift.Codable {
   public var croppedFaceImagePath: Swift.String? {
@@ -1746,8 +1745,8 @@ public struct FaceData : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct APIResult : Swift.Codable {
   public var moduleId: Swift.String {
@@ -1762,8 +1761,8 @@ public struct APIResult : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct APIData : Swift.Codable {
   public var responseCode: Swift.Int? {
@@ -1781,8 +1780,8 @@ public struct APIData : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct SessionRecordingResult : Swift.Codable {
   public var moduleId: Swift.String {
@@ -1797,8 +1796,8 @@ public struct SessionRecordingResult : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct SessionRecordingData : Swift.Codable {
   public var responseCode: Swift.Int? {
@@ -1822,8 +1821,8 @@ public struct SessionRecordingData : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct VideoStatementResult : Swift.Codable {
   public var moduleId: Swift.String {
@@ -1838,8 +1837,8 @@ public struct VideoStatementResult : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct VideoStatementData : Swift.Codable {
   public var responseCode: Swift.Int? {
@@ -1863,8 +1862,8 @@ public struct VideoStatementData : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct VideoStatementV2Result : Swift.Codable {
   public var moduleId: Swift.String {
@@ -1879,8 +1878,8 @@ public struct VideoStatementV2Result : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct VideoStatementV2Data : Swift.Codable {
   public var responseCode: Swift.Int? {
@@ -1910,8 +1909,8 @@ public struct VideoStatementV2Data : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct FormResult : Swift.Codable {
   public var moduleId: Swift.String {
@@ -1923,8 +1922,8 @@ public struct FormResult : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct WebviewResult : Swift.Codable {
   public var moduleId: Swift.String {
@@ -1939,8 +1938,8 @@ public struct WebviewResult : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct WebviewData : Swift.Codable {
   public var rawData: Swift.String? {
@@ -1949,8 +1948,8 @@ public struct WebviewData : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct BarcodeResult : Swift.Codable {
   public var moduleId: Swift.String? {
@@ -1971,8 +1970,8 @@ public struct BarcodeResult : Swift.Codable {
   public var asDictionary: [Swift.String : Any] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ApiFlags : Swift.Codable {
   public var source: Swift.String? {
@@ -1984,8 +1983,8 @@ public struct ApiFlags : Swift.Codable {
   public var values: [Swift.String : Swift.String]? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @available(*, deprecated, message: "Use generic APIResult")
 public struct FaceMatchDataResult {
@@ -2024,7 +2023,7 @@ public enum LogEvent {
   case waitOnMainThread
   case pendingPromiseDeallocated
   case pendingGuaranteeDeallocated
-  case cauterized(Swift.Error)
+  case cauterized(any Swift.Error)
 }
 @_hasMissingDesignatedInitializers public class PromiseBox<T> {
   @objc deinit
@@ -2041,14 +2040,14 @@ public func race<U>(fulfilled thenables: [U]) -> HyperKYC.HVPromise<U.T> where U
 }
 extension HyperKYC.Resolver {
   final public func fulfill(_ value: T)
-  final public func reject(_ error: Swift.Error)
+  final public func reject(_ error: any Swift.Error)
   final public func resolve(_ result: HyperKYC.PromiseResult<T>)
-  final public func resolve(_ obj: T?, _ error: Swift.Error?)
-  final public func resolve(_ obj: T, _ error: Swift.Error?)
-  final public func resolve(_ error: Swift.Error?, _ obj: T?)
+  final public func resolve(_ obj: T?, _ error: (any Swift.Error)?)
+  final public func resolve(_ obj: T, _ error: (any Swift.Error)?)
+  final public func resolve(_ error: (any Swift.Error)?, _ obj: T?)
 }
-extension HyperKYC.Resolver where T == Swift.Void {
-  final public func resolve(_ error: Swift.Error?)
+extension HyperKYC.Resolver where T == () {
+  final public func resolve(_ error: (any Swift.Error)?)
   final public func fulfill_()
 }
 extension HyperKYC.Resolver {
@@ -2056,7 +2055,7 @@ extension HyperKYC.Resolver {
 }
 public enum PromiseResult<T> {
   case fulfilled(T)
-  case rejected(Swift.Error)
+  case rejected(any Swift.Error)
 }
 extension HyperKYC.PromiseResult {
   public var isFulfilled: Swift.Bool {
@@ -2078,7 +2077,7 @@ extension HyperKYC.Thenable {
   public func asVoid() -> HyperKYC.HVPromise<Swift.Void>
 }
 extension HyperKYC.Thenable {
-  public var error: Swift.Error? {
+  public var error: (any Swift.Error)? {
     get
   }
   public var isPending: Swift.Bool {
@@ -2126,8 +2125,9 @@ extension HyperKYC.Thenable where Self.T : Swift.Sequence, Self.T.Element : Swif
   @objc deinit
 }
 public func when<U>(fulfilled thenables: [U]) -> HyperKYC.HVPromise<[U.T]> where U : HyperKYC.Thenable
-public func when<U>(fulfilled promises: U...) -> HyperKYC.HVPromise<Swift.Void> where U : HyperKYC.Thenable, U.T == Swift.Void
-public func when<U>(fulfilled promises: [U]) -> HyperKYC.HVPromise<Swift.Void> where U : HyperKYC.Thenable, U.T == Swift.Void
+public func when(fulfilled thenables: [any HyperKYC.Thenable]) -> HyperKYC.HVPromise<[Any]>
+public func when<U>(fulfilled promises: U...) -> HyperKYC.HVPromise<Swift.Void> where U : HyperKYC.Thenable, U.T == ()
+public func when<U>(fulfilled promises: [U]) -> HyperKYC.HVPromise<Swift.Void> where U : HyperKYC.Thenable, U.T == ()
 public func when<U, V>(fulfilled pu: U, _ pv: V) -> HyperKYC.HVPromise<(U.T, V.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable
 public func when<U, V, W>(fulfilled pu: U, _ pv: V, _ pw: W) -> HyperKYC.HVPromise<(U.T, V.T, W.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable, W : HyperKYC.Thenable
 public func when<U, V, W, X>(fulfilled pu: U, _ pv: V, _ pw: W, _ px: X) -> HyperKYC.HVPromise<(U.T, V.T, W.T, X.T)> where U : HyperKYC.Thenable, V : HyperKYC.Thenable, W : HyperKYC.Thenable, X : HyperKYC.Thenable
@@ -2160,8 +2160,8 @@ public struct WorkFlowConfig : Swift.Codable {
   public var sdkResponse: [Swift.String : Swift.String]? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct WorkflowProperties : Swift.Codable {
   public var sdkVersions: [Swift.String : HyperKYC.SDKVersion]? {
@@ -2191,15 +2191,15 @@ public struct WorkflowProperties : Swift.Codable {
   public enum PlatformKey : Swift.String, Swift.Codable {
     case sdkVersionMobileKey
     case unknown
-    public init(from decoder: Swift.Decoder) throws
+    public init(from decoder: any Swift.Decoder) throws
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
     }
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct SDKVersion : Swift.Codable {
   public var minimum: Swift.String? {
@@ -2208,15 +2208,15 @@ public struct SDKVersion : Swift.Codable {
   public var maximum: Swift.String? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct MobileProperties : Swift.Codable {
   public var exitIfRooted: Swift.Bool? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct WorkflowModule : Swift.Codable {
   public enum WorkflowModuleType : Swift.String, Swift.Codable {
@@ -2233,7 +2233,7 @@ public struct WorkflowModule : Swift.Codable {
     case type_webview
     case type_barcode
     case unknown
-    public init(from decoder: Swift.Decoder) throws
+    public init(from decoder: any Swift.Decoder) throws
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -2264,8 +2264,8 @@ public struct WorkflowModule : Swift.Codable {
   public var variables: [HyperKYC.WorkflowModuleVariable]? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct WorkflowModuleProperties : Swift.Codable {
   public var countriesSupported: [Swift.String]? {
@@ -2418,8 +2418,8 @@ public struct WorkflowModuleProperties : Swift.Codable {
   public var enableOverlay: Swift.Bool? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Statement : Swift.Codable {
   public var displayTimer: Swift.Bool? {
@@ -2437,8 +2437,8 @@ public struct Statement : Swift.Codable {
   public var checks: HyperKYC.Checks? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Checks : Swift.Codable {
   public var restartFrom: Swift.String? {
@@ -2456,8 +2456,8 @@ public struct Checks : Swift.Codable {
   public var speechToTextMatching: HyperKYC.Check? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Check : Swift.Codable {
   public var isSync: Swift.Bool? {
@@ -2472,8 +2472,8 @@ public struct Check : Swift.Codable {
   public var allowIfCheckFailed: Swift.Bool? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct VideoStatementAPI : Swift.Codable {
   public var url: Swift.String? {
@@ -2488,8 +2488,8 @@ public struct VideoStatementAPI : Swift.Codable {
   public var allowedStatusCodes: [Swift.Int]? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct StatementV2 : Swift.Codable {
   public var type: Swift.String? {
@@ -2504,8 +2504,8 @@ public struct StatementV2 : Swift.Codable {
   public var checks: HyperKYC.ChecksV2? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ChecksV2 : Swift.Codable {
   public var liveness: HyperKYC.CheckV2? {
@@ -2520,8 +2520,8 @@ public struct ChecksV2 : Swift.Codable {
   public var speechToTextMatch: HyperKYC.CheckV2? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct CheckV2 : Swift.Codable {
   public var enable: Swift.String? {
@@ -2536,8 +2536,8 @@ public struct CheckV2 : Swift.Codable {
   public var maxOutOfFrameTime: Swift.Int? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DocumentsOverride : Swift.Codable {
   public var sidesConfig: HyperKYC.SidesConfig? {
@@ -2552,8 +2552,8 @@ public struct DocumentsOverride : Swift.Codable {
   public var type: Swift.String? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct WorkflowModuleRequestParam : Swift.Codable {
   public var name: Swift.String {
@@ -2565,8 +2565,8 @@ public struct WorkflowModuleRequestParam : Swift.Codable {
   public var type: Swift.String? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct WorkflowModuleVariable : Swift.Codable {
   public var name: Swift.String {
@@ -2575,15 +2575,15 @@ public struct WorkflowModuleVariable : Swift.Codable {
   public var path: Swift.String {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct WebviewModuleProperty : Swift.Codable {
   public var queryParams: [Swift.String : Swift.String]? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Section : Swift.Codable {
   public var id: Swift.String {
@@ -2592,8 +2592,8 @@ public struct Section : Swift.Codable {
   public var components: [HyperKYC.Component] {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Component : Swift.Codable {
   public enum ComponentType : Swift.String, Swift.Codable {
@@ -2611,7 +2611,7 @@ public struct Component : Swift.Codable {
     case loader
     case timer
     case unknown
-    public init(from decoder: Swift.Decoder) throws
+    public init(from decoder: any Swift.Decoder) throws
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -2753,8 +2753,8 @@ public struct Component : Swift.Codable {
   public var blockLength: Swift.String? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Validation : Swift.Codable {
   public enum ValidationType : Swift.String, Swift.Codable {
@@ -2775,8 +2775,8 @@ public struct Validation : Swift.Codable {
   public var errorMsg: Swift.String? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DynamicHandlers : Swift.Codable {
   public var children: [Swift.String]? {
@@ -2785,8 +2785,8 @@ public struct DynamicHandlers : Swift.Codable {
   public var handlers: [HyperKYC.Handler]? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct SupportedFiles : Swift.Codable {
   public enum FileType : Swift.String, Swift.Codable {
@@ -2815,8 +2815,8 @@ public struct SupportedFiles : Swift.Codable {
   public var enabled: Swift.Bool? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DateRange : Swift.Codable {
   public var startMonth: Swift.Int? {
@@ -2825,8 +2825,8 @@ public struct DateRange : Swift.Codable {
   public var endMonth: Swift.Int? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct Handler : Swift.Codable {
   public var rule: Swift.String? {
@@ -2841,8 +2841,8 @@ public struct Handler : Swift.Codable {
   public var reload: [Swift.String : HyperKYC.ReloadProperties]? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ReloadProperties : Swift.Codable {
   public var enabled: Swift.String? {
@@ -2881,8 +2881,8 @@ public struct ReloadProperties : Swift.Codable {
   public var subTitle: Swift.String? {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct WorkflowCondition : Swift.Codable {
   public var if_false: Swift.String {
@@ -2894,13 +2894,13 @@ public struct WorkflowCondition : Swift.Codable {
   public var rule: Swift.String {
     get
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class WorkFlowStateDelegate : ObjectiveC.NSObject {
   public struct WorkflowState : Swift.Codable {
-    public func encode(to encoder: Swift.Encoder) throws
-    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
   public func saveState()
   public func deleteWorkflowState(appId: Swift.String, transactionID: Swift.String)
