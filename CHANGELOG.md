@@ -1,4 +1,8 @@
 ## CHANGELOG
+### 0.48.0 *[11 Jul 2025]*
+- Maintenance:
+    - Use HyperSnapSDK `4.39.0`
+    
 ### 0.47.0 *[3 Jul 2025]*
 - Enhancements:
     - Deprecated videoStatement v1 module, use videoStatementV2
