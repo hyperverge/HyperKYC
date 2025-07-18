@@ -1,4 +1,8 @@
 ## CHANGELOG
+### 0.48.1 *[18 Jul 2025]*
+- Maintenance:
+    - Use HyperSnapSDK `4.39.1`
+    
 ### 0.48.0 *[11 Jul 2025]*
 - Maintenance:
     - Use HyperSnapSDK `4.39.0`
