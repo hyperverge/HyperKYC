@@ -452,7 +452,6 @@ SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
 
 
 
-
 SWIFT_CLASS("_TtC8HyperKYC17FittableFontLabel")
 @interface FittableFontLabel : UILabel
 /// If true, the font size will be adjusted each time that the text or the frame change.
