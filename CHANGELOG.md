@@ -3,7 +3,7 @@
 - Enhancements:
     - Add support to show retry screen when remote config fetch fails in slow network scenarios
     - Add support to save files to a private directory within the parent app
-    - Update default webCore version to `9.15.0`
+    - Update default webCore version to `9.15.1`
 - Maintenance:
     - Use HyperSnapSDK `5.0.0`
     
