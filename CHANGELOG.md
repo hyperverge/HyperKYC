@@ -1,4 +1,8 @@
 ## CHANGELOG
+### 0.48.2 *[19 Aug 2025]*
+- Enhancements:
+    - Remove unnecessary `*.abi.json` from the generated xcFrameworks
+    
 ### 0.48.1 *[18 Jul 2025]*
 - Maintenance:
     - Use HyperSnapSDK `4.39.1`
