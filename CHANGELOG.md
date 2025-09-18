@@ -1,4 +1,13 @@
 ## CHANGELOG
+### 0.50.0 *[17 Sep 2025]*
+- Enhancements:
+    - Add support for vkyc flow in webCore mode
+    - Add support for full screen webapp display in webView module in webcore mode using `hideTopBar`
+    - Remove validate SDK version check in webCore mode
+    - Update default webCore version to `9.15.7`   
+- Bug Fixes:
+    - Fix top view margin on webViews
+    - Remove setting `customUserAgent` on webViews
 ### 0.49.0 *[13 Aug 2025]*
 - Enhancements:
     - Add support to show retry screen when remote config fetch fails in slow network scenarios
