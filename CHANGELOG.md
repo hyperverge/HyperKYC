@@ -1,6 +1,7 @@
 ## CHANGELOG
 ### 0.50.0 *[17 Sep 2025]*
 - Enhancements:
+    - Updated deployment target to iOS 13.0
     - Add support for vkyc flow in webCore mode
     - Add support for full screen webapp display in webView module in webcore mode using `hideTopBar`
     - Remove validate SDK version check in webCore mode
