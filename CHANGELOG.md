@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 0.50.1 *[6 Oct 2025]*
+- Enhancements:
+    - Update default webCore version to `9.15.10`   
+- Maintenance:
+    - Use HyperSnapSDK `5.0.2`
 ### 0.50.0 *[17 Sep 2025]*
 - Enhancements:
     - Updated deployment target to iOS 13.0
