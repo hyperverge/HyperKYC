@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 0.50.2 *[15 Oct 2025]* 
+- Maintenance:
+    - Use HyperSnapSDK `5.0.3`
+    - Use HVCrashGuard `1.0.1`
+
 ### 0.50.1 *[6 Oct 2025]*
 - Enhancements:
     - Update default webCore version to `9.15.10`   
