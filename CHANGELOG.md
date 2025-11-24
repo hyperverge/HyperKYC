@@ -1,4 +1,8 @@
 ## CHANGELOG
+### 0.50.3 *[24 Nov 2025]*
+- Bug Fixes:
+    - Added fix for overlapping status bar and top bar in webViews
+    
 ### 0.50.2 *[15 Oct 2025]* 
 - Maintenance:
     - Use HyperSnapSDK `5.0.3`
