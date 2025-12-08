@@ -42235,13 +42235,6 @@
         "moduleName": "HyperKYC"
       },
       {
-        "kind": "Import",
-        "name": "HVCrashGuard",
-        "printedName": "HVCrashGuard",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
         "kind": "TypeDecl",
         "name": "HyperKyc",
         "printedName": "HyperKyc",
@@ -97746,41 +97739,41 @@
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "StringLiteral",
       "offset": 311,
-      "length": 8,
-      "value": "\"0.50.3\""
+      "length": 12,
+      "value": "\"1.0.0-beta\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "BooleanLiteral",
-      "offset": 360,
+      "offset": 364,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "Array",
-      "offset": 438,
+      "offset": 442,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "StringLiteral",
-      "offset": 561,
+      "offset": 565,
       "length": 32,
       "value": "\"co.hyperkyc.eventDispatchQueue\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "IntegerLiteral",
-      "offset": 638,
+      "offset": 642,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "Array",
-      "offset": 773,
+      "offset": 777,
       "length": 2,
       "value": "[]"
     },
