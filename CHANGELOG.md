@@ -1,4 +1,8 @@
 ## CHANGELOG
+### 0.50.4 *[11 Dec 2025]*
+- Enhancements:
+    - Sending final completion callback after dismissing VC
+
 ### 0.50.3 *[24 Nov 2025]*
 - Bug Fixes:
     - Added fix for overlapping status bar and top bar in webViews
