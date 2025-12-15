@@ -41553,6 +41553,13 @@
         "moduleName": "HyperKYC"
       },
       {
+        "kind": "Import",
+        "name": "HVCrashGuard",
+        "printedName": "HVCrashGuard",
+        "declKind": "Import",
+        "moduleName": "HyperKYC"
+      },
+      {
         "kind": "TypeDecl",
         "name": "HyperKyc",
         "printedName": "HyperKyc",
