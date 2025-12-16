@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'Core' do |cs|
 	cs.dependency 'HyperSnapSDK', '6.0.0-beta01'
+	cs.dependency 'HVCrashGuard', '1.0.1'
 	cs.dependency 'MaterialComponents/TextControls+OutlinedTextFields'
         cs.dependency 'MaterialComponents/TextControls+OutlinedTextAreas'
 	cs.vendored_frameworks = 'Core/HyperKYC.xcframework'
