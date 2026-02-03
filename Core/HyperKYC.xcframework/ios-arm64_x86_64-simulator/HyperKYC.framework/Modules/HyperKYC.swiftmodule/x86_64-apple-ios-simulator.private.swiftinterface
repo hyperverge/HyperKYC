@@ -12,6 +12,7 @@ import CoreFoundation
 import CoreLocation
 import CoreMedia
 import CoreNFC
+import CoreText
 import CryptoKit
 import Darwin
 import Dispatch
@@ -21,8 +22,6 @@ import Foundation/*.TimeInterval*/
 @_exported import HyperKYC
 import HyperSnapSDK
 import MachO
-import MaterialComponents
-import MaterialComponents.MaterialTextControls_OutlinedTextFields
 import MobileCoreServices
 import ObjectiveC
 import PDFKit
@@ -310,52 +309,6 @@ extension HyperKYC.CatchMixin where Self.T == () {
   @discardableResult
   public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, _ body: @escaping (any Swift.Error) -> Swift.Void) -> HyperKYC.Guarantee<Swift.Void>
   public func recover(on: Dispatch.DispatchQueue? = conf.Q.map, flags: Dispatch.DispatchWorkItemFlags? = nil, policy: HyperKYC.CatchPolicy = conf.catchPolicy, _ body: @escaping (any Swift.Error) throws -> Swift.Void) -> HyperKYC.HVPromise<Swift.Void>
-}
-@objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class Checkbox : UIKit.UIControl {
-  @objc public enum CheckmarkStyle : Swift.Int {
-    case square
-    case circle
-    case cross
-    case tick
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @objc public enum BorderStyle : Swift.Int {
-    case square
-    case circle
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @objc @_Concurrency.MainActor @preconcurrency dynamic public var checkmarkStyle: HyperKYC.Checkbox.CheckmarkStyle
-  @objc @_Concurrency.MainActor @preconcurrency dynamic public var borderStyle: HyperKYC.Checkbox.BorderStyle
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var borderLineWidth: CoreFoundation.CGFloat
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var checkmarkSize: CoreFoundation.CGFloat
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var uncheckedBorderColor: UIKit.UIColor!
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var checkedBorderColor: UIKit.UIColor!
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var checkmarkColor: UIKit.UIColor!
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var emoji: Swift.String?
-  @_Concurrency.MainActor @preconcurrency public var checkboxBackgroundColor: UIKit.UIColor!
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var checkboxClearColor: UIKit.UIColor
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var checkboxFillColor: UIKit.UIColor
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var borderCornerRadius: CoreFoundation.CGFloat
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var increasedTouchRadius: CoreFoundation.CGFloat
-  @_Concurrency.MainActor @preconcurrency public var valueChanged: ((_ isChecked: Swift.Bool) -> Swift.Void)?
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var isChecked: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var useHapticFeedback: Swift.Bool
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func point(inside point: CoreFoundation.CGPoint, with event: UIKit.UIEvent?) -> Swift.Bool
-  @objc deinit
 }
 @objc @_Concurrency.MainActor @preconcurrency open class LoaderView : UIKit.UIView {
   public typealias CompletionBlock = () -> Swift.Void
@@ -692,26 +645,6 @@ public struct RuleChecks : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PickedFile : ObjectiveC.NSObject {
-  public var localUri: Swift.String?
-  public var fileUrl: Swift.String
-  public var fileName: Swift.String?
-  public var sizeInKB: Swift.Int
-  public var fileExtension: Swift.String?
-  public var type: Swift.String?
-  public var state: HyperKYC.PickedFile.State
-  public enum State : Swift.String, Swift.Codable {
-    case loading
-    case success
-    case error
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  @objc deinit
-}
 extension UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc dynamic public var plainView: UIKit.UIView {
     @objc get
@@ -837,29 +770,6 @@ public struct HKYCUIPrimaryButtonIcon : Swift.Codable {
   public init()
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
-}
-public enum DynamicConstraints {
-  case centerHorizontal
-  case centerVertical
-  case center
-  public static func == (a: HyperKYC.DynamicConstraints, b: HyperKYC.DynamicConstraints) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public enum CustomViewTags : Swift.Int {
-  case datePicker
-  case dropDown
-  case textField
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-extension MaterialComponents.MDCOutlinedTextField {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func canPerformAction(_ action: ObjectiveC.Selector, withSender sender: Any?) -> Swift.Bool
 }
 public enum PMKError : Swift.Error {
   case invalidCallingConvention
@@ -1139,11 +1049,13 @@ public func hang<T>(_ promise: HyperKYC.HVPromise<T>) throws -> T
   @_Concurrency.MainActor @preconcurrency public func updateUI()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class HKYCBundleLocator : ObjectiveC.NSObject {
-  public static func getParentApplicationBundleId() -> Swift.String?
-  public static func getHyperKYCResourcesBundle() -> Foundation.Bundle?
-  public static func getHVResourcesBundle() -> Foundation.Bundle?
-  @objc override dynamic public init()
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class HKYCBundleLocator : ObjectiveC.NSObject {
+  public static let hyperKYCBundleName: Swift.String
+  public static let hvResourcesBundleName: Swift.String
+  @objc public static func getParentApplicationBundleId() -> Swift.String?
+  @objc public static func getHyperKYCResourcesBundle() -> Foundation.Bundle?
+  @objc public static func getHVResourcesBundle() -> Foundation.Bundle?
+  @objc public static func registerFonts()
   @objc deinit
 }
 public typealias HKYCFailedCheckType = (check: HyperKYC.HKYCFailedCheck, failMessage: Swift.String)
@@ -1318,27 +1230,6 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class HKYCListCollectionViewCell : UIKit.UICollectionViewCell {
-  @_Concurrency.MainActor @preconcurrency public var containerView: UIKit.UIView!
-  @_Concurrency.MainActor @preconcurrency public var listCell: UIKit.UIStackView!
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class DocCollectionViewCell : UIKit.UICollectionViewCell {
-  @_Concurrency.MainActor @preconcurrency public var docHolderCard: HyperKYC.HKYCDocHolderCard!
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class AddImageCollectionViewCell : UIKit.UICollectionViewCell {
-  @_Concurrency.MainActor @preconcurrency public var addImageCard: HyperKYC.HKYCAddImageCard!
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class HKYCFileStackView : UIKit.UIStackView {
-  @_Concurrency.MainActor @preconcurrency public var stackImage: UIKit.UIImageView!
-  @_Concurrency.MainActor @preconcurrency public var stackLabel: HyperKYC.HKYCDescriptionLabel!
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @objc deinit
-}
 @objc @_Concurrency.MainActor @preconcurrency public class HKYCRetakeMessageLabel : UIKit.UILabel {
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc @_Concurrency.MainActor @preconcurrency public static func setFont(_ font: UIKit.UIFont)
@@ -1356,64 +1247,9 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
   }
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCDocHolderCard : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var thumbnailImage: UIKit.UIImageView!
-  @_Concurrency.MainActor @preconcurrency public var deleteIcon: UIKit.UIImageView!
-  @_Concurrency.MainActor @preconcurrency public var sizeLabel: HyperKYC.PaddingLabel!
-  @_Concurrency.MainActor @preconcurrency public var nameLabel: HyperKYC.PaddingLabel!
-  @_Concurrency.MainActor @preconcurrency public var pickedFile: HyperKYC.PickedFile?
-  @_Concurrency.MainActor @preconcurrency public func showloader()
-  @_Concurrency.MainActor @preconcurrency public func hideLoader()
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCAddImageCard : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var addImage: UIKit.UIImageView!
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
-  @objc deinit
-}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCRecordView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public var dotView: UIKit.UIView!
   @_Concurrency.MainActor @preconcurrency public var label: UIKit.UILabel!
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCCheckBox : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var containerView: UIKit.UIView!
-  @_Concurrency.MainActor @preconcurrency public var checkBoxlabel: UIKit.UILabel!
-  @_Concurrency.MainActor @preconcurrency public var checkBox: HyperKYC.Checkbox!
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCRadio : UIKit.UIStackView {
-  @_Concurrency.MainActor @preconcurrency public var radiolabel: UIKit.UILabel!
-  @_Concurrency.MainActor @preconcurrency public var radioButton: HyperKYC.RadioButton!
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCChip : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var chipButton: HyperKYC.HKYCChipButton!
-  @_Concurrency.MainActor @preconcurrency public var widthConstraint: UIKit.NSLayoutConstraint!
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCChipButton : UIKit.UIButton {
-  @_Concurrency.MainActor @preconcurrency public var trailingIcon: UIKit.UIImageView!
-  @_Concurrency.MainActor @preconcurrency public var leadingIcon: UIKit.UIImageView!
-  @_Concurrency.MainActor @preconcurrency public var buttonSelected: Swift.Bool {
-    get
-    set
-  }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor @preconcurrency public class DottedLineView : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var dottedLineColor: UIKit.UIColor {
-    get
-    set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class DividerView : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var dividerLabel: UIKit.UILabel!
-  @_Concurrency.MainActor @preconcurrency public var dottedLine: HyperKYC.DottedLineView!
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCCardView : UIKit.UIView {
@@ -1458,10 +1294,6 @@ public typealias HKYCFileIntegrityCheckResult = (result: Swift.Bool, hitChecks: 
   }
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HintView : UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var hintLabel: HyperKYC.HKYCHintLabel!
   @objc deinit
 }
 @objc @_Concurrency.MainActor @preconcurrency public class AdaptiveStackView : UIKit.UIStackView {
@@ -2218,48 +2050,6 @@ public func race<U>(_ thenables: U...) -> HyperKYC.HVPromise<U.T> where U : Hype
 public func race<U>(_ thenables: [U]) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
 public func race<T>(_ guarantees: HyperKYC.Guarantee<T>...) -> HyperKYC.Guarantee<T>
 public func race<U>(fulfilled thenables: [U]) -> HyperKYC.HVPromise<U.T> where U : HyperKYC.Thenable
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency public class RadioButton : UIKit.UIButton {
-  @_Concurrency.MainActor @preconcurrency public var animationDuration: Swift.Double
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var iconSize: CoreFoundation.CGFloat
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var indicatorSize: CoreFoundation.CGFloat
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var borderColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var fillColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var borderStrokeWidth: CoreFoundation.CGFloat
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var indicatorColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var marginWidth: CoreFoundation.CGFloat
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var iconSquare: Swift.Bool
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var icon: UIKit.UIImage!
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var iconSelected: UIKit.UIImage!
-  @_Concurrency.MainActor @preconcurrency public var valueChanged: ((_ isChecked: Swift.Bool) -> Swift.Void)?
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var setIcon: UIKit.UIImage {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency public var setIconSelected: UIKit.UIImage {
-    @objc get
-    @objc set(newValue)
-  }
-  @_Concurrency.MainActor @preconcurrency public var setAnimationDuration: CoreFoundation.CFTimeInterval {
-    get
-  }
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func prepareForInterfaceBuilder()
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var isSelected: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func draw(_ rect: CoreFoundation.CGRect)
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers final public class Resolver<T> {
   @objc deinit
 }
@@ -3366,23 +3156,9 @@ public struct EvalResultConfigs : Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
-extension HyperKYC.Checkbox.CheckmarkStyle : Swift.Equatable {}
-extension HyperKYC.Checkbox.CheckmarkStyle : Swift.Hashable {}
-extension HyperKYC.Checkbox.CheckmarkStyle : Swift.RawRepresentable {}
-extension HyperKYC.Checkbox.BorderStyle : Swift.Equatable {}
-extension HyperKYC.Checkbox.BorderStyle : Swift.Hashable {}
-extension HyperKYC.Checkbox.BorderStyle : Swift.RawRepresentable {}
 extension HyperKYC.HyperKycStatus : Swift.Equatable {}
 extension HyperKYC.HyperKycStatus : Swift.Hashable {}
 extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
-extension HyperKYC.PickedFile.State : Swift.Equatable {}
-extension HyperKYC.PickedFile.State : Swift.Hashable {}
-extension HyperKYC.PickedFile.State : Swift.RawRepresentable {}
-extension HyperKYC.DynamicConstraints : Swift.Equatable {}
-extension HyperKYC.DynamicConstraints : Swift.Hashable {}
-extension HyperKYC.CustomViewTags : Swift.Equatable {}
-extension HyperKYC.CustomViewTags : Swift.Hashable {}
-extension HyperKYC.CustomViewTags : Swift.RawRepresentable {}
 extension HyperKYC.CatchPolicy : Swift.Equatable {}
 extension HyperKYC.CatchPolicy : Swift.Hashable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}

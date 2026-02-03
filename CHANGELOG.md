@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 1.0.0 *[3 Feb 2026]*
+- Enhancements: (Breaking Version)
+    - Removed support for native forms, enable `webCore` or `webForms` for dynamic form module
+    - Remove DocDetect module, document auto capture is supported via Core & Crashguard subspecs
+    - Maintenance:
+        - Use HyperSnapSDK `6.0.1`
+        
 ### 0.50.4 *[11 Dec 2025]*
 - Enhancements:
     - Sending final completion callback after dismissing VC

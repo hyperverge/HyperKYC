@@ -283,7 +283,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreFoundation;
 @import CoreGraphics;
 @import Foundation;
-@import MaterialComponents;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -316,127 +315,12 @@ SWIFT_CLASS("_TtC8HyperKYC17AdaptiveStackView")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC26AddImageCollectionViewCell")
-@interface AddImageCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-enum CheckmarkStyle : NSInteger;
-enum BorderStyle : NSInteger;
-@class UIColor;
-@class NSString;
-@class UIEvent;
-
-/// Checkbox is a simple, animation free checkbox and UISwitch alternative designed
-/// to be performant and easy to implement.
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC8HyperKYC8Checkbox")
-@interface Checkbox : UIControl
-/// Shape of the center checkmark that appears when <code>Checkbox.isChecked == true</code>.
-/// <em>Default:</em> <code>CheckmarkStyle.square</code>
-@property (nonatomic) enum CheckmarkStyle checkmarkStyle;
-/// Shape of the outside border containing the checkmarks contents.
-/// Used as a visual indication of where the user can tap.
-/// <em>Default:</em> <code>BorderStyle.square</code>
-@property (nonatomic) enum BorderStyle borderStyle;
-/// Width of the borders stroke.
-/// <em>NOTE</em>
-/// Diagonal/rounded lines tend to appear thicker, so border styles
-/// that use these (.circle) have had their border widths halved to compensate
-/// in order appear similar next to other border styles.
-/// <em>Default:</em> <code>2</code>
-@property (nonatomic) IBInspectable CGFloat borderLineWidth;
-/// Size of the center checkmark element.
-/// Drawn as a percentage of the size of the Checkbox’s draw rect.
-/// <em>Default:</em> <code>0.5</code>
-@property (nonatomic) IBInspectable CGFloat checkmarkSize;
-/// The checboxes border color in its unchecked state.
-/// <em>Default:</em> The current tintColor.
-@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified uncheckedBorderColor;
-/// The checboxes border color in its checked state.
-/// <em>Default:</em> The current tintColor.
-@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified checkedBorderColor;
-/// <em>Default:</em> The current tintColor.
-@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified checkmarkColor;
-/// <em>Default:</em> Replaces the checkmark style with an emoji.
-@property (nonatomic, copy) IBInspectable NSString * _Nullable emoji;
-/// The checkboxes fill color.
-/// <em>Default:</em> <code>UIColoe.Clear</code>
-@property (nonatomic, strong) IBInspectable UIColor * _Nonnull checkboxClearColor;
-@property (nonatomic, strong) IBInspectable UIColor * _Nonnull checkboxFillColor;
-/// Sets the corner radius for the checkbox border.
-/// <em>Default:</em> <code>0.0</code>
-/// note:
-/// Only applies to checkboxes with <code>BorderStyle.square</code>
-@property (nonatomic) IBInspectable CGFloat borderCornerRadius;
-/// Increases the controls touch area.
-/// Checkbox’s tend to be smaller than regular UIButton elements
-/// and in some cases making them difficult to interact with.
-/// This property helps with that.
-/// <em>Default:</em> <code>5</code>
-@property (nonatomic) IBInspectable CGFloat increasedTouchRadius;
-/// Indicates whether the checkbox is currently in a state of being
-/// checked or not.
-@property (nonatomic) IBInspectable BOOL isChecked;
-/// Determines if tapping the checkbox generates haptic feedback to the user.
-/// <em>Default:</em> <code>true</code>
-@property (nonatomic) IBInspectable BOOL useHapticFeedback;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)drawRect:(CGRect)rect;
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
-@end
-
-/// Shape of the center checkmark that appears when <code>Checkbox.isChecked == true</code>.
-typedef SWIFT_ENUM(NSInteger, CheckmarkStyle, open) {
-/// ■
-  CheckmarkStyleSquare = 0,
-/// ●
-  CheckmarkStyleCircle = 1,
-/// ╳
-  CheckmarkStyleCross = 2,
-/// ✓
-  CheckmarkStyleTick = 3,
-};
-
-/// Shape of the outside box containing the checkmarks contents.
-/// Used as a visual indication of where the user can tap.
-typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
-/// ▢
-  BorderStyleSquare = 0,
-/// ◯
-  BorderStyleCircle = 1,
-};
 
 
 
-
-
-
-
-SWIFT_CLASS("_TtC8HyperKYC11DividerView")
-@interface DividerView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC21DocCollectionViewCell")
-@interface DocCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC14DottedLineView")
-@interface DottedLineView : UIView
-- (void)drawRect:(CGRect)rect;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
 
 @class UILabel;
+@class NSString;
 
 SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
 @interface DropDownCell : UITableViewCell
@@ -479,6 +363,7 @@ SWIFT_CLASS("_TtC8HyperKYC17FittableFontLabel")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIColor;
 
 SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 @interface HKYCActivityIndicator : UIActivityIndicatorView
@@ -501,14 +386,6 @@ SWIFT_CLASS("_TtC8HyperKYC22HKYCActivityTitleLabel")
 @interface HKYCActivityTitleLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
-@interface HKYCAddImageCard : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (void)layoutSubviews;
 @end
 
 @class UIImage;
@@ -536,10 +413,26 @@ SWIFT_CLASS("_TtC8HyperKYC18HKYCBrandingLayout")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class NSBundle;
 
 SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @interface HKYCBundleLocator : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Returns the parent application bundle identifier
++ (NSString * _Nullable)getParentApplicationBundleId SWIFT_WARN_UNUSED_RESULT;
+/// Public accessor for the HyperKYC resource bundle (legacy API).
+///
+/// returns:
+/// the most appropriate Bundle containing HyperKYC resources, or nil if not found.
++ (NSBundle * _Nullable)getHyperKYCResourcesBundle SWIFT_WARN_UNUSED_RESULT;
+/// Public accessor for the HVResources bundle (HyperSnapSDK resources - legacy API).
+///
+/// returns:
+/// the most appropriate Bundle containing HVResources, or nil if not found.
++ (NSBundle * _Nullable)getHVResourcesBundle SWIFT_WARN_UNUSED_RESULT;
+/// Register custom fonts from the HyperKYC resource bundle. Safe to call multiple times.
++ (void)registerFonts;
 @end
 
 
@@ -547,27 +440,6 @@ SWIFT_CLASS("_TtC8HyperKYC12HKYCCardView")
 @interface HKYCCardView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
-@interface HKYCCheckBox : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC8HKYCChip")
-@interface HKYCChip : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC14HKYCChipButton")
-@interface HKYCChipButton : UIButton
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 
@@ -593,13 +465,6 @@ SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC17HKYCDocHolderCard")
-@interface HKYCDocHolderCard : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @interface HKYCErrorMessageLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -611,24 +476,10 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
-@interface HKYCFileStackView : UIStackView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
 @interface HKYCHintLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC26HKYCListCollectionViewCell")
-@interface HKYCListCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -667,13 +518,6 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCPrimaryButton")
 
 @interface HKYCPrimaryButton (SWIFT_EXTENSION(HyperKYC))
 @property (nonatomic, getter=isEnabled) BOOL enabled;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC9HKYCRadio")
-@interface HKYCRadio : UIStackView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 
@@ -791,13 +635,6 @@ SWIFT_CLASS("_TtC8HyperKYC11HVCamConfig")
 @end
 
 
-
-SWIFT_CLASS("_TtC8HyperKYC8HintView")
-@interface HintView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
 @class UIViewController;
 @class HyperKycConfig;
 @class HyperKycResult;
@@ -907,12 +744,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 
 
 
-@interface MDCOutlinedTextField (SWIFT_EXTENSION(HyperKYC))
-/// Overrides the default behavior to determine whether a specific action can be performed on the text field.
-- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 
 
 
@@ -922,36 +753,6 @@ SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
 - (void)drawTextInRect:(CGRect)rect;
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
-@interface PickedFile : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC8HyperKYC11RadioButton")
-@interface RadioButton : UIButton
-@property (nonatomic) IBInspectable CGFloat iconSize;
-@property (nonatomic) IBInspectable CGFloat indicatorSize;
-@property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColor;
-@property (nonatomic, strong) IBInspectable UIColor * _Nullable fillColor;
-@property (nonatomic) IBInspectable CGFloat borderStrokeWidth;
-@property (nonatomic, strong) IBInspectable UIColor * _Nullable indicatorColor;
-@property (nonatomic) IBInspectable CGFloat marginWidth;
-@property (nonatomic) IBInspectable BOOL iconSquare;
-@property (nonatomic, strong) IBInspectable UIImage * _Null_unspecified icon;
-@property (nonatomic, strong) IBInspectable UIImage * _Null_unspecified iconSelected;
-@property (nonatomic, strong) IBInspectable UIImage * _Nonnull setIcon;
-@property (nonatomic, strong) IBInspectable UIImage * _Nonnull setIconSelected;
-- (void)prepareForInterfaceBuilder;
-@property (nonatomic, getter=isSelected) BOOL selected;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (void)drawRect:(CGRect)rect;
 @end
 
 
@@ -1301,7 +1102,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import CoreFoundation;
 @import CoreGraphics;
 @import Foundation;
-@import MaterialComponents;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -1334,127 +1134,12 @@ SWIFT_CLASS("_TtC8HyperKYC17AdaptiveStackView")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC26AddImageCollectionViewCell")
-@interface AddImageCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-enum CheckmarkStyle : NSInteger;
-enum BorderStyle : NSInteger;
-@class UIColor;
-@class NSString;
-@class UIEvent;
-
-/// Checkbox is a simple, animation free checkbox and UISwitch alternative designed
-/// to be performant and easy to implement.
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC8HyperKYC8Checkbox")
-@interface Checkbox : UIControl
-/// Shape of the center checkmark that appears when <code>Checkbox.isChecked == true</code>.
-/// <em>Default:</em> <code>CheckmarkStyle.square</code>
-@property (nonatomic) enum CheckmarkStyle checkmarkStyle;
-/// Shape of the outside border containing the checkmarks contents.
-/// Used as a visual indication of where the user can tap.
-/// <em>Default:</em> <code>BorderStyle.square</code>
-@property (nonatomic) enum BorderStyle borderStyle;
-/// Width of the borders stroke.
-/// <em>NOTE</em>
-/// Diagonal/rounded lines tend to appear thicker, so border styles
-/// that use these (.circle) have had their border widths halved to compensate
-/// in order appear similar next to other border styles.
-/// <em>Default:</em> <code>2</code>
-@property (nonatomic) IBInspectable CGFloat borderLineWidth;
-/// Size of the center checkmark element.
-/// Drawn as a percentage of the size of the Checkbox’s draw rect.
-/// <em>Default:</em> <code>0.5</code>
-@property (nonatomic) IBInspectable CGFloat checkmarkSize;
-/// The checboxes border color in its unchecked state.
-/// <em>Default:</em> The current tintColor.
-@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified uncheckedBorderColor;
-/// The checboxes border color in its checked state.
-/// <em>Default:</em> The current tintColor.
-@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified checkedBorderColor;
-/// <em>Default:</em> The current tintColor.
-@property (nonatomic, strong) IBInspectable UIColor * _Null_unspecified checkmarkColor;
-/// <em>Default:</em> Replaces the checkmark style with an emoji.
-@property (nonatomic, copy) IBInspectable NSString * _Nullable emoji;
-/// The checkboxes fill color.
-/// <em>Default:</em> <code>UIColoe.Clear</code>
-@property (nonatomic, strong) IBInspectable UIColor * _Nonnull checkboxClearColor;
-@property (nonatomic, strong) IBInspectable UIColor * _Nonnull checkboxFillColor;
-/// Sets the corner radius for the checkbox border.
-/// <em>Default:</em> <code>0.0</code>
-/// note:
-/// Only applies to checkboxes with <code>BorderStyle.square</code>
-@property (nonatomic) IBInspectable CGFloat borderCornerRadius;
-/// Increases the controls touch area.
-/// Checkbox’s tend to be smaller than regular UIButton elements
-/// and in some cases making them difficult to interact with.
-/// This property helps with that.
-/// <em>Default:</em> <code>5</code>
-@property (nonatomic) IBInspectable CGFloat increasedTouchRadius;
-/// Indicates whether the checkbox is currently in a state of being
-/// checked or not.
-@property (nonatomic) IBInspectable BOOL isChecked;
-/// Determines if tapping the checkbox generates haptic feedback to the user.
-/// <em>Default:</em> <code>true</code>
-@property (nonatomic) IBInspectable BOOL useHapticFeedback;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)drawRect:(CGRect)rect;
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
-@end
-
-/// Shape of the center checkmark that appears when <code>Checkbox.isChecked == true</code>.
-typedef SWIFT_ENUM(NSInteger, CheckmarkStyle, open) {
-/// ■
-  CheckmarkStyleSquare = 0,
-/// ●
-  CheckmarkStyleCircle = 1,
-/// ╳
-  CheckmarkStyleCross = 2,
-/// ✓
-  CheckmarkStyleTick = 3,
-};
-
-/// Shape of the outside box containing the checkmarks contents.
-/// Used as a visual indication of where the user can tap.
-typedef SWIFT_ENUM(NSInteger, BorderStyle, open) {
-/// ▢
-  BorderStyleSquare = 0,
-/// ◯
-  BorderStyleCircle = 1,
-};
 
 
 
-
-
-
-
-SWIFT_CLASS("_TtC8HyperKYC11DividerView")
-@interface DividerView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC21DocCollectionViewCell")
-@interface DocCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC14DottedLineView")
-@interface DottedLineView : UIView
-- (void)drawRect:(CGRect)rect;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
 
 @class UILabel;
+@class NSString;
 
 SWIFT_CLASS("_TtC8HyperKYC12DropDownCell")
 @interface DropDownCell : UITableViewCell
@@ -1497,6 +1182,7 @@ SWIFT_CLASS("_TtC8HyperKYC17FittableFontLabel")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIColor;
 
 SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
 @interface HKYCActivityIndicator : UIActivityIndicatorView
@@ -1519,14 +1205,6 @@ SWIFT_CLASS("_TtC8HyperKYC22HKYCActivityTitleLabel")
 @interface HKYCActivityTitleLabel : UILabel
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC16HKYCAddImageCard")
-@interface HKYCAddImageCard : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (void)layoutSubviews;
 @end
 
 @class UIImage;
@@ -1554,10 +1232,26 @@ SWIFT_CLASS("_TtC8HyperKYC18HKYCBrandingLayout")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class NSBundle;
 
 SWIFT_CLASS("_TtC8HyperKYC17HKYCBundleLocator")
 @interface HKYCBundleLocator : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Returns the parent application bundle identifier
++ (NSString * _Nullable)getParentApplicationBundleId SWIFT_WARN_UNUSED_RESULT;
+/// Public accessor for the HyperKYC resource bundle (legacy API).
+///
+/// returns:
+/// the most appropriate Bundle containing HyperKYC resources, or nil if not found.
++ (NSBundle * _Nullable)getHyperKYCResourcesBundle SWIFT_WARN_UNUSED_RESULT;
+/// Public accessor for the HVResources bundle (HyperSnapSDK resources - legacy API).
+///
+/// returns:
+/// the most appropriate Bundle containing HVResources, or nil if not found.
++ (NSBundle * _Nullable)getHVResourcesBundle SWIFT_WARN_UNUSED_RESULT;
+/// Register custom fonts from the HyperKYC resource bundle. Safe to call multiple times.
++ (void)registerFonts;
 @end
 
 
@@ -1565,27 +1259,6 @@ SWIFT_CLASS("_TtC8HyperKYC12HKYCCardView")
 @interface HKYCCardView : UIView
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC12HKYCCheckBox")
-@interface HKYCCheckBox : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC8HKYCChip")
-@interface HKYCChip : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC14HKYCChipButton")
-@interface HKYCChipButton : UIButton
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1611,13 +1284,6 @@ SWIFT_CLASS("_TtC8HyperKYC20HKYCDescriptionLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC17HKYCDocHolderCard")
-@interface HKYCDocHolderCard : UIView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @interface HKYCErrorMessageLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -1629,24 +1295,10 @@ SWIFT_CLASS("_TtC8HyperKYC21HKYCErrorMessageLabel")
 @end
 
 
-SWIFT_CLASS("_TtC8HyperKYC17HKYCFileStackView")
-@interface HKYCFileStackView : UIStackView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC8HyperKYC13HKYCHintLabel")
 @interface HKYCHintLabel : UILabel
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC26HKYCListCollectionViewCell")
-@interface HKYCListCollectionViewCell : UICollectionViewCell
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -1685,13 +1337,6 @@ SWIFT_CLASS("_TtC8HyperKYC17HKYCPrimaryButton")
 
 @interface HKYCPrimaryButton (SWIFT_EXTENSION(HyperKYC))
 @property (nonatomic, getter=isEnabled) BOOL enabled;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC9HKYCRadio")
-@interface HKYCRadio : UIStackView
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
 
@@ -1809,13 +1454,6 @@ SWIFT_CLASS("_TtC8HyperKYC11HVCamConfig")
 @end
 
 
-
-SWIFT_CLASS("_TtC8HyperKYC8HintView")
-@interface HintView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
 @class UIViewController;
 @class HyperKycConfig;
 @class HyperKycResult;
@@ -1925,12 +1563,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 
 
 
-@interface MDCOutlinedTextField (SWIFT_EXTENSION(HyperKYC))
-/// Overrides the default behavior to determine whether a specific action can be performed on the text field.
-- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
-@end
-
-
 
 
 
@@ -1940,36 +1572,6 @@ SWIFT_CLASS("_TtC8HyperKYC12PaddingLabel")
 - (void)drawTextInRect:(CGRect)rect;
 @property (nonatomic, readonly) CGSize intrinsicContentSize;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS("_TtC8HyperKYC10PickedFile")
-@interface PickedFile : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC8HyperKYC11RadioButton")
-@interface RadioButton : UIButton
-@property (nonatomic) IBInspectable CGFloat iconSize;
-@property (nonatomic) IBInspectable CGFloat indicatorSize;
-@property (nonatomic, strong) IBInspectable UIColor * _Nullable borderColor;
-@property (nonatomic, strong) IBInspectable UIColor * _Nullable fillColor;
-@property (nonatomic) IBInspectable CGFloat borderStrokeWidth;
-@property (nonatomic, strong) IBInspectable UIColor * _Nullable indicatorColor;
-@property (nonatomic) IBInspectable CGFloat marginWidth;
-@property (nonatomic) IBInspectable BOOL iconSquare;
-@property (nonatomic, strong) IBInspectable UIImage * _Null_unspecified icon;
-@property (nonatomic, strong) IBInspectable UIImage * _Null_unspecified iconSelected;
-@property (nonatomic, strong) IBInspectable UIImage * _Nonnull setIcon;
-@property (nonatomic, strong) IBInspectable UIImage * _Nonnull setIconSelected;
-- (void)prepareForInterfaceBuilder;
-@property (nonatomic, getter=isSelected) BOOL selected;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (void)drawRect:(CGRect)rect;
 @end
 
 
