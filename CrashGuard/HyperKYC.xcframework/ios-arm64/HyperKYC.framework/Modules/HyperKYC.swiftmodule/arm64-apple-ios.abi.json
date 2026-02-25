@@ -41890,6 +41890,67 @@
           },
           {
             "kind": "Var",
+            "name": "backendVideoUrl",
+            "printedName": "backendVideoUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8HyperKYC8FaceDataV15backendVideoUrlSSSgvp",
+            "mangledName": "$s8HyperKYC8FaceDataV15backendVideoUrlSSSgvp",
+            "moduleName": "HyperKYC",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8HyperKYC8FaceDataV15backendVideoUrlSSSgvg",
+                "mangledName": "$s8HyperKYC8FaceDataV15backendVideoUrlSSSgvg",
+                "moduleName": "HyperKYC",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "action",
             "printedName": "action",
             "children": [
@@ -83778,14 +83839,14 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
       "kind": "StringLiteral",
-      "offset": 22932,
+      "offset": 22930,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKModels\/HKWebCoreNativeResponse.swift",
       "kind": "BooleanLiteral",
-      "offset": 980,
+      "offset": 1053,
       "length": 5,
       "value": "false"
     },
@@ -87467,119 +87528,119 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "FloatLiteral",
-      "offset": 7965,
+      "offset": 8019,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "FloatLiteral",
-      "offset": 8018,
+      "offset": 8072,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "IntegerLiteral",
-      "offset": 8072,
+      "offset": 8126,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "IntegerLiteral",
-      "offset": 8186,
+      "offset": 8240,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "IntegerLiteral",
-      "offset": 10462,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
-      "kind": "Array",
       "offset": 10516,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
-      "kind": "IntegerLiteral",
-      "offset": 13083,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "Array",
+      "offset": 10570,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
+      "kind": "IntegerLiteral",
       "offset": 13137,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
-      "kind": "IntegerLiteral",
-      "offset": 15617,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "Array",
+      "offset": 13191,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
+      "kind": "IntegerLiteral",
       "offset": 15671,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
-      "kind": "IntegerLiteral",
-      "offset": 18140,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "Array",
-      "offset": 18194,
+      "offset": 15725,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "IntegerLiteral",
-      "offset": 20866,
+      "offset": 18194,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
+      "kind": "Array",
+      "offset": 18248,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
+      "kind": "IntegerLiteral",
+      "offset": 20920,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "IntegerLiteral",
-      "offset": 21797,
+      "offset": 21851,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "IntegerLiteral",
-      "offset": 23573,
+      "offset": 23627,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "IntegerLiteral",
-      "offset": 23620,
+      "offset": 23674,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/KycResultData.swift",
       "kind": "IntegerLiteral",
-      "offset": 25234,
+      "offset": 25288,
       "length": 1,
       "value": "0"
     },

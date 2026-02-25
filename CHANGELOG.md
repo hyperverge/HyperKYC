@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 1.1.0 *[24 Feb 2026]*
+- Enhancements: 
+    - Add support for backend video recording when face module property `videoRecordingMode` set to `backend` in workflow config
+    - Update default webCore version to `10.7.0`  
+    - Maintenance:
+        - Use HyperSnapSDK `6.1.0`
+        
 ### 1.0.0 *[3 Feb 2026]*
 - Enhancements: (Breaking Version)
     - Removed support for native forms, enable `webCore` or `webForms` for dynamic form module
