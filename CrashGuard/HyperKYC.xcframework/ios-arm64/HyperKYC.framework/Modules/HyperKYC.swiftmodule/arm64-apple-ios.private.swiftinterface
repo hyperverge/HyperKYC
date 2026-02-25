@@ -1692,6 +1692,9 @@ public struct FaceData : Swift.Codable {
   public var videoPath: Swift.String? {
     get
   }
+  public var backendVideoUrl: Swift.String? {
+    get
+  }
   public var action: Swift.String? {
     get
   }
