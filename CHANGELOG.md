@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 1.2.0 *[12 Mar 2026]*
+- Bug Fixes: 
+    - Fix issue with prefetch and launch in low bandwidth scenarios
+    - Add support for user to retry loading the SDK again in very slow internet
+    - Maintenance:
+        - Use HyperSnapSDK `6.1.0`
+        
 ### 1.1.0 *[24 Feb 2026]*
 - Enhancements: 
     - Add support for backend video recording when face module property `videoRecordingMode` set to `backend` in workflow config

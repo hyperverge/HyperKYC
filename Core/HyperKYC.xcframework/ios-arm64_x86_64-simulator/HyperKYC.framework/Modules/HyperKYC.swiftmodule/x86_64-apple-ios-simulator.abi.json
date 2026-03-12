@@ -83050,6 +83050,13 @@
       "value": "\"HKMainVM\""
     },
     {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewModels\/HKMainVM.swift",
+      "kind": "BooleanLiteral",
+      "offset": 252,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKModels\/HKNFCConfig.swift",
       "kind": "StringLiteral",
       "offset": 474,
@@ -83128,29 +83135,22 @@
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
-      "kind": "BooleanLiteral",
-      "offset": 629,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 722,
+      "offset": 840,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 778,
+      "offset": 896,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
       "kind": "StringLiteral",
-      "offset": 22930,
+      "offset": 25447,
       "length": 2,
       "value": "\"\""
     },
@@ -83325,217 +83325,231 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 952,
+      "offset": 953,
+      "length": 29,
+      "value": "\"Native Module Data Received\""
+    },
+    {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1020,
+      "length": 20,
+      "value": "\"Webcore Load Error\""
+    },
+    {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1085,
       "length": 11,
       "value": "\"countryId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 993,
+      "offset": 1126,
       "length": 12,
       "value": "\"documentId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1027,
+      "offset": 1160,
       "length": 5,
       "value": "\"tag\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1058,
+      "offset": 1191,
       "length": 8,
       "value": "\"webUrl\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1091,
+      "offset": 1224,
       "length": 8,
       "value": "\"status\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1127,
+      "offset": 1260,
       "length": 10,
       "value": "\"moduleId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1167,
+      "offset": 1300,
       "length": 12,
       "value": "\"moduleType\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1212,
+      "offset": 1345,
       "length": 15,
       "value": "\"moduleSubType\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1254,
+      "offset": 1387,
       "length": 10,
       "value": "\"nextStep\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1292,
+      "offset": 1425,
       "length": 10,
       "value": "\"sourceId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1332,
+      "offset": 1465,
       "length": 12,
       "value": "\"sourceType\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1378,
+      "offset": 1511,
       "length": 16,
       "value": "\"retakeAttempts\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1423,
+      "offset": 1556,
       "length": 11,
       "value": "\"timeSpent\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1465,
+      "offset": 1598,
       "length": 13,
       "value": "\"backPressed\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1538,
+      "offset": 1671,
       "length": 11,
       "value": "\"journeyId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1574,
+      "offset": 1707,
       "length": 7,
       "value": "\"appId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1614,
+      "offset": 1747,
       "length": 15,
       "value": "\"transactionId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1657,
+      "offset": 1790,
       "length": 10,
       "value": "\"uniqueId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1697,
+      "offset": 1830,
       "length": 12,
       "value": "\"workflowId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1742,
+      "offset": 1875,
       "length": 11,
       "value": "\"condition\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1778,
+      "offset": 1911,
       "length": 8,
       "value": "\"module\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1840,
+      "offset": 1973,
       "length": 6,
       "value": "\"type\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1881,
+      "offset": 2014,
       "length": 17,
       "value": "\"hyperkycVersion\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1928,
+      "offset": 2061,
       "length": 9,
       "value": "\"version\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 1964,
+      "offset": 2097,
       "length": 9,
       "value": "\"sdkMode\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2062,
+      "offset": 2195,
       "length": 19,
       "value": "\"timeTakenToLoadJs\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2128,
+      "offset": 2261,
       "length": 26,
       "value": "\"timeTakenToStartWorkflow\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2209,
+      "offset": 2342,
       "length": 22,
       "value": "\"HKYCAnalyticsManager\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2315,
+      "offset": 2448,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "StringLiteral",
-      "offset": 2470,
+      "offset": 2603,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Analytics\/HKYCAnalyticsManager.swift",
       "kind": "Dictionary",
-      "offset": 2522,
+      "offset": 2655,
       "length": 3,
       "value": "[]"
     },
@@ -85896,7 +85910,7 @@
       "kind": "StringLiteral",
       "offset": 311,
       "length": 7,
-      "value": "\"1.0.0\""
+      "value": "\"1.2.0\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
