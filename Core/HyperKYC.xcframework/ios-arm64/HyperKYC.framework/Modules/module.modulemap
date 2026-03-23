@@ -1,0 +1,11 @@
+framework module HyperKYC {
+  umbrella header "HyperKYCCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module HyperKYC.Swift {
+  header "HyperKYC-Swift.h"
+  requires objc
+}
