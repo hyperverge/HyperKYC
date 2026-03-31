@@ -363,6 +363,38 @@ SWIFT_CLASS("_TtC8HyperKYC17FittableFontLabel")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+/// Theme mode for the SDK.
+/// This enum specifies how the SDK should handle theming:
+/// <ul>
+///   <li>
+///     <code>dark</code>: Force dark theme regardless of system settings
+///   </li>
+///   <li>
+///     <code>light</code>: Force light theme regardless of system settings
+///   </li>
+///   <li>
+///     <code>system</code>: Follow the device’s system theme settings
+///   </li>
+/// </ul>
+/// Usage:
+/// \code
+/// let config = HyperKycConfig(appId: appId, appKey: appKey, workflowId: workflowId, transactionId: transactionId)
+/// config.setHKThemeMode(themeMode: .system)  // Follow system theme
+/// // or
+/// config.setHKThemeMode(themeMode: .dark)    // Force dark theme
+/// // or
+/// config.setHKThemeMode(themeMode: .light)   // Force light theme
+///
+/// \endcode
+typedef SWIFT_ENUM(NSInteger, HKThemeMode, open) {
+/// Force dark theme regardless of system settings
+  HKThemeModeDark = 0,
+/// Force light theme regardless of system settings
+  HKThemeModeLight = 1,
+/// Follow the device’s system theme settings
+  HKThemeModeSystem = 2,
+};
+
 @class UIColor;
 
 SWIFT_CLASS("_TtC8HyperKYC21HKYCActivityIndicator")
@@ -677,6 +709,7 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycConfig")
 - (void)setUniqueIdWithUuid:(NSString * _Nonnull)uuid;
 - (void)setDefaultLangCodeWithLanguage:(NSString * _Nonnull)language;
 - (void)setUseLocationWithShouldUse:(BOOL)shouldUse;
+- (void)setHKThemeModeWithThemeMode:(enum HKThemeMode)themeMode;
 - (void)addMetadataWithMetadata:(NSDictionary<NSString *, NSString *> * _Nonnull)metadata;
 @end
 

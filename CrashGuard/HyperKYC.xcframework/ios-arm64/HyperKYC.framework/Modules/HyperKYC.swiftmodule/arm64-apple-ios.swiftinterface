@@ -1037,6 +1037,16 @@ extension Dispatch.DispatchQueue {
   final public func async<T>(_: HyperKYC.PMKNamespacer, group: Dispatch.DispatchGroup? = nil, qos: Dispatch.DispatchQoS = .default, flags: Dispatch.DispatchWorkItemFlags = [], execute body: @escaping () -> T) -> HyperKYC.Guarantee<T>
 }
 public func hang<T>(_ promise: HyperKYC.HVPromise<T>) throws -> T
+@objc public enum HKThemeMode : Swift.Int {
+  case dark = 0
+  case light = 1
+  case system = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCBrandingLayout : UIKit.UIStackView {
   @_Concurrency.MainActor @preconcurrency public var label: UIKit.UILabel {
     get
@@ -1390,6 +1400,7 @@ public enum PMKNamespacer {
   @objc public func setUniqueId(uuid: Swift.String)
   @objc public func setDefaultLangCode(language: Swift.String)
   @objc public func setUseLocation(shouldUse: Swift.Bool)
+  @objc public func setHKThemeMode(themeMode: HyperKYC.HKThemeMode)
   @objc public func addMetadata(metadata: [Swift.String : Swift.String])
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
@@ -3189,6 +3200,9 @@ extension HyperKYC.HyperKycStatus : Swift.Hashable {}
 extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
 extension HyperKYC.CatchPolicy : Swift.Equatable {}
 extension HyperKYC.CatchPolicy : Swift.Hashable {}
+extension HyperKYC.HKThemeMode : Swift.Equatable {}
+extension HyperKYC.HKThemeMode : Swift.Hashable {}
+extension HyperKYC.HKThemeMode : Swift.RawRepresentable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Hashable {}
 extension HyperKYC.DyldChainedImportFormat : Swift.Equatable {}

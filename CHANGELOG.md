@@ -1,4 +1,11 @@
 ## CHANGELOG
+### 1.4.0 *[31 Mar 2026]*
+- Enhancements: 
+    - Updated `sdk.min.js` asset url in `webcore.html`
+    - Add support for adding theme via `hyperKYCConfig.setHKThemeMode`
+    - Maintenance:
+     - Use HyperSnapSDK `6.3.0`
+     
 ### 1.3.0 *[23 Mar 2026]*
 - Maintenance:
     - Use HyperSnapSDK `6.2.0`

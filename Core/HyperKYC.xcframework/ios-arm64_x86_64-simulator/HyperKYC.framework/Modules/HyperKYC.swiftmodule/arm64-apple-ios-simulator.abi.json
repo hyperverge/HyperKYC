@@ -20080,6 +20080,290 @@
       },
       {
         "kind": "Import",
+        "name": "HyperSnapSDK",
+        "printedName": "HyperSnapSDK",
+        "declKind": "Import",
+        "moduleName": "HyperKYC"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HKThemeMode",
+        "printedName": "HKThemeMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "dark",
+            "printedName": "dark",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HyperKYC.HKThemeMode.Type) -> HyperKYC.HKThemeMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HKThemeMode",
+                    "printedName": "HyperKYC.HKThemeMode",
+                    "usr": "c:@M@HyperKYC@E@HKThemeMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "HyperKYC.HKThemeMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HKThemeMode",
+                        "printedName": "HyperKYC.HKThemeMode",
+                        "usr": "c:@M@HyperKYC@E@HKThemeMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@HyperKYC@E@HKThemeMode@HKThemeModeDark",
+            "mangledName": "$s8HyperKYC11HKThemeModeO4darkyA2CmF",
+            "moduleName": "HyperKYC",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "light",
+            "printedName": "light",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HyperKYC.HKThemeMode.Type) -> HyperKYC.HKThemeMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HKThemeMode",
+                    "printedName": "HyperKYC.HKThemeMode",
+                    "usr": "c:@M@HyperKYC@E@HKThemeMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "HyperKYC.HKThemeMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HKThemeMode",
+                        "printedName": "HyperKYC.HKThemeMode",
+                        "usr": "c:@M@HyperKYC@E@HKThemeMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@HyperKYC@E@HKThemeMode@HKThemeModeLight",
+            "mangledName": "$s8HyperKYC11HKThemeModeO5lightyA2CmF",
+            "moduleName": "HyperKYC",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "system",
+            "printedName": "system",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(HyperKYC.HKThemeMode.Type) -> HyperKYC.HKThemeMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HKThemeMode",
+                    "printedName": "HyperKYC.HKThemeMode",
+                    "usr": "c:@M@HyperKYC@E@HKThemeMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "HyperKYC.HKThemeMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HKThemeMode",
+                        "printedName": "HyperKYC.HKThemeMode",
+                        "usr": "c:@M@HyperKYC@E@HKThemeMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@HyperKYC@E@HKThemeMode@HKThemeModeSystem",
+            "mangledName": "$s8HyperKYC11HKThemeModeO6systemyA2CmF",
+            "moduleName": "HyperKYC",
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HyperKYC.HKThemeMode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HKThemeMode",
+                    "printedName": "HyperKYC.HKThemeMode",
+                    "usr": "c:@M@HyperKYC@E@HKThemeMode"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8HyperKYC11HKThemeModeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s8HyperKYC11HKThemeModeO8rawValueACSgSi_tcfc",
+            "moduleName": "HyperKYC",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8HyperKYC11HKThemeModeO8rawValueSivp",
+            "mangledName": "$s8HyperKYC11HKThemeModeO8rawValueSivp",
+            "moduleName": "HyperKYC",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8HyperKYC11HKThemeModeO8rawValueSivg",
+                "mangledName": "$s8HyperKYC11HKThemeModeO8rawValueSivg",
+                "moduleName": "HyperKYC",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@HyperKYC@E@HKThemeMode",
+        "mangledName": "$s8HyperKYC11HKThemeModeO",
+        "moduleName": "HyperKYC",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HyperKYC",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -34187,6 +34471,34 @@
             "mangledName": "$s8HyperKYC0A9KycConfigC14setUseLocation06shouldF0ySb_tF",
             "moduleName": "HyperKYC",
             "objc_name": "setUseLocationWithShouldUse:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setHKThemeMode",
+            "printedName": "setHKThemeMode(themeMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HKThemeMode",
+                "printedName": "HyperKYC.HKThemeMode",
+                "usr": "c:@M@HyperKYC@E@HKThemeMode"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyperKYC@objc(cs)HyperKycConfig(im)setHKThemeModeWithThemeMode:",
+            "mangledName": "$s8HyperKYC0A9KycConfigC14setHKThemeMode05themeG0yAA0fG0O_tF",
+            "moduleName": "HyperKYC",
+            "objc_name": "setHKThemeModeWithThemeMode:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -83384,112 +83696,112 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 2577,
+      "offset": 5357,
       "length": 11,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 2587,
+      "offset": 5367,
       "length": 58,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "BooleanLiteral",
-      "offset": 28312,
+      "offset": 31938,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 85631,
+      "offset": 89257,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "FloatLiteral",
-      "offset": 85660,
+      "offset": 89286,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 86396,
+      "offset": 90022,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "FloatLiteral",
-      "offset": 86425,
+      "offset": 90051,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 94596,
+      "offset": 98222,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "BooleanLiteral",
-      "offset": 105944,
+      "offset": 109570,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 108417,
+      "offset": 112043,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 108432,
+      "offset": 112058,
       "length": 11,
       "value": "1"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 108457,
+      "offset": 112083,
       "length": 11,
       "value": "2"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "IntegerLiteral",
-      "offset": 108482,
+      "offset": 112108,
       "length": 11,
       "value": "3"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "FloatLiteral",
-      "offset": 108580,
+      "offset": 112206,
       "length": 3,
       "value": "1.4"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "FloatLiteral",
-      "offset": 112956,
+      "offset": 116582,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Extensions.swift",
       "kind": "StringLiteral",
-      "offset": 116370,
+      "offset": 119996,
       "length": 16,
       "value": "\"hyperKYCUIView\""
     },
@@ -83720,7 +84032,7 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKLoadingVC.swift",
       "kind": "BooleanLiteral",
-      "offset": 1622,
+      "offset": 2065,
       "length": 5,
       "value": "false"
     },
@@ -83809,6 +84121,27 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HKThemeMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 859,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HKThemeMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 939,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HKThemeMode.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1014,
+      "length": 1,
+      "value": "2"
+    },
+    {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
       "kind": "StringLiteral",
       "offset": 200,
@@ -83832,7 +84165,7 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
       "kind": "StringLiteral",
-      "offset": 25447,
+      "offset": 26580,
       "length": 2,
       "value": "\"\""
     },
@@ -83853,7 +84186,7 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKWebCoreVC.swift",
       "kind": "BooleanLiteral",
-      "offset": 1314,
+      "offset": 1760,
       "length": 5,
       "value": "false"
     },
@@ -86739,7 +87072,7 @@
       "kind": "StringLiteral",
       "offset": 311,
       "length": 7,
-      "value": "\"1.3.0\""
+      "value": "\"1.4.0\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
@@ -86849,42 +87182,42 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 897,
+      "offset": 940,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 967,
+      "offset": 1010,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 1042,
+      "offset": 1085,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 1098,
+      "offset": 1141,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycConfig.swift",
       "kind": "StringLiteral",
-      "offset": 1467,
+      "offset": 1510,
       "length": 17,
       "value": "\"HyperKYCPreview\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycConfig.swift",
       "kind": "StringLiteral",
-      "offset": 8532,
+      "offset": 8686,
       "length": 5,
       "value": "\"exp\""
     },
