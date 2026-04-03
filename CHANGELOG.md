@@ -1,4 +1,7 @@
 ## CHANGELOG
+### 1.4.1 *[3 Apr 2026]*
+- Bug Fixes: 
+    Fix flickering issues in webview module when dark theme mode is used.
 ### 1.4.0 *[31 Mar 2026]*
 - Enhancements: 
     - Updated `sdk.min.js` asset url in `webcore.html`
