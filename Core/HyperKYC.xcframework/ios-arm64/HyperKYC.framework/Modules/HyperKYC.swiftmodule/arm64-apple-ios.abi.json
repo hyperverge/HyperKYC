@@ -23,23 +23,6 @@
       },
       {
         "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -6360,16 +6343,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "Combine",
         "printedName": "Combine",
         "declKind": "Import",
@@ -7403,100 +7376,6 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -15124,16 +15003,6 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
         "moduleName": "HyperKYC"
       },
       {
@@ -20001,61 +19870,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "HyperSnapSDK",
-        "printedName": "HyperSnapSDK",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreNFC",
-        "printedName": "CoreNFC",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "HyperSnapSDK",
         "printedName": "HyperSnapSDK",
         "declKind": "Import",
@@ -23847,51 +23661,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "HyperSnapSDK",
-        "printedName": "HyperSnapSDK",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "CoreNFC",
-        "printedName": "CoreNFC",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
       },
       {
         "kind": "Import",
@@ -32297,23 +32066,6 @@
       },
       {
         "kind": "Import",
-        "name": "CoreNFC",
-        "printedName": "CoreNFC",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "HyperSnapSDK",
         "printedName": "HyperSnapSDK",
         "declKind": "Import",
@@ -32349,16 +32101,6 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -32913,47 +32655,6 @@
             "mangledName": "$sSQ"
           }
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreNFC",
-        "printedName": "CoreNFC",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
       },
       {
         "kind": "Import",
@@ -49734,13 +49435,6 @@
       },
       {
         "kind": "Import",
-        "name": "CoreNFC",
-        "printedName": "CoreNFC",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -49854,503 +49548,6 @@
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CommonCrypto",
-        "printedName": "CommonCrypto",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "CryptoKit",
-        "printedName": "CryptoKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Function",
-        "name": "asn1Length",
-        "printedName": "asn1Length(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Tuple",
-            "printedName": "(Swift.Int, Swift.Int)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ]
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "ArraySlice",
-            "printedName": "Swift.ArraySlice<Swift.UInt8>",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:s10ArraySliceV"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:8HyperKYC10asn1LengthySi_Sits10ArraySliceVys5UInt8VGKF",
-        "mangledName": "$s8HyperKYC10asn1LengthySi_Sits10ArraySliceVys5UInt8VGKF",
-        "moduleName": "HyperKYC",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available",
-          "RawDocComment"
-        ],
-        "throwing": true,
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "asn1Length",
-        "printedName": "asn1Length(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Tuple",
-            "printedName": "(Swift.Int, Swift.Int)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ]
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:8HyperKYC10asn1LengthySi_SitSays5UInt8VGKF",
-        "mangledName": "$s8HyperKYC10asn1LengthySi_SitSays5UInt8VGKF",
-        "moduleName": "HyperKYC",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available"
-        ],
-        "throwing": true,
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "toAsn1Length",
-        "printedName": "toAsn1Length(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Int",
-            "printedName": "Swift.Int",
-            "usr": "s:Si"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:8HyperKYC12toAsn1LengthySays5UInt8VGSiKF",
-        "mangledName": "$s8HyperKYC12toAsn1LengthySays5UInt8VGSiKF",
-        "moduleName": "HyperKYC",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available",
-          "RawDocComment"
-        ],
-        "throwing": true,
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "calcHash",
-        "printedName": "calcHash(data:hashAlgorithm:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "String",
-            "printedName": "Swift.String",
-            "usr": "s:SS"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:8HyperKYC8calcHash4data13hashAlgorithmSays5UInt8VGAG_SStKF",
-        "mangledName": "$s8HyperKYC8calcHash4data13hashAlgorithmSays5UInt8VGAG_SStKF",
-        "moduleName": "HyperKYC",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available",
-          "RawDocComment"
-        ],
-        "throwing": true,
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "calcSHA1Hash",
-        "printedName": "calcSHA1Hash(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:8HyperKYC12calcSHA1HashySays5UInt8VGAEF",
-        "mangledName": "$s8HyperKYC12calcSHA1HashySays5UInt8VGAEF",
-        "moduleName": "HyperKYC",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available",
-          "RawDocComment"
-        ],
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "calcSHA224Hash",
-        "printedName": "calcSHA224Hash(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:8HyperKYC14calcSHA224HashySays5UInt8VGAEF",
-        "mangledName": "$s8HyperKYC14calcSHA224HashySays5UInt8VGAEF",
-        "moduleName": "HyperKYC",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available",
-          "RawDocComment"
-        ],
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "calcSHA256Hash",
-        "printedName": "calcSHA256Hash(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:8HyperKYC14calcSHA256HashySays5UInt8VGAEF",
-        "mangledName": "$s8HyperKYC14calcSHA256HashySays5UInt8VGAEF",
-        "moduleName": "HyperKYC",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available",
-          "RawDocComment"
-        ],
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "calcSHA512Hash",
-        "printedName": "calcSHA512Hash(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:8HyperKYC14calcSHA512HashySays5UInt8VGAEF",
-        "mangledName": "$s8HyperKYC14calcSHA512HashySays5UInt8VGAEF",
-        "moduleName": "HyperKYC",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available",
-          "RawDocComment"
-        ],
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Function",
-        "name": "calcSHA384Hash",
-        "printedName": "calcSHA384Hash(_:)",
-        "children": [
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          },
-          {
-            "kind": "TypeNominal",
-            "name": "Array",
-            "printedName": "[Swift.UInt8]",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UInt8",
-                "printedName": "Swift.UInt8",
-                "usr": "s:s5UInt8V"
-              }
-            ],
-            "usr": "s:Sa"
-          }
-        ],
-        "declKind": "Func",
-        "usr": "s:8HyperKYC14calcSHA384HashySays5UInt8VGAEF",
-        "mangledName": "$s8HyperKYC14calcSHA384HashySays5UInt8VGAEF",
-        "moduleName": "HyperKYC",
-        "intro_Macosx": "10.15",
-        "intro_iOS": "13",
-        "declAttributes": [
-          "AccessControl",
-          "Available",
-          "Available",
-          "RawDocComment"
-        ],
-        "funcSelfKind": "NonMutating"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -54080,30 +53277,6 @@
       },
       {
         "kind": "Import",
-        "name": "CoreNFC",
-        "printedName": "CoreNFC",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CryptoKit",
-        "printedName": "CryptoKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -54131,33 +53304,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
       },
       {
         "kind": "Import",
@@ -54185,23 +53331,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "HyperKYC",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreNFC",
-        "printedName": "CoreNFC",
-        "declKind": "Import",
-        "moduleName": "HyperKYC"
       },
       {
         "kind": "Import",
@@ -81545,27 +80674,6 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/AES_3DES_DESEncryption.swift",
-      "kind": "StringLiteral",
-      "offset": 200,
-      "length": 24,
-      "value": "\"AES_3DES_DESEncryption\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/AES_3DES_DESEncryption.swift",
-      "kind": "IntegerLiteral",
-      "offset": 9275,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/AES_3DES_DESEncryption.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11018,
-      "length": 1,
-      "value": "0"
-    },
-    {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Data\/Network\/APIService.swift",
       "kind": "StringLiteral",
       "offset": 328,
@@ -81781,34 +80889,6 @@
       "offset": 15652,
       "length": 9,
       "value": "\"toValue\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/COM.swift",
-      "kind": "StringLiteral",
-      "offset": 164,
-      "length": 5,
-      "value": "\"COM\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/COM.swift",
-      "kind": "StringLiteral",
-      "offset": 216,
-      "length": 9,
-      "value": "\"Unknown\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/COM.swift",
-      "kind": "StringLiteral",
-      "offset": 279,
-      "length": 9,
-      "value": "\"Unknown\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/COM.swift",
-      "kind": "Array",
-      "offset": 347,
-      "length": 2,
-      "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/CommonUtils.swift",
@@ -82889,314 +81969,6 @@
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup1.swift",
-      "kind": "Dictionary",
-      "offset": 370,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 229,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 273,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 318,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 369,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 422,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 468,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 505,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 544,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 584,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 626,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 667,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 707,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 758,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 802,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 846,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 887,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 929,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 975,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1016,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1057,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1095,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup2.swift",
-      "kind": "Array",
-      "offset": 1139,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroup7.swift",
-      "kind": "Array",
-      "offset": 241,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 253,
-      "length": 4,
-      "value": "0x60"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 273,
-      "length": 4,
-      "value": "0x61"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 293,
-      "length": 4,
-      "value": "0x75"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 313,
-      "length": 4,
-      "value": "0x63"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 333,
-      "length": 4,
-      "value": "0x76"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 353,
-      "length": 4,
-      "value": "0x65"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 373,
-      "length": 4,
-      "value": "0x66"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 393,
-      "length": 4,
-      "value": "0x67"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 413,
-      "length": 4,
-      "value": "0x68"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 433,
-      "length": 4,
-      "value": "0x69"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 454,
-      "length": 4,
-      "value": "0x6a"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 475,
-      "length": 4,
-      "value": "0x6b"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 496,
-      "length": 4,
-      "value": "0x6c"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 517,
-      "length": 4,
-      "value": "0x6d"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 538,
-      "length": 4,
-      "value": "0x6e"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 559,
-      "length": 4,
-      "value": "0x6f"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 580,
-      "length": 4,
-      "value": "0x70"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 600,
-      "length": 4,
-      "value": "0x77"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/DataGroupId.swift",
-      "kind": "IntegerLiteral",
-      "offset": 624,
-      "length": 4,
-      "value": "0x00"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/DGParser.swift",
-      "kind": "StringLiteral",
-      "offset": 755,
-      "length": 10,
-      "value": "\"DGParser\""
-    },
-    {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/DropDown\/Helpers\/DPDConstants.swift",
       "kind": "StringLiteral",
       "offset": 236,
@@ -84047,62 +82819,6 @@
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewModels\/HKMainVM.swift",
       "kind": "BooleanLiteral",
       "offset": 252,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKModels\/HKNFCConfig.swift",
-      "kind": "StringLiteral",
-      "offset": 474,
-      "length": 11,
-      "value": "\"module_id\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKNFCInstructionsVC.swift",
-      "kind": "StringLiteral",
-      "offset": 242,
-      "length": 21,
-      "value": "\"HKNFCInstructionsVC\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKNFCInstructionsVC.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1687,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKNFCReaderVC.swift",
-      "kind": "StringLiteral",
-      "offset": 267,
-      "length": 15,
-      "value": "\"HKNFCReaderVC\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKNFCReaderVC.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1079,
-      "length": 2,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKNFCReaderVC.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1178,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKNFCReaderVC.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1205,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKNFCReaderVC.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9696,
       "length": 5,
       "value": "false"
     },
@@ -85395,83 +84111,6 @@
       "value": "0"
     },
     {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCInstructionVC.swift",
-      "kind": "StringLiteral",
-      "offset": 251,
-      "length": 22,
-      "value": "\"HKYCNFCInstructionVC\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCInstructionVC.swift",
-      "kind": "StringLiteral",
-      "offset": 793,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCInstructionVC.swift",
-      "kind": "StringLiteral",
-      "offset": 822,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCInstructionVC.swift",
-      "kind": "StringLiteral",
-      "offset": 891,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCInstructionVC.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1805,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCReaderVC.swift",
-      "kind": "StringLiteral",
-      "offset": 285,
-      "length": 17,
-      "value": "\"HKYCNFCReaderVC\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCReaderVC.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1190,
-      "length": 2,
-      "value": "-1"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCReaderVC.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1289,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCReaderVC.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1316,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCReaderVC.swift",
-      "kind": "StringLiteral",
-      "offset": 1346,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCReaderVC.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9877,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Services\/Security\/Security+Device\/HKYCProxyChecker.swift",
       "kind": "BooleanLiteral",
       "offset": 278,
@@ -86256,62 +84895,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVBACHandler.swift",
-      "kind": "StringLiteral",
-      "offset": 258,
-      "length": 14,
-      "value": "\"HVBACHandler\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVBACHandler.swift",
-      "kind": "Array",
-      "offset": 297,
-      "length": 12,
-      "value": "[0, 0, 0, 1]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVBACHandler.swift",
-      "kind": "Array",
-      "offset": 334,
-      "length": 12,
-      "value": "[0, 0, 0, 2]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVBACHandler.swift",
-      "kind": "Array",
-      "offset": 384,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVBACHandler.swift",
-      "kind": "Array",
-      "offset": 419,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVBACHandler.swift",
-      "kind": "Array",
-      "offset": 450,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVBACHandler.swift",
-      "kind": "Array",
-      "offset": 480,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVBACHandler.swift",
-      "kind": "Array",
-      "offset": 514,
-      "length": 2,
-      "value": "[]"
-    },
-    {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Router\/HVBridge.swift",
       "kind": "StringLiteral",
       "offset": 764,
@@ -86415,41 +84998,6 @@
       "offset": 11020,
       "length": 3,
       "value": "100"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/HVDataGroup.swift",
-      "kind": "Array",
-      "offset": 276,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/HVDataGroup.swift",
-      "kind": "Array",
-      "offset": 420,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/HVDataGroup.swift",
-      "kind": "IntegerLiteral",
-      "offset": 442,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVDataGroupParser.swift",
-      "kind": "Array",
-      "offset": 187,
-      "length": 145,
-      "value": "[\"Common\", \"DG1\", \"DG2\", \"DG3\", \"DG4\", \"DG5\", \"DG6\", \"DG7\", \"DG8\", \"DG9\", \"DG10\", \"DG11\", \"DG12\", \"DG13\", \"DG14\", \"DG15\", \"DG16\", \"SecurityData\"]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVDataGroupParser.swift",
-      "kind": "Array",
-      "offset": 364,
-      "length": 108,
-      "value": "[0x60, 0x61, 0x75, 0x63, 0x76, 0x65, 0x66, 0x67, 0x68, 0x69, 0x6a, 0x6b, 0x6c, 0x6d, 0x6e, 0x6f, 0x70, 0x77]"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Views\/HVFacePreview.swift",
@@ -86599,461 +85147,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 323,
-      "length": 20,
-      "value": "\"HVNFCPassportModel\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 421,
-      "length": 6,
-      "value": "\"5F03\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 439,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 524,
-      "length": 6,
-      "value": "\"5F03\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 541,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 620,
-      "length": 4,
-      "value": "\"53\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 629,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 659,
-      "length": 3,
-      "value": "\"<\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 670,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 748,
-      "length": 4,
-      "value": "\"5A\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 757,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 787,
-      "length": 3,
-      "value": "\"<\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 798,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 877,
-      "length": 6,
-      "value": "\"5F28\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 888,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 969,
-      "length": 4,
-      "value": "\"59\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 978,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1052,
-      "length": 6,
-      "value": "\"5F57\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1063,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1132,
-      "length": 6,
-      "value": "\"5F35\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1143,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1217,
-      "length": 6,
-      "value": "\"5F2C\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1228,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1323,
-      "length": 4,
-      "value": "\"5B\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1332,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1361,
-      "length": 4,
-      "value": "\"<<\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1388,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1416,
-      "length": 3,
-      "value": "\"<\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1427,
-      "length": 3,
-      "value": "\" \""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1532,
-      "length": 4,
-      "value": "\"5B\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1541,
-      "length": 3,
-      "value": "\"?\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1570,
-      "length": 4,
-      "value": "\"<<\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1595,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1615,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1690,
-      "length": 3,
-      "value": "\"<\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1701,
-      "length": 3,
-      "value": "\" \""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1791,
-      "length": 3,
-      "value": "\" \""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1964,
-      "length": 6,
-      "value": "\"5F1F\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 1975,
-      "length": 11,
-      "value": "\"NOT FOUND\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "StringLiteral",
-      "offset": 3204,
-      "length": 9,
-      "value": "\"Unknown\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "Array",
-      "offset": 3377,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "Dictionary",
-      "offset": 3584,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3909,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3979,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4038,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4100,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "Array",
-      "offset": 4168,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "Array",
-      "offset": 4233,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "Array",
-      "offset": 4287,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 7198,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVNFCPassportModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 9679,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "StringLiteral",
-      "offset": 289,
-      "length": 18,
-      "value": "\"HVPassportReader\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "IntegerLiteral",
-      "offset": 453,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "Array",
-      "offset": 566,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 605,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 648,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 678,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 711,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "StringLiteral",
-      "offset": 983,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1340,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1577,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "Array",
-      "offset": 2626,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2657,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2678,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
-      "kind": "BooleanLiteral",
-      "offset": 2702,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/PromiseKit\/HVPromise.swift",
       "kind": "Array",
       "offset": 4905,
@@ -87072,7 +85165,7 @@
       "kind": "StringLiteral",
       "offset": 311,
       "length": 7,
-      "value": "\"1.4.1\""
+      "value": "\"1.5.0\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
@@ -87987,84 +86080,84 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 271,
+      "offset": 268,
       "length": 15,
       "value": "\"MainViewModel\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 424,
+      "offset": 421,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 766,
+      "offset": 763,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 771,
+      "offset": 768,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "StringLiteral",
-      "offset": 775,
+      "offset": 772,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 953,
+      "offset": 950,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 990,
+      "offset": 987,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1150,
+      "offset": 1147,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1280,
+      "offset": 1277,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 57381,
+      "offset": 57375,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 57416,
+      "offset": 57410,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/MainViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 59745,
+      "offset": 59739,
       "length": 4,
       "value": "true"
     },
@@ -88123,69 +86216,6 @@
       "offset": 350,
       "length": 3,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/NFCUtils.swift",
-      "kind": "StringLiteral",
-      "offset": 229,
-      "length": 10,
-      "value": "\"NFCUtils\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/NFCUtils.swift",
-      "kind": "Array",
-      "offset": 940,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/NFCUtils.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1077,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/NFCUtils.swift",
-      "kind": "IntegerLiteral",
-      "offset": 2219,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/NFCViewModel.swift",
-      "kind": "StringLiteral",
-      "offset": 180,
-      "length": 14,
-      "value": "\"NFCViewModel\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/NFCViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 376,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/NFCViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 951,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/NFCViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1501,
-      "length": 1,
-      "value": "3"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ViewModels\/NFCViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1969,
-      "length": 1,
-      "value": "0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Data\/Network\/Alamofire\/Notifications.swift",
@@ -88673,7 +86703,7 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/RootVC.swift",
       "kind": "BooleanLiteral",
-      "offset": 12580,
+      "offset": 12611,
       "length": 5,
       "value": "false"
     },
@@ -88704,41 +86734,6 @@
       "offset": 1506,
       "length": 3,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/SecureMessaging.swift",
-      "kind": "StringLiteral",
-      "offset": 693,
-      "length": 17,
-      "value": "\"SecureMessaging\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/SecureMessagingSessionKeyGenerator.swift",
-      "kind": "IntegerLiteral",
-      "offset": 278,
-      "length": 4,
-      "value": "0x00"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/SecureMessagingSessionKeyGenerator.swift",
-      "kind": "IntegerLiteral",
-      "offset": 334,
-      "length": 3,
-      "value": "0x1"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/SecureMessagingSessionKeyGenerator.swift",
-      "kind": "IntegerLiteral",
-      "offset": 363,
-      "length": 3,
-      "value": "0x2"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/SecureMessagingSessionKeyGenerator.swift",
-      "kind": "IntegerLiteral",
-      "offset": 393,
-      "length": 3,
-      "value": "0x3"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Data\/Network\/Alamofire\/ServerTrustPolicy.swift",
@@ -89028,13 +87023,6 @@
       "value": "\"org.alamofire.session-manager.\""
     },
     {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/DataGroups\/SOD.swift",
-      "kind": "Array",
-      "offset": 202,
-      "length": 2,
-      "value": "[]"
-    },
-    {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/StartReview.swift",
       "kind": "Dictionary",
       "offset": 495,
@@ -89047,27 +87035,6 @@
       "offset": 559,
       "length": 3,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Views\/StatusView.swift",
-      "kind": "StringLiteral",
-      "offset": 265,
-      "length": 12,
-      "value": "\"StatusView\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/TagReader.swift",
-      "kind": "StringLiteral",
-      "offset": 255,
-      "length": 11,
-      "value": "\"TagReader\""
-    },
-    {
-      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/TagReader.swift",
-      "kind": "IntegerLiteral",
-      "offset": 371,
-      "length": 4,
-      "value": "0xa0"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Data\/Network\/Alamofire\/TaskDelegate.swift",

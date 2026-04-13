@@ -11,9 +11,7 @@ import CommonCrypto
 import CoreFoundation
 import CoreLocation
 import CoreMedia
-import CoreNFC
 import CoreText
-import CryptoKit
 import Darwin
 import Dispatch
 import Foundation
@@ -34,7 +32,6 @@ import SystemConfiguration
 import UIKit
 import WebKit
 import _Concurrency
-import _CoreNFC_UIKit
 import _StringProcessing
 import _SwiftConcurrencyShims
 public func after(seconds: Foundation.TimeInterval) -> HyperKYC.Guarantee<Swift.Void>
@@ -2037,24 +2034,6 @@ public enum LogEvent {
 }
 public struct UIFlowModel {
 }
-@available(iOS 13, macOS 10.15, *)
-public func asn1Length(_ data: Swift.ArraySlice<Swift.UInt8>) throws -> (Swift.Int, Swift.Int)
-@available(iOS 13, macOS 10.15, *)
-public func asn1Length(_ data: [Swift.UInt8]) throws -> (Swift.Int, Swift.Int)
-@available(iOS 13, macOS 10.15, *)
-public func toAsn1Length(_ data: Swift.Int) throws -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcHash(data: [Swift.UInt8], hashAlgorithm: Swift.String) throws -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA1Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA224Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA256Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA512Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
-@available(iOS 13, macOS 10.15, *)
-public func calcSHA384Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
 @_hasMissingDesignatedInitializers public class PromiseBox<T> {
   @objc deinit
 }
