@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 1.4.2 *[24 Apr 2026]*
+- Maintenance:
+     - Use HyperSnapSDK `6.3.1`
+     - Add support for laminated cards for document auto capture
+
 ### 1.4.1 *[3 Apr 2026]*
 - Bug Fixes: 
     Fix flickering issues in webview module when dark theme mode is used.
