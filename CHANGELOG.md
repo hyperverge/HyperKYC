@@ -1,4 +1,13 @@
 ## CHANGELOG
+### 1.5.0 *[5 May 2026]*
+- Bug Fixes: 
+ - Fixed crashes occurring on parsing module config in `webcore` mode
+- Maintenance:
+  - Use HyperSnapSDK `6.4.0`
+    - Added support to disable orientation checks via remoteConfig and featureConfig
+    - Fixed crashes occurring on a background thread
+    - Fixed an issue where location permission being turned off during the selfie capture flow caused failures
+
 ### 1.4.2 *[24 Apr 2026]*
 - Maintenance:
      - Use HyperSnapSDK `6.3.1`
