@@ -81684,511 +81684,518 @@
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5056,
+      "offset": 5060,
+      "length": 31,
+      "value": "\"Failed to parse module config\""
+    },
+    {
+      "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 5125,
       "length": 48,
       "value": "\"Is your Aadhaar linked with your phone number?\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5140,
+      "offset": 5209,
       "length": 75,
       "value": "\"If they are linked, you can use the Aadhaar OKYC flow for faster approval\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5251,
+      "offset": 5320,
       "length": 35,
       "value": "\"Yes, take me to Aadhaar OKYC flow\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5322,
+      "offset": 5391,
       "length": 24,
       "value": "\"No they are not linked\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5380,
+      "offset": 5449,
       "length": 48,
       "value": "\"Is your Aadhaar linked with your phone number?\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5464,
+      "offset": 5533,
       "length": 73,
       "value": "\"If they are linked, you can use the Digilocker flow for faster approval\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5573,
+      "offset": 5642,
       "length": 33,
       "value": "\"Yes, take me to Digilocker flow\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5642,
+      "offset": 5711,
       "length": 24,
       "value": "\"No they are not linked\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5730,
+      "offset": 5799,
       "length": 13,
       "value": "\"Turn on NFC\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5785,
+      "offset": 5854,
       "length": 15,
       "value": "\"Turned on NFC\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5839,
+      "offset": 5908,
       "length": 18,
       "value": "\"NFC not detected\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5891,
+      "offset": 5960,
       "length": 34,
       "value": "\"Touch your ID card to your phone\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 5965,
+      "offset": 6034,
       "length": 28,
       "value": "\"Hold your ID card in place\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6030,
+      "offset": 6099,
       "length": 23,
       "value": "\"Card got disconnected\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6088,
+      "offset": 6157,
       "length": 17,
       "value": "\"Connect to card\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6149,
+      "offset": 6218,
       "length": 25,
       "value": "\"Establishing connection\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6215,
+      "offset": 6284,
       "length": 37,
       "value": "\"Successfully established connection\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6290,
+      "offset": 6359,
       "length": 32,
       "value": "\"Failed to establish connection\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6380,
+      "offset": 6449,
       "length": 20,
       "value": "\"primaryButtonColor\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6441,
+      "offset": 6510,
       "length": 22,
       "value": "\"secondaryButtonColor\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6498,
+      "offset": 6567,
       "length": 16,
       "value": "\"titleTextColor\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6555,
+      "offset": 6624,
       "length": 22,
       "value": "\"descriptionTextColor\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6616,
+      "offset": 6685,
       "length": 20,
       "value": "\"retakeMessageColor\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6675,
+      "offset": 6744,
       "length": 20,
       "value": "\"captureButtonColor\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6749,
+      "offset": 6818,
       "length": 9,
       "value": "\"#564EF1\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6813,
+      "offset": 6882,
       "length": 9,
       "value": "\"#564EF1\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6871,
+      "offset": 6940,
       "length": 9,
       "value": "\"#050451\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6935,
+      "offset": 7004,
       "length": 9,
       "value": "\"#6F729B\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 6997,
+      "offset": 7066,
       "length": 9,
       "value": "\"#564EF1\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7059,
+      "offset": 7128,
       "length": 9,
       "value": "\"#050451\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7119,
+      "offset": 7188,
       "length": 7,
       "value": "\"image\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7869,
+      "offset": 7938,
       "length": 6,
       "value": "\"text\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7899,
+      "offset": 7968,
       "length": 7,
       "value": "\"email\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7930,
+      "offset": 7999,
       "length": 7,
       "value": "\"phone\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 7962,
+      "offset": 8031,
       "length": 8,
       "value": "\"number\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8019,
+      "offset": 8088,
       "length": 7,
       "value": "\"regex\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8070,
+      "offset": 8139,
       "length": 6,
       "value": "\"list\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8100,
+      "offset": 8169,
       "length": 7,
       "value": "\"range\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8151,
+      "offset": 8220,
       "length": 6,
       "value": "\"fill\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8180,
+      "offset": 8249,
       "length": 6,
       "value": "\"wrap\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8324,
+      "offset": 8393,
       "length": 17,
       "value": "\"dismissToParent\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8382,
+      "offset": 8451,
       "length": 6,
       "value": "\"none\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8412,
+      "offset": 8481,
       "length": 7,
       "value": "\"popup\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8449,
+      "offset": 8518,
       "length": 13,
       "value": "\"actionSheet\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8510,
+      "offset": 8579,
       "length": 7,
       "value": "\"apple\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 8553,
+      "offset": 8622,
       "length": 19,
       "value": "\"callbackUrlScheme\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 9125,
+      "offset": 9194,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 9163,
+      "offset": 9232,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 9209,
+      "offset": 9278,
       "length": 4,
       "value": "5000"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "IntegerLiteral",
-      "offset": 9262,
+      "offset": 9331,
       "length": 4,
       "value": "2000"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9301,
+      "offset": 9370,
       "length": 19,
       "value": "\"END_OF_STATEMENTS\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "BooleanLiteral",
-      "offset": 9367,
+      "offset": 9436,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "BooleanLiteral",
-      "offset": 9414,
+      "offset": 9483,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "BooleanLiteral",
-      "offset": 9457,
+      "offset": 9526,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9531,
+      "offset": 9600,
       "length": 17,
       "value": "\"nfcScreen_title\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9587,
+      "offset": 9656,
       "length": 16,
       "value": "\"nfcScreen_desc\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9642,
+      "offset": 9711,
       "length": 16,
       "value": "\"nfcScreen_skip\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9698,
+      "offset": 9767,
       "length": 17,
       "value": "\"nfcScreen_retry\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9757,
+      "offset": 9826,
       "length": 12,
       "value": "\"nfc_turnOn\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9812,
+      "offset": 9881,
       "length": 13,
       "value": "\"nfc_touchId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9872,
+      "offset": 9941,
       "length": 17,
       "value": "\"nfc_connectChip\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9919,
+      "offset": 9988,
       "length": 11,
       "value": "\"nfcTurnOn\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 9961,
+      "offset": 10030,
       "length": 12,
       "value": "\"nfcTouchId\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10008,
+      "offset": 10077,
       "length": 16,
       "value": "\"nfcConnectChip\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10050,
+      "offset": 10119,
       "length": 9,
       "value": "\"skipped\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10083,
+      "offset": 10152,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10116,
+      "offset": 10185,
       "length": 9,
       "value": "\"success\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10162,
+      "offset": 10231,
       "length": 23,
       "value": "\"Card got disconnected\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10224,
+      "offset": 10293,
       "length": 24,
       "value": "\"Authentication Failure\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10284,
+      "offset": 10353,
       "length": 18,
       "value": "\"NFC not detected\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10337,
+      "offset": 10406,
       "length": 37,
       "value": "\"NFC Authentication data unavailable\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10410,
+      "offset": 10479,
       "length": 61,
       "value": "\"Failed to parse the date. It should be of dd-MM-yyyy format\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 10511,
+      "offset": 10580,
       "length": 51,
       "value": "\"NFC scan incomplete. Unable to extract all values\""
     },
@@ -86243,7 +86250,7 @@
       "kind": "StringLiteral",
       "offset": 311,
       "length": 7,
-      "value": "\"1.4.2\""
+      "value": "\"1.5.0\""
     },
     {
       "filePath": "\/Users\/admin\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
