@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 1.6.0 *[12 May 2026]*
+- Add support to modify initial loader color via color assets using `hk_processing_color`
+- Maintenance:
+     - Add additional metadata for crash reports
+     - Use HVCrashGuard `1.1.0`
+
 ### 1.5.0 *[5 May 2026]*
 - Bug Fixes: 
  - Fixed crashes occurring on parsing module config in `webcore` mode
