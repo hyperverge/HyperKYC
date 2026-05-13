@@ -1,6 +1,7 @@
 ## CHANGELOG
 ### 1.6.0 *[12 May 2026]*
-- Add support to modify initial loader color via color assets using `hk_processing_color`
+- Add support to modify initial loader color via color assets using `hk_processing_loader_color`.
+- Adds additional params like hv-hk-sdk-version, web-core-mode and web-core-vesion to analytics, sentry and default headers.
 - Maintenance:
      - Add additional metadata for crash reports
      - Use HVCrashGuard `1.1.0`
