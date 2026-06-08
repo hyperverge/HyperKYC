@@ -1,4 +1,12 @@
 ## CHANGELOG
+### 1.6.1 *[6 Jun 2026]*
+- Bug Fixes: 
+    - Fix issues with vc transition animation in `webCore` mode
+    - Fix unwrapping `nil` values for native module config in `webCore` mode
+    - Use HVCrashGuard `1.2.0`
+        - Add support to send `release` tag to Sentry dashboard
+
+
 ### 1.6.0 *[12 May 2026]*
 - Add support to modify initial loader color via color assets using `hk_processing_loader_color`.
 - Adds additional params like hv-hk-sdk-version, web-core-mode and web-core-vesion to analytics, sentry and default headers.
