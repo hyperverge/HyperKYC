@@ -1,4 +1,15 @@
 ## CHANGELOG
+### 1.7.0 *[29 Jun 2026]*
+- Bug Fixes: 
+    - Fix race condition issue with js bridge layer and force it run on main thread
+    - Use HyperSnapSDK `6.5.0`
+        - Enhancements
+            - Added support for Super Module changes for selfie capture.
+        - Bug Fixes
+            - Fixed image rotation issue after selfie capture.
+            - Fixed UI clipping issue on iOS 26 during document capture.
+            - Fixed timeout issue during video recording in selfie capture.
+
 ### 1.6.1 *[6 Jun 2026]*
 - Bug Fixes: 
     - Fix issues with vc transition animation in `webCore` mode
