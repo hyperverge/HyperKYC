@@ -1,5 +1,6 @@
 ## CHANGELOG
 ### 1.7.0 *[29 Jun 2026]*
+- Update default webCore version to `10.16.1`
 - Bug Fixes: 
     - Fix race condition issue with js bridge layer and force it run on main thread
     - Use HyperSnapSDK `6.5.0`
