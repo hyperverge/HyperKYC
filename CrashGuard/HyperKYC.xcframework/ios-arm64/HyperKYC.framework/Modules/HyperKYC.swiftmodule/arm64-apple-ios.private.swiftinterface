@@ -1598,6 +1598,8 @@ public enum PMKNamespacer {
   public static let SDK_EXIT_ERROR: Swift.Int
   public static let SDK_INTERNAL_ERROR: Swift.Int
   public static let DATE_FORMAT_ERROR: Swift.Int
+  public static let GPS_LOCATION_UNAVAILABLE: Swift.Int
+  public static let LOCATION_INIT_CONFIG_ERROR: Swift.Int
   public static let CHECK_SESSION_ERROR: Swift.Int
   public var errorMessage: Swift.String?
   public var errorCode: Swift.Int?
