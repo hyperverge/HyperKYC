@@ -1,5 +1,5 @@
 framework module HyperKYC {
-  umbrella header "HyperKYCCore-umbrella.h"
+  umbrella header "HyperKYCFull-umbrella.h"
 
   export *
   module * { export * }
