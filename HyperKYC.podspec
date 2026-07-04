@@ -23,12 +23,7 @@ Pod::Spec.new do |s|
     s.swift_version = '5.4'
     s.default_subspecs = "CrashGuard"
 
-    s.subspec 'Core' do |cs|
-	cs.dependency 'HyperSnapSDK', '6.5.0-muthoot-finance-poc'
-	cs.vendored_frameworks = 'Core/HyperKYC.xcframework'
-    	cs.ios.resource = 'Core/HyperKYCResources.bundle'
-    end
-
+ s.ios.resource = 'Core/HyperKYCResources.bundle'
  
     s.subspec 'CrashGuard' do |cgs|
     	cgs.dependency 'HyperSnapSDK', '6.5.0-muthoot-finance-poc'
