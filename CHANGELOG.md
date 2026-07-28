@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 1.8.0 *[28 Jul 2026]*
+- Add support to include bundled assets within the sdk for `webCore` mode
+- Bug Fixes: 
+    - Fixed lag when launch is called from the client app in slow internet scenarios
+
 ### 1.7.0 *[29 Jun 2026]*
 - ***BREAKING*** Updated min Xcode requirement to Xcode 26.2
 - Update default webCore version to `10.16.1`

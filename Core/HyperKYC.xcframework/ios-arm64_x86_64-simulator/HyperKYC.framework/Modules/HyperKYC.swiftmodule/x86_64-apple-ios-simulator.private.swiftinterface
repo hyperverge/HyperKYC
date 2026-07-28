@@ -1564,6 +1564,7 @@ public enum PMKNamespacer {
   public static let SDK_INTERNAL_ERROR: Swift.Int
   public static let DATE_FORMAT_ERROR: Swift.Int
   public static let CHECK_SESSION_ERROR: Swift.Int
+  public static let LOCAL_SDK_WEBCORE_MIN_JS_LOAD_ERROR: Swift.Int
   public var errorMessage: Swift.String?
   public var errorCode: Swift.Int?
   @objc deinit
