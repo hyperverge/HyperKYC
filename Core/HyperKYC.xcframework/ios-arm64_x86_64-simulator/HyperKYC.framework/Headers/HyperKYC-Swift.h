@@ -355,29 +355,11 @@ SWIFT_CLASS("_TtC8HyperKYC17FittableFontLabel")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-/// Theme mode for the SDK.
-/// This enum specifies how the SDK should handle theming:
-/// <ul>
-///   <li>
-///     <code>dark</code>: Force dark theme regardless of system settings
-///   </li>
-///   <li>
-///     <code>light</code>: Force light theme regardless of system settings
-///   </li>
-///   <li>
-///     <code>system</code>: Follow the device’s system theme settings
-///   </li>
-/// </ul>
-/// Usage:
-/// \code
-/// let config = HyperKycConfig(appId: appId, appKey: appKey, workflowId: workflowId, transactionId: transactionId)
-/// config.setHKThemeMode(themeMode: .system)  // Follow system theme
-/// // or
-/// config.setHKThemeMode(themeMode: .dark)    // Force dark theme
-/// // or
-/// config.setHKThemeMode(themeMode: .light)   // Force light theme
-///
-/// \endcode
+/// Deprecated. Use <code>ThemeMode</code> instead.
+/// Retained for source compatibility with older integrations. Note the raw
+/// values here differ from <code>ThemeMode</code> (dark=0, light=1, system=2 vs.
+/// light=0, dark=1, system=2) — always convert via <code>toThemeMode()</code> rather
+/// than relying on the raw value.
 typedef SWIFT_ENUM(NSInteger, HKThemeMode, open) {
 /// Force dark theme regardless of system settings
   HKThemeModeDark = 0,
@@ -660,6 +642,7 @@ SWIFT_CLASS("_TtC8HyperKYC8HyperKyc")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+enum ThemeMode : NSInteger;
 SWIFT_CLASS("_TtC8HyperKYC14HyperKycConfig")
 @interface HyperKycConfig : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -670,7 +653,8 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycConfig")
 - (void)setUniqueIdWithUuid:(NSString * _Nonnull)uuid;
 - (void)setDefaultLangCodeWithLanguage:(NSString * _Nonnull)language;
 - (void)setUseLocationWithShouldUse:(BOOL)shouldUse;
-- (void)setHKThemeModeWithThemeMode:(enum HKThemeMode)themeMode;
+- (void)setThemeModeWithThemeMode:(enum ThemeMode)themeMode;
+- (void)setHKThemeModeWithThemeMode:(enum HKThemeMode)themeMode SWIFT_DEPRECATED_MSG("", "setThemeModeWithThemeMode:");
 - (void)addMetadataWithMetadata:(NSDictionary<NSString *, NSString *> * _Nonnull)metadata;
 @end
 
@@ -743,6 +727,38 @@ SWIFT_CLASS("_TtC8HyperKYC17ResumeFileHandler")
 @interface ResumeFileHandler : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+/// Theme mode for the SDK.
+/// This enum specifies how the SDK should handle theming:
+/// <ul>
+///   <li>
+///     <code>dark</code>: Force dark theme regardless of system settings
+///   </li>
+///   <li>
+///     <code>light</code>: Force light theme regardless of system settings
+///   </li>
+///   <li>
+///     <code>system</code>: Follow the device’s system theme settings
+///   </li>
+/// </ul>
+/// Usage:
+/// \code
+/// let config = HyperKycConfig(appId: appId, appKey: appKey, workflowId: workflowId, transactionId: transactionId)
+/// config.setThemeMode(themeMode: .system)  // Follow system theme
+/// // or
+/// config.setThemeMode(themeMode: .dark)    // Force dark theme
+/// // or
+/// config.setThemeMode(themeMode: .light)   // Force light theme
+///
+/// \endcode
+typedef SWIFT_ENUM(NSInteger, ThemeMode, open) {
+/// Force light theme regardless of system settings
+  ThemeModeLight = 0,
+/// Force dark theme regardless of system settings
+  ThemeModeDark = 1,
+/// Follow the device’s system theme settings
+  ThemeModeSystem = 2,
+};
 
 @interface UIBarButtonItem (SWIFT_EXTENSION(HyperKYC))
 @property (nonatomic, readonly, strong) UIView * _Nonnull plainView;
@@ -1134,29 +1150,11 @@ SWIFT_CLASS("_TtC8HyperKYC17FittableFontLabel")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-/// Theme mode for the SDK.
-/// This enum specifies how the SDK should handle theming:
-/// <ul>
-///   <li>
-///     <code>dark</code>: Force dark theme regardless of system settings
-///   </li>
-///   <li>
-///     <code>light</code>: Force light theme regardless of system settings
-///   </li>
-///   <li>
-///     <code>system</code>: Follow the device’s system theme settings
-///   </li>
-/// </ul>
-/// Usage:
-/// \code
-/// let config = HyperKycConfig(appId: appId, appKey: appKey, workflowId: workflowId, transactionId: transactionId)
-/// config.setHKThemeMode(themeMode: .system)  // Follow system theme
-/// // or
-/// config.setHKThemeMode(themeMode: .dark)    // Force dark theme
-/// // or
-/// config.setHKThemeMode(themeMode: .light)   // Force light theme
-///
-/// \endcode
+/// Deprecated. Use <code>ThemeMode</code> instead.
+/// Retained for source compatibility with older integrations. Note the raw
+/// values here differ from <code>ThemeMode</code> (dark=0, light=1, system=2 vs.
+/// light=0, dark=1, system=2) — always convert via <code>toThemeMode()</code> rather
+/// than relying on the raw value.
 typedef SWIFT_ENUM(NSInteger, HKThemeMode, open) {
 /// Force dark theme regardless of system settings
   HKThemeModeDark = 0,
@@ -1439,6 +1437,7 @@ SWIFT_CLASS("_TtC8HyperKYC8HyperKyc")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+enum ThemeMode : NSInteger;
 SWIFT_CLASS("_TtC8HyperKYC14HyperKycConfig")
 @interface HyperKycConfig : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1449,7 +1448,8 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycConfig")
 - (void)setUniqueIdWithUuid:(NSString * _Nonnull)uuid;
 - (void)setDefaultLangCodeWithLanguage:(NSString * _Nonnull)language;
 - (void)setUseLocationWithShouldUse:(BOOL)shouldUse;
-- (void)setHKThemeModeWithThemeMode:(enum HKThemeMode)themeMode;
+- (void)setThemeModeWithThemeMode:(enum ThemeMode)themeMode;
+- (void)setHKThemeModeWithThemeMode:(enum HKThemeMode)themeMode SWIFT_DEPRECATED_MSG("", "setThemeModeWithThemeMode:");
 - (void)addMetadataWithMetadata:(NSDictionary<NSString *, NSString *> * _Nonnull)metadata;
 @end
 
@@ -1522,6 +1522,38 @@ SWIFT_CLASS("_TtC8HyperKYC17ResumeFileHandler")
 @interface ResumeFileHandler : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+/// Theme mode for the SDK.
+/// This enum specifies how the SDK should handle theming:
+/// <ul>
+///   <li>
+///     <code>dark</code>: Force dark theme regardless of system settings
+///   </li>
+///   <li>
+///     <code>light</code>: Force light theme regardless of system settings
+///   </li>
+///   <li>
+///     <code>system</code>: Follow the device’s system theme settings
+///   </li>
+/// </ul>
+/// Usage:
+/// \code
+/// let config = HyperKycConfig(appId: appId, appKey: appKey, workflowId: workflowId, transactionId: transactionId)
+/// config.setThemeMode(themeMode: .system)  // Follow system theme
+/// // or
+/// config.setThemeMode(themeMode: .dark)    // Force dark theme
+/// // or
+/// config.setThemeMode(themeMode: .light)   // Force light theme
+///
+/// \endcode
+typedef SWIFT_ENUM(NSInteger, ThemeMode, open) {
+/// Force light theme regardless of system settings
+  ThemeModeLight = 0,
+/// Force dark theme regardless of system settings
+  ThemeModeDark = 1,
+/// Follow the device’s system theme settings
+  ThemeModeSystem = 2,
+};
 
 @interface UIBarButtonItem (SWIFT_EXTENSION(HyperKYC))
 @property (nonatomic, readonly, strong) UIView * _Nonnull plainView;

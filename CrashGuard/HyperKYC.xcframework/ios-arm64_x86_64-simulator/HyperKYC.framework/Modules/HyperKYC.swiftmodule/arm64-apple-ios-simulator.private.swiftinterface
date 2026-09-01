@@ -1129,18 +1129,6 @@ extension Dispatch.DispatchQueue {
   #endif
 }
 public func hang<T>(_ promise: HyperKYC.HVPromise<T>) throws -> T
-@objc public enum HKThemeMode : Swift.Int {
-  case dark = 0
-  case light = 1
-  case system = 2
-  #if compiler(>=5.3) && $NonescapableTypes
-  public init?(rawValue: Swift.Int)
-  #endif
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor @preconcurrency public class HKYCBrandingLayout : UIKit.UIStackView {
   @_Concurrency.MainActor @preconcurrency public var label: UIKit.UILabel {
     get
@@ -1566,6 +1554,8 @@ public enum PMKNamespacer {
   @objc public func setUniqueId(uuid: Swift.String)
   @objc public func setDefaultLangCode(language: Swift.String)
   @objc public func setUseLocation(shouldUse: Swift.Bool)
+  @objc public func setThemeMode(themeMode: HyperKYC.ThemeMode)
+  @available(*, deprecated, renamed: "setThemeMode(themeMode:)")
   @objc public func setHKThemeMode(themeMode: HyperKYC.HKThemeMode)
   @objc public func addMetadata(metadata: [Swift.String : Swift.String])
   @objc deinit
@@ -2413,6 +2403,32 @@ public struct ModuleData : Swift.Codable {
   }
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
+}
+@objc public enum ThemeMode : Swift.Int {
+  case light = 0
+  case dark = 1
+  case system = 2
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@available(*, deprecated, renamed: "ThemeMode")
+@objc public enum HKThemeMode : Swift.Int {
+  case dark = 0
+  case light = 1
+  case system = 2
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  @available(*, deprecated, renamed: "ThemeMode")
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public protocol Thenable : AnyObject {
   associatedtype T
@@ -3428,9 +3444,9 @@ extension HyperKYC.HyperKycStatus : Swift.Hashable {}
 extension HyperKYC.HyperKycStatus : Swift.RawRepresentable {}
 extension HyperKYC.CatchPolicy : Swift.Equatable {}
 extension HyperKYC.CatchPolicy : Swift.Hashable {}
-extension HyperKYC.HKThemeMode : Swift.Equatable {}
-extension HyperKYC.HKThemeMode : Swift.Hashable {}
-extension HyperKYC.HKThemeMode : Swift.RawRepresentable {}
+extension HyperKYC.ThemeMode : Swift.Equatable {}
+extension HyperKYC.ThemeMode : Swift.Hashable {}
+extension HyperKYC.ThemeMode : Swift.RawRepresentable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Equatable {}
 extension HyperKYC.HKYCFailedCheck : Swift.Hashable {}
 extension HyperKYC.DyldChainedImportFormat : Swift.Equatable {}
@@ -3440,6 +3456,12 @@ extension HyperKYC.PMKNamespacer : Swift.Equatable {}
 extension HyperKYC.PMKNamespacer : Swift.Hashable {}
 extension HyperKYC.SessionStatus : Swift.Equatable {}
 extension HyperKYC.SessionStatus : Swift.Hashable {}
+@available(*, deprecated, renamed: "ThemeMode")
+extension HyperKYC.HKThemeMode : Swift.Equatable {}
+@available(*, deprecated, renamed: "ThemeMode")
+extension HyperKYC.HKThemeMode : Swift.Hashable {}
+@available(*, deprecated, renamed: "ThemeMode")
+extension HyperKYC.HKThemeMode : Swift.RawRepresentable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Equatable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.Hashable {}
 extension HyperKYC.WorkflowProperties.PlatformKey : Swift.RawRepresentable {}
