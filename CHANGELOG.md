@@ -1,4 +1,8 @@
 ## CHANGELOG
+### 1.8.1 *[21 Sep 2026]*
+    - Update bundled webCore SDK version to `10.16.2`
+    - Add additional logging for error scenarios 
+    
 ### 1.8.0 *[28 Jul 2026]*
 - Add support to include bundled assets within the sdk for `webCore` mode
 - Bug Fixes: 

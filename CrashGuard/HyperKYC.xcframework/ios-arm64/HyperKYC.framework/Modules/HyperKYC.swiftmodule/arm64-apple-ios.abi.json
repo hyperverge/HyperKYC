@@ -85186,9 +85186,23 @@
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
       "kind": "StringLiteral",
-      "offset": 32183,
+      "offset": 34395,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
+      "kind": "StringLiteral",
+      "offset": 51994,
+      "length": 25,
+      "value": "\"Native Module Data Sent\""
+    },
+    {
+      "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
+      "kind": "StringLiteral",
+      "offset": 52067,
+      "length": 31,
+      "value": "\"Native Module Data Send Error\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKModels\/HKWebCoreNativeResponse.swift",
@@ -88114,7 +88128,7 @@
       "kind": "StringLiteral",
       "offset": 311,
       "length": 7,
-      "value": "\"1.8.0\""
+      "value": "\"1.8.1\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
