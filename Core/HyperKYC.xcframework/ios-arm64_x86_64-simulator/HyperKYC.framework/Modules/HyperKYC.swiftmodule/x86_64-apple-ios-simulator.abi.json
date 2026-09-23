@@ -33631,6 +33631,36 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(accessToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HyperKycConfig",
+                "printedName": "HyperKYC.HyperKycConfig",
+                "usr": "c:@M@HyperKYC@objc(cs)HyperKycConfig"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@HyperKYC@objc(cs)HyperKycConfig(im)initWithAccessToken:",
+            "mangledName": "$s8HyperKYC0A9KycConfigC11accessTokenACSS_tcfc",
+            "moduleName": "HyperKYC",
+            "objc_name": "initWithAccessToken:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "setInputs",
             "printedName": "setInputs(inputs:)",
@@ -84129,6 +84159,20 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKBundledAssetHandler.swift",
+      "kind": "Dictionary",
+      "offset": 608,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKBundledAssetHandler.swift",
+      "kind": "IntegerLiteral",
+      "offset": 949,
+      "length": 2,
+      "value": "10"
+    },
+    {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKModels\/HKDocumentCaptureConfig.swift",
       "kind": "StringLiteral",
       "offset": 749,
@@ -84271,462 +84315,476 @@
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 505,
+      "offset": 594,
+      "length": 26,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
+      "kind": "StringLiteral",
+      "offset": 609,
+      "length": 1,
+      "value": "\":\/\/assets\/\""
+    },
+    {
+      "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
+      "kind": "StringLiteral",
+      "offset": 936,
       "length": 54,
       "value": "\"https:\/\/assets.edge.hyperverge.co\/sdk\/default\/images\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 622,
+      "offset": 1053,
       "length": 36,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 637,
+      "offset": 1068,
       "length": 1,
       "value": "\"\/PictureOrImages.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 667,
+      "offset": 1098,
       "length": 28,
       "value": "\"uploadPicturesImageSrc.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 705,
+      "offset": 1136,
       "length": 32,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 720,
+      "offset": 1151,
       "length": 1,
       "value": "\"\/pdfDocument.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 750,
+      "offset": 1181,
       "length": 28,
       "value": "\"uploadDocumentImageSrc.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 788,
+      "offset": 1219,
       "length": 35,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 803,
+      "offset": 1234,
       "length": 1,
       "value": "\"\/fileUploadIcon.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 833,
+      "offset": 1264,
       "length": 29,
       "value": "\"fileUploadButtonIconSrc.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 872,
+      "offset": 1303,
       "length": 32,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 887,
+      "offset": 1318,
       "length": 1,
       "value": "\"\/secureImage.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 917,
+      "offset": 1348,
       "length": 16,
       "value": "\"secureIcon.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 943,
+      "offset": 1374,
       "length": 38,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 958,
+      "offset": 1389,
       "length": 1,
       "value": "\"\/formDropDownArrow.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 988,
+      "offset": 1419,
       "length": 27,
       "value": "\"formDropDownArrowIcon.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1025,
+      "offset": 1456,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1040,
+      "offset": 1471,
       "length": 1,
       "value": "\"\/disabledDropDown.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1070,
+      "offset": 1501,
       "length": 35,
       "value": "\"formDropDownArrowDisabledIcon.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1115,
+      "offset": 1546,
       "length": 39,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1130,
+      "offset": 1561,
       "length": 1,
       "value": "\"\/documentNextButton.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1160,
+      "offset": 1591,
       "length": 24,
       "value": "\"documentNextButton.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1194,
+      "offset": 1625,
       "length": 31,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1209,
+      "offset": 1640,
       "length": 1,
       "value": "\"\/gkycShield.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1239,
+      "offset": 1670,
       "length": 18,
       "value": "\"footerShield.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1267,
+      "offset": 1698,
       "length": 31,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1282,
+      "offset": 1713,
       "length": 1,
       "value": "\"\/backButton.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1312,
+      "offset": 1743,
       "length": 16,
       "value": "\"backButton.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1338,
+      "offset": 1769,
       "length": 37,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1353,
+      "offset": 1784,
       "length": 1,
       "value": "\"\/genericLoader.lottie\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1383,
+      "offset": 1814,
       "length": 28,
       "value": "\"genericLottieLoader.lottie\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1421,
+      "offset": 1852,
       "length": 31,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1436,
+      "offset": 1867,
       "length": 1,
       "value": "\"\/deleteIcon.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1466,
+      "offset": 1897,
       "length": 26,
       "value": "\"fileUploadDeleteIcon.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1502,
+      "offset": 1933,
       "length": 29,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1517,
+      "offset": 1948,
       "length": 1,
       "value": "\"\/dropdown.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1547,
+      "offset": 1978,
       "length": 19,
       "value": "\"dropdownArrow.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1576,
+      "offset": 2007,
       "length": 25,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1591,
+      "offset": 2022,
       "length": 1,
       "value": "\"\/tick.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1621,
+      "offset": 2052,
       "length": 25,
       "value": "\"countrySelectedTick.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1656,
+      "offset": 2087,
       "length": 25,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1671,
+      "offset": 2102,
       "length": 1,
       "value": "\"\/tick.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1701,
+      "offset": 2132,
       "length": 10,
       "value": "\"tick.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1721,
+      "offset": 2152,
       "length": 36,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1736,
+      "offset": 2167,
       "length": 1,
       "value": "\"\/gkycExclamation.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1766,
+      "offset": 2197,
       "length": 17,
       "value": "\"exclamation.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1793,
+      "offset": 2224,
       "length": 32,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1808,
+      "offset": 2239,
       "length": 1,
       "value": "\"\/closeButton.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1838,
+      "offset": 2269,
       "length": 17,
       "value": "\"closeButton.svg\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1865,
+      "offset": 2296,
       "length": 25,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1880,
+      "offset": 2311,
       "length": 1,
       "value": "\"\/Date.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1910,
+      "offset": 2341,
       "length": 32,
       "value": "\"enabledLightDatePickerIcon.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1952,
+      "offset": 2383,
       "length": 43,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1967,
+      "offset": 2398,
       "length": 1,
       "value": "\"\/disabledDatePickerIcon.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 1997,
+      "offset": 2428,
       "length": 28,
       "value": "\"disabledDatePickerIcon.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 2035,
+      "offset": 2466,
       "length": 36,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 2050,
+      "offset": 2481,
       "length": 1,
       "value": "\"\/whiteCameraIcon.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 2080,
+      "offset": 2511,
       "length": 43,
       "value": "\"documentChoiceScreenCaptureButtonIcon.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 2133,
+      "offset": 2564,
       "length": 36,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 2148,
+      "offset": 2579,
       "length": 1,
       "value": "\"\/whiteUploadIcon.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 2178,
+      "offset": 2609,
       "length": 42,
       "value": "\"documentChoiceScreenUploadButtonIcon.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 2230,
+      "offset": 2661,
       "length": 26,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 2245,
+      "offset": 2676,
       "length": 1,
       "value": "\"\/cross.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 2275,
+      "offset": 2706,
       "length": 19,
       "value": "\"documentCross.png\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 4195,
+      "offset": 4626,
       "length": 25,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreAssets.swift",
       "kind": "StringLiteral",
-      "offset": 4210,
+      "offset": 4641,
       "length": 1,
       "value": "\":\/\/assets\""
     },
@@ -84761,7 +84819,7 @@
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
       "kind": "StringLiteral",
-      "offset": 32181,
+      "offset": 31891,
       "length": 2,
       "value": "\"\""
     },
@@ -87541,41 +87599,41 @@
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "StringLiteral",
       "offset": 311,
-      "length": 7,
-      "value": "\"1.9.0\""
+      "length": 8,
+      "value": "\"1.10.0\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "BooleanLiteral",
-      "offset": 359,
+      "offset": 360,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "Array",
-      "offset": 437,
+      "offset": 438,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "StringLiteral",
-      "offset": 560,
+      "offset": 561,
       "length": 32,
       "value": "\"co.hyperkyc.eventDispatchQueue\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "IntegerLiteral",
-      "offset": 637,
+      "offset": 638,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
       "kind": "Array",
-      "offset": 772,
+      "offset": 773,
       "length": 2,
       "value": "[]"
     },
@@ -87687,7 +87745,7 @@
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycConfig.swift",
       "kind": "StringLiteral",
-      "offset": 8955,
+      "offset": 11116,
       "length": 5,
       "value": "\"exp\""
     },

@@ -649,6 +649,18 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycConfig")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithAppId:(NSString * _Nonnull)appId appKey:(NSString * _Nonnull)appKey workflowId:(NSString * _Nonnull)workflowId transactionId:(NSString * _Nonnull)transactionId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithAccessToken:(NSString * _Nonnull)accessToken workflowId:(NSString * _Nonnull)workflowId transactionId:(NSString * _Nonnull)transactionId OBJC_DESIGNATED_INITIALIZER;
+/// Secondary initializer for accessToken-only init.
+/// Use this when the accessToken’s JWT payload itself carries the <code>workflowId</code>
+/// and <code>transactionId</code> (alongside the <code>appId</code>), so neither has to be passed
+/// explicitly at launch.
+/// If the <code>workflowId</code> or <code>transactionId</code> is missing or blank in the payload,
+/// the corresponding field is left empty and the SDK surfaces the problem as a
+/// <code>HyperKycStatus.error</code> result (errorCode <code>HyperKycError.SDK_CONFIG_ERROR</code>)
+/// at launch.
+/// \param accessToken accessToken from HV auth api, whose JWT payload
+/// contains the <code>appId</code>, <code>workflowId</code> and <code>transactionId</code>.
+///
+- (nonnull instancetype)initWithAccessToken:(NSString * _Nonnull)accessToken OBJC_DESIGNATED_INITIALIZER;
 - (void)setInputsWithInputs:(NSDictionary<NSString *, id> * _Nonnull)inputs;
 - (void)setUniqueIdWithUuid:(NSString * _Nonnull)uuid;
 - (void)setDefaultLangCodeWithLanguage:(NSString * _Nonnull)language;
@@ -1444,6 +1456,18 @@ SWIFT_CLASS("_TtC8HyperKYC14HyperKycConfig")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (nonnull instancetype)initWithAppId:(NSString * _Nonnull)appId appKey:(NSString * _Nonnull)appKey workflowId:(NSString * _Nonnull)workflowId transactionId:(NSString * _Nonnull)transactionId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithAccessToken:(NSString * _Nonnull)accessToken workflowId:(NSString * _Nonnull)workflowId transactionId:(NSString * _Nonnull)transactionId OBJC_DESIGNATED_INITIALIZER;
+/// Secondary initializer for accessToken-only init.
+/// Use this when the accessToken’s JWT payload itself carries the <code>workflowId</code>
+/// and <code>transactionId</code> (alongside the <code>appId</code>), so neither has to be passed
+/// explicitly at launch.
+/// If the <code>workflowId</code> or <code>transactionId</code> is missing or blank in the payload,
+/// the corresponding field is left empty and the SDK surfaces the problem as a
+/// <code>HyperKycStatus.error</code> result (errorCode <code>HyperKycError.SDK_CONFIG_ERROR</code>)
+/// at launch.
+/// \param accessToken accessToken from HV auth api, whose JWT payload
+/// contains the <code>appId</code>, <code>workflowId</code> and <code>transactionId</code>.
+///
+- (nonnull instancetype)initWithAccessToken:(NSString * _Nonnull)accessToken OBJC_DESIGNATED_INITIALIZER;
 - (void)setInputsWithInputs:(NSDictionary<NSString *, id> * _Nonnull)inputs;
 - (void)setUniqueIdWithUuid:(NSString * _Nonnull)uuid;
 - (void)setDefaultLangCodeWithLanguage:(NSString * _Nonnull)language;
