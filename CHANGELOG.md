@@ -1,4 +1,13 @@
 ## CHANGELOG
+### 1.10.0 *[23 Sep 2026]*
+- Update default bundled webCore version to `11.4.3`
+- Add support for only `accessToken` based SDK initialisation  
+- Move away from universal file scheme to a custom scheme in `webCore` mode
+- Fix redirect of assets within webviews and handling download using URLSession
+- Use HyperSnapSDK `6.8.0`
+    - Enhancements
+        - Migrate proxy geoIp api to thomas api
+        
 ### 1.9.0 *[1 Sep 2026]*
 - Add support for `hk_background` for background color 
 - Deprecated `setHkThemeMode` , use `setThemeMode`

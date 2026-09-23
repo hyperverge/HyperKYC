@@ -1516,6 +1516,7 @@ public enum PMKNamespacer {
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyperKycConfig : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(appId: Swift.String, appKey: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
   @objc public init(accessToken: Swift.String, workflowId: Swift.String, transactionId: Swift.String)
+  @objc public init(accessToken: Swift.String)
   @objc public func setInputs(inputs: [Swift.String : Any])
   @objc public func setUniqueId(uuid: Swift.String)
   @objc public func setDefaultLangCode(language: Swift.String)
