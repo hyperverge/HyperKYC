@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 1.11.0 *[12 Oct 2026]*
+- Maintenance
+    - Use HyperSnapSDK `6.9.0`
+        - Enhancements
+            - Add support for injection checks in document module
+
 ### 1.10.0 *[23 Sep 2026]*
 - Update default bundled webCore version to `11.4.3`
 - Add support for only `accessToken` based SDK initialisation  
