@@ -1,5 +1,7 @@
 ## CHANGELOG
+
 ### 1.11.0 *[12 Oct 2026]*
+- Updated min Xcode requirement to Xcode 26.3
 - Maintenance
     - Use HyperSnapSDK `6.9.0`
         - Enhancements
