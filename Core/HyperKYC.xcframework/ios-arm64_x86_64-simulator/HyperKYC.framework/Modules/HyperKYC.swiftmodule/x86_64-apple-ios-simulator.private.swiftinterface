@@ -1553,6 +1553,7 @@ public enum PMKNamespacer {
   public static let PRIVACY_CONSENT_DENIED_ERROR: Swift.Int
   public static let SDK_EXIT_ERROR: Swift.Int
   public static let SDK_INTERNAL_ERROR: Swift.Int
+  public static let DEVICE_EMULATOR_ERROR: Swift.Int
   public static let DATE_FORMAT_ERROR: Swift.Int
   public static let CHECK_SESSION_ERROR: Swift.Int
   public static let LOCAL_SDK_WEBCORE_MIN_JS_LOAD_ERROR: Swift.Int

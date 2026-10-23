@@ -35282,6 +35282,58 @@
           },
           {
             "kind": "Var",
+            "name": "DEVICE_EMULATOR_ERROR",
+            "printedName": "DEVICE_EMULATOR_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8HyperKYC0A8KycErrorC21DEVICE_EMULATOR_ERRORSivpZ",
+            "mangledName": "$s8HyperKYC0A8KycErrorC21DEVICE_EMULATOR_ERRORSivpZ",
+            "moduleName": "HyperKYC",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8HyperKYC0A8KycErrorC21DEVICE_EMULATOR_ERRORSivgZ",
+                "mangledName": "$s8HyperKYC0A8KycErrorC21DEVICE_EMULATOR_ERRORSivgZ",
+                "moduleName": "HyperKYC",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "DATE_FORMAT_ERROR",
             "printedName": "DATE_FORMAT_ERROR",
             "children": [
@@ -83335,7 +83387,7 @@
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Utils\/DGParser.swift",
       "kind": "StringLiteral",
-      "offset": 755,
+      "offset": 771,
       "length": 10,
       "value": "\"DGParser\""
     },
@@ -84280,7 +84332,14 @@
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKNFCReaderVC.swift",
       "kind": "BooleanLiteral",
-      "offset": 9696,
+      "offset": 1235,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKViewControllers\/HKNFCReaderVC.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9726,
       "length": 5,
       "value": "false"
     },
@@ -84819,7 +84878,7 @@
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/WebCore\/HKShared\/HKWebCoreManager.swift",
       "kind": "StringLiteral",
-      "offset": 31891,
+      "offset": 33280,
       "length": 2,
       "value": "\"\""
     },
@@ -85994,15 +86053,22 @@
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCReaderVC.swift",
-      "kind": "StringLiteral",
+      "kind": "BooleanLiteral",
       "offset": 1346,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCReaderVC.swift",
+      "kind": "StringLiteral",
+      "offset": 1376,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/VCs\/HKYCNFCReaderVC.swift",
       "kind": "BooleanLiteral",
-      "offset": 9877,
+      "offset": 9907,
       "length": 5,
       "value": "false"
     },
@@ -87556,28 +87622,28 @@
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
       "kind": "Array",
-      "offset": 2626,
+      "offset": 2849,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2657,
+      "offset": 2880,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2678,
+      "offset": 2901,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/ThirdParty\/NFC\/NFCPassportReader\/HVPassportReader.swift",
       "kind": "BooleanLiteral",
-      "offset": 2702,
+      "offset": 2925,
       "length": 5,
       "value": "false"
     },
@@ -87600,7 +87666,7 @@
       "kind": "StringLiteral",
       "offset": 311,
       "length": 8,
-      "value": "\"1.11.0\""
+      "value": "\"1.12.0\""
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/HyperKyc.swift",
@@ -88018,21 +88084,28 @@
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycError.swift",
       "kind": "IntegerLiteral",
-      "offset": 1950,
+      "offset": 2055,
+      "length": 3,
+      "value": "142"
+    },
+    {
+      "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycError.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2101,
       "length": 2,
       "value": "45"
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycError.swift",
       "kind": "IntegerLiteral",
-      "offset": 2002,
+      "offset": 2153,
       "length": 3,
       "value": "151"
     },
     {
       "filePath": "\/Users\/niveditamuthusubramanian\/iOS\/hyperkyc\/HyperKYC\/Sources\/HyperKYC\/Classes\/Models\/HyperKycError.swift",
       "kind": "IntegerLiteral",
-      "offset": 2066,
+      "offset": 2217,
       "length": 3,
       "value": "152"
     },

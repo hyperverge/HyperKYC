@@ -1,4 +1,7 @@
 ## CHANGELOG
+### 1.12.0 *[23 Oct 2026]*
+- Update default bundled webCore version to `11.6.1`
+- Add emulator detection in `webCore` mode, reported as `isEmulator` for the `exitIfEmulator` workflow flag (error `142` - `Emulator or simulator detected`)
 
 ### 1.11.0 *[12 Oct 2026]*
 - Updated min Xcode requirement to Xcode 26.3
