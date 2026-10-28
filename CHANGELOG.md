@@ -1,4 +1,10 @@
 ## CHANGELOG
+### 1.12.1 *[28 Oct 2026]*
+- Maintenance
+    - Use HyperSnapSDK `6.9.1`
+    - Bug Fixes
+        - Fix crash on back press before the preview loads
+        - Fix crash in auto capture flows on back press before capture is done
 ### 1.12.0 *[23 Oct 2026]*
 - Update default bundled webCore version to `11.6.1`
 - Add emulator detection in `webCore` mode, reported as `isEmulator` for the `exitIfEmulator` workflow flag (error `142` - `Emulator or simulator detected`)
