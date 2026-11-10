@@ -1,4 +1,9 @@
 ## CHANGELOG
+### 1.13.0 *[10 Nov 2026]*
+- Maintenance
+    - Use HyperSnapSDK `6.10.0`
+        - Enhancements
+            - Add backend checks for light probe checks
 ### 1.12.1 *[28 Oct 2026]*
 - Maintenance
     - Use HyperSnapSDK `6.9.1`
